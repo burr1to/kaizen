@@ -2,18 +2,20 @@
 #include <fstream>
 #include <ctime>
 #include  <bits/stdc++.h>
+#include "classes.h"
 using namespace std;
 
 
 void storeInFile(char*,string,int,int,int);
 string createPlan();
-char* dateTime();
 void showAllPlans();
+
 
 int main(){
     char reply;
     int day,year;
     int month;
+    Planner id1;
     
     while (reply != 'y'){
         cout << "Create a new plan? : ";
@@ -22,7 +24,7 @@ int main(){
     
     if (reply == 'y' || reply == 'Y'){
 
-        char* currentDateTime = dateTime();
+        char* currentDateTime = id1.dateTime();
         string planCreated = createPlan();
         
        cout << "\n" << "When should I remind you of this plan?\n\n";
@@ -54,11 +56,7 @@ string createPlan(){
     
 }
 
-char* dateTime(){
-    time_t now = time(0);
-    return ctime(&now);
-   
-}
+
 
 void storeInFile(char* date, string plan, int year, int month,int day){
             string months[] = {"January","February","March","April","May","June","July","August","September","October","November","December"};

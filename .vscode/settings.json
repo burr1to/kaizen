@@ -38,6 +38,22 @@
       "username": "sqluser",
       "password": "password",
       "name": "sanskardb"
+    },
+    {
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "sanskarDB",
+      "database": "san",
+      "username": "sqluser",
+      "password": "password"
     }
-  ]
+  ],
+  "files.associations": {
+    "iostream": "cpp"
+  }
 }
