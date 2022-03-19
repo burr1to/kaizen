@@ -42,6 +42,12 @@ border-radius:30px;
        </item>
        <item row="0" column="1">
         <widget class="QWidget" name="widget" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>2</verstretch>
+          </sizepolicy>
+         </property>
          <property name="styleSheet">
           <string notr="true">#widget{
 background-color:black;
@@ -62,6 +68,12 @@ border-radius:30px;
        </item>
        <item row="1" column="1" rowspan="2">
         <widget class="QWidget" name="widget_2" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>4</verstretch>
+          </sizepolicy>
+         </property>
          <property name="styleSheet">
           <string notr="true">#widget_2{
 background-color:red;
