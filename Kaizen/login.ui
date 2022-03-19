@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>login</class>
+ <widget class="QMainWindow" name="login">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1132</width>
+    <height>752</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="1">
+     <widget class="QFrame" name="loginframe">
+      <property name="styleSheet">
+       <string notr="true">#loginframe{
+background-color:rgb(205, 255, 218);
+border-radius:10px;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="1" column="0" rowspan="2">
+        <widget class="QWidget" name="widget_3" native="true">
+         <property name="styleSheet">
+          <string notr="true">#widget_3{
+background-color:blue;
+border-radius:30px;
+}</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QWidget" name="widget" native="true">
+         <property name="styleSheet">
+          <string notr="true">#widget{
+background-color:black;
+border-radius:30px;
+}</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QWidget" name="widget_5" native="true">
+         <property name="styleSheet">
+          <string notr="true">#widget_5{
+background-color:red;
+border-radius:30px;
+}</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1" rowspan="2">
+        <widget class="QWidget" name="widget_2" native="true">
+         <property name="styleSheet">
+          <string notr="true">#widget_2{
+background-color:red;
+border-radius:30px;
+}</string>
+         </property>
+         <widget class="QWidget" name="widget_4" native="true">
+          <property name="geometry">
+           <rect>
+            <x>70</x>
+            <y>90</y>
+            <width>401</width>
+            <height>271</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#widget_4{
+background-color:pink;
+border-radius:30px;
+}</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="0">
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <item>
+              <widget class="QLineEdit" name="lineEdit_2"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit"/>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
