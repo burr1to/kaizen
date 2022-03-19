@@ -19,6 +19,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -30,11 +31,12 @@ public:
     QGridLayout *gridLayout;
     QFrame *planner_frame;
     QWidget *layoutWidget;
+    QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
     QLabel *label;
     QLineEdit *addPlan;
     QSpacerItem *horizontalSpacer;
-    QPushButton *pushButton;
+    QPushButton *dataSend;
 
     void setupUi(QMainWindow *planner)
     {
@@ -54,13 +56,15 @@ public:
         planner_frame->setFrameShadow(QFrame::Raised);
         layoutWidget = new QWidget(planner_frame);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(40, 300, 461, 142));
-        horizontalLayout = new QHBoxLayout(layoutWidget);
+        layoutWidget->setGeometry(QRect(40, 300, 501, 174));
+        verticalLayout = new QVBoxLayout(layoutWidget);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
         label = new QLabel(layoutWidget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setPixmap(QPixmap(QString::fromUtf8(":/image/plus.png")));
+        label->setPixmap(QPixmap(QString::fromUtf8(":/image/pl.png")));
 
         horizontalLayout->addWidget(label);
 
@@ -76,9 +80,14 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer);
 
-        pushButton = new QPushButton(planner_frame);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(660, 150, 301, 191));
+
+        verticalLayout->addLayout(horizontalLayout);
+
+        dataSend = new QPushButton(layoutWidget);
+        dataSend->setObjectName(QString::fromUtf8("dataSend"));
+
+        verticalLayout->addWidget(dataSend);
+
 
         gridLayout->addWidget(planner_frame, 0, 0, 1, 1);
 
@@ -93,7 +102,7 @@ public:
     {
         planner->setWindowTitle(QCoreApplication::translate("planner", "planner", nullptr));
         label->setText(QString());
-        pushButton->setText(QCoreApplication::translate("planner", "PushButton", nullptr));
+        dataSend->setText(QCoreApplication::translate("planner", "Send data", nullptr));
     } // retranslateUi
 
 };

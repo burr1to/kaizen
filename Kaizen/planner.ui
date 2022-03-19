@@ -33,60 +33,58 @@ background-color:rgb(158, 255, 117)
         <rect>
          <x>40</x>
          <y>300</y>
-         <width>461</width>
-         <height>142</height>
+         <width>501</width>
+         <height>174</height>
         </rect>
        </property>
-       <layout class="QHBoxLayout" name="horizontalLayout">
+       <layout class="QVBoxLayout" name="verticalLayout">
         <item>
-         <widget class="QLabel" name="label">
-          <property name="text">
-           <string/>
-          </property>
-          <property name="pixmap">
-           <pixmap resource="src.qrc">:/image/plus.png</pixmap>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="addPlan">
-          <property name="styleSheet">
-           <string notr="true">#addPlan{
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="src.qrc">:/image/pl.png</pixmap>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="addPlan">
+            <property name="styleSheet">
+             <string notr="true">#addPlan{
 border:1px solid transparent;
 }</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Minimum</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="dataSend">
+          <property name="text">
+           <string>Send data</string>
           </property>
          </widget>
         </item>
-        <item>
-         <spacer name="horizontalSpacer">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Minimum</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
        </layout>
-      </widget>
-      <widget class="QPushButton" name="pushButton">
-       <property name="geometry">
-        <rect>
-         <x>660</x>
-         <y>150</y>
-         <width>301</width>
-         <height>191</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>PushButton</string>
-       </property>
       </widget>
      </widget>
     </item>
