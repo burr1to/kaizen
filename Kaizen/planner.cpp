@@ -33,10 +33,12 @@ QSqlDatabase connectDB(){
     QSqlDatabase datba= QSqlDatabase::addDatabase("QMYSQL");
     datba.setHostName("localhost");
     datba.setDatabaseName("kaizen");
-    datba.setUserName("root");
-    datba.setPassword("");
+    datba.setUserName("sqluser");
+    datba.setPassword("password");
     if (datba.open()){
         qDebug()<< "DB Suc";
+    } else{
+        qDebug() << "DB Fail";
     }
     return datba;
 

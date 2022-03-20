@@ -67,6 +67,11 @@ public:
 
         widget = new QWidget(loginframe);
         widget->setObjectName(QString::fromUtf8("widget"));
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(2);
+        sizePolicy.setHeightForWidth(widget->sizePolicy().hasHeightForWidth());
+        widget->setSizePolicy(sizePolicy);
         widget->setStyleSheet(QString::fromUtf8("#widget{\n"
 "background-color:black;\n"
 "border-radius:30px;\n"
@@ -85,6 +90,11 @@ public:
 
         widget_2 = new QWidget(loginframe);
         widget_2->setObjectName(QString::fromUtf8("widget_2"));
+        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(4);
+        sizePolicy1.setHeightForWidth(widget_2->sizePolicy().hasHeightForWidth());
+        widget_2->setSizePolicy(sizePolicy1);
         widget_2->setStyleSheet(QString::fromUtf8("#widget_2{\n"
 "background-color:red;\n"
 "border-radius:30px;\n"

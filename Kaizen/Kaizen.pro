@@ -14,6 +14,7 @@ SOURCES += \
     planner.cpp
 
 HEADERS += \
+    errthang.h \
     login.h \
     planner.h
 

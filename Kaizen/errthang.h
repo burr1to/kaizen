@@ -1,25 +1,23 @@
-#include "planner.h"
-#include "login.h"
-#include <QApplication>
+#ifndef ERRTHANG_H
+#define ERRTHANG_H
 #include <QDebug>
+#include <QMainWindow>
 #include <QtSql>
 #include <QSqlDatabase>
 #include <QMessageBox>
-
 /*
 QSqlDatabase connectDB(){
     QSqlDatabase datba= QSqlDatabase::addDatabase("QMYSQL");
     datba.setHostName("localhost");
     datba.setDatabaseName("kaizen");
-    datba.setUserName("sqluser");
-    datba.setPassword("password");
+    datba.setUserName("root");
+    datba.setPassword("");
     if (datba.open()){
         qDebug()<< "DB Suc";
     }
     return datba;
-
-}
-
+}*/
+/*
 void createDB(){
     qDebug()<<"Start";
     QSqlDatabase d = connectDB();
@@ -44,18 +42,10 @@ void createDB(){
 
 }
 */
-int main(int argc, char *argv[])
-{
-    QApplication a(argc, argv);
-    /*connectDB();
-    createDB();*/
 
 
 
-    planner w;
-    w.show();
-    /*login l;
-    l.show();*/
 
-    return a.exec();
-}
+
+
+#endif // ERRTHANG_H
