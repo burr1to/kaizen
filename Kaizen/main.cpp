@@ -1,5 +1,7 @@
 #include "planner.h"
 #include "login.h"
+
+#include <QDialog>
 #include <QApplication>
 #include <QDebug>
 #include <QtSql>
@@ -9,10 +11,6 @@
 /*
 QSqlDatabase connectDB(){
     QSqlDatabase datba= QSqlDatabase::addDatabase("QMYSQL");
-    datba.setHostName("localhost");
-    datba.setDatabaseName("kaizen");
-    datba.setUserName("sqluser");
-    datba.setPassword("password");
     if (datba.open()){
         qDebug()<< "DB Suc";
     }
@@ -49,13 +47,10 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     /*connectDB();
     createDB();*/
-
-
-
-    planner w;
-    w.show();
-    /*login l;
-    l.show();*/
+    login l;
+    l.show();
+    /*planner pl;
+    pl.show();*/
 
     return a.exec();
 }

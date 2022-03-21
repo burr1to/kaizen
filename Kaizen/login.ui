@@ -6,22 +6,31 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1132</width>
-    <height>752</height>
+    <width>1201</width>
+    <height>804</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="1">
+   <property name="styleSheet">
+    <string notr="true">#centralwidget{
+background-color:rgb(128, 85, 255)
+}</string>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
      <widget class="QFrame" name="loginframe">
       <property name="styleSheet">
        <string notr="true">#loginframe{
-background-color:rgb(205, 255, 218);
-border-radius:10px;
-}</string>
+background-color:rgb(235, 235, 235);
+border-radius:40px;
+max-width:400px;
+max-height:400px;
+}
+
+</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -29,86 +38,156 @@ border-radius:10px;
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <layout class="QGridLayout" name="gridLayout_2">
-       <item row="1" column="0" rowspan="2">
-        <widget class="QWidget" name="widget_3" native="true">
-         <property name="styleSheet">
-          <string notr="true">#widget_3{
-background-color:blue;
-border-radius:30px;
-}</string>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
          </property>
-        </widget>
+         <property name="sizeType">
+          <enum>QSizePolicy::Minimum</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
        </item>
-       <item row="0" column="1">
-        <widget class="QWidget" name="widget" native="true">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-           <horstretch>0</horstretch>
-           <verstretch>2</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">#widget{
-background-color:black;
-border-radius:30px;
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Preferred</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>100</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="usr">
+             <property name="styleSheet">
+              <string notr="true">#usr{
+font-weight:bold;
+color:rgb(162, 48, 255);
+font-size:30px;
 }</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QWidget" name="widget_5" native="true">
-         <property name="styleSheet">
-          <string notr="true">#widget_5{
-background-color:red;
-border-radius:30px;
+             </property>
+             <property name="text">
+              <string>Username</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="username">
+             <property name="styleSheet">
+              <string notr="true">#username{
+border:1px solid transparent;
+border-radius:10px;
+padding:12px;
+margin-bottom:12px;
 }</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1" rowspan="2">
-        <widget class="QWidget" name="widget_2" native="true">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-           <horstretch>0</horstretch>
-           <verstretch>4</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">#widget_2{
-background-color:red;
-border-radius:30px;
-}</string>
-         </property>
-         <widget class="QWidget" name="widget_4" native="true">
-          <property name="geometry">
-           <rect>
-            <x>70</x>
-            <y>90</y>
-            <width>401</width>
-            <height>271</height>
-           </rect>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">#widget_4{
-background-color:pink;
-border-radius:30px;
-}</string>
-          </property>
-          <layout class="QGridLayout" name="gridLayout_3">
-           <item row="0" column="0">
-            <layout class="QVBoxLayout" name="verticalLayout_2">
-             <item>
-              <widget class="QLineEdit" name="lineEdit_2"/>
-             </item>
-             <item>
-              <widget class="QLineEdit" name="lineEdit"/>
-             </item>
-            </layout>
+             </property>
+            </widget>
            </item>
           </layout>
-         </widget>
-        </widget>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QLabel" name="pass">
+             <property name="styleSheet">
+              <string notr="true">#pass{
+
+font-weight:bold;
+color:rgb(162, 48, 255);
+font-size:30px;
+
+}</string>
+             </property>
+             <property name="text">
+              <string>Password</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="password">
+             <property name="styleSheet">
+              <string notr="true">#password{
+border:1px solid transparent;
+border-radius:10px;
+padding:12px;
+}</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QPushButton" name="loginbutt">
+           <property name="text">
+            <string>Login</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="signupbut">
+           <property name="styleSheet">
+            <string notr="true">#signupbut{
+padding-top:20px;
+color:rgb(162, 48, 255);
+font-weight:bold;
+font-size:20px;
+border:1px solid transparent;
+
+}</string>
+           </property>
+           <property name="text">
+            <string>Sign up from here</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>80</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Minimum</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
        </item>
       </layout>
      </widget>

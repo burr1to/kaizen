@@ -11,16 +11,21 @@ CONFIG += c++11
 SOURCES += \
     login.cpp \
     main.cpp \
-    planner.cpp
+    planner.cpp \
+    signup.cpp
+
 
 HEADERS += \
-    errthang.h \
     login.h \
-    planner.h
+    planner.h \
+    signup.h
+
 
 FORMS += \
     login.ui \
-    planner.ui
+    planner.ui \
+    signup.ui
+
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

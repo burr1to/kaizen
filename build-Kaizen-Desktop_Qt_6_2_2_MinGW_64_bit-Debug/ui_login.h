@@ -12,9 +12,12 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QFrame>
-#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -24,110 +27,143 @@ class Ui_login
 {
 public:
     QWidget *centralwidget;
-    QGridLayout *gridLayout;
+    QHBoxLayout *horizontalLayout;
     QFrame *loginframe;
-    QGridLayout *gridLayout_2;
-    QWidget *widget_3;
-    QWidget *widget;
-    QWidget *widget_5;
-    QWidget *widget_2;
-    QWidget *widget_4;
-    QGridLayout *gridLayout_3;
+    QHBoxLayout *horizontalLayout_2;
+    QSpacerItem *horizontalSpacer;
+    QVBoxLayout *verticalLayout_3;
+    QVBoxLayout *verticalLayout;
+    QSpacerItem *verticalSpacer;
+    QLabel *usr;
+    QLineEdit *username;
     QVBoxLayout *verticalLayout_2;
-    QLineEdit *lineEdit_2;
-    QLineEdit *lineEdit;
+    QLabel *pass;
+    QLineEdit *password;
+    QPushButton *loginbutt;
+    QPushButton *signupbut;
+    QSpacerItem *verticalSpacer_2;
+    QSpacerItem *horizontalSpacer_2;
 
     void setupUi(QMainWindow *login)
     {
         if (login->objectName().isEmpty())
             login->setObjectName(QString::fromUtf8("login"));
-        login->resize(1132, 752);
+        login->resize(1201, 804);
         centralwidget = new QWidget(login);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        gridLayout = new QGridLayout(centralwidget);
-        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        centralwidget->setStyleSheet(QString::fromUtf8("#centralwidget{\n"
+"background-color:rgb(128, 85, 255)\n"
+"}"));
+        horizontalLayout = new QHBoxLayout(centralwidget);
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         loginframe = new QFrame(centralwidget);
         loginframe->setObjectName(QString::fromUtf8("loginframe"));
         loginframe->setStyleSheet(QString::fromUtf8("#loginframe{\n"
-"background-color:rgb(205, 255, 218);\n"
-"border-radius:10px;\n"
-"}"));
+"background-color:rgb(235, 235, 235);\n"
+"border-radius:40px;\n"
+"max-width:400px;\n"
+"max-height:400px;\n"
+"}\n"
+"\n"
+""));
         loginframe->setFrameShape(QFrame::StyledPanel);
         loginframe->setFrameShadow(QFrame::Raised);
-        gridLayout_2 = new QGridLayout(loginframe);
-        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
-        widget_3 = new QWidget(loginframe);
-        widget_3->setObjectName(QString::fromUtf8("widget_3"));
-        widget_3->setStyleSheet(QString::fromUtf8("#widget_3{\n"
-"background-color:blue;\n"
-"border-radius:30px;\n"
+        horizontalLayout_2 = new QHBoxLayout(loginframe);
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Minimum, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer);
+
+        verticalLayout_3 = new QVBoxLayout();
+        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalSpacer = new QSpacerItem(20, 100, QSizePolicy::Minimum, QSizePolicy::Preferred);
+
+        verticalLayout->addItem(verticalSpacer);
+
+        usr = new QLabel(loginframe);
+        usr->setObjectName(QString::fromUtf8("usr"));
+        usr->setStyleSheet(QString::fromUtf8("#usr{\n"
+"font-weight:bold;\n"
+"color:rgb(162, 48, 255);\n"
+"font-size:30px;\n"
 "}"));
 
-        gridLayout_2->addWidget(widget_3, 1, 0, 2, 1);
+        verticalLayout->addWidget(usr);
 
-        widget = new QWidget(loginframe);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(2);
-        sizePolicy.setHeightForWidth(widget->sizePolicy().hasHeightForWidth());
-        widget->setSizePolicy(sizePolicy);
-        widget->setStyleSheet(QString::fromUtf8("#widget{\n"
-"background-color:black;\n"
-"border-radius:30px;\n"
+        username = new QLineEdit(loginframe);
+        username->setObjectName(QString::fromUtf8("username"));
+        username->setStyleSheet(QString::fromUtf8("#username{\n"
+"border:1px solid transparent;\n"
+"border-radius:10px;\n"
+"padding:12px;\n"
+"margin-bottom:12px;\n"
 "}"));
 
-        gridLayout_2->addWidget(widget, 0, 1, 1, 1);
+        verticalLayout->addWidget(username);
 
-        widget_5 = new QWidget(loginframe);
-        widget_5->setObjectName(QString::fromUtf8("widget_5"));
-        widget_5->setStyleSheet(QString::fromUtf8("#widget_5{\n"
-"background-color:red;\n"
-"border-radius:30px;\n"
-"}"));
 
-        gridLayout_2->addWidget(widget_5, 0, 0, 1, 1);
+        verticalLayout_3->addLayout(verticalLayout);
 
-        widget_2 = new QWidget(loginframe);
-        widget_2->setObjectName(QString::fromUtf8("widget_2"));
-        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Preferred);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(4);
-        sizePolicy1.setHeightForWidth(widget_2->sizePolicy().hasHeightForWidth());
-        widget_2->setSizePolicy(sizePolicy1);
-        widget_2->setStyleSheet(QString::fromUtf8("#widget_2{\n"
-"background-color:red;\n"
-"border-radius:30px;\n"
-"}"));
-        widget_4 = new QWidget(widget_2);
-        widget_4->setObjectName(QString::fromUtf8("widget_4"));
-        widget_4->setGeometry(QRect(70, 90, 401, 271));
-        widget_4->setStyleSheet(QString::fromUtf8("#widget_4{\n"
-"background-color:pink;\n"
-"border-radius:30px;\n"
-"}"));
-        gridLayout_3 = new QGridLayout(widget_4);
-        gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        lineEdit_2 = new QLineEdit(widget_4);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        pass = new QLabel(loginframe);
+        pass->setObjectName(QString::fromUtf8("pass"));
+        pass->setStyleSheet(QString::fromUtf8("#pass{\n"
+"\n"
+"font-weight:bold;\n"
+"color:rgb(162, 48, 255);\n"
+"font-size:30px;\n"
+"\n"
+"}"));
 
-        verticalLayout_2->addWidget(lineEdit_2);
+        verticalLayout_2->addWidget(pass);
 
-        lineEdit = new QLineEdit(widget_4);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        password = new QLineEdit(loginframe);
+        password->setObjectName(QString::fromUtf8("password"));
+        password->setStyleSheet(QString::fromUtf8("#password{\n"
+"border:1px solid transparent;\n"
+"border-radius:10px;\n"
+"padding:12px;\n"
+"}"));
 
-        verticalLayout_2->addWidget(lineEdit);
+        verticalLayout_2->addWidget(password);
 
 
-        gridLayout_3->addLayout(verticalLayout_2, 0, 0, 1, 1);
+        verticalLayout_3->addLayout(verticalLayout_2);
+
+        loginbutt = new QPushButton(loginframe);
+        loginbutt->setObjectName(QString::fromUtf8("loginbutt"));
+
+        verticalLayout_3->addWidget(loginbutt);
+
+        signupbut = new QPushButton(loginframe);
+        signupbut->setObjectName(QString::fromUtf8("signupbut"));
+        signupbut->setStyleSheet(QString::fromUtf8("#signupbut{\n"
+"padding-top:20px;\n"
+"color:rgb(162, 48, 255);\n"
+"font-weight:bold;\n"
+"font-size:20px;\n"
+"border:1px solid transparent;\n"
+"\n"
+"}"));
+
+        verticalLayout_3->addWidget(signupbut);
+
+        verticalSpacer_2 = new QSpacerItem(20, 80, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_3->addItem(verticalSpacer_2);
 
 
-        gridLayout_2->addWidget(widget_2, 1, 1, 2, 1);
+        horizontalLayout_2->addLayout(verticalLayout_3);
+
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Minimum, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_2);
 
 
-        gridLayout->addWidget(loginframe, 0, 1, 1, 1);
+        horizontalLayout->addWidget(loginframe);
 
         login->setCentralWidget(centralwidget);
 
@@ -139,6 +175,10 @@ public:
     void retranslateUi(QMainWindow *login)
     {
         login->setWindowTitle(QCoreApplication::translate("login", "MainWindow", nullptr));
+        usr->setText(QCoreApplication::translate("login", "Username", nullptr));
+        pass->setText(QCoreApplication::translate("login", "Password", nullptr));
+        loginbutt->setText(QCoreApplication::translate("login", "Login", nullptr));
+        signupbut->setText(QCoreApplication::translate("login", "Sign up from here", nullptr));
     } // retranslateUi
 
 };

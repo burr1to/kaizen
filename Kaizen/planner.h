@@ -20,12 +20,12 @@ public:
     ~planner();
 
 private slots:
-    void on_addPlan_returnPressed();
 
     void on_dataSend_clicked();
 
 private:
     Ui::planner *ui;
+    QSqlDatabase db;
 };
 
 
