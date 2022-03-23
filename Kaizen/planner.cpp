@@ -24,19 +24,10 @@ planner::~planner()
 
 
 
-
-/*
-QSqlDatabase connectDB(){
-    QSqlDatabase db= QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("test.db");
-    return db;
-
-}*/
-
 void planner::on_dataSend_clicked()
 {
     db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("C:/Users/burr1to/Desktop/Kaizen/Kaizen/test.db");
+    db.setDatabaseName("C:/Users/burr1to/Desktop/Kaizen/Kaizen/testdb.db");
     if (!db.open()){
         qDebug()<< "Failed";
     } else {
@@ -49,15 +40,17 @@ void planner::on_dataSend_clicked()
     QString what = ui->addPlan->text();
 
     QSqlQuery q;
-    if (what == " "){
+    if (what == ""){
         qDebug()<< "MT";
     }
-
+    else{
         q.prepare("insert into plan(plandet) values (:plan)");
         q.bindValue(":plan",what);
         if (q.exec()){
             qDebug()<< "Ok";
-        }
+        }}
+
+
 
     ui->addPlan->clear();
 

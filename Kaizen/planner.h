@@ -19,6 +19,7 @@ public:
     planner(QWidget *parent = nullptr);
     ~planner();
 
+
 private slots:
 
     void on_dataSend_clicked();
@@ -26,6 +27,7 @@ private slots:
 private:
     Ui::planner *ui;
     QSqlDatabase db;
+
 };
 
 

@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1201</width>
-    <height>804</height>
+    <width>1240</width>
+    <height>916</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Kaizen</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
@@ -26,8 +26,8 @@ background-color:rgb(128, 85, 255)
        <string notr="true">#loginframe{
 background-color:rgb(235, 235, 235);
 border-radius:40px;
-max-width:400px;
-max-height:400px;
+max-width:440px;
+max-height:440px;
 }
 
 </string>
@@ -70,7 +70,7 @@ max-height:400px;
              <property name="sizeHint" stdset="0">
               <size>
                <width>20</width>
-               <height>100</height>
+               <height>70</height>
               </size>
              </property>
             </spacer>
@@ -80,7 +80,7 @@ max-height:400px;
              <property name="styleSheet">
               <string notr="true">#usr{
 font-weight:bold;
-color:rgb(162, 48, 255);
+color:rgb(128, 85, 255);
 font-size:30px;
 }</string>
              </property>
@@ -111,7 +111,7 @@ margin-bottom:12px;
               <string notr="true">#pass{
 
 font-weight:bold;
-color:rgb(162, 48, 255);
+color:rgb(128, 85, 255);
 font-size:30px;
 
 }</string>
@@ -136,6 +136,22 @@ padding:12px;
          </item>
          <item>
           <widget class="QPushButton" name="loginbutt">
+           <property name="styleSheet">
+            <string notr="true">#loginbutt{
+border-radius:10px;
+border:1px solid rgb(173, 173, 173);
+padding:6px;
+margin-top:15px;
+font-size:20px;
+font-weight:bold;
+color:rgb(128, 85, 255);
+}
+
+#loginbutt:hover{
+background-color:rgb(128, 85, 255);
+color:white;
+}</string>
+           </property>
            <property name="text">
             <string>Login</string>
            </property>
@@ -146,7 +162,7 @@ padding:12px;
            <property name="styleSheet">
             <string notr="true">#signupbut{
 padding-top:20px;
-color:rgb(162, 48, 255);
+color:rgb(128, 85, 255);
 font-weight:bold;
 font-size:20px;
 border:1px solid transparent;

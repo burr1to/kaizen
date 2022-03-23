@@ -5,20 +5,16 @@
 #include <QtSql>
 #include <QSqlDatabase>
 #include <QMessageBox>
+#include <iostream>
 
 login::login(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::login)
 {
     ui->setupUi(this);
-    mydb = QSqlDatabase::addDatabase("QSQLITE");
-    mydb.setDatabaseName("C:/Users/burr1to/Desktop/db/testdb.db");
-    if (!mydb.open()){
-        qDebug()<< "Failed";
-    } else {
-        qDebug()<< "Success";
+    ui->username->setPlaceholderText("Enter username");
+    ui->password->setPlaceholderText("Enter password");
 
-    }
 
 }
 
@@ -27,14 +23,36 @@ login::~login()
     delete ui;
 }
 
+
+
+
+
+/*
+class userdetails{
+private:
+    QString username,password,f_name,l_name;
+    int height,weight,dob;
+
+public:
+     void getData(){
+         username = ui->username->text();
+         password = ui->password->text();
+}*/
+
+
+
 void login::on_loginbutt_clicked()
 {
+    mydb = QSqlDatabase::addDatabase("QSQLITE");
+    mydb.setDatabaseName("C:/Users/burr1to/Desktop/Kaizen/Kaizen/testdb.db");
+    if (!mydb.open()){
+        qDebug()<<"Db problem";
+    } else {
+        qDebug()<< "Success";
+    }
 
     QString username = ui->username->text();
     QString password = ui->password->text();
-    if (!mydb.open()){
-        return;
-    }
     QSqlQuery qry;
 
     if(qry.exec("select * from user where username = '"+username+"' and password = '"+password+"'")){
@@ -44,12 +62,16 @@ void login::on_loginbutt_clicked()
         }
         if (count==1){
             qDebug()<< "Successful login";
+            qry.clear();
             mydb.close();
             hide();
             p.show();
+
         }
         if (count<1){
             qDebug()<< "NOT Successful login";
+            qry.clear();
+            mydb.close();
         }
     }
 
@@ -61,7 +83,7 @@ void login::on_loginbutt_clicked()
 void login::on_signupbut_clicked()
 {
     hide();
-    signup.show();
+    s.show();
 
 }
 

@@ -48,7 +48,7 @@ public:
     {
         if (login->objectName().isEmpty())
             login->setObjectName(QString::fromUtf8("login"));
-        login->resize(1201, 804);
+        login->resize(1240, 916);
         centralwidget = new QWidget(login);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         centralwidget->setStyleSheet(QString::fromUtf8("#centralwidget{\n"
@@ -61,8 +61,8 @@ public:
         loginframe->setStyleSheet(QString::fromUtf8("#loginframe{\n"
 "background-color:rgb(235, 235, 235);\n"
 "border-radius:40px;\n"
-"max-width:400px;\n"
-"max-height:400px;\n"
+"max-width:440px;\n"
+"max-height:440px;\n"
 "}\n"
 "\n"
 ""));
@@ -78,7 +78,7 @@ public:
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        verticalSpacer = new QSpacerItem(20, 100, QSizePolicy::Minimum, QSizePolicy::Preferred);
+        verticalSpacer = new QSpacerItem(20, 70, QSizePolicy::Minimum, QSizePolicy::Preferred);
 
         verticalLayout->addItem(verticalSpacer);
 
@@ -86,7 +86,7 @@ public:
         usr->setObjectName(QString::fromUtf8("usr"));
         usr->setStyleSheet(QString::fromUtf8("#usr{\n"
 "font-weight:bold;\n"
-"color:rgb(162, 48, 255);\n"
+"color:rgb(128, 85, 255);\n"
 "font-size:30px;\n"
 "}"));
 
@@ -113,7 +113,7 @@ public:
         pass->setStyleSheet(QString::fromUtf8("#pass{\n"
 "\n"
 "font-weight:bold;\n"
-"color:rgb(162, 48, 255);\n"
+"color:rgb(128, 85, 255);\n"
 "font-size:30px;\n"
 "\n"
 "}"));
@@ -135,6 +135,20 @@ public:
 
         loginbutt = new QPushButton(loginframe);
         loginbutt->setObjectName(QString::fromUtf8("loginbutt"));
+        loginbutt->setStyleSheet(QString::fromUtf8("#loginbutt{\n"
+"border-radius:10px;\n"
+"border:1px solid rgb(173, 173, 173);\n"
+"padding:6px;\n"
+"margin-top:15px;\n"
+"font-size:20px;\n"
+"font-weight:bold;\n"
+"color:rgb(128, 85, 255);\n"
+"}\n"
+"\n"
+"#loginbutt:hover{\n"
+"background-color:rgb(128, 85, 255);\n"
+"color:white;\n"
+"}"));
 
         verticalLayout_3->addWidget(loginbutt);
 
@@ -142,7 +156,7 @@ public:
         signupbut->setObjectName(QString::fromUtf8("signupbut"));
         signupbut->setStyleSheet(QString::fromUtf8("#signupbut{\n"
 "padding-top:20px;\n"
-"color:rgb(162, 48, 255);\n"
+"color:rgb(128, 85, 255);\n"
 "font-weight:bold;\n"
 "font-size:20px;\n"
 "border:1px solid transparent;\n"
@@ -174,7 +188,7 @@ public:
 
     void retranslateUi(QMainWindow *login)
     {
-        login->setWindowTitle(QCoreApplication::translate("login", "MainWindow", nullptr));
+        login->setWindowTitle(QCoreApplication::translate("login", "Kaizen", nullptr));
         usr->setText(QCoreApplication::translate("login", "Username", nullptr));
         pass->setText(QCoreApplication::translate("login", "Password", nullptr));
         loginbutt->setText(QCoreApplication::translate("login", "Login", nullptr));

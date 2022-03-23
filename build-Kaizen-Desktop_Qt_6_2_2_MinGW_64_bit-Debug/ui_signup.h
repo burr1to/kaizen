@@ -28,43 +28,41 @@ class Ui_signup
 public:
     QHBoxLayout *horizontalLayout;
     QFrame *signupframe;
-    QWidget *widget;
-    QVBoxLayout *verticalLayout_11;
-    QVBoxLayout *verticalLayout_10;
-    QVBoxLayout *verticalLayout;
-    QLabel *label;
-    QLineEdit *lineEdit;
-    QVBoxLayout *verticalLayout_6;
-    QLabel *label_6;
-    QLineEdit *lineEdit_5;
-    QVBoxLayout *verticalLayout_2;
-    QLabel *label_2;
-    QLineEdit *lineEdit_2;
-    QVBoxLayout *verticalLayout_7;
-    QLabel *label_7;
-    QLineEdit *lineEdit_6;
-    QVBoxLayout *verticalLayout_3;
-    QLabel *label_3;
-    QLineEdit *lineEdit_3;
-    QVBoxLayout *verticalLayout_4;
-    QLabel *label_4;
-    QLineEdit *lineEdit_4;
-    QVBoxLayout *verticalLayout_8;
-    QLabel *label_8;
-    QLineEdit *lineEdit_7;
+    QPushButton *pushButton;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout_5;
     QLabel *label_5;
-    QDateEdit *dateEdit;
+    QDateEdit *dob;
+    QWidget *layoutWidget1;
+    QVBoxLayout *verticalLayout_2;
+    QLabel *label_2;
+    QLineEdit *l_name;
+    QWidget *layoutWidget2;
+    QVBoxLayout *verticalLayout_8;
+    QLabel *label_8;
+    QLineEdit *email;
+    QWidget *layoutWidget3;
+    QVBoxLayout *verticalLayout;
+    QLabel *label;
+    QLineEdit *f_name;
+    QWidget *layoutWidget4;
     QVBoxLayout *verticalLayout_9;
     QLabel *label_9;
-    QLineEdit *lineEdit_8;
-    QPushButton *pushButton;
+    QLineEdit *phone;
+    QWidget *layoutWidget5;
+    QVBoxLayout *verticalLayout_10;
+    QVBoxLayout *verticalLayout_3;
+    QLabel *label_3;
+    QLineEdit *username;
+    QVBoxLayout *verticalLayout_4;
+    QLabel *label_4;
+    QLineEdit *password;
 
     void setupUi(QDialog *signup)
     {
         if (signup->objectName().isEmpty())
             signup->setObjectName(QString::fromUtf8("signup"));
-        signup->resize(561, 732);
+        signup->resize(626, 768);
         horizontalLayout = new QHBoxLayout(signup);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         signupframe = new QFrame(signup);
@@ -74,156 +72,124 @@ public:
 "}"));
         signupframe->setFrameShape(QFrame::StyledPanel);
         signupframe->setFrameShadow(QFrame::Raised);
-        widget = new QWidget(signupframe);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(150, 10, 291, 671));
-        verticalLayout_11 = new QVBoxLayout(widget);
-        verticalLayout_11->setObjectName(QString::fromUtf8("verticalLayout_11"));
-        verticalLayout_11->setContentsMargins(0, 0, 0, 0);
-        verticalLayout_10 = new QVBoxLayout();
-        verticalLayout_10->setObjectName(QString::fromUtf8("verticalLayout_10"));
-        verticalLayout = new QVBoxLayout();
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        label = new QLabel(widget);
-        label->setObjectName(QString::fromUtf8("label"));
+        pushButton = new QPushButton(signupframe);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(210, 610, 75, 24));
+        layoutWidget = new QWidget(signupframe);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(120, 440, 83, 44));
+        verticalLayout_5 = new QVBoxLayout(layoutWidget);
+        verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
+        verticalLayout_5->setContentsMargins(0, 0, 0, 0);
+        label_5 = new QLabel(layoutWidget);
+        label_5->setObjectName(QString::fromUtf8("label_5"));
 
-        verticalLayout->addWidget(label);
+        verticalLayout_5->addWidget(label_5);
 
-        lineEdit = new QLineEdit(widget);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        dob = new QDateEdit(layoutWidget);
+        dob->setObjectName(QString::fromUtf8("dob"));
 
-        verticalLayout->addWidget(lineEdit);
+        verticalLayout_5->addWidget(dob);
 
-
-        verticalLayout_10->addLayout(verticalLayout);
-
-        verticalLayout_6 = new QVBoxLayout();
-        verticalLayout_6->setObjectName(QString::fromUtf8("verticalLayout_6"));
-        label_6 = new QLabel(widget);
-        label_6->setObjectName(QString::fromUtf8("label_6"));
-
-        verticalLayout_6->addWidget(label_6);
-
-        lineEdit_5 = new QLineEdit(widget);
-        lineEdit_5->setObjectName(QString::fromUtf8("lineEdit_5"));
-
-        verticalLayout_6->addWidget(lineEdit_5);
-
-
-        verticalLayout_10->addLayout(verticalLayout_6);
-
-        verticalLayout_2 = new QVBoxLayout();
+        layoutWidget1 = new QWidget(signupframe);
+        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(310, 70, 135, 46));
+        verticalLayout_2 = new QVBoxLayout(layoutWidget1);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        label_2 = new QLabel(widget);
+        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
+        label_2 = new QLabel(layoutWidget1);
         label_2->setObjectName(QString::fromUtf8("label_2"));
 
         verticalLayout_2->addWidget(label_2);
 
-        lineEdit_2 = new QLineEdit(widget);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        l_name = new QLineEdit(layoutWidget1);
+        l_name->setObjectName(QString::fromUtf8("l_name"));
 
-        verticalLayout_2->addWidget(lineEdit_2);
+        verticalLayout_2->addWidget(l_name);
 
+        layoutWidget2 = new QWidget(signupframe);
+        layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
+        layoutWidget2->setGeometry(QRect(390, 170, 135, 46));
+        verticalLayout_8 = new QVBoxLayout(layoutWidget2);
+        verticalLayout_8->setObjectName(QString::fromUtf8("verticalLayout_8"));
+        verticalLayout_8->setContentsMargins(0, 0, 0, 0);
+        label_8 = new QLabel(layoutWidget2);
+        label_8->setObjectName(QString::fromUtf8("label_8"));
 
-        verticalLayout_10->addLayout(verticalLayout_2);
+        verticalLayout_8->addWidget(label_8);
 
-        verticalLayout_7 = new QVBoxLayout();
-        verticalLayout_7->setObjectName(QString::fromUtf8("verticalLayout_7"));
-        label_7 = new QLabel(widget);
-        label_7->setObjectName(QString::fromUtf8("label_7"));
+        email = new QLineEdit(layoutWidget2);
+        email->setObjectName(QString::fromUtf8("email"));
 
-        verticalLayout_7->addWidget(label_7);
+        verticalLayout_8->addWidget(email);
 
-        lineEdit_6 = new QLineEdit(widget);
-        lineEdit_6->setObjectName(QString::fromUtf8("lineEdit_6"));
+        layoutWidget3 = new QWidget(signupframe);
+        layoutWidget3->setObjectName(QString::fromUtf8("layoutWidget3"));
+        layoutWidget3->setGeometry(QRect(40, 180, 135, 46));
+        verticalLayout = new QVBoxLayout(layoutWidget3);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        label = new QLabel(layoutWidget3);
+        label->setObjectName(QString::fromUtf8("label"));
 
-        verticalLayout_7->addWidget(lineEdit_6);
+        verticalLayout->addWidget(label);
 
+        f_name = new QLineEdit(layoutWidget3);
+        f_name->setObjectName(QString::fromUtf8("f_name"));
 
-        verticalLayout_10->addLayout(verticalLayout_7);
+        verticalLayout->addWidget(f_name);
 
+        layoutWidget4 = new QWidget(signupframe);
+        layoutWidget4->setObjectName(QString::fromUtf8("layoutWidget4"));
+        layoutWidget4->setGeometry(QRect(60, 330, 135, 46));
+        verticalLayout_9 = new QVBoxLayout(layoutWidget4);
+        verticalLayout_9->setObjectName(QString::fromUtf8("verticalLayout_9"));
+        verticalLayout_9->setContentsMargins(0, 0, 0, 0);
+        label_9 = new QLabel(layoutWidget4);
+        label_9->setObjectName(QString::fromUtf8("label_9"));
+
+        verticalLayout_9->addWidget(label_9);
+
+        phone = new QLineEdit(layoutWidget4);
+        phone->setObjectName(QString::fromUtf8("phone"));
+
+        verticalLayout_9->addWidget(phone);
+
+        layoutWidget5 = new QWidget(signupframe);
+        layoutWidget5->setObjectName(QString::fromUtf8("layoutWidget5"));
+        layoutWidget5->setGeometry(QRect(330, 450, 137, 100));
+        verticalLayout_10 = new QVBoxLayout(layoutWidget5);
+        verticalLayout_10->setObjectName(QString::fromUtf8("verticalLayout_10"));
+        verticalLayout_10->setContentsMargins(0, 0, 0, 0);
         verticalLayout_3 = new QVBoxLayout();
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
-        label_3 = new QLabel(widget);
+        label_3 = new QLabel(layoutWidget5);
         label_3->setObjectName(QString::fromUtf8("label_3"));
 
         verticalLayout_3->addWidget(label_3);
 
-        lineEdit_3 = new QLineEdit(widget);
-        lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
+        username = new QLineEdit(layoutWidget5);
+        username->setObjectName(QString::fromUtf8("username"));
 
-        verticalLayout_3->addWidget(lineEdit_3);
+        verticalLayout_3->addWidget(username);
 
 
         verticalLayout_10->addLayout(verticalLayout_3);
 
         verticalLayout_4 = new QVBoxLayout();
         verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
-        label_4 = new QLabel(widget);
+        label_4 = new QLabel(layoutWidget5);
         label_4->setObjectName(QString::fromUtf8("label_4"));
 
         verticalLayout_4->addWidget(label_4);
 
-        lineEdit_4 = new QLineEdit(widget);
-        lineEdit_4->setObjectName(QString::fromUtf8("lineEdit_4"));
+        password = new QLineEdit(layoutWidget5);
+        password->setObjectName(QString::fromUtf8("password"));
 
-        verticalLayout_4->addWidget(lineEdit_4);
+        verticalLayout_4->addWidget(password);
 
 
         verticalLayout_10->addLayout(verticalLayout_4);
-
-        verticalLayout_8 = new QVBoxLayout();
-        verticalLayout_8->setObjectName(QString::fromUtf8("verticalLayout_8"));
-        label_8 = new QLabel(widget);
-        label_8->setObjectName(QString::fromUtf8("label_8"));
-
-        verticalLayout_8->addWidget(label_8);
-
-        lineEdit_7 = new QLineEdit(widget);
-        lineEdit_7->setObjectName(QString::fromUtf8("lineEdit_7"));
-
-        verticalLayout_8->addWidget(lineEdit_7);
-
-
-        verticalLayout_10->addLayout(verticalLayout_8);
-
-        verticalLayout_5 = new QVBoxLayout();
-        verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
-        label_5 = new QLabel(widget);
-        label_5->setObjectName(QString::fromUtf8("label_5"));
-
-        verticalLayout_5->addWidget(label_5);
-
-        dateEdit = new QDateEdit(widget);
-        dateEdit->setObjectName(QString::fromUtf8("dateEdit"));
-
-        verticalLayout_5->addWidget(dateEdit);
-
-
-        verticalLayout_10->addLayout(verticalLayout_5);
-
-        verticalLayout_9 = new QVBoxLayout();
-        verticalLayout_9->setObjectName(QString::fromUtf8("verticalLayout_9"));
-        label_9 = new QLabel(widget);
-        label_9->setObjectName(QString::fromUtf8("label_9"));
-
-        verticalLayout_9->addWidget(label_9);
-
-        lineEdit_8 = new QLineEdit(widget);
-        lineEdit_8->setObjectName(QString::fromUtf8("lineEdit_8"));
-
-        verticalLayout_9->addWidget(lineEdit_8);
-
-
-        verticalLayout_10->addLayout(verticalLayout_9);
-
-
-        verticalLayout_11->addLayout(verticalLayout_10);
-
-        pushButton = new QPushButton(widget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-
-        verticalLayout_11->addWidget(pushButton);
 
 
         horizontalLayout->addWidget(signupframe);
@@ -237,16 +203,14 @@ public:
     void retranslateUi(QDialog *signup)
     {
         signup->setWindowTitle(QCoreApplication::translate("signup", "Dialog", nullptr));
-        label->setText(QCoreApplication::translate("signup", "First Name", nullptr));
-        label_6->setText(QCoreApplication::translate("signup", "Weight", nullptr));
+        pushButton->setText(QCoreApplication::translate("signup", "Register", nullptr));
+        label_5->setText(QCoreApplication::translate("signup", "Date of Birth", nullptr));
         label_2->setText(QCoreApplication::translate("signup", "Last Name", nullptr));
-        label_7->setText(QCoreApplication::translate("signup", "Height", nullptr));
+        label_8->setText(QCoreApplication::translate("signup", "Email ID", nullptr));
+        label->setText(QCoreApplication::translate("signup", "First Name", nullptr));
+        label_9->setText(QCoreApplication::translate("signup", "Phone number", nullptr));
         label_3->setText(QCoreApplication::translate("signup", "Username", nullptr));
         label_4->setText(QCoreApplication::translate("signup", "Password", nullptr));
-        label_8->setText(QCoreApplication::translate("signup", "Email ID", nullptr));
-        label_5->setText(QCoreApplication::translate("signup", "Date of Birth", nullptr));
-        label_9->setText(QCoreApplication::translate("signup", "Phone number", nullptr));
-        pushButton->setText(QCoreApplication::translate("signup", "Register", nullptr));
     } // retranslateUi
 
 };
