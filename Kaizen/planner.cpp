@@ -15,6 +15,7 @@ planner::planner(QWidget *parent)
 {
     ui->setupUi(this);
 
+
 }
 
 planner::~planner()
@@ -23,19 +24,18 @@ planner::~planner()
 }
 
 
+/*if(q.exec("insert into plan(plan) values ('"+what+"')")){
+    qDebug()<< "Ok";
+};*/
 
 void planner::on_dataSend_clicked()
 {
-    db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("C:/Users/burr1to/Desktop/Kaizen/Kaizen/testdb.db");
+     db = QSqlDatabase::database();
     if (!db.open()){
         qDebug()<< "Failed";
+        return;
     } else {
         qDebug()<< "Success";
-
-    }
-    if (!db.open()){
-        return;
     }
     QString what = ui->addPlan->text();
 
@@ -48,15 +48,32 @@ void planner::on_dataSend_clicked()
         q.bindValue(":plan",what);
         if (q.exec()){
             qDebug()<< "Ok";
-        }}
+            ui->addPlan->clear();
+            q.clear();
+        }else {
+            qDebug()<< "n";
+        }
+    }
+
+    db.close();
+
+    }
 
 
 
-    ui->addPlan->clear();
+void planner::on_pushButton_clicked()
+{
+    db = QSqlDatabase::database();
+    QSqlQueryModel * model = new QSqlQueryModel();
+    QSqlQuery *qry = new QSqlQuery(db);
+    qry->prepare("select * from plan order by plandet desc");
+    qry->exec();
+    model->setQuery(*qry);
+    delete qry;
+    int rowcount = model->rowCount();
+    qDebug()<< rowcount;
 
-    /*if(q.exec("insert into plan(plan) values ('"+what+"')")){
-        qDebug()<< "Ok";
-    };*/
-
+    ui->listView->setModel(model);
+    db.close();
 }
 

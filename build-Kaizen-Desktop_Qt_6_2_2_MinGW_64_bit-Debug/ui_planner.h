@@ -16,9 +16,11 @@
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
+#include <QtWidgets/QListView>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -28,18 +30,20 @@ class Ui_planner
 public:
     QWidget *centralwidget;
     QGridLayout *gridLayout;
-    QFrame *frame_3;
-    QHBoxLayout *horizontalLayout_4;
-    QFrame *frame_6;
-    QFrame *planner_frame;
-    QFrame *frame;
+    QFrame *frame_2;
     QWidget *layoutWidget;
+    QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
     QLabel *label;
     QLineEdit *addPlan;
     QSpacerItem *horizontalSpacer;
     QPushButton *dataSend;
-    QFrame *frame_2;
+    QListView *listView;
+    QPushButton *pushButton;
+    QLineEdit *plan1;
+    QLineEdit *plan2;
+    QLineEdit *plan3;
+    QLineEdit *plan4;
 
     void setupUi(QMainWindow *planner)
     {
@@ -50,49 +54,23 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         gridLayout = new QGridLayout(centralwidget);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        frame_3 = new QFrame(centralwidget);
-        frame_3->setObjectName(QString::fromUtf8("frame_3"));
+        frame_2 = new QFrame(centralwidget);
+        frame_2->setObjectName(QString::fromUtf8("frame_2"));
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
-        sizePolicy.setHorizontalStretch(3);
+        sizePolicy.setHorizontalStretch(1);
         sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(frame_3->sizePolicy().hasHeightForWidth());
-        frame_3->setSizePolicy(sizePolicy);
-        frame_3->setFrameShape(QFrame::StyledPanel);
-        frame_3->setFrameShadow(QFrame::Raised);
-        horizontalLayout_4 = new QHBoxLayout(frame_3);
-        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
-        frame_6 = new QFrame(frame_3);
-        frame_6->setObjectName(QString::fromUtf8("frame_6"));
-        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Preferred);
-        sizePolicy1.setHorizontalStretch(1);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(frame_6->sizePolicy().hasHeightForWidth());
-        frame_6->setSizePolicy(sizePolicy1);
-        frame_6->setFrameShape(QFrame::StyledPanel);
-        frame_6->setFrameShadow(QFrame::Raised);
-
-        horizontalLayout_4->addWidget(frame_6);
-
-        planner_frame = new QFrame(frame_3);
-        planner_frame->setObjectName(QString::fromUtf8("planner_frame"));
-        sizePolicy.setHeightForWidth(planner_frame->sizePolicy().hasHeightForWidth());
-        planner_frame->setSizePolicy(sizePolicy);
-        planner_frame->setStyleSheet(QString::fromUtf8("#planner_frame{\n"
-"background-color:rgb(158, 255, 117)\n"
-"}"));
-        planner_frame->setFrameShape(QFrame::StyledPanel);
-        planner_frame->setFrameShadow(QFrame::Raised);
-        frame = new QFrame(planner_frame);
-        frame->setObjectName(QString::fromUtf8("frame"));
-        frame->setGeometry(QRect(740, 310, 291, 291));
-        frame->setFrameShape(QFrame::StyledPanel);
-        frame->setFrameShadow(QFrame::Raised);
-        layoutWidget = new QWidget(planner_frame);
+        sizePolicy.setHeightForWidth(frame_2->sizePolicy().hasHeightForWidth());
+        frame_2->setSizePolicy(sizePolicy);
+        frame_2->setFrameShape(QFrame::StyledPanel);
+        frame_2->setFrameShadow(QFrame::Raised);
+        layoutWidget = new QWidget(frame_2);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(240, 70, 411, 131));
-        horizontalLayout = new QHBoxLayout(layoutWidget);
+        layoutWidget->setGeometry(QRect(450, 30, 252, 231));
+        verticalLayout = new QVBoxLayout(layoutWidget);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
         label = new QLabel(layoutWidget);
         label->setObjectName(QString::fromUtf8("label"));
         label->setPixmap(QPixmap(QString::fromUtf8(":/image/pl.png")));
@@ -111,31 +89,42 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer);
 
-        dataSend = new QPushButton(planner_frame);
+
+        verticalLayout->addLayout(horizontalLayout);
+
+        dataSend = new QPushButton(layoutWidget);
         dataSend->setObjectName(QString::fromUtf8("dataSend"));
-        dataSend->setGeometry(QRect(370, 230, 132, 42));
-        QSizePolicy sizePolicy2(QSizePolicy::Ignored, QSizePolicy::Ignored);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(dataSend->sizePolicy().hasHeightForWidth());
-        dataSend->setSizePolicy(sizePolicy2);
+        QSizePolicy sizePolicy1(QSizePolicy::Ignored, QSizePolicy::Ignored);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(dataSend->sizePolicy().hasHeightForWidth());
+        dataSend->setSizePolicy(sizePolicy1);
         dataSend->setStyleSheet(QString::fromUtf8("#dataSend{\n"
 "max-height:40px;\n"
-"max-width:130px;\n"
+"\n"
 "\n"
 "}"));
 
-        horizontalLayout_4->addWidget(planner_frame);
+        verticalLayout->addWidget(dataSend);
 
-
-        gridLayout->addWidget(frame_3, 1, 0, 1, 1);
-
-        frame_2 = new QFrame(centralwidget);
-        frame_2->setObjectName(QString::fromUtf8("frame_2"));
-        sizePolicy1.setHeightForWidth(frame_2->sizePolicy().hasHeightForWidth());
-        frame_2->setSizePolicy(sizePolicy1);
-        frame_2->setFrameShape(QFrame::StyledPanel);
-        frame_2->setFrameShadow(QFrame::Raised);
+        listView = new QListView(frame_2);
+        listView->setObjectName(QString::fromUtf8("listView"));
+        listView->setGeometry(QRect(100, 30, 291, 391));
+        pushButton = new QPushButton(frame_2);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(200, 460, 75, 24));
+        plan1 = new QLineEdit(frame_2);
+        plan1->setObjectName(QString::fromUtf8("plan1"));
+        plan1->setGeometry(QRect(760, 80, 301, 51));
+        plan2 = new QLineEdit(frame_2);
+        plan2->setObjectName(QString::fromUtf8("plan2"));
+        plan2->setGeometry(QRect(760, 190, 301, 51));
+        plan3 = new QLineEdit(frame_2);
+        plan3->setObjectName(QString::fromUtf8("plan3"));
+        plan3->setGeometry(QRect(750, 310, 301, 51));
+        plan4 = new QLineEdit(frame_2);
+        plan4->setObjectName(QString::fromUtf8("plan4"));
+        plan4->setGeometry(QRect(750, 420, 301, 51));
 
         gridLayout->addWidget(frame_2, 0, 0, 1, 1);
 
@@ -151,6 +140,7 @@ public:
         planner->setWindowTitle(QCoreApplication::translate("planner", "planner", nullptr));
         label->setText(QString());
         dataSend->setText(QCoreApplication::translate("planner", "Send data", nullptr));
+        pushButton->setText(QCoreApplication::translate("planner", "Show Plans", nullptr));
     } // retranslateUi
 
 };

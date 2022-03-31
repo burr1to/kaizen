@@ -35,8 +35,8 @@ void signup::on_pushButton_clicked()
    /* weight = ui->weight->text();
     height = ui->height->text();*/
 
-    mydb = QSqlDatabase::addDatabase("QSQLITE");
-    mydb.setDatabaseName("C:/Users/burr1to/Desktop/Kaizen/Kaizen/testdb.db");
+    mydb = QSqlDatabase::database();
+
     if (!mydb.open()){
         qDebug()<< "Failed database";
     } else {

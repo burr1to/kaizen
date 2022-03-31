@@ -24,6 +24,8 @@ private slots:
 
     void on_dataSend_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::planner *ui;
     QSqlDatabase db;
