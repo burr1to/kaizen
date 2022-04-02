@@ -212,5 +212,22 @@ border:1px solid transparent;
   </widget>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>password</sender>
+   <signal>returnPressed()</signal>
+   <receiver>loginbutt</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>602</x>
+     <y>474</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>602</x>
+     <y>540</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

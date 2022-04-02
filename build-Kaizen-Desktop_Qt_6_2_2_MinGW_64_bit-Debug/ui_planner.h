@@ -41,15 +41,13 @@ public:
     QListView *listView;
     QPushButton *pushButton;
     QLineEdit *plan1;
-    QLineEdit *plan2;
-    QLineEdit *plan3;
-    QLineEdit *plan4;
+    QLabel *displayText;
 
     void setupUi(QMainWindow *planner)
     {
         if (planner->objectName().isEmpty())
             planner->setObjectName(QString::fromUtf8("planner"));
-        planner->resize(1124, 697);
+        planner->resize(1127, 701);
         centralwidget = new QWidget(planner);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         gridLayout = new QGridLayout(centralwidget);
@@ -115,16 +113,10 @@ public:
         pushButton->setGeometry(QRect(200, 460, 75, 24));
         plan1 = new QLineEdit(frame_2);
         plan1->setObjectName(QString::fromUtf8("plan1"));
-        plan1->setGeometry(QRect(760, 80, 301, 51));
-        plan2 = new QLineEdit(frame_2);
-        plan2->setObjectName(QString::fromUtf8("plan2"));
-        plan2->setGeometry(QRect(760, 190, 301, 51));
-        plan3 = new QLineEdit(frame_2);
-        plan3->setObjectName(QString::fromUtf8("plan3"));
-        plan3->setGeometry(QRect(750, 310, 301, 51));
-        plan4 = new QLineEdit(frame_2);
-        plan4->setObjectName(QString::fromUtf8("plan4"));
-        plan4->setGeometry(QRect(750, 420, 301, 51));
+        plan1->setGeometry(QRect(710, 310, 361, 71));
+        displayText = new QLabel(frame_2);
+        displayText->setObjectName(QString::fromUtf8("displayText"));
+        displayText->setGeometry(QRect(360, 570, 231, 51));
 
         gridLayout->addWidget(frame_2, 0, 0, 1, 1);
 
@@ -139,8 +131,9 @@ public:
     {
         planner->setWindowTitle(QCoreApplication::translate("planner", "planner", nullptr));
         label->setText(QString());
-        dataSend->setText(QCoreApplication::translate("planner", "Send data", nullptr));
+        dataSend->setText(QCoreApplication::translate("planner", "Send Data", nullptr));
         pushButton->setText(QCoreApplication::translate("planner", "Show Plans", nullptr));
+        displayText->setText(QCoreApplication::translate("planner", "TextLabel", nullptr));
     } // retranslateUi
 
 };

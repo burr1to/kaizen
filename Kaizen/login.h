@@ -18,9 +18,16 @@ class login : public QMainWindow
     Q_OBJECT
 
 public:
+    QString temp = "Ok";
+
+public:
     explicit login(QWidget *parent = nullptr);
     ~login();
-
+public slots:
+    void myfunction(){
+        mydb = QSqlDatabase::addDatabase("QSQLITE");
+        mydb.setDatabaseName("C:/Users/burr1to/Desktop/Kaizen/Kaizen/testdb.db");
+    };
 private slots:
     void on_loginbutt_clicked();
 
@@ -32,6 +39,12 @@ private:
     signup s;
     QSqlDatabase mydb;
 
+
+};
+
+
+class userdetails{
+    QString username, password, f_name, l_name, email, phone;
 
 };
 

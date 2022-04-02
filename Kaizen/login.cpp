@@ -27,28 +27,14 @@ login::~login()
 
 
 
-/*
-class userdetails{
-private:
-    QString username,password,f_name,l_name;
-    int height,weight,dob;
-
-public:
-     void getData(){
-         username = ui->username->text();
-         password = ui->password->text();
-}*/
-
-
-
 void login::on_loginbutt_clicked()
 {
-    mydb = QSqlDatabase::addDatabase("QSQLITE");
-    mydb.setDatabaseName("C:/Users/burr1to/Desktop/Kaizen/Kaizen/testdb.db");
+
     if (!mydb.open()){
         qDebug()<<"Db problem";
     } else {
         qDebug()<< "Success";
+
     }
 
     QString username = ui->username->text();
@@ -65,6 +51,7 @@ void login::on_loginbutt_clicked()
             qry.clear();
             mydb.close();
             hide();
+
             p.show();
 
         }

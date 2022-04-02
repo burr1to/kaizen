@@ -15,6 +15,8 @@ class planner : public QMainWindow
 {
     Q_OBJECT
 
+
+
 public:
     planner(QWidget *parent = nullptr);
     ~planner();

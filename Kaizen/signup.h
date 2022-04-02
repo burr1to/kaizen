@@ -19,8 +19,13 @@ public:
     explicit signup(QWidget *parent = nullptr);
     ~signup();
 
+public:
+    QString username,password,f_name,l_name,email,phone;
+
+
 private slots:
-    void on_pushButton_clicked();
+
+    void on_regBut_clicked();
 
 private:
     Ui::signup *ui;

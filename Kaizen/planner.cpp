@@ -1,11 +1,13 @@
 #include "planner.h"
 #include "ui_planner.h"
+#include "login.h"
 #include <iostream>
 #include <QDebug>
 #include <QtSql>
 #include <QSqlDatabase>
 #include <QMessageBox>
 #include <QSqlError>
+#include <QDateTime>
 
 
 using namespace std;
@@ -14,6 +16,7 @@ planner::planner(QWidget *parent)
     , ui(new Ui::planner)
 {
     ui->setupUi(this);
+
 
 
 }
@@ -30,7 +33,8 @@ planner::~planner()
 
 void planner::on_dataSend_clicked()
 {
-     db = QSqlDatabase::database();
+
+    db = QSqlDatabase::database();
     if (!db.open()){
         qDebug()<< "Failed";
         return;
@@ -38,6 +42,9 @@ void planner::on_dataSend_clicked()
         qDebug()<< "Success";
     }
     QString what = ui->addPlan->text();
+    QDate date = QDate::currentDate();
+    QTime time = QTime::currentTime();
+    //QString datetime = time.toString
 
     QSqlQuery q;
     if (what == ""){

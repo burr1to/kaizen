@@ -182,6 +182,7 @@ public:
         login->setCentralWidget(centralwidget);
 
         retranslateUi(login);
+        QObject::connect(password, &QLineEdit::returnPressed, loginbutt, qOverload<>(&QPushButton::click));
 
         QMetaObject::connectSlotsByName(login);
     } // setupUi
