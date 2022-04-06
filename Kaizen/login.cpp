@@ -56,10 +56,12 @@ void login::on_loginbutt_clicked()
 
         }
         if (count<1){
-            qDebug()<< "NOT Successful login";
+            qDebug()<< "Username and Password does not exist.";
+            ui->textdis->setText("Username and Password not found");
             qry.clear();
             mydb.close();
         }
+
     }
 
 }

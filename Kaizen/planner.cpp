@@ -41,18 +41,18 @@ void planner::on_dataSend_clicked()
     } else {
         qDebug()<< "Success";
     }
-    QString what = ui->addPlan->text();
-    QDate date = QDate::currentDate();
-    QTime time = QTime::currentTime();
+    QString newPlan = ui->addPlan->text();
+    /*QDate date = QDate::currentDate();
+    QTime time = QTime::currentTime();*/
     //QString datetime = time.toString
 
-    QSqlQuery q;
+    /*QSqlQuery q;
     if (what == ""){
         qDebug()<< "MT";
     }
     else{
         q.prepare("insert into plan(plandet) values (:plan)");
-        q.bindValue(":plan",what);
+        q.bindValue(":plan",newPlan);
         if (q.exec()){
             qDebug()<< "Ok";
             ui->addPlan->clear();
@@ -61,7 +61,7 @@ void planner::on_dataSend_clicked()
             qDebug()<< "n";
         }
     }
-
+*/
     db.close();
 
     }
@@ -70,7 +70,7 @@ void planner::on_dataSend_clicked()
 
 void planner::on_pushButton_clicked()
 {
-    db = QSqlDatabase::database();
+    /*db = QSqlDatabase::database();
     QSqlQueryModel * model = new QSqlQueryModel();
     QSqlQuery *qry = new QSqlQuery(db);
     qry->prepare("select * from plan order by plandet desc");
@@ -81,6 +81,6 @@ void planner::on_pushButton_clicked()
     qDebug()<< rowcount;
 
     ui->listView->setModel(model);
-    db.close();
+    db.close();*/
 }
 

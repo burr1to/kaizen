@@ -126,8 +126,8 @@ max-height:40px;
       <widget class="QLineEdit" name="plan1">
        <property name="geometry">
         <rect>
-         <x>710</x>
-         <y>310</y>
+         <x>720</x>
+         <y>90</y>
          <width>361</width>
          <height>71</height>
         </rect>
@@ -136,14 +136,44 @@ max-height:40px;
       <widget class="QLabel" name="displayText">
        <property name="geometry">
         <rect>
-         <x>360</x>
-         <y>570</y>
+         <x>590</x>
+         <y>350</y>
          <width>231</width>
          <height>51</height>
         </rect>
        </property>
        <property name="text">
         <string>TextLabel</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="plan1_2">
+       <property name="geometry">
+        <rect>
+         <x>730</x>
+         <y>200</y>
+         <width>361</width>
+         <height>71</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="plan1_3">
+       <property name="geometry">
+        <rect>
+         <x>720</x>
+         <y>320</y>
+         <width>361</width>
+         <height>71</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="plan1_4">
+       <property name="geometry">
+        <rect>
+         <x>720</x>
+         <y>440</y>
+         <width>361</width>
+         <height>71</height>
+        </rect>
        </property>
       </widget>
      </widget>

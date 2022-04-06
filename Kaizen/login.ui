@@ -187,6 +187,13 @@ border:1px solid transparent;
            </property>
           </spacer>
          </item>
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="textdis">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
         </layout>
        </item>
        <item>

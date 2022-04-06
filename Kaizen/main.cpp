@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
     signup s;
     planner p;
     l.myfunction();
-    l.show();
+    p.show();
 
     return a.exec();
 }

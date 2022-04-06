@@ -24,9 +24,12 @@ public:
     explicit login(QWidget *parent = nullptr);
     ~login();
 public slots:
+     QString username = "nigga";
+
+
     void myfunction(){
         mydb = QSqlDatabase::addDatabase("QSQLITE");
-        mydb.setDatabaseName("C:/Users/burr1to/Desktop/Kaizen/Kaizen/testdb.db");
+        mydb.setDatabaseName("C:/Users/burr1to/Desktop/Kaizen/Kaizen/database.db");
     };
 private slots:
     void on_loginbutt_clicked();
@@ -43,10 +46,6 @@ private:
 };
 
 
-class userdetails{
-    QString username, password, f_name, l_name, email, phone;
-
-};
 
 
 

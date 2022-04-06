@@ -21,6 +21,12 @@ public:
     planner(QWidget *parent = nullptr);
     ~planner();
 
+public slots:
+
+    /*void executeQuery(){
+        QSqlQuery a;
+        a.prepare(select)
+    }*/
 
 private slots:
 
