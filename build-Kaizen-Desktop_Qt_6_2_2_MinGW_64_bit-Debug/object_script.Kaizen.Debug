@@ -1,0 +1,10 @@
+debug/login.o
+debug/main.o
+debug/planner.o
+debug/signup.o
+debug/mainwindow.o
+debug/qrc_src.o
+debug/moc_login.o
+debug/moc_planner.o
+debug/moc_signup.o
+debug/moc_mainwindow.o
