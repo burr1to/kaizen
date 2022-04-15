@@ -13,14 +13,25 @@ SOURCES += \
     disp.cpp \
     login.cpp \
     planner.cpp \
-    signup.cpp
+    signup.cpp \
+    budget.cpp \
+    stationery.cpp \
+    food.cpp \
+    other.cpp \
+    rent.cpp
+
 
 
 HEADERS += \
     disp.h \
     login.h \
     planner.h \
-    signup.h
+    signup.h \
+    budget.h \
+    stationery.h \
+    food.h \
+    other.h \
+    rent.h
 
 
 
@@ -28,7 +39,12 @@ FORMS += \
     disp.ui \
     login.ui \
     planner.ui \
-    signup.ui
+    signup.ui \
+    budget.ui \
+    stationery.ui \
+    food.ui \
+    other.ui \
+    rent.ui
 
 
 
@@ -36,3 +52,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    img.qrc

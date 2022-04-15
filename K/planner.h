@@ -6,6 +6,7 @@
 #include <QtSql>
 #include <QSqlDatabase>
 #include <QMessageBox>
+#include "budget.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class planner; }
@@ -17,11 +18,13 @@ class planner : public QMainWindow
 signals:
     void getData();
 public:
+
     QSqlDatabase db;
     QString ok,ok2;
 
 
 public:
+    Budget *b;
     planner(QWidget *parent = nullptr);
     ~planner();
 

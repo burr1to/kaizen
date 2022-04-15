@@ -1,6 +1,7 @@
 #include "login.h"
 #include "ui_login.h"
 #include "planner.h"
+#include "budget.h"
 #include <QDebug>
 #include <QtSql>
 #include <QSqlDatabase>
