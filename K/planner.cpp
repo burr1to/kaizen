@@ -1,14 +1,14 @@
-#include "planner.h"
-#include "ui_planner.h"
-#include "login.h"
+
 #include <iostream>
 #include <QDebug>
 #include <QtSql>
 #include <QSqlDatabase>
-#include <QMessageBox>
 #include <QSqlError>
 #include <QDateTime>
-
+#include "planner.h"
+#include "ui_planner.h"
+#include "login.h"
+#include "budget.h"
 int a;
 using namespace std;
 planner::planner(QWidget *parent)
@@ -116,7 +116,9 @@ void planner::on_pushButton_clicked()
 
 void planner::on_budgetbut_clicked()
 {
-
+    b = new Budget(this);
+    this->hide();
+    b->show();
 }
 
 
@@ -149,7 +151,7 @@ int planner::on_listView_activated(const QModelIndex &index)
         }
 
     } else {
-        QMessageBox::critical(this,tr("error::"),que.lastError().text());
+        qDebug()<<"Nope not done";
 
     }
     que.clear();
@@ -175,11 +177,11 @@ void planner::on_updateBut_clicked()
  sq.prepare("update plan set plandate = '"+update+"', plantime = '"+uptime+"', plandetails = '"+upplan+"' where planid = :pl");
  sq.bindValue(":pl",a);
 if (sq.exec()){
-    QMessageBox::critical(this,tr("Edit"),tr("Updated"));
+    qDebug()<< "Edit updated";
 
 }
 else{
-    QMessageBox::critical(this,tr("error::"),sq.lastError().text());
+    qDebug()<< "Nope";
 }
 sq.clear();
 db.close();
