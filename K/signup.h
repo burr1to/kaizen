@@ -1,40 +1,32 @@
 #ifndef SIGNUP_H
 #define SIGNUP_H
-#include <QDialog>
 #include "planner.h"
 #include <QMainWindow>
 #include <QSql>
 #include <QSqlDatabase>
 #include <QDebug>
 #include <QFileInfo>
+#include <QMainWindow>
+
 namespace Ui {
 class signup;
 }
 
-class signup : public QDialog
+class signup : public QMainWindow
 {
     Q_OBJECT
-
-public:
-
-    explicit signup(QWidget *parent = nullptr);
-    ~signup();
-
-
 public:
 
     QSqlDatabase mydb;
-
-
+public:
+    explicit signup(QWidget *parent = nullptr);
+    ~signup();
 
 private slots:
-
-    void on_regBut_clicked();
+    void on_regbut_clicked();
 
 private:
     Ui::signup *ui;
-
 };
-
 
 #endif // SIGNUP_H

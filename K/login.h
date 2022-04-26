@@ -1,8 +1,6 @@
 #ifndef LOGIN_H
 #define LOGIN_H
 
-#include "planner.h"
-#include "signup.h"
 #include <QMainWindow>
 #include <QSql>
 #include <QSqlDatabase>
@@ -12,52 +10,38 @@
 
 
 namespace Ui {
-class login;
+class Login;
 }
 
-class login : public QMainWindow
+class Login : public QMainWindow
 {
     Q_OBJECT
 
-public:
-    QString temp = "Ok";
-    planner *p;
-    signup *s;
+  public:
+
+
     QSqlDatabase mydb;
-signals:
-    void sendData();
-public:
-    explicit login(QWidget *parent = nullptr);
-    ~login();
-public slots:
+
     void myfunction(){
-        mydb = QSqlDatabase::addDatabase("QSQLITE");
-        mydb.setDatabaseName("C:/Users/burr1to/Desktop/Kaizen/K/database.db");
-    };
+           mydb = QSqlDatabase::addDatabase("QSQLITE");
+           mydb.setDatabaseName("C:/Users/burr1to/Desktop/Kaizen/K/database.db");
+       };
 
-    void connClose(){
 
-        mydb.close();
-        mydb.removeDatabase(QSqlDatabase::defaultConnection);
-    }
+public:
+    explicit Login(QWidget *parent = nullptr);
+    ~Login();
+
 
 private slots:
+
+
     void on_loginbutt_clicked();
 
     void on_signupbut_clicked();
 
-
-
 private:
-    Ui::login *ui;
+    Ui::Login *ui;
 };
-
-
-
-
-
-
-
-
 
 #endif // LOGIN_H

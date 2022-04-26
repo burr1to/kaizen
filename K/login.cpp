@@ -2,27 +2,25 @@
 #include "ui_login.h"
 #include "planner.h"
 #include "budget.h"
-#include <QDebug>
-#include <QtSql>
-#include <QSqlDatabase>
-#include <QMessageBox>
-#include <iostream>
+#include "signup.h"
 
-login::login(QWidget *parent) :
+
+Login::Login(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::login)
+    ui(new Ui::Login)
 {
     ui->setupUi(this);
-    ui->username->setPlaceholderText("Enter username");
-    ui->password->setPlaceholderText("Enter password");
-
-
+       ui->username->setPlaceholderText("Enter username");
+       ui->password->setPlaceholderText("Enter password");
 
 
 
 }
 
-login::~login()
+
+
+
+Login::~Login()
 {
     delete ui;
 }
@@ -31,69 +29,78 @@ login::~login()
 
 
 
-void login::on_loginbutt_clicked()
+
+
+void Login::on_loginbutt_clicked()
 {
-
     if (!mydb.open()){
-        qDebug()<<"Db problem";
-    } else {
-        qDebug()<< "Success";
+           qDebug()<<"Db problem";
+       } else {
+           qDebug()<< "Success";
 
-    }
+       }
 
-    QString username = ui->username->text();
-    QString password = ui->password->text();
-    QSqlQuery qry;
+       QString username = ui->username->text();
+       QString password = ui->password->text();
+       QSqlQuery qry;
 
-    if (username == "" && password == ""){
-        qDebug() << "nigjhghjg";
-    }
+       if (username == "" && password == ""){
+            ui->textdis->setText("Please enter username or password to log in.");
+       }
 
-    else{
+       else{
 
-    if(qry.exec("select * from user where username = '"+username+"' and password = '"+password+"'")){
+       if(qry.exec("select * from user where username = '"+username+"' and password = '"+password+"'")){
 
-        int count=0;
-        while(qry.next()){
-            count++;
-        }
-        if (count==1){
-            qDebug()<< "Successful login";
-            qry.clear();
-            /*QSqlQuery newtable;
-            newtable.prepare("create table test()");*/
-            mydb.close();
-            hide();
-            p = new planner(this);
-            p->show();
+           int count=0;
+           while(qry.next()){
+               count++;
+           }
+           if (count==1){
+               qDebug()<< "Successful login";
+               qry.clear();
 
-        }
-        else if (count<1){
-            qDebug()<< "Username and Password does not exist.";
-            ui->textdis->setText("Username and Password not found");
-            qry.clear();
-            mydb.close();
-        } else if(count>1){
-            qDebug() << "Bad";
-        } else {
-            qDebug()<< "Uhm ok";
-        }
+                QSqlQuery quz;
 
-    }
-    }
 
+               Planner *p;
+               quz.prepare("insert into current_user(current) values ('"+username+"')");
+               if(quz.exec()){
+                 qDebug()<<"Table created";
+               } else {
+                   qDebug()<<"Table not created";
+               }
+                   quz.clear();
+
+                   mydb.close();
+                   this->hide();
+
+               //connect();
+               p = new Planner(this);
+               p->show();
+
+           }
+           else if (count<1){
+               qDebug()<< "Username and Password does not exist.";
+               ui->textdis->setText("Username and Password not found");
+               qry.clear();
+               mydb.close();
+           } else if(count>1){
+               qDebug() << "Bad";
+           } else {
+               qDebug()<< "Uhm ok";
+           }
+
+       }
+       }
 }
 
 
-
-
-void login::on_signupbut_clicked()
+void Login::on_signupbut_clicked()
 {
+    signup *s;
     s = new signup(this);
     s->show();
 
 }
-
-
-
 

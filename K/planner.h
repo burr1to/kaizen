@@ -1,60 +1,44 @@
 #ifndef PLANNER_H
 #define PLANNER_H
-
+#include "budget.h"
+#include "login.h"
+#include "fitness.h"
 #include <QDebug>
 #include <QMainWindow>
 #include <QtSql>
 #include <QSqlDatabase>
 #include <QMessageBox>
-#include "budget.h"
+
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class planner; }
+namespace Ui { class Planner; }
 QT_END_NAMESPACE
 
-class planner : public QMainWindow
+class Planner : public QMainWindow
 {
     Q_OBJECT
-signals:
-    void getData();
 public:
 
     QSqlDatabase db;
-    QString ok,ok2;
-
-
+       QString ok,ok2;
+       Budget *b;
+       fitness *f;
 public:
-    Budget *b;
-    planner(QWidget *parent = nullptr);
-    ~planner();
-
-public slots:
-
+    Planner(QWidget *parent = nullptr);
+    ~Planner();
 
 
 private slots:
 
-    void on_dataSend_clicked();
-
-    void on_pushButton_clicked();
+    void on_addbut_clicked();
 
     void on_budgetbut_clicked();
 
-    int on_listView_activated(const QModelIndex &index);
+    void on_Logout_clicked();
 
-    void on_updateBut_clicked();
-
-    void on_deleteBut_clicked();
+    void on_fitbut_clicked();
 
 private:
-    Ui::planner *ui;
-
-
+    Ui::Planner *ui;
 };
-
-
-
-
-
 #endif // PLANNER_H
-

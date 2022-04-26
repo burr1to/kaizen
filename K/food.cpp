@@ -26,10 +26,11 @@ void Food::on_pushButton_clicked()
         return;
     }
     QSqlQuery qry;
-    qry.prepare("INSERT INTO Info(item, price, category) VALUES(:item, :price, :category)");
+    qry.prepare("INSERT INTO Info(item, price, category,username) VALUES(:item, :price, :category,:usr)");
     qry.bindValue(":price", price);
     qry.bindValue(":item", item);
     qry.bindValue(":category", "Food");
+    qry.bindValue(":usr","burrito");
     if (qry.exec()){
         ui->lineEdit->setText("");
         ui->lineEdit_2->setText("");

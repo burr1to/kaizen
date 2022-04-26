@@ -1,35 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>login</class>
- <widget class="QMainWindow" name="login">
+ <class>Login</class>
+ <widget class="QMainWindow" name="Login">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1463</width>
-    <height>914</height>
+    <width>1200</width>
+    <height>800</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
   <property name="windowTitle">
-   <string>Kaizen</string>
+   <string>Login</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="src_img.qrc">
+    <normaloff>:/images/src_images/kaizen_square.png</normaloff>:/images/src_images/kaizen_square.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QFrame{
+border: 1px solid transparent;}
+
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="minimumSize">
+    <size>
+     <width>500</width>
+     <height>500</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1920</width>
+     <height>1080</height>
+    </size>
+   </property>
    <property name="styleSheet">
-    <string notr="true">#centralwidget{
-background-color:rgb(128, 85, 255)
-}</string>
+    <string notr="true"/>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
+     <widget class="QFrame" name="frame_3">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>7</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
      <widget class="QFrame" name="loginframe">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>4</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>442</width>
+        <height>442</height>
+       </size>
+      </property>
       <property name="styleSheet">
        <string notr="true">#loginframe{
-background-color:rgb(235, 235, 235);
+background-color:grey;
 border-radius:40px;
 max-width:440px;
 max-height:440px;
 }
 
+
+#username,#password
+{
+border-radius:20px;
+border:1px solid transparent;
+padding:10px;
+margin-bottom:10px;
+}
+
+
+#loginbutt{
+border-radius:10px;
+border:1px solid rgb(173, 173, 173);
+padding:6px;
+color:white;
+margin-top:15px;
+font-size:20px;
+font-weight:bold;
+}
+
+#loginbutt:hover{
+background-color:black;
+border:1px solid transparent;
+color:white;
+}
+
+
+#usr,#pswd{
+font-size:24px;
+margin-bottom:10px;
+color:white;
+}
+#pswd{
+margin-top:20px;
+}
+
+#signupbut{
+border:1px solid transparent;
+padding:20px;
+font-size:15px;
+color:white;
+
+}
+
+#textdis{
+margin-bottom:5px;
+color:white;
+}
 </string>
       </property>
       <property name="frameShape">
@@ -45,11 +147,11 @@ max-height:440px;
           <enum>Qt::Horizontal</enum>
          </property>
          <property name="sizeType">
-          <enum>QSizePolicy::Minimum</enum>
+          <enum>QSizePolicy::Fixed</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>40</width>
+           <width>20</width>
            <height>20</height>
           </size>
          </property>
@@ -58,99 +160,63 @@ max-height:440px;
        <item>
         <layout class="QVBoxLayout" name="verticalLayout_3">
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout">
-           <item>
-            <spacer name="verticalSpacer">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeType">
-              <enum>QSizePolicy::Preferred</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>70</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item>
-            <widget class="QLabel" name="usr">
-             <property name="styleSheet">
-              <string notr="true">#usr{
-font-weight:bold;
-color:rgb(128, 85, 255);
-font-size:30px;
-}</string>
-             </property>
-             <property name="text">
-              <string>Username</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="username">
-             <property name="styleSheet">
-              <string notr="true">#username{
-border:1px solid transparent;
-border-radius:10px;
-padding:12px;
-margin-bottom:12px;
-}</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
          </item>
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout_2">
+          <layout class="QVBoxLayout" name="verticalLayout_4">
            <item>
-            <widget class="QLabel" name="pass">
-             <property name="styleSheet">
-              <string notr="true">#pass{
-
-font-weight:bold;
-color:rgb(128, 85, 255);
-font-size:30px;
-
-}</string>
-             </property>
-             <property name="text">
-              <string>Password</string>
-             </property>
-            </widget>
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <item>
+              <widget class="QLabel" name="usr">
+               <property name="text">
+                <string>Username</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="username"/>
+             </item>
+            </layout>
            </item>
            <item>
-            <widget class="QLineEdit" name="password">
-             <property name="styleSheet">
-              <string notr="true">#password{
-border:1px solid transparent;
-border-radius:10px;
-padding:12px;
-}</string>
-             </property>
-            </widget>
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <item>
+              <widget class="QLabel" name="pswd">
+               <property name="text">
+                <string>Password</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="password"/>
+             </item>
+            </layout>
            </item>
           </layout>
          </item>
          <item>
           <widget class="QPushButton" name="loginbutt">
+           <property name="font">
+            <font>
+             <pointsize>-1</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="styleSheet">
-            <string notr="true">#loginbutt{
-border-radius:10px;
-border:1px solid rgb(173, 173, 173);
-padding:6px;
-margin-top:15px;
-font-size:20px;
-font-weight:bold;
-color:rgb(128, 85, 255);
-}
-
-#loginbutt:hover{
-background-color:rgb(128, 85, 255);
-color:white;
-}</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>Login</string>
@@ -159,15 +225,14 @@ color:white;
          </item>
          <item>
           <widget class="QPushButton" name="signupbut">
+           <property name="font">
+            <font>
+             <pointsize>-1</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="styleSheet">
-            <string notr="true">#signupbut{
-padding-top:20px;
-color:rgb(128, 85, 255);
-font-weight:bold;
-font-size:20px;
-border:1px solid transparent;
-
-}</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>Sign up from here</string>
@@ -179,19 +244,19 @@ border:1px solid transparent;
            <property name="orientation">
             <enum>Qt::Vertical</enum>
            </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
            <property name="sizeHint" stdset="0">
             <size>
              <width>20</width>
-             <height>80</height>
+             <height>10</height>
             </size>
            </property>
           </spacer>
          </item>
          <item alignment="Qt::AlignHCenter">
           <widget class="QLabel" name="textdis">
-           <property name="styleSheet">
-            <string notr="true">margin-bottom:30px;</string>
-           </property>
            <property name="text">
             <string/>
            </property>
@@ -205,11 +270,11 @@ border:1px solid transparent;
           <enum>Qt::Horizontal</enum>
          </property>
          <property name="sizeType">
-          <enum>QSizePolicy::Minimum</enum>
+          <enum>QSizePolicy::Fixed</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>40</width>
+           <width>20</width>
            <height>20</height>
           </size>
          </property>
@@ -218,10 +283,28 @@ border:1px solid transparent;
       </layout>
      </widget>
     </item>
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>1</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+    </item>
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="src_img.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>password</sender>
@@ -230,12 +313,12 @@ border:1px solid transparent;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>602</x>
-     <y>474</y>
+     <x>948</x>
+     <y>406</y>
     </hint>
     <hint type="destinationlabel">
-     <x>602</x>
-     <y>540</y>
+     <x>951</x>
+     <y>466</y>
     </hint>
    </hints>
   </connection>

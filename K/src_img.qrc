@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>src_images/Fit.png</file>
+        <file>src_images/Budget.png</file>
+        <file>src_images/kaizen_square.png</file>
+        <file>src_images/plus.png</file>
+        <file>src_images/back.png</file>
+        <file>src_images/Kaizen_logo.png</file>
+        <file>src_images/logout.png</file>
+        <file>src_images/fit_1.png</file>
+        <file>src_images/backkkkk.png</file>
+        <file>src_images/fit_2.png</file>
+        <file>src_images/bud_2.png</file>
+    </qresource>
+</RCC>
