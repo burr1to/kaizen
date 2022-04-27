@@ -16,9 +16,6 @@ SOURCES += \
     signup.cpp \
     budget.cpp \
     food.cpp \
-    rent.cpp \
-    stationery.cpp \
-    other.cpp \
     core.cpp \
     fitness.cpp \
     fitness_edit.cpp \
@@ -33,9 +30,6 @@ HEADERS += \
     signup.h \
     budget.h \
     food.h \
-    rent.h \
-    stationery.h \
-    other.h \
     core.h \
     fitness.h \
     fitness_edit.h \
@@ -50,9 +44,6 @@ FORMS += \
     signup.ui \
     budget.ui \
     food.ui \
-    rent.ui \
-    stationery.ui \
-    other.ui \
     core.ui \
     fitness.ui \
     fitness_edit.ui \

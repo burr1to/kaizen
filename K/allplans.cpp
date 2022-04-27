@@ -88,6 +88,9 @@ void allplans::on_pushButton_clicked()
      sq.bindValue(":pl",a);
     if (sq.exec()){
         qDebug()<< "Edit updated";
+        ui->editingPlan->clear();
+        ui->datecome->clear();
+        ui->timecome->clear();
 
     }
     else{

@@ -16,6 +16,7 @@ class Food : public QDialog
 {
     Q_OBJECT
 public:
+    QString current;
     QSqlDatabase budgetdb;
 public:
     explicit Food(QWidget *parent = nullptr);

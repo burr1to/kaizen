@@ -60,6 +60,7 @@ Planner::~Planner()
     if (dest.exec()){
         qDebug()<< "Destructor called";
     }
+    dest.clear();
     db.close();
     delete ui;
 

@@ -413,8 +413,8 @@ background-color: rgb(209, 243, 255)
                        <string/>
                       </property>
                       <property name="icon">
-                       <iconset>
-                        <normaloff>:/resource/Image/plus.png</normaloff>:/resource/Image/plus.png</iconset>
+                       <iconset resource="src_img.qrc">
+                        <normaloff>:/images/src_images/plus.png</normaloff>:/images/src_images/plus.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -453,8 +453,8 @@ background-color: rgb(209, 243, 255);
                        <string/>
                       </property>
                       <property name="icon">
-                       <iconset>
-                        <normaloff>:/resource/Image/menu.png</normaloff>:/resource/Image/menu.png</iconset>
+                       <iconset resource="src_img.qrc">
+                        <normaloff>:/images/src_images/menu.png</normaloff>:/images/src_images/menu.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -539,8 +539,8 @@ background-color:rgb(209, 243, 255);
                        <string/>
                       </property>
                       <property name="icon">
-                       <iconset>
-                        <normaloff>:/resource/Image/plus.png</normaloff>:/resource/Image/plus.png</iconset>
+                       <iconset resource="src_img.qrc">
+                        <normaloff>:/images/src_images/plus.png</normaloff>:/images/src_images/plus.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -578,8 +578,8 @@ background-color: rgb(209, 243, 255);
                        <string/>
                       </property>
                       <property name="icon">
-                       <iconset>
-                        <normaloff>:/resource/Image/menu.png</normaloff>:/resource/Image/menu.png</iconset>
+                       <iconset resource="src_img.qrc">
+                        <normaloff>:/images/src_images/menu.png</normaloff>:/images/src_images/menu.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -667,8 +667,8 @@ background-color: rgb(209, 243, 255);
                        <string/>
                       </property>
                       <property name="icon">
-                       <iconset>
-                        <normaloff>:/resource/Image/plus.png</normaloff>:/resource/Image/plus.png</iconset>
+                       <iconset resource="src_img.qrc">
+                        <normaloff>:/images/src_images/plus.png</normaloff>:/images/src_images/plus.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -706,8 +706,8 @@ background-color: rgb(209, 243, 255);
                        <string/>
                       </property>
                       <property name="icon">
-                       <iconset>
-                        <normaloff>:/resource/Image/menu.png</normaloff>:/resource/Image/menu.png</iconset>
+                       <iconset resource="src_img.qrc">
+                        <normaloff>:/images/src_images/menu.png</normaloff>:/images/src_images/menu.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -795,8 +795,8 @@ background-color: rgb(209, 243, 255);
                        <string/>
                       </property>
                       <property name="icon">
-                       <iconset>
-                        <normaloff>:/resource/Image/plus.png</normaloff>:/resource/Image/plus.png</iconset>
+                       <iconset resource="src_img.qrc">
+                        <normaloff>:/images/src_images/plus.png</normaloff>:/images/src_images/plus.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -834,8 +834,8 @@ background-color: rgb(209, 243, 255);
                        <string/>
                       </property>
                       <property name="icon">
-                       <iconset>
-                        <normaloff>:/resource/Image/menu.png</normaloff>:/resource/Image/menu.png</iconset>
+                       <iconset resource="src_img.qrc">
+                        <normaloff>:/images/src_images/menu.png</normaloff>:/images/src_images/menu.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -974,6 +974,8 @@ color: black;</string>
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="src_img.qrc"/>
+ </resources>
  <connections/>
 </ui>

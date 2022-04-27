@@ -15,15 +15,14 @@ class Budget : public QMainWindow
     Q_OBJECT
 
 public:
+    QString current;
      QSqlDatabase budgetdb;
     Budget(QWidget *parent = nullptr);
     ~Budget();
 
 private slots:
     void on_pushButton_1_clicked();
-    void on_pushButton_3_clicked();
-    void on_pushButton_5_clicked();
-    void on_pushButton_7_clicked();
+
 
 private:
     Ui::Budget *ui;

@@ -21,6 +21,12 @@ fitness::fitness(QWidget *parent)
 
 fitness::~fitness()
 {
+    QSqlQuery dest;
+    dest.prepare("delete from current_user");
+    if (dest.exec()){
+        qDebug()<< "Destructor called";
+    }
+    dest.clear();
     delete ui;
 }
 
