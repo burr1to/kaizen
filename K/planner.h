@@ -1,7 +1,9 @@
 #ifndef PLANNER_H
 #define PLANNER_H
+
 #include "budget.h"
 #include "login.h"
+
 #include "fitness.h"
 #include <QDebug>
 #include <QMainWindow>
@@ -18,11 +20,12 @@ class Planner : public QMainWindow
 {
     Q_OBJECT
 public:
-
+    QString current;
     QSqlDatabase db;
-       QString ok,ok2;
-       Budget *b;
-       fitness *f;
+    QString ok,ok2;
+    Budget *b;
+    fitness *f;
+
 public:
     Planner(QWidget *parent = nullptr);
     ~Planner();
@@ -37,6 +40,8 @@ private slots:
     void on_Logout_clicked();
 
     void on_fitbut_clicked();
+
+    void on_showplans_clicked();
 
 private:
     Ui::Planner *ui;

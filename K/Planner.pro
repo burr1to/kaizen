@@ -9,10 +9,10 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    allplans.cpp \
     login.cpp \
     main.cpp \
     planner.cpp \
-    show.cpp \
     signup.cpp \
     budget.cpp \
     food.cpp \
@@ -27,9 +27,9 @@ SOURCES += \
     yoga.cpp
 
 HEADERS += \
+    allplans.h \
     login.h \
     planner.h \
-    show.h \
     signup.h \
     budget.h \
     food.h \
@@ -44,9 +44,9 @@ HEADERS += \
     yoga.h
 
 FORMS += \
+    allplans.ui \
     login.ui \
     planner.ui \
-    show.ui \
     signup.ui \
     budget.ui \
     food.ui \

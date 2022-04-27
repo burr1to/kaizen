@@ -1,5 +1,6 @@
 #include "planner.h"
 #include "ui_planner.h"
+#include "allplans.h"
 
 Planner::Planner(QWidget *parent)
     : QMainWindow(parent)
@@ -7,25 +8,24 @@ Planner::Planner(QWidget *parent)
 {
     ui->setupUi(this);
 
-    QString current;
+
     QString querystore[4];
      db = QSqlDatabase::database();
      QSqlQuery qry;
      qry.prepare("select current from current_user");
      if (qry.exec()){
-     //while(qry.next()){
          qry.first();
      current = qry.value(0).toString();
      qry.clear();
-     qDebug()<<current;
-     //}
+
+
      }
 
       if (!db.open()){
            qDebug()<< "Fail to open in planner";
        } else qDebug()<< "Open in planner";
        QSqlQuery qq;
-       qq.prepare("select plandetails from plan where planuser = '"+current+"' order by plandate asc, plantime desc");
+       qq.prepare("select plandetails from plan where planuser = '"+current+"' order by plandate desc, plantime desc limit 4");
        if(qq.exec()){
            qDebug()<<"Exec";
 
@@ -94,7 +94,7 @@ void Planner::on_addbut_clicked()
 
                q.prepare("insert into plan(plandate,plantime,plandetails,planuser) values (:dt,:tm,:plan,:usr)");
                q.bindValue(":plan",newPlan);
-               q.bindValue(":usr","burrito");
+               q.bindValue(":usr",current);
                q.bindValue(":dt",plandate);
                q.bindValue(":tm",plantime);
                if (q.exec()){
@@ -123,7 +123,11 @@ void Planner::on_Logout_clicked()
 {
     //db = QSqlDatabase::database();
     QSqlQuery destroy;
-    destroy.exec("delete * from current_user");
+    destroy.prepare("delete * from current_user");
+    if (destroy.exec()){
+        qDebug()<< "Destructor called";
+    }
+
     destroy.clear();
     //db.close();
     QCoreApplication::exit();
@@ -135,5 +139,13 @@ void Planner::on_fitbut_clicked()
     f = new fitness(this);
         this->hide();
         f->show();
+}
+
+
+void Planner::on_showplans_clicked()
+{
+    allplans *ap;
+    ap = new allplans(this);
+        ap->show();
 }
 
