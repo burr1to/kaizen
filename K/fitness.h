@@ -5,9 +5,9 @@
 #include <QtSql>
 #include <QtDebug>
 #include <QFileInfo>
-/*#include <QtCharts>
-#include <QChartView>
-#include <QLineSeries>*/
+//#include <QtCharts>
+//#include <QChartView>
+//#include <QLineSeries>
 #include <QString>
 #include <QTimer>
 #include <QDateTime>
@@ -26,7 +26,8 @@ class fitness : public QMainWindow
 {
     Q_OBJECT
 public:
-
+    QSqlDatabase db;
+    QString current;
 
 public:
     fitness(QWidget *parent = nullptr);
@@ -46,7 +47,7 @@ private slots:
 
     void on_pushButton_clicked();
 
-    void show_chart();
+    //void show_chart();
 
 
 private:

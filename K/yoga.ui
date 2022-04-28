@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1127</width>
-    <height>660</height>
+    <width>1279</width>
+    <height>741</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,8 +23,8 @@
       </sizepolicy>
      </property>
      <property name="styleSheet">
-      <string notr="true">
-background: transparent;
+      <string notr="true">background-color:#B1ccf2;
+color: white;
 border-radius: 15px;</string>
      </property>
      <property name="frameShape">
@@ -366,8 +366,12 @@ border-radius:15px;</string>
              <bold>true</bold>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">background-color:#B1ccf2;
+color: white;</string>
+           </property>
            <property name="text">
-            <string>UPPER BODY</string>
+            <string>Yoga</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -385,7 +389,7 @@ border-radius:15px;</string>
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_2" stretch="3,1">
+        <layout class="QVBoxLayout" name="verticalLayout_2" stretch="8,1,2,1">
          <item>
           <widget class="QFrame" name="frame_6">
            <property name="frameShape">
@@ -394,23 +398,7 @@ border-radius:15px;</string>
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
-           <layout class="QGridLayout" name="gridLayout">
-            <item row="1" column="0">
-             <widget class="QPushButton" name="pushButton_2">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">border-image: url(:/img_fitness/img/shoulder stand.png);</string>
-              </property>
-              <property name="text">
-               <string>Shoulder Stand</string>
-              </property>
-             </widget>
-            </item>
+           <layout class="QGridLayout" name="gridLayout" columnstretch="5,5,1">
             <item row="0" column="1">
              <widget class="QPushButton" name="pushButton_3">
               <property name="sizePolicy">
@@ -419,8 +407,16 @@ border-radius:15px;</string>
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
+              <property name="font">
+               <font>
+                <pointsize>26</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="styleSheet">
-               <string notr="true">border-image: url(:/img_fitness/img/easy-pose.png);</string>
+               <string notr="true">#pushButton_3{border-image: url(:/images/src_images/easy-pose.png);}
+#pushButton_3:hover{font-size: 48px; 
+color: #3d4653;}</string>
               </property>
               <property name="text">
                <string>Easy Pose</string>
@@ -435,11 +431,43 @@ border-radius:15px;</string>
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
+              <property name="font">
+               <font>
+                <pointsize>26</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="styleSheet">
-               <string notr="true">border-image: url(:/img_fitness/img/child pose.png);</string>
+               <string notr="true">#pushButton{border-image: url(:/images/src_images/child pose.png);}
+#pushButton:hover{font-size: 48px; 
+color: #3d4653;}</string>
               </property>
               <property name="text">
                <string>Child Pose</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QPushButton" name="pushButton_2">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>26</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">#pushButton_2{border-image: url(:/images/src_images/shoulder stand.png);}
+#pushButton_2:hover{font-size: 48px; 
+color: #3d4653;}</string>
+              </property>
+              <property name="text">
+               <string>Shoulder Stand</string>
               </property>
              </widget>
             </item>
@@ -451,15 +479,81 @@ border-radius:15px;</string>
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
+              <property name="font">
+               <font>
+                <pointsize>26</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="styleSheet">
-               <string notr="true">border-image: url(:/img_fitness/img/upward facing dog.png);</string>
+               <string notr="true">#pushButton_4{border-image: url(:/images/src_images/upward facing dog.png);}
+#pushButton_4:hover{font-size: 48px; 
+color: #3d4653;}</string>
               </property>
               <property name="text">
                <string>Upward facing dog</string>
               </property>
              </widget>
             </item>
+            <item row="0" column="2" rowspan="2">
+             <widget class="QFrame" name="frame_8">
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,5">
+               <item>
+                <widget class="QLabel" name="label_11">
+                 <property name="font">
+                  <font>
+                   <pointsize>28</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Reminder</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_12">
+                 <property name="font">
+                  <font>
+                   <pointsize>18</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">padding-top: 40px;</string>
+                 </property>
+                 <property name="text">
+                  <string>Remember to take breaks 
+ and drink plenty water 
+ during and after exercises.</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignHCenter|Qt::AlignTop</set>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
            </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="frame_9">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
           </widget>
          </item>
          <item>
@@ -522,6 +616,16 @@ border-radius:15px;</string>
              </widget>
             </item>
            </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="frame_10">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
           </widget>
          </item>
         </layout>

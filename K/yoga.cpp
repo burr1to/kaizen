@@ -33,14 +33,11 @@ void yoga::on_pushButton_start_workout_clicked()
 
 void yoga::on_pushButton_stop_timer_clicked()
 {
-    seconds = seconds -1;
-    if(seconds < 0){
-        minutes = minutes -1;
-    }
-    else{
-        ui->seconds->display(seconds);
-        ui->minutes->display(minutes);
-    }
+    minutes = 14;
+    seconds = 59;
+    ui->seconds->display(seconds);
+    ui->minutes->display(minutes);
+    time.stop();
 }
 
 void yoga::timerr()

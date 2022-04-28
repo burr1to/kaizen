@@ -12,6 +12,14 @@ fitness::fitness(QWidget *parent)
 {
 
     ui->setupUi(this);
+    db = QSqlDatabase::database();
+    QSqlQuery qry;
+    qry.prepare("select current from current_user");
+    if (qry.exec()){
+        qry.first();
+    current = qry.value(0).toString();
+    qry.clear();
+    }
     QTimer *datetime = new QTimer(this);
 
     //show_chart();
@@ -21,20 +29,14 @@ fitness::fitness(QWidget *parent)
 
 fitness::~fitness()
 {
-    QSqlQuery dest;
-    dest.prepare("delete from current_user");
-    if (dest.exec()){
-        qDebug()<< "Destructor called";
-    }
-    dest.clear();
     delete ui;
 }
 
-void fitness::show_chart()
+/*void fitness::show_chart()
 {
-    /*QSqlQuery qry1, qry2,qry3;
+    QSqlQuery qry1, qry2,qry3;
 
-    qry2.prepare("select count(*) from fitness");
+    qry2.prepare("select count(*) from fitness where username = '""+current+'");
     qry2.exec();
     qry2.first();
     int noofrows = qry2.value(0).toInt();
@@ -43,7 +45,7 @@ void fitness::show_chart()
 
     QLineSeries *series = new QLineSeries();
     int i;
-    qry3.prepare("select * from fitness limit 5 offset :offsetvalue");
+    qry3.prepare("select * from fitness where username = '"+current+"' limit 5 offset :offsetvalue ");
     qry3.bindValue(":offsetvalue",offset);
     int count = 0;
     if (qry3.exec()){
@@ -52,16 +54,16 @@ void fitness::show_chart()
         }
     }
 
-    qry1.prepare("select * from fitness limit 5 offset :offsetvalue");
+    qry1.prepare("select * from fitness username = '"+current+"' limit 5 offset :offsetvalue");
     qry1.bindValue(":offsetvalue",offset);
     qry1.exec();
 
     for (i=0; i<count; i++){
         qry1.next();
-        QStringList dates = qry1.value(0).toString().split("-").mid(0,2);
+        QStringList dates = qry1.value(0).toString().split("-").mid(0,3);
         QDateTime momentInTime;
-        momentInTime.setDate(QDate(dates[2].toInt(), dates[1].toInt() , dates[0].toInt()));
-        series -> append(momentInTime.toMSecsSinceEpoch(), qry1.value(0).toDouble());
+        momentInTime.setDate(QDate(dates[0].toInt(), dates[1].toInt() , dates[2].toInt()));
+        series -> append(momentInTime.toMSecsSinceEpoch(), qry1.value(1).toDouble());
     }
 
     QChart *chart = new QChart();
@@ -79,7 +81,7 @@ void fitness::show_chart()
 
     QValueAxis *axisY = new QValueAxis;
     axisY->setLabelFormat("%i");
-    axisY->setRange(65,75);
+    axisY->setRange(66,75);
     axisY->setTickCount(10);
     axisY->setTitleText("Weight");
     chart->addAxis(axisY, Qt::AlignLeft);
@@ -91,9 +93,9 @@ void fitness::show_chart()
 
     QChartView *chartView = new QChartView(chart);
     chartView -> setRenderHint(QPainter::Antialiasing);
-    chartView -> setParent(ui->horizontalFrame_chart);*/
+    chartView -> setParent(ui->horizontalFrame_chart);
 }
-
+*/
 void fitness::on_pushButton_uperbody_clicked()
 {
     hide();

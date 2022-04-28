@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1131</width>
+    <width>2052</width>
     <height>684</height>
    </rect>
   </property>
@@ -23,8 +23,8 @@
       </sizepolicy>
      </property>
      <property name="styleSheet">
-      <string notr="true">
-background: transparent;
+      <string notr="true">background-color:#B1ccf2;
+color: white;
 border-radius: 15px;</string>
      </property>
      <property name="frameShape">
@@ -366,8 +366,12 @@ border-radius:15px;</string>
              <bold>true</bold>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">background-color:#B1ccf2;
+color: white;</string>
+           </property>
            <property name="text">
-            <string>UPPER BODY</string>
+            <string>Core</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -385,7 +389,7 @@ border-radius:15px;</string>
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_2" stretch="3,1">
+        <layout class="QVBoxLayout" name="verticalLayout_2" stretch="8,1,2,1">
          <item>
           <widget class="QFrame" name="frame_6">
            <property name="frameShape">
@@ -394,7 +398,7 @@ border-radius:15px;</string>
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
-           <layout class="QGridLayout" name="gridLayout">
+           <layout class="QGridLayout" name="gridLayout" columnstretch="5,5,1">
             <item row="1" column="1">
              <widget class="QPushButton" name="pushButton_4">
               <property name="sizePolicy">
@@ -403,44 +407,23 @@ border-radius:15px;</string>
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
-              <property name="styleSheet">
-               <string notr="true">
-border-image: url(:/img_fitness/img/russian twists.png);</string>
-              </property>
-              <property name="text">
-               <string>Russian Twist</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1">
-             <widget class="QPushButton" name="pushButton_3">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
+              <property name="font">
+               <font>
+                <pointsize>26</pointsize>
+                <bold>true</bold>
+               </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">border-image: url(:/img_fitness/img/glute bridge.png);</string>
+               <string notr="true">#pushButton_4{
+border-image: url(:/images/src_images/russian twists.png);}
+
+#pushButton_4:hover{font-size: 48px;
+color: #727a7c;}
+</string>
               </property>
               <property name="text">
-               <string>Glute Bridge</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="0">
-             <widget class="QPushButton" name="pushButton">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">border-image: url(:/img_fitness/img/bird dog.png);</string>
-              </property>
-              <property name="text">
-               <string>Bird Dog</string>
+               <string>Russian Twist 
+ 3 sets of 12 reps</string>
               </property>
              </widget>
             </item>
@@ -452,15 +435,139 @@ border-image: url(:/img_fitness/img/russian twists.png);</string>
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
+              <property name="font">
+               <font>
+                <pointsize>26</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="styleSheet">
-               <string notr="true">border-image: url(:/img_fitness/img/leg raise.png);</string>
+               <string notr="true">#pushButton_2{
+border-image: url(:/images/src_images/leg raise.png);}
+
+#pushButton_2:hover{
+font-size: 48px;
+color: #727a7c;}</string>
               </property>
               <property name="text">
-               <string>Leg Raise</string>
+               <string>Leg Raise 
+ 3 sets of 10 reps</string>
               </property>
              </widget>
             </item>
+            <item row="0" column="1">
+             <widget class="QPushButton" name="pushButton_3">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>26</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">#pushButton_3{
+border-image: url(:/images/src_images/glute bridge.png);}
+#pushButton_3:hover{
+font-size: 48px;
+color: #727a7c;}</string>
+              </property>
+              <property name="text">
+               <string>Glute Bridge
+ 2 sets of 15 reps</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QPushButton" name="pushButton">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>26</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">#pushButton{border-image: url(:/images/src_images/mountain climber.png);}
+#pushButton:hover{
+font-size: 48px;
+color: #727a7c;}</string>
+              </property>
+              <property name="text">
+               <string>Bird Dog 
+ 3 sets of 12 reps</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2" rowspan="2">
+             <widget class="QFrame" name="frame_8">
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,4">
+               <item>
+                <widget class="QLabel" name="label_11">
+                 <property name="font">
+                  <font>
+                   <pointsize>36</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Reminder</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_12">
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">padding-top: 40px;</string>
+                 </property>
+                 <property name="text">
+                  <string>Remember to take breaks 
+ and drink plenty water 
+ during and after exercises.</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignHCenter|Qt::AlignTop</set>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
            </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="frame_9">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
           </widget>
          </item>
          <item>
@@ -523,6 +630,16 @@ border-image: url(:/img_fitness/img/russian twists.png);</string>
              </widget>
             </item>
            </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="frame_10">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
           </widget>
          </item>
         </layout>
