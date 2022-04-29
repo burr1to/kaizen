@@ -1,11 +1,6 @@
-
-#include <QSql>
-#include <QSqlDatabase>
-#include <QDebug>
 #include "budget.h"
 #include "ui_budget.h"
-#include "food.h"
-
+#include <QtDebug>
 
 
 Budget::Budget(QWidget *parent)
@@ -23,6 +18,7 @@ Budget::Budget(QWidget *parent)
     current = qry.value(0).toString();
     qry.clear();
     }
+
        if (!budgetdb.open()){
            qDebug()<< "Fail to open";
        }
@@ -31,62 +27,47 @@ Budget::Budget(QWidget *parent)
            sumq.first();
            f = sumq.value(0).toString();
            sumq.clear();
-       }
-       /*qDebug()<< f;
-       if(sumq.exec("select sum(Price) from Info where Category = 'Rent'")){
-           sumq.first();
-           r = sumq.value(0).toString();
-           sumq.clear();
-       }
-       qDebug()<< r;
-       if(sumq.exec("select sum(Price) from Info where Category = 'Stationery'")){
-           sumq.first();
-           o = sumq.value(0).toString();
-           sumq.clear();
-       }
-       qDebug()<< o;
-       if(sumq.exec("select sum(Price) from Info where Category = 'Other'")){
-           sumq.first();
-           s = sumq.value(0).toString();
-           sumq.clear();
-       }*/
-       int total=f.toInt()/*+r.toInt()+o.toInt()+s.toInt()*/;
-       qDebug()<< total;
+        }
+    qDebug()<< f;
+    if(sumq.exec("select sum(Price) from Info where Category = 'Rent'")){
+        sumq.first();
+        r = sumq.value(0).toString();
+        sumq.clear();
+    }
+    qDebug()<< r;
+    if(sumq.exec("select sum(Price) from Info where Category = 'Stationery'")){
+        sumq.first();
+        o = sumq.value(0).toString();
+        sumq.clear();
+    }
+    qDebug()<< o;
+    if(sumq.exec("select sum(Price) from Info where Category = 'Other'")){
+        sumq.first();
+        s = sumq.value(0).toString();
+        sumq.clear();
+    }
+    int total=f.toInt()+r.toInt()+o.toInt()+s.toInt();
+    qDebug()<< total;
 
-       ui->tot->setNum(total);
-       ui->foodex->setText(f);
-       /*ui->rentex->setText(r);
-       ui->statex->setText(o);
-       ui->totalex->setText(s);*/
-
-       QSqlQueryModel *bqmodel= new QSqlQueryModel();
-       bqmodel->setQuery("SELECT Item,Price FROM Info where username = '"+current+"'");
-       ui->expta->setModel(bqmodel);
-
-
-
-
-
+    QSqlQueryModel *bqmodel= new QSqlQueryModel();
+    QSqlQuery bq;
+    bqmodel->setQuery("SELECT Item,Price FROM Info");
+    ui->expta->setModel(bqmodel);
 
 }
 
 Budget::~Budget()
 {
     QSqlQuery dest;
-    dest.prepare("delete from current_user");
-    if (dest.exec()){
-        qDebug()<< "Destructor called";
-    }
-    dest.clear();
+       dest.prepare("delete from current_user");
+       if (dest.exec()){
+            qDebug()<< "Destructor called";
+        }
+        dest.clear();
     delete ui;
 }
 
-void Budget::on_pushButton_1_clicked()
-{
-    Food dialog;
-    dialog.setModal(true);
-    dialog.exec();
-}
+
 
 
 

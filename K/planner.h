@@ -43,6 +43,8 @@ private slots:
 
     void on_showplans_clicked();
 
+    void showfour(QString current,QString querystore[]);
+
 private:
     Ui::Planner *ui;
 };

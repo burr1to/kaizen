@@ -1,6 +1,7 @@
 #include "planner.h"
 #include "ui_planner.h"
 #include "allplans.h"
+ QString querystore[4];
 
 Planner::Planner(QWidget *parent)
     : QMainWindow(parent)
@@ -9,7 +10,7 @@ Planner::Planner(QWidget *parent)
     ui->setupUi(this);
 
 
-    QString querystore[4];
+
      db = QSqlDatabase::database();
      QSqlQuery qry;
      qry.prepare("select current from current_user");
@@ -17,17 +18,18 @@ Planner::Planner(QWidget *parent)
          qry.first();
      current = qry.value(0).toString();
      qry.clear();
-
-
      }
+
 
       if (!db.open()){
            qDebug()<< "Fail to open in planner";
        } else qDebug()<< "Open in planner";
-       QSqlQuery qq;
+
+
+      /* QSqlQuery qq;
        qq.prepare("select plandetails from plan where planuser = '"+current+"' order by plandate desc, plantime desc limit 4");
        if(qq.exec()){
-           qDebug()<<"Exec";
+           qDebug()<<"Exec";s
 
            while(qq.next()){
 
@@ -40,14 +42,14 @@ Planner::Planner(QWidget *parent)
        }
        else{
            qDebug()<<"Error";
-       }
-
+       }*/
+       showfour(current,querystore);
 
        ui->plan_1->setText(querystore[0]);
        ui->plan_2->setText(querystore[1]);
        ui->plan_3->setText(querystore[2]);
        ui->plan_4->setText(querystore[3]);
-       qq.clear();
+
 
        //db.close();
 
@@ -68,7 +70,26 @@ Planner::~Planner()
 }
 
 
+void Planner::showfour(QString current,QString querystore[]){
+    QSqlQuery qq;
+    qq.prepare("select plandetails from plan where planuser = '"+current+"' order by plandate desc, plantime desc limit 4");
+    if(qq.exec()){
+        qDebug()<<"Exec";
 
+        while(qq.next()){
+
+        for (int i = 0; i < 4;i++){
+            querystore[i] = qq.value(0).toString();
+            qq.next();
+        }
+        }
+
+    }
+    else{
+        qDebug()<<"Error";
+        qq.clear();
+    }
+}
 
 void Planner::on_addbut_clicked()
 {
@@ -107,6 +128,12 @@ void Planner::on_addbut_clicked()
                    q.clear();
                }
            }
+           showfour(current,querystore);
+
+           ui->plan_1->setText(querystore[0]);
+           ui->plan_2->setText(querystore[1]);
+           ui->plan_3->setText(querystore[2]);
+           ui->plan_4->setText(querystore[3]);
 
            //db.close();
 }

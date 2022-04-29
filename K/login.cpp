@@ -68,12 +68,6 @@ void Login::on_loginbutt_clicked()
            if (count==1){
                qDebug()<< "Successful login";
                qry.clear();
-
-
-
-
-
-
                    mydb.close();
                    this->hide();
 

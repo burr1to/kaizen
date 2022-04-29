@@ -15,7 +15,6 @@ SOURCES += \
     planner.cpp \
     signup.cpp \
     budget.cpp \
-    food.cpp \
     core.cpp \
     fitness.cpp \
     fitness_edit.cpp \
@@ -29,7 +28,6 @@ HEADERS += \
     planner.h \
     signup.h \
     budget.h \
-    food.h \
     core.h \
     fitness.h \
     fitness_edit.h \
@@ -43,7 +41,6 @@ FORMS += \
     planner.ui \
     signup.ui \
     budget.ui \
-    food.ui \
     core.ui \
     fitness.ui \
     fitness_edit.ui \
@@ -56,8 +53,7 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-RESOURCES += \
-    src_img.qrc
+RESOURCES +=
 
 DISTFILES += \
     src_images/bear crawl.png \

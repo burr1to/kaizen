@@ -1,9 +1,9 @@
 #ifndef BUDGET_H
 #define BUDGET_H
-#include <QSql>
+
+#include <QtSql>
 #include <QSqlDatabase>
-
-
+#include <QDebug>
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -16,12 +16,11 @@ class Budget : public QMainWindow
 
 public:
     QString current;
-     QSqlDatabase budgetdb;
+    QSqlDatabase budgetdb;
     Budget(QWidget *parent = nullptr);
     ~Budget();
 
 private slots:
-    void on_pushButton_1_clicked();
 
 
 private:

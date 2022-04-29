@@ -128,3 +128,14 @@ void allplans::on_pushButton_3_clicked()
     }
 
 
+
+void allplans::on_refresh_clicked()
+{
+    QSqlQueryModel * model = new QSqlQueryModel();
+    model->setQuery("select plandetails from plan where planuser = '"+current+"'");
+    int rowcount = model->rowCount();
+    qDebug()<< rowcount;
+
+    ui->listView->setModel(model);
+}
+

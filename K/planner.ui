@@ -20,7 +20,7 @@
    <string>Home</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="src_img.qrc">
+   <iconset>
     <normaloff>:/images/src_images/kaizen_square.png</normaloff>:/images/src_images/kaizen_square.png</iconset>
   </property>
   <property name="styleSheet">
@@ -312,10 +312,10 @@ background-color: rgb(231, 231, 231);</string>
                     <string notr="true">border:0 px;</string>
                    </property>
                    <property name="text">
-                    <string/>
+                    <string>a</string>
                    </property>
                    <property name="icon">
-                    <iconset resource="src_img.qrc">
+                    <iconset>
                      <normaloff>:/images/src_images/plus.png</normaloff>:/images/src_images/plus.png</iconset>
                    </property>
                    <property name="iconSize">
@@ -719,8 +719,6 @@ background:transparent;</string>
    </layout>
   </widget>
  </widget>
- <resources>
-  <include location="src_img.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
