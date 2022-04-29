@@ -20,7 +20,9 @@ fitness::fitness(QWidget *parent)
     current = qry.value(0).toString();
     qry.clear();
     }
-    QTimer *datetime = new QTimer(this);
+    QString height, weight, bmi;
+
+    //QTimer *datetime = new QTimer(this);
 
     //show_chart();
 
@@ -127,12 +129,27 @@ void fitness::on_pushButton_yoga_clicked()
 }
 
 
-void fitness::on_pushButton_clicked()
+
+
+
+
+void fitness::on_editstuff_clicked()
 {
-    fitness_edit Fitness_edit;
-    Fitness_edit.setModal(true);
-    Fitness_edit.exec();
+    fitness_edit *fit;
+    fit = new fitness_edit(this);
+    fit->show();
+
 }
 
 
+void fitness::on_refresh_clicked()
+{
+
+}
+
+
+void fitness::on_home_clicked()
+{
+
+}
 

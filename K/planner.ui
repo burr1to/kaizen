@@ -58,11 +58,7 @@ background:transparent;}</string>
              <string notr="true">border:0px;</string>
             </property>
             <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset resource="src_img.qrc">
-              <normaloff>:/images/src_images/Kaizen_logo.png</normaloff>:/images/src_images/Kaizen_logo.png</iconset>
+             <string>k</string>
             </property>
             <property name="iconSize">
              <size>
@@ -111,11 +107,7 @@ padding-right:10px;</string>
              <string notr="true">border:0px;</string>
             </property>
             <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset resource="src_img.qrc">
-              <normaloff>:/images/src_images/logout.png</normaloff>:/images/src_images/logout.png</iconset>
+             <string>LOGOUT</string>
             </property>
             <property name="iconSize">
              <size>
@@ -362,11 +354,7 @@ background-color: rgb(231, 231, 231);</string>
                  <string notr="true"/>
                 </property>
                 <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="src_img.qrc">
-                  <normaloff>:/images/src_images/Fit.png</normaloff>:/images/src_images/Fit.png</iconset>
+                 <string>f</string>
                 </property>
                 <property name="iconSize">
                  <size>
@@ -561,11 +549,7 @@ padding-left:10px;</string>
                  <string notr="true"/>
                 </property>
                 <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="src_img.qrc">
-                  <normaloff>:/images/src_images/Budget.png</normaloff>:/images/src_images/Budget.png</iconset>
+                 <string>b</string>
                 </property>
                 <property name="iconSize">
                  <size>

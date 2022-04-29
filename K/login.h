@@ -19,8 +19,8 @@ class Login : public QMainWindow
 
   public:
 
-
     QSqlDatabase mydb;
+
 
     void myfunction(){
            mydb = QSqlDatabase::addDatabase("QSQLITE");

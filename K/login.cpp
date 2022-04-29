@@ -20,6 +20,7 @@ Login::Login(QWidget *parent) :
 
 
 
+
 Login::~Login()
 {
     delete ui;
@@ -42,6 +43,14 @@ void Login::on_loginbutt_clicked()
 
        QString username = ui->username->text();
        QString password = ui->password->text();
+       QSqlQuery quz;
+       quz.prepare("insert into current_user(current) values ('"+username+"')");
+       if(quz.exec()){
+         qDebug()<<"Table created";
+       } else {
+          qDebug()<<"Table not created";
+       }
+       quz.clear();
        QSqlQuery qry;
 
        if (username == "" && password == ""){
@@ -60,22 +69,15 @@ void Login::on_loginbutt_clicked()
                qDebug()<< "Successful login";
                qry.clear();
 
-                QSqlQuery quz;
 
 
-               Planner *p;
-               quz.prepare("insert into current_user(current) values ('"+username+"')");
-               if(quz.exec()){
-                 qDebug()<<"Table created";
-               } else {
-                   qDebug()<<"Table not created";
-               }
-                   quz.clear();
+
+
 
                    mydb.close();
                    this->hide();
 
-               //connect();
+               Planner *p;
                p = new Planner(this);
                p->show();
 

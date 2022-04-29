@@ -45,10 +45,15 @@ private slots:
 
     void on_pushButton_yoga_clicked();
 
-    void on_pushButton_clicked();
 
     //void show_chart();
 
+
+    void on_editstuff_clicked();
+
+    void on_refresh_clicked();
+
+    void on_home_clicked();
 
 private:
     Ui::fitness *ui;

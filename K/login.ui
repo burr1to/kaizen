@@ -49,7 +49,8 @@ border: 1px solid transparent;}
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">#loginwidget{background-color: rgb(255, 3, 7);}</string>
+    <string notr="true">#loginwidget{background-color: rgb(49, 155, 255); }
+</string>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
@@ -66,35 +67,7 @@ border: 1px solid transparent;}
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <layout class="QGridLayout" name="gridLayout">
-       <item row="1" column="0" alignment="Qt::AlignHCenter">
-        <widget class="QLabel" name="label">
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="pixmap">
-          <pixmap resource="src_img.qrc">:/images/src_images/Kaizen_logo.png</pixmap>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="label_2">
-         <property name="text">
-          <string>TextLabel</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_3">
-         <property name="text">
-          <string>TextLabel</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
+      <layout class="QGridLayout" name="gridLayout"/>
      </widget>
     </item>
     <item>
@@ -119,6 +92,10 @@ max-width:600px;
 max-height:600px;
 }
 
+#bigtxt{
+font-size:30px;
+font-weight:bold;
+}
 
 #username,#password
 {
@@ -215,6 +192,13 @@ color:black;
             </size>
            </property>
           </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="bigtxt">
+           <property name="text">
+            <string>Login System</string>
+           </property>
+          </widget>
          </item>
          <item>
           <layout class="QVBoxLayout" name="verticalLayout_4">
