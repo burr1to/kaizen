@@ -24,7 +24,7 @@ fitness::fitness(QWidget *parent)
 
     QTimer *datetime = new QTimer(this);
 
-    show_chart();
+    //show_chart();
 
 }
 
@@ -33,7 +33,7 @@ fitness::~fitness()
 {
     delete ui;
 }
-
+/*
 void fitness::show_chart()
 {
     QSqlQuery qry1, qry2,qry3;
@@ -97,7 +97,7 @@ void fitness::show_chart()
     chartView -> setRenderHint(QPainter::Antialiasing);
     chartView -> setParent(ui->horizontalFrame_chart);
 }
-
+*/
 void fitness::on_pushButton_uperbody_clicked()
 {
     hide();
@@ -129,10 +129,6 @@ void fitness::on_pushButton_yoga_clicked()
 }
 
 
-
-
-
-
 void fitness::on_editstuff_clicked()
 {
     fitness_edit *fit;
@@ -140,7 +136,6 @@ void fitness::on_editstuff_clicked()
     fit->show();
 
 }
-
 
 void fitness::on_refresh_clicked()
 {
@@ -150,6 +145,8 @@ void fitness::on_refresh_clicked()
 
 void fitness::on_home_clicked()
 {
-
+    hide();
+    QWidget *parent = this->parentWidget();
+    parent->show();
 }
 

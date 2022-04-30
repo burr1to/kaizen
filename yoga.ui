@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1279</width>
+    <width>1423</width>
     <height>741</height>
    </rect>
   </property>
@@ -467,7 +467,8 @@ color: #3d4653;}</string>
 color: #3d4653;}</string>
               </property>
               <property name="text">
-               <string>Shoulder Stand</string>
+               <string>Shoulder
+ Stand</string>
               </property>
              </widget>
             </item>
@@ -491,7 +492,8 @@ color: #3d4653;}</string>
 color: #3d4653;}</string>
               </property>
               <property name="text">
-               <string>Upward facing dog</string>
+               <string>Upward facing
+ dog</string>
               </property>
              </widget>
             </item>
@@ -564,7 +566,20 @@ color: #3d4653;}</string>
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
-           <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="2,4,2,4,1,4,2">
+            <item>
+             <spacer name="verticalSpacer">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_4">
               <item>
@@ -590,6 +605,19 @@ color: #3d4653;}</string>
              </layout>
             </item>
             <item>
+             <spacer name="verticalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
              <widget class="QPushButton" name="pushButton_start_workout">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -597,10 +625,26 @@ color: #3d4653;}</string>
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: green;</string>
+              </property>
               <property name="text">
                <string>Start Workout</string>
               </property>
              </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
             </item>
             <item>
              <widget class="QPushButton" name="pushButton_stop_timer">
@@ -610,10 +654,26 @@ color: #3d4653;}</string>
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: red;</string>
+              </property>
               <property name="text">
-               <string>Stop</string>
+               <string>Reset</string>
               </property>
              </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
             </item>
            </layout>
           </widget>
