@@ -56,57 +56,12 @@ background-color:#B1ccf2;</string>
             <property name="topMargin">
              <number>150</number>
             </property>
-            <item>
-             <widget class="QPushButton" name="pushButton">
-              <property name="font">
-               <font>
-                <pointsize>20</pointsize>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">QPushButton{
-border:none;
-padding: 20px;}
-
-QPushButton:hover{
-background-color: rgb(0, 171, 255);
-}</string>
-              </property>
-              <property name="text">
-               <string>Home</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="pushButton_2">
-              <property name="font">
-               <font>
-                <pointsize>20</pointsize>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">QPushButton{
-border:none;
-padding: 20px;
-}
-
-QPushButton:hover{
-background-color: rgb(0, 171, 255);
-}</string>
-              </property>
-              <property name="text">
-               <string>About</string>
-              </property>
-             </widget>
-            </item>
            </layout>
           </item>
           <item row="0" column="0" colspan="2">
            <widget class="QPushButton" name="pushButton_5">
             <property name="text">
-             <string>PushButton</string>
+             <string>Refresh</string>
             </property>
            </widget>
           </item>
@@ -139,7 +94,7 @@ border: none;</string>
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>245</width>
+               <width>252</width>
                <height>690</height>
               </rect>
              </property>
@@ -212,7 +167,7 @@ border: none;
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="label_6">
+              <widget class="QLabel" name="hellotxt">
                <property name="font">
                 <font>
                  <pointsize>20</pointsize>
@@ -225,7 +180,7 @@ border: none;
 border: none;</string>
                </property>
                <property name="text">
-                <string>Hello Stranger!</string>
+                <string>xxxx</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -257,10 +212,10 @@ color: black;</string>
             <widget class="QLabel" name="label_7">
              <property name="geometry">
               <rect>
-               <x>80</x>
-               <y>40</y>
-               <width>111</width>
-               <height>26</height>
+               <x>60</x>
+               <y>30</y>
+               <width>181</width>
+               <height>51</height>
               </rect>
              </property>
              <property name="font">
@@ -284,7 +239,7 @@ color: black;
             <widget class="Line" name="linedivider">
              <property name="geometry">
               <rect>
-               <x>270</x>
+               <x>350</x>
                <y>20</y>
                <width>20</width>
                <height>231</height>
@@ -298,46 +253,92 @@ color: black;
               <enum>Qt::Vertical</enum>
              </property>
             </widget>
-            <widget class="QLabel" name="tot">
+            <widget class="QLabel" name="label_9">
              <property name="geometry">
               <rect>
-               <x>180</x>
-               <y>210</y>
-               <width>39</width>
-               <height>22</height>
+               <x>430</x>
+               <y>30</y>
+               <width>181</width>
+               <height>51</height>
               </rect>
              </property>
              <property name="font">
               <font>
-               <pointsize>15</pointsize>
+               <pointsize>22</pointsize>
                <bold>true</bold>
               </font>
              </property>
-             <property name="text">
-              <string>2000</string>
-             </property>
-            </widget>
-            <widget class="QLabel" name="label_17">
-             <property name="geometry">
-              <rect>
-               <x>-10</x>
-               <y>210</y>
-               <width>177</width>
-               <height>22</height>
-              </rect>
-             </property>
-             <property name="font">
-              <font>
-               <pointsize>18</pointsize>
-               <bold>true</bold>
-              </font>
+             <property name="styleSheet">
+              <string notr="true">border: none;
+color: black;
+</string>
              </property>
              <property name="text">
-              <string>Total Expenses: </string>
+              <string>Income</string>
              </property>
              <property name="alignment">
-              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
+            </widget>
+            <widget class="QLabel" name="intotal">
+             <property name="geometry">
+              <rect>
+               <x>500</x>
+               <y>190</y>
+               <width>131</width>
+               <height>61</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>xxxx</string>
+             </property>
+            </widget>
+            <widget class="QWidget" name="">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>210</y>
+               <width>291</width>
+               <height>34</height>
+              </rect>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item>
+               <widget class="QLabel" name="label_17">
+                <property name="font">
+                 <font>
+                  <pointsize>18</pointsize>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Total Expenses: </string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="extotal">
+                <property name="font">
+                 <font>
+                  <pointsize>15</pointsize>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>xxxx</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </widget>
            </widget>
           </item>
@@ -398,7 +399,7 @@ border: none;</string>
                          <string>Food</string>
                         </property>
                         <property name="icon">
-                         <iconset resource="Resource.qrc">
+                         <iconset>
                           <normaloff>:/resource/Image/Screen_Shot_2022-04-28_at_10.45.06_PM-removebg-preview.png</normaloff>:/resource/Image/Screen_Shot_2022-04-28_at_10.45.06_PM-removebg-preview.png</iconset>
                         </property>
                         <property name="iconSize">
@@ -432,7 +433,7 @@ margin-right:10px;</string>
                        <number>10</number>
                       </property>
                       <item>
-                       <widget class="QLineEdit" name="lineEdit_9">
+                       <widget class="QLineEdit" name="f_item">
                         <property name="styleSheet">
                          <string notr="true">border: 1px solid rgb(217, 217, 217);
 border-radius: 7px;
@@ -449,7 +450,7 @@ margin-right: 10px;</string>
                        </widget>
                       </item>
                       <item>
-                       <widget class="QLineEdit" name="lineEdit_10">
+                       <widget class="QLineEdit" name="f_amount">
                         <property name="styleSheet">
                          <string notr="true">border: 1px solid rgb(217, 217, 217);
 border-radius: 7px;
@@ -512,10 +513,10 @@ background-color:rgb(209, 243, 255);
 </string>
                     </property>
                     <property name="text">
-                     <string/>
+                     <string>a</string>
                     </property>
                     <property name="icon">
-                     <iconset resource="Resource.qrc">
+                     <iconset>
                       <normaloff>:/resource/Image/plus.png</normaloff>:/resource/Image/plus.png</iconset>
                     </property>
                     <property name="iconSize">
@@ -540,7 +541,7 @@ background-color:rgb(209, 243, 255);
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLabel" name="foodex">
+                   <widget class="QLabel" name="foodtot">
                     <property name="font">
                      <font>
                       <bold>true</bold>
@@ -594,7 +595,7 @@ background-color:rgb(209, 243, 255);
                          <string>Education</string>
                         </property>
                         <property name="icon">
-                         <iconset resource="Resource.qrc">
+                         <iconset>
                           <normaloff>:/resource/Image/Screen_Shot_2022-04-28_at_10.45.06_PM-removebg-preview.png</normaloff>:/resource/Image/Screen_Shot_2022-04-28_at_10.45.06_PM-removebg-preview.png</iconset>
                         </property>
                         <property name="iconSize">
@@ -628,7 +629,7 @@ margin-right:10px;</string>
                        <number>10</number>
                       </property>
                       <item>
-                       <widget class="QLineEdit" name="lineEdit_2">
+                       <widget class="QLineEdit" name="edu_item">
                         <property name="styleSheet">
                          <string notr="true">border: 1px solid rgb(217, 217, 217);
 border-radius: 7px;
@@ -645,7 +646,7 @@ margin-right: 10px;</string>
                        </widget>
                       </item>
                       <item>
-                       <widget class="QLineEdit" name="lineEdit">
+                       <widget class="QLineEdit" name="edu_amount">
                         <property name="styleSheet">
                          <string notr="true">border: 1px solid rgb(217, 217, 217);
 border-radius: 7px;
@@ -708,10 +709,10 @@ background-color:rgb(209, 243, 255);
 </string>
                     </property>
                     <property name="text">
-                     <string/>
+                     <string>a</string>
                     </property>
                     <property name="icon">
-                     <iconset resource="Resource.qrc">
+                     <iconset>
                       <normaloff>:/resource/Image/plus.png</normaloff>:/resource/Image/plus.png</iconset>
                     </property>
                     <property name="iconSize">
@@ -736,14 +737,14 @@ background-color:rgb(209, 243, 255);
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLabel" name="rentex">
+                   <widget class="QLabel" name="edutot">
                     <property name="font">
                      <font>
                       <bold>true</bold>
                      </font>
                     </property>
                     <property name="text">
-                     <string>700</string>
+                     <string/>
                     </property>
                    </widget>
                   </item>
@@ -790,7 +791,7 @@ background-color:rgb(209, 243, 255);
                          <string>Other</string>
                         </property>
                         <property name="icon">
-                         <iconset resource="Resource.qrc">
+                         <iconset>
                           <normaloff>:/resource/Image/Screen_Shot_2022-04-28_at_10.45.06_PM-removebg-preview.png</normaloff>:/resource/Image/Screen_Shot_2022-04-28_at_10.45.06_PM-removebg-preview.png</iconset>
                         </property>
                         <property name="iconSize">
@@ -824,7 +825,7 @@ margin-right:10px;</string>
                        <number>10</number>
                       </property>
                       <item>
-                       <widget class="QLineEdit" name="lineEdit_3">
+                       <widget class="QLineEdit" name="o_item">
                         <property name="styleSheet">
                          <string notr="true">border: 1px solid rgb(217, 217, 217);
 border-radius: 7px;
@@ -841,7 +842,7 @@ margin-right: 10px;</string>
                        </widget>
                       </item>
                       <item>
-                       <widget class="QLineEdit" name="lineEdit_4">
+                       <widget class="QLineEdit" name="o_amount">
                         <property name="styleSheet">
                          <string notr="true">border: 1px solid rgb(217, 217, 217);
 border-radius: 7px;
@@ -904,10 +905,10 @@ background-color:rgb(209, 243, 255);
 </string>
                     </property>
                     <property name="text">
-                     <string/>
+                     <string>a</string>
                     </property>
                     <property name="icon">
-                     <iconset resource="Resource.qrc">
+                     <iconset>
                       <normaloff>:/resource/Image/plus.png</normaloff>:/resource/Image/plus.png</iconset>
                     </property>
                     <property name="iconSize">
@@ -932,7 +933,7 @@ background-color:rgb(209, 243, 255);
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLabel" name="totalex">
+                   <widget class="QLabel" name="othertot">
                     <property name="font">
                      <font>
                       <bold>true</bold>
@@ -986,7 +987,7 @@ background-color:rgb(209, 243, 255);
                          <string>Income</string>
                         </property>
                         <property name="icon">
-                         <iconset resource="Resource.qrc">
+                         <iconset>
                           <normaloff>:/resource/Image/Screen_Shot_2022-04-28_at_10.45.06_PM-removebg-preview.png</normaloff>:/resource/Image/Screen_Shot_2022-04-28_at_10.45.06_PM-removebg-preview.png</iconset>
                         </property>
                         <property name="iconSize">
@@ -1020,7 +1021,7 @@ margin-right:10px;</string>
                        <number>10</number>
                       </property>
                       <item>
-                       <widget class="QLineEdit" name="lineEdit_5">
+                       <widget class="QLineEdit" name="in_item">
                         <property name="styleSheet">
                          <string notr="true">border: 1px solid rgb(217, 217, 217);
 border-radius: 7px;
@@ -1037,7 +1038,7 @@ margin-right: 10px;</string>
                        </widget>
                       </item>
                       <item>
-                       <widget class="QLineEdit" name="lineEdit_6">
+                       <widget class="QLineEdit" name="in_amount">
                         <property name="styleSheet">
                          <string notr="true">border: 1px solid rgb(217, 217, 217);
 border-radius: 7px;
@@ -1100,10 +1101,10 @@ background-color:rgb(209, 243, 255);
 </string>
                     </property>
                     <property name="text">
-                     <string/>
+                     <string>a</string>
                     </property>
                     <property name="icon">
-                     <iconset resource="Resource.qrc">
+                     <iconset>
                       <normaloff>:/resource/Image/plus.png</normaloff>:/resource/Image/plus.png</iconset>
                     </property>
                     <property name="iconSize">
@@ -1128,7 +1129,7 @@ background-color:rgb(209, 243, 255);
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLabel" name="rentex_3">
+                   <widget class="QLabel" name="intot">
                     <property name="font">
                      <font>
                       <bold>true</bold>
@@ -1156,8 +1157,6 @@ background-color:rgb(209, 243, 255);
    </layout>
   </widget>
  </widget>
- <resources>
-  <include location="Resource.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
