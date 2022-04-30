@@ -1,7 +1,7 @@
 #include "planner.h"
 #include "ui_planner.h"
 #include "allplans.h"
- QString querystore[4];
+ QString querystore[4],datestore[4],timestore[4];
 
 Planner::Planner(QWidget *parent)
     : QMainWindow(parent)
@@ -25,30 +25,14 @@ Planner::Planner(QWidget *parent)
            qDebug()<< "Fail to open in planner";
        } else qDebug()<< "Open in planner";
 
+       ui->heytxt->setText("Hello " + current.toUpper() + " !");
 
-      /* QSqlQuery qq;
-       qq.prepare("select plandetails from plan where planuser = '"+current+"' order by plandate desc, plantime desc limit 4");
-       if(qq.exec()){
-           qDebug()<<"Exec";s
+       showfour(current,querystore,datestore,timestore);
 
-           while(qq.next()){
-
-           for (int i = 0; i < 4;i++){
-               querystore[i] = qq.value(0).toString();
-               qq.next();
-           }
-           }
-
-       }
-       else{
-           qDebug()<<"Error";
-       }*/
-       showfour(current,querystore);
-
-       ui->plan_1->setText(querystore[0]);
-       ui->plan_2->setText(querystore[1]);
-       ui->plan_3->setText(querystore[2]);
-       ui->plan_4->setText(querystore[3]);
+       ui->plan_1->setText(querystore[0] + "\n" +  "\n" + datestore[0] + "   " + timestore[0]);
+       ui->plan_2->setText(querystore[1] + "\n" +  "\n" + datestore[1] + "   " + timestore[1]);
+       ui->plan_3->setText(querystore[2] + "\n" +  "\n" + datestore[2] + "   " + timestore[2]);
+       ui->plan_4->setText(querystore[3] + "\n" +  "\n" + datestore[3] + "   " + timestore[3]);
 
 
        //db.close();
@@ -68,11 +52,12 @@ Planner::~Planner()
 
 
 }
+void Planner::setbudget(){}
+void Planner::setfitness(){}
 
-
-void Planner::showfour(QString current,QString querystore[]){
+void Planner::showfour(QString current,QString querystore[],QString datestore[],QString timestore[]){
     QSqlQuery qq;
-    qq.prepare("select plandetails from plan where planuser = '"+current+"' order by plandate desc, plantime desc limit 4");
+    qq.prepare("select plandetails,plandate,plantime from plan where planuser = '"+current+"' order by plandate desc, plantime desc limit 4");
     if(qq.exec()){
         qDebug()<<"Exec";
 
@@ -80,6 +65,9 @@ void Planner::showfour(QString current,QString querystore[]){
 
         for (int i = 0; i < 4;i++){
             querystore[i] = qq.value(0).toString();
+            datestore[i] = qq.value(1).toString();
+            timestore[i] = qq.value(2).toString();
+
             qq.next();
         }
         }
@@ -93,7 +81,7 @@ void Planner::showfour(QString current,QString querystore[]){
 
 void Planner::on_addbut_clicked()
 {
-    //db = QSqlDatabase::database();
+
            if (!db.open()){
                qDebug()<< "Failed";
                return;
@@ -128,14 +116,13 @@ void Planner::on_addbut_clicked()
                    q.clear();
                }
            }
-           showfour(current,querystore);
+           showfour(current,querystore,datestore,timestore);
 
-           ui->plan_1->setText(querystore[0]);
-           ui->plan_2->setText(querystore[1]);
-           ui->plan_3->setText(querystore[2]);
-           ui->plan_4->setText(querystore[3]);
+           ui->plan_1->setText(querystore[0] + "\n" +  "\n" + datestore[0] + "   " + timestore[0]);
+           ui->plan_2->setText(querystore[1] + "\n" +  "\n" + datestore[1] + "   " + timestore[1]);
+           ui->plan_3->setText(querystore[2] + "\n" +  "\n" + datestore[2] + "   " + timestore[2]);
+           ui->plan_4->setText(querystore[3] + "\n" +  "\n" + datestore[3] + "   " + timestore[3]);
 
-           //db.close();
 }
 
 
@@ -164,6 +151,7 @@ void Planner::on_Logout_clicked()
 
 void Planner::on_fitbut_clicked()
 {
+    db.close();
     f = new fitness(this);
         this->hide();
         f->show();
@@ -172,8 +160,15 @@ void Planner::on_fitbut_clicked()
 
 void Planner::on_showplans_clicked()
 {
-    allplans *ap;
-    ap = new allplans(this);
-        ap->show();
+    allplans *ap= new allplans(this);
+    ap->show();
+}
+
+
+void Planner::on_pushButton_clicked()
+{
+    this->close();
+    Planner *back = new Planner(this);
+    back->show();
 }
 

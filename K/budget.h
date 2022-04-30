@@ -7,6 +7,7 @@
 #include <QFileInfo>
 #include <QMainWindow>
 
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class Budget; }
 QT_END_NAMESPACE
@@ -16,6 +17,7 @@ class Budget : public QMainWindow
     Q_OBJECT
 
 public:
+    QString price, item;
     QString f,e,o,s;
     int extotal,intotal,alltotal;
     QString current,variable;
@@ -35,7 +37,11 @@ private slots:
 
     void on_pushButton_4_clicked();
 
-    void addItemstoDatabase();
+    QString addItemstoDatabase(QString,QString,QString);
+
+    void on_home_clicked();
+
+    void setTotals();
 
 private:
     Ui::Budget *ui;

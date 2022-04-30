@@ -14,7 +14,7 @@
    <string>Sign Up</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="src_img.qrc">
+   <iconset>
     <normaloff>:/images/src_images/kaizen_square.png</normaloff>:/images/src_images/kaizen_square.png</iconset>
   </property>
   <property name="styleSheet">
@@ -22,7 +22,7 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
-    <string notr="true">background-image: url(:/images/src_images/backkkkk.png);</string>
+    <string notr="true"/>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_2">
     <item>
@@ -126,7 +126,6 @@ padding:4px;
               </property>
               <property name="font">
                <font>
-                <family>Bahnschrift SemiBold</family>
                 <pointsize>-1</pointsize>
                </font>
               </property>
@@ -149,7 +148,6 @@ color: black;
                  <widget class="QLabel" name="label_2">
                   <property name="font">
                    <font>
-                    <family>Bahnschrift SemiBold</family>
                     <pointsize>-1</pointsize>
                    </font>
                   </property>
@@ -162,7 +160,6 @@ color: black;
                  <widget class="QLabel" name="label">
                   <property name="font">
                    <font>
-                    <family>Bahnschrift SemiBold</family>
                     <pointsize>-1</pointsize>
                    </font>
                   </property>
@@ -231,7 +228,6 @@ background-color: rgb(255, 255, 255);</string>
                <widget class="QLabel" name="label_3">
                 <property name="font">
                  <font>
-                  <family>Bahnschrift SemiBold</family>
                   <pointsize>-1</pointsize>
                  </font>
                 </property>
@@ -271,7 +267,6 @@ background-color: rgb(255, 255, 255);</string>
                <widget class="QLabel" name="label_4">
                 <property name="font">
                  <font>
-                  <family>Bahnschrift SemiBold</family>
                   <pointsize>-1</pointsize>
                  </font>
                 </property>
@@ -311,7 +306,6 @@ background-color: rgb(255, 255, 255);</string>
                <widget class="QLabel" name="label_6">
                 <property name="font">
                  <font>
-                  <family>Bahnschrift SemiBold</family>
                   <pointsize>-1</pointsize>
                  </font>
                 </property>
@@ -331,7 +325,6 @@ background-color: rgb(255, 255, 255);</string>
                <widget class="QLabel" name="label_5">
                 <property name="font">
                  <font>
-                  <family>Bahnschrift SemiBold</family>
                   <pointsize>-1</pointsize>
                  </font>
                 </property>
@@ -388,14 +381,12 @@ background-color: rgb(255, 255, 255);</string>
               </property>
               <property name="font">
                <font>
-                <family>Bahnschrift SemiBold</family>
                 <pointsize>-1</pointsize>
                 <bold>true</bold>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">
-</string>
+               <string notr="true"/>
               </property>
               <property name="text">
                <string>Create Account</string>
@@ -429,8 +420,6 @@ background-color: rgb(255, 255, 255);</string>
    </layout>
   </widget>
  </widget>
- <resources>
-  <include location="src_img.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

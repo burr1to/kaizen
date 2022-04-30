@@ -40,6 +40,8 @@ private slots:
 
     void on_signupbut_clicked();
 
+    void createTable(QString);
+
 private:
     Ui::Login *ui;
 };

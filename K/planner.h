@@ -43,7 +43,13 @@ private slots:
 
     void on_showplans_clicked();
 
-    void showfour(QString current,QString querystore[]);
+    void showfour(QString current,QString querystore[],QString datestore[],QString timestore[]);
+
+    void on_pushButton_clicked();
+
+    void setbudget();
+
+    void setfitness();
 
 private:
     Ui::Planner *ui;

@@ -1,6 +1,6 @@
 #include "budget.h"
 #include "ui_budget.h"
-#include <QtDebug>
+#include "planner.h"
 
 
 Budget::Budget(QWidget *parent)
@@ -17,52 +17,17 @@ Budget::Budget(QWidget *parent)
        qry.clear();
        }
 
+ui->hellotxt->setText("Hello " + current.toUpper() + " !");
 
+   ui->foodtot->setText(addItemstoDatabase(current,"Food",f));
+   ui->edutot->setText(addItemstoDatabase(current,"Education",e));
+   ui->othertot->setText(addItemstoDatabase(current,"Other",s));
+   ui->intot->setText(addItemstoDatabase(current,"Income",o));
 
-
-    QSqlQuery sumq;
-   if(sumq.exec("select sum(Price) from Info where Category = 'Food' and username = '"+current+"'")){
-        sumq.first();
-        f = sumq.value(0).toString();
-        sumq.clear();
-    }
-   ui->foodtot->setText(f);
-
-    if(sumq.exec("select sum(Price) from Info where Category = 'Education' and username = '"+current+"'")){
-        sumq.first();
-        e = sumq.value(0).toString();
-        sumq.clear();
-   }
-     ui->edutot->setText(e);
-
-    if(sumq.exec("select sum(Price) from Info where Category = 'Income' and username = '"+current+"'")){
-       sumq.first();
-       o = sumq.value(0).toString();
-        sumq.clear();
-    }
-     ui->intot->setText(o);
-
-    if(sumq.exec("select sum(Price) from Info where Category = 'Other' and username = '"+current+"'")){
-        sumq.first();
-        s = sumq.value(0).toString();
-        sumq.clear();
-    }
-     ui->othertot->setText(s);
-
-     extotal=f.toInt()+e.toInt()+s.toInt();
-    intotal = o.toInt();
-
-
-    ui->extotal->setNum(extotal);
-    ui->intotal->setNum(intotal);
-
-
-
-
-
+   setTotals();
 
  QSqlQueryModel *bqmodel= new QSqlQueryModel();
-  bqmodel->setQuery("SELECT Item,Price FROM Info where username = '""+current+'");
+  bqmodel->setQuery("SELECT Item,Price FROM Info where username = '"+current+"'");
   ui->expta->setModel(bqmodel);
 
 }
@@ -79,16 +44,33 @@ Budget::~Budget()
     delete ui;
 };
 
+void Budget::setTotals(){
+    QString a,b;
+    QSqlQuery tot;
+   if(tot.exec("select sum(Price) from INFO where category = 'Income'")){
+        tot.first();
+        a = tot.value(0).toString();
+    }
 
-void Budget::addItemstoDatabase(){
+    ui->intotal->setNum(a.toInt());
+    tot.clear();
+    if(tot.exec("select sum(Price) from INFO")){
+         tot.first();
+         b = tot.value(0).toString();
+     }
+
+   ui->extotal->setNum(b.toInt()-a.toInt());
+
+}
+
+QString Budget::addItemstoDatabase(QString current, QString variable,QString a){
     QSqlQuery sumq;
    if(sumq.exec("select sum(Price) from Info where Category = '"+variable+"' and username = '"+current+"'")){
         sumq.first();
         a = sumq.value(0).toString();
-        sumq.clear();
     }
     sumq.clear();
-   ui->edutot->setText(a);
+    return a;
 
 }
 
@@ -102,7 +84,7 @@ void Budget::on_pushButton_5_clicked()
 
 void Budget::on_pushButton_3_clicked()
 {
-    QString price, item;
+
         item = ui->edu_item->text();
         price = ui->edu_amount->text();
 
@@ -110,7 +92,9 @@ void Budget::on_pushButton_3_clicked()
             qDebug()<<"Failed to connect";
             return;
         }
+        if (!item.isEmpty() && !price.isEmpty()){
         QSqlQuery qry;
+
         qry.prepare("INSERT INTO Info(item, price, category,username) VALUES(:item, :price, :category,:usr)");
         qry.bindValue(":price", price);
         qry.bindValue(":item", item);
@@ -125,20 +109,25 @@ void Budget::on_pushButton_3_clicked()
            qDebug()<<"Error";
         }
 
-        QSqlQuery sumq;
-       if(sumq.exec("select sum(Price) from Info where Category = 'Education' and username = '"+current+"'")){
-            sumq.first();
-            e = sumq.value(0).toString();
-            sumq.clear();
+
+
+       ui->edutot->setText(addItemstoDatabase(current,"Education",e));
+       extotal=f.toInt()+e.toInt()+s.toInt();
+       intotal = o.toInt();
+
+        setTotals();
+
         }
-        sumq.clear();
-       ui->edutot->setText(e);
+        else{
+            qDebug()<<"No empty please";
+        }
+
 }
 
 
 void Budget::on_pushButton_12_clicked()
 {
-    QString price, item;
+
         item = ui->f_item->text();
         price = ui->f_amount->text();
 
@@ -146,7 +135,9 @@ void Budget::on_pushButton_12_clicked()
             qDebug()<<"Failed to connect";
             return;
         }
+         if (!item.isEmpty() && !price.isEmpty()){
         QSqlQuery qry;
+
         qry.prepare("INSERT INTO Info(item, price, category,username) VALUES(:item, :price, :category,:usr)");
         qry.bindValue(":price", price);
         qry.bindValue(":item", item);
@@ -160,20 +151,19 @@ void Budget::on_pushButton_12_clicked()
         else{
              qDebug()<<"Error";
         }
-        QSqlQuery sumq;
-        if(sumq.exec("select sum(Price) from Info where Category = 'Food' and username = '"+current+"'")){
-            sumq.first();
-            f = sumq.value(0).toString();
-            sumq.clear();
-       }
-         sumq.clear();
-         ui->foodtot->setText(f);
+         ui->foodtot->setText(addItemstoDatabase(current,"Food",f));
+            setTotals();
+         }
+         else{
+             qDebug()<<"No empty please";
+         }
+
 }
 
 
 void Budget::on_pushButton_9_clicked()
 {
-    QString price, item;
+
         item = ui->o_item->text();
         price = ui->o_amount->text();
 
@@ -181,6 +171,7 @@ void Budget::on_pushButton_9_clicked()
             qDebug()<<"Failed to connect";
             return;
         }
+        if (!item.isEmpty() && !price.isEmpty()){
         QSqlQuery qry;
         qry.prepare("INSERT INTO Info(item, price, category,username) VALUES(:item, :price, :category,:usr)");
         qry.bindValue(":price", price);
@@ -196,20 +187,19 @@ void Budget::on_pushButton_9_clicked()
             qDebug()<<"Error";
         }
 
-           QSqlQuery sumq;
-         if(sumq.exec("select sum(Price) from Info where Category = 'Other' and username = '"+current+"'")){
-             sumq.first();
-             s = sumq.value(0).toString();
-             sumq.clear();
-         }
-         sumq.clear();
-          ui->othertot->setText(s);
+          ui->othertot->setText(addItemstoDatabase(current,"Other",s));
+          setTotals();
+        }
+        else{
+                qDebug()<<"No empty please";
+        }
+
 }
 
 
 void Budget::on_pushButton_4_clicked()
 {
-    QString price, item;
+
         item = ui->in_item->text();
         price = ui->in_amount->text();
 
@@ -217,6 +207,7 @@ void Budget::on_pushButton_4_clicked()
             qDebug()<<"Failed to connect";
             return;
         }
+        if (!item.isEmpty() && !price.isEmpty()){
         QSqlQuery qry;
         qry.prepare("INSERT INTO Info(item, price, category,username) VALUES(:item, :price, :category,:usr)");
         qry.bindValue(":price", price);
@@ -231,13 +222,20 @@ void Budget::on_pushButton_4_clicked()
         else{
              qDebug()<<"Error";
         }
-        QSqlQuery sumq;
-       if(sumq.exec("select sum(Price) from Info where Category = 'Income' and username = '"+current+"'")){
-          sumq.first();
-          o = sumq.value(0).toString();
-           sumq.clear();
-       }
-        sumq.clear();
-        ui->intot->setText(o);
+         ui->intot->setText(addItemstoDatabase(current,"Income",o));
+           setTotals();
+        }
+        else{
+           qDebug()<<"No empty please";
+        }
+
+}
+
+
+void Budget::on_home_clicked()
+{
+    this->close();
+    Planner *pew=new Planner(this);
+    pew->show();
 }
 
