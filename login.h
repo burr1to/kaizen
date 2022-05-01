@@ -1,0 +1,47 @@
+#ifndef LOGIN_H
+#define LOGIN_H
+
+#include <QMainWindow>
+#include <QSql>
+#include <QSqlDatabase>
+#include <QDebug>
+#include <QFileInfo>
+
+
+
+namespace Ui {
+class Login;
+}
+
+class Login : public QMainWindow
+{
+    Q_OBJECT
+
+  public:
+
+    QSqlDatabase mydb;
+
+
+    void myfunction(){
+           mydb = QSqlDatabase::addDatabase("QSQLITE");
+           mydb.setDatabaseName("/Users/shinigami/Desktop/kaizen/database.db");
+       };
+
+
+public:
+    explicit Login(QWidget *parent = nullptr);
+    ~Login();
+
+
+private slots:
+
+
+    void on_loginbutt_clicked();
+
+    void on_signupbut_clicked();
+
+private:
+    Ui::Login *ui;
+};
+
+#endif // LOGIN_H
