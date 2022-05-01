@@ -46,7 +46,7 @@
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(32, 34, 37);</string>
+    <string notr="true">background-color: rgb(185, 187, 190);</string>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
