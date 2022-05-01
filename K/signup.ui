@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>449</width>
-    <height>729</height>
+    <width>500</width>
+    <height>779</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>500</width>
+    <height>720</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Sign Up</string>
@@ -18,7 +24,9 @@
     <normaloff>:/images/src_images/kaizen_square.png</normaloff>:/images/src_images/kaizen_square.png</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">background-color: rgb(34, 37, 42);
+color:black;
+padding:10px;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
@@ -27,9 +35,14 @@
    <layout class="QHBoxLayout" name="horizontalLayout_2">
     <item>
      <widget class="QFrame" name="Mainframe">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
       <property name="styleSheet">
-       <string notr="true">
-border-radius:20px;</string>
+       <string notr="true">border-radius:50px;</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -37,61 +50,21 @@ border-radius:20px;</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout" stretch="0">
+      <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0">
        <item>
         <layout class="QVBoxLayout" name="Left_side" stretch="0">
          <item>
           <widget class="QFrame" name="signup_frame">
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <pointsize>-1</pointsize>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">#signup_frame{
-background-color: rgb(255, 255, 255);
-padding:10px;
-}
-
-#title{
-margin-bottom:20px;
-}
-
-QLabel{
-font-size:20px;
-}
-
-QDateEdit
-{
-    background-color: white;
-border: 2px solid white;
-  padding:5px;
-font-size:15px;
-background-color:white;
-}
-
-
-
-#regbut{
-border-radius:10px;
-border:1px solid rgb(173, 173, 173);
-background-color: rgb(251, 255, 249);
-padding:15px;
-font-size:18px;
-}
-
-#regbut:hover{
-background-color:black;
-border:1px solid transparent;
-color:white;
-}
-
-QLineEdit{
-padding:4px;
-}
-
-
-</string>
+            <string notr="true">background-color: rgb(255, 255, 255);
+font:18px;</string>
            </property>
            <property name="frameShape">
             <enum>QFrame::StyledPanel</enum>
@@ -99,23 +72,7 @@ padding:4px;
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
-           <layout class="QVBoxLayout" name="verticalLayout">
-            <item>
-             <spacer name="verticalSpacer_2">
-              <property name="orientation">
-               <enum>Qt::Vertical</enum>
-              </property>
-              <property name="sizeType">
-               <enum>QSizePolicy::Fixed</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>20</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
+           <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0,0,0,0,0,0,0">
             <item>
              <widget class="QLabel" name="title">
               <property name="minimumSize">
@@ -127,18 +84,30 @@ padding:4px;
               <property name="font">
                <font>
                 <pointsize>-1</pointsize>
+                <italic>false</italic>
+                <bold>false</bold>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">border:0px;
-background:transparent;
-color: black;
-</string>
+               <string notr="true"/>
               </property>
               <property name="text">
-               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; font-weight:700;&quot;&gt;Sign up&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; font-weight:700;&quot;&gt;Sign up&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
             </item>
             <item>
              <layout class="QVBoxLayout" name="names">
@@ -146,10 +115,21 @@ color: black;
                <layout class="QHBoxLayout" name="horizontalLayout_3">
                 <item>
                  <widget class="QLabel" name="label_2">
+                  <property name="sizeIncrement">
+                   <size>
+                    <width>0</width>
+                    <height>30</height>
+                   </size>
+                  </property>
                   <property name="font">
                    <font>
                     <pointsize>-1</pointsize>
+                    <italic>false</italic>
+                    <bold>false</bold>
                    </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"/>
                   </property>
                   <property name="text">
                    <string>First Name</string>
@@ -158,10 +138,21 @@ color: black;
                 </item>
                 <item>
                  <widget class="QLabel" name="label">
+                  <property name="sizeIncrement">
+                   <size>
+                    <width>0</width>
+                    <height>30</height>
+                   </size>
+                  </property>
                   <property name="font">
                    <font>
                     <pointsize>-1</pointsize>
+                    <italic>false</italic>
+                    <bold>false</bold>
                    </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"/>
                   </property>
                   <property name="text">
                    <string>Last Name</string>
@@ -182,13 +173,15 @@ color: black;
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>12</pointsize>
-                    <bold>true</bold>
+                    <pointsize>-1</pointsize>
+                    <italic>false</italic>
+                    <bold>false</bold>
                    </font>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">background:transparent;
-background-color: rgb(255, 255, 255);</string>
+                   <string notr="true">background-color: rgb(230, 235, 241);
+border-radius:15px;
+border:0px;e6ebf1</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -205,13 +198,15 @@ background-color: rgb(255, 255, 255);</string>
                   </property>
                   <property name="font">
                    <font>
-                    <pointsize>12</pointsize>
-                    <bold>true</bold>
+                    <pointsize>-1</pointsize>
+                    <italic>false</italic>
+                    <bold>false</bold>
                    </font>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">background:transparent;
-background-color: rgb(255, 255, 255);</string>
+                   <string notr="true">background-color: rgb(230, 235, 241);
+border-radius:15px;
+border:0px;</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -229,6 +224,8 @@ background-color: rgb(255, 255, 255);</string>
                 <property name="font">
                  <font>
                   <pointsize>-1</pointsize>
+                  <italic>false</italic>
+                  <bold>false</bold>
                  </font>
                 </property>
                 <property name="text">
@@ -246,13 +243,15 @@ background-color: rgb(255, 255, 255);</string>
                 </property>
                 <property name="font">
                  <font>
-                  <pointsize>12</pointsize>
-                  <bold>true</bold>
+                  <pointsize>-1</pointsize>
+                  <italic>false</italic>
+                  <bold>false</bold>
                  </font>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">background:transparent;
-background-color: rgb(255, 255, 255);</string>
+                 <string notr="true">background-color: rgb(230, 235, 241);
+border-radius:15px;
+border:0px;</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -268,6 +267,8 @@ background-color: rgb(255, 255, 255);</string>
                 <property name="font">
                  <font>
                   <pointsize>-1</pointsize>
+                  <italic>false</italic>
+                  <bold>false</bold>
                  </font>
                 </property>
                 <property name="text">
@@ -285,13 +286,15 @@ background-color: rgb(255, 255, 255);</string>
                 </property>
                 <property name="font">
                  <font>
-                  <pointsize>12</pointsize>
-                  <bold>true</bold>
+                  <pointsize>-1</pointsize>
+                  <italic>false</italic>
+                  <bold>false</bold>
                  </font>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">background:transparent;
-background-color: rgb(255, 255, 255);</string>
+                 <string notr="true">background-color: rgb(230, 235, 241);
+border-radius:15px;
+border:0px;</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -307,6 +310,8 @@ background-color: rgb(255, 255, 255);</string>
                 <property name="font">
                  <font>
                   <pointsize>-1</pointsize>
+                  <italic>false</italic>
+                  <bold>false</bold>
                  </font>
                 </property>
                 <property name="text">
@@ -315,7 +320,13 @@ background-color: rgb(255, 255, 255);</string>
                </widget>
               </item>
               <item>
-               <widget class="QDateEdit" name="dob"/>
+               <widget class="QDateEdit" name="dob">
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(230, 235, 241);
+border-radius:15px;
+border:0px;</string>
+                </property>
+               </widget>
               </item>
              </layout>
             </item>
@@ -326,6 +337,8 @@ background-color: rgb(255, 255, 255);</string>
                 <property name="font">
                  <font>
                   <pointsize>-1</pointsize>
+                  <italic>false</italic>
+                  <bold>false</bold>
                  </font>
                 </property>
                 <property name="text">
@@ -343,33 +356,35 @@ background-color: rgb(255, 255, 255);</string>
                 </property>
                 <property name="font">
                  <font>
-                  <pointsize>12</pointsize>
-                  <bold>true</bold>
+                  <pointsize>-1</pointsize>
+                  <italic>false</italic>
+                  <bold>false</bold>
                  </font>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">background:transparent;
-background-color: rgb(255, 255, 255);</string>
+                 <string notr="true">background-color: rgb(230, 235, 241);
+border-radius:15px;
+border:0px;</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                 </property>
                </widget>
               </item>
-              <item>
-               <spacer name="verticalSpacer_3">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>40</width>
-                  <height>30</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
              </layout>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
             </item>
             <item>
              <widget class="QPushButton" name="regbut">
@@ -382,32 +397,19 @@ background-color: rgb(255, 255, 255);</string>
               <property name="font">
                <font>
                 <pointsize>-1</pointsize>
-                <bold>true</bold>
+                <italic>false</italic>
+                <bold>false</bold>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true"/>
+               <string notr="true">background-color: rgb(230, 235, 241);
+border-radius:10px;
+border:0px;</string>
               </property>
               <property name="text">
                <string>Create Account</string>
               </property>
              </widget>
-            </item>
-            <item>
-             <spacer name="verticalSpacer">
-              <property name="orientation">
-               <enum>Qt::Vertical</enum>
-              </property>
-              <property name="sizeType">
-               <enum>QSizePolicy::Fixed</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>20</width>
-                <height>40</height>
-               </size>
-              </property>
-             </spacer>
             </item>
            </layout>
           </widget>
