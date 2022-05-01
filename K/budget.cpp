@@ -58,6 +58,7 @@ void Budget::setTotals(){
          tot.first();
          b = tot.value(0).toString();
      }
+    tot.clear();
 
    ui->extotal->setNum(b.toInt()-a.toInt());
 

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1099</width>
-    <height>812</height>
+    <width>1920</width>
+    <height>1080</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -40,6 +40,12 @@ background-color:#B1ccf2;</string>
       <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,0">
        <item>
         <widget class="QFrame" name="frame_3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>1</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="styleSheet">
           <string notr="true">border: none;
 background-color:#B1ccf2;</string>
@@ -93,6 +99,12 @@ background-color:#B1ccf2;</string>
        </item>
        <item>
         <widget class="QFrame" name="frame">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>5</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="styleSheet">
           <string notr="true">background-color:#DDE6F4;</string>
          </property>
@@ -117,8 +129,8 @@ border: none;</string>
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>228</width>
-               <height>673</height>
+               <width>274</width>
+               <height>932</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_7">
@@ -279,8 +291,8 @@ color: black;
             <widget class="QLabel" name="label_9">
              <property name="geometry">
               <rect>
-               <x>430</x>
-               <y>30</y>
+               <x>390</x>
+               <y>20</y>
                <width>181</width>
                <height>51</height>
               </rect>
@@ -322,7 +334,7 @@ color: black;
               <string>xxxx</string>
              </property>
             </widget>
-            <widget class="QWidget" name="">
+            <widget class="QWidget" name="layoutWidget">
              <property name="geometry">
               <rect>
                <x>30</x>
