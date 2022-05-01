@@ -46,7 +46,7 @@ private slots:
     void on_pushButton_yoga_clicked();
 
 
-    //void show_chart();
+    void show_chart();
 
 
     void on_editstuff_clicked();

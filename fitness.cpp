@@ -22,9 +22,9 @@ fitness::fitness(QWidget *parent)
     }
     QString height, weight, bmi;
 
-    QTimer *datetime = new QTimer(this);
+    //QTimer *datetime = new QTimer(this);
 
-    //show_chart();
+    show_chart();
 
 }
 
@@ -33,15 +33,16 @@ fitness::~fitness()
 {
     delete ui;
 }
-/*
+
 void fitness::show_chart()
 {
     QSqlQuery qry1, qry2,qry3;
-
-    qry2.prepare("select count(*) from fitness where username = '""+current+'");
+    int a;
+    qry2.prepare("select count(*) from fitness where username = '"+current+"'");
     qry2.exec();
     qry2.first();
     int noofrows = qry2.value(0).toInt();
+    qDebug() << noofrows;
 
     int offset = noofrows - 5;
 
@@ -49,22 +50,30 @@ void fitness::show_chart()
     int i;
     qry3.prepare("select * from fitness where username = '"+current+"' limit 5 offset :offsetvalue ");
     qry3.bindValue(":offsetvalue",offset);
+    qDebug() << current;
+
     int count = 0;
     if (qry3.exec()){
         while (qry3.next()){
             count = count + 1;
         }
     }
+    qDebug() << count;
 
-    qry1.prepare("select * from fitness username = '"+current+"' limit 5 offset :offsetvalue");
+    qry1.prepare("select * from fitness where username = '"+current+"' limit 5 offset :offsetvalue");
     qry1.bindValue(":offsetvalue",offset);
     qry1.exec();
+    qDebug() << offset;
 
     for (i=0; i<count; i++){
         qry1.next();
+        if (i == 0){
+            a = qry1.value(1).toInt();
+            qDebug()<< a;
+        }
         QStringList dates = qry1.value(0).toString().split("-").mid(0,3);
         QDateTime momentInTime;
-        momentInTime.setDate(QDate(dates[0].toInt(), dates[1].toInt() , dates[2].toInt()));
+        momentInTime.setDate(QDate(dates[0].toInt(), dates[1].toInt(), dates[2].toInt()));
         series -> append(momentInTime.toMSecsSinceEpoch(), qry1.value(1).toDouble());
     }
 
@@ -72,7 +81,7 @@ void fitness::show_chart()
     chart -> addSeries(series);
     chart -> legend() -> hide();
     chart -> setTitle("Weight Record");
-    chart -> setTheme(QChart::ChartThemeHighContrast);
+    chart -> setTheme(QChart::ChartThemeBlueIcy);
 
     QDateTimeAxis *axisX = new QDateTimeAxis;
     axisX->setFormat("dd MMM");
@@ -83,7 +92,7 @@ void fitness::show_chart()
 
     QValueAxis *axisY = new QValueAxis;
     axisY->setLabelFormat("%i");
-    axisY->setRange(66,75);
+    axisY->setRange(a-4, a+5);
     axisY->setTickCount(10);
     axisY->setTitleText("Weight");
     chart->addAxis(axisY, Qt::AlignLeft);
@@ -92,12 +101,14 @@ void fitness::show_chart()
     chart -> setAnimationOptions(QChart::GridAxisAnimations);
     chart -> setAnimationOptions(QChart::SeriesAnimations);
     chart -> setAnimationEasingCurve(QEasingCurve::OutCubic);
+    chart->setPlotArea(QRectF(50, 40, 530, 250));
+    chart->setMargins(QMargins(0,0,0,0));
 
     QChartView *chartView = new QChartView(chart);
     chartView -> setRenderHint(QPainter::Antialiasing);
     chartView -> setParent(ui->horizontalFrame_chart);
 }
-*/
+
 void fitness::on_pushButton_uperbody_clicked()
 {
     hide();
