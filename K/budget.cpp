@@ -117,6 +117,9 @@ void Budget::on_pushButton_3_clicked()
        intotal = o.toInt();
 
         setTotals();
+        QSqlQueryModel *bqmodel= new QSqlQueryModel();
+         bqmodel->setQuery("SELECT Item,Price FROM Info where username = '"+current+"'");
+         ui->expta->setModel(bqmodel);
 
         }
         else{
@@ -154,6 +157,9 @@ void Budget::on_pushButton_12_clicked()
         }
          ui->foodtot->setText(addItemstoDatabase(current,"Food",f));
             setTotals();
+            QSqlQueryModel *bqmodel= new QSqlQueryModel();
+             bqmodel->setQuery("SELECT Item,Price FROM Info where username = '"+current+"'");
+             ui->expta->setModel(bqmodel);
          }
          else{
              qDebug()<<"No empty please";
@@ -190,6 +196,9 @@ void Budget::on_pushButton_9_clicked()
 
           ui->othertot->setText(addItemstoDatabase(current,"Other",s));
           setTotals();
+          QSqlQueryModel *bqmodel= new QSqlQueryModel();
+           bqmodel->setQuery("SELECT Item,Price FROM Info where username = '"+current+"'");
+           ui->expta->setModel(bqmodel);
         }
         else{
                 qDebug()<<"No empty please";
@@ -225,6 +234,9 @@ void Budget::on_pushButton_4_clicked()
         }
          ui->intot->setText(addItemstoDatabase(current,"Income",o));
            setTotals();
+           QSqlQueryModel *bqmodel= new QSqlQueryModel();
+            bqmodel->setQuery("SELECT Item,Price FROM Info where username = '"+current+"'");
+            ui->expta->setModel(bqmodel);
         }
         else{
            qDebug()<<"No empty please";
@@ -236,7 +248,6 @@ void Budget::on_pushButton_4_clicked()
 void Budget::on_home_clicked()
 {
     this->close();
-    Planner *pew=new Planner(this);
-    pew->show();
+    back->show();
 }
 

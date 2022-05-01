@@ -14,9 +14,9 @@
    <string>Budget</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">border: 1px solid black;
+   <string notr="true">#Budget{border: 1px solid black;
 border-radius: 30px;
-background:white;</string>
+background:white;}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
