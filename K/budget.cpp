@@ -27,7 +27,7 @@ ui->hellotxt->setText("Hello " + current.toUpper() + " !");
    setTotals();
 
  QSqlQueryModel *bqmodel= new QSqlQueryModel();
-  bqmodel->setQuery("SELECT Item,Price FROM Info where username = '"+current+"'");
+  bqmodel->setQuery("SELECT Item,Price,Category FROM Info where username = '"+current+"'");
   ui->expta->setModel(bqmodel);
 
 }
@@ -60,7 +60,8 @@ void Budget::setTotals(){
      }
     tot.clear();
 
-   ui->extotal->setNum(b.toInt()-a.toInt());
+   ui->extotal->setNum(b.toInt());
+   ui->net->setNum(b.toInt()-a.toInt());
 
 }
 
@@ -248,6 +249,6 @@ void Budget::on_pushButton_4_clicked()
 void Budget::on_home_clicked()
 {
     this->close();
-    back->show();
+    //back->show();
 }
 
