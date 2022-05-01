@@ -276,8 +276,14 @@ padding-left:10px;</string>
                      </item>
                     </layout>
                    </item>
-                   <item>
+                   <item alignment="Qt::AlignHCenter">
                     <widget class="QLabel" name="planerr">
+                     <property name="styleSheet">
+                      <string notr="true">#planerr{
+font-size:14px;
+color:white;
+}</string>
+                     </property>
                      <property name="text">
                       <string/>
                      </property>

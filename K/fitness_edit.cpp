@@ -23,14 +23,31 @@ fitness_edit::fitness_edit(QWidget *parent) :
 fitness_edit::~fitness_edit()
 {
 
-    /*fitness *f;
-    f = new fitness(this);
-    f->show();*/
+
     delete ui;
 }
 
 
+void fitness_edit::insertData(QString weight, QString height, QString clock_text, float bmi, QString current){
+    QSqlQuery qry;
+    qry.prepare("INSERT INTO fitness(currentdate,weight,height,bmi,username) VALUES (:d,:w,:h,:b,:usr)");
+    qry.bindValue(":w", weight);
+    qry.bindValue(":h", height);
+    qry.bindValue(":b", bmi);
+    qry.bindValue(":usr", current);
+    qry.bindValue(":d",clock_text);
+    if (qry.exec()){
+        qDebug()<<"done";
+        qry.clear();
 
+        ui->weight->clear();
+        ui->height->clear();
+    }
+    else{
+        qDebug()<<"no";
+    }
+    qry.clear();
+}
 
 void fitness_edit::on_submit_clicked()
 {
@@ -42,39 +59,14 @@ void fitness_edit::on_submit_clicked()
         qDebug()<< "Connection done";
     }
     QDateTime clock = QDateTime::currentDateTime();
-    QString clock_text=clock.toString("yyyy-MM-dd-hh-mm-ss");
-
-    QString weight,height;
+    clock_text=clock.toString("yyyy-MM-dd-hh-mm-ss");
+    float bmi = 10.0;
     weight = ui->weight->text();
     height = ui->height->text();
-    /*int wt,ht;
-    ht = height.toInt();
-    wt = weight.toInt();
-    float bmi;
-    ht = ht/100;
-    bmi = wt/(ht*ht);
-    qDebug()<< bmi;*/
-
-
-    QSqlQuery qry;
-    qry.prepare("INSERT INTO fitness(currentdate,weight,height,bmi,username) VALUES (:d,:w,:h,:b,:usr)");
-    qry.bindValue(":w", weight);
-    qry.bindValue(":h", height);
-    qry.bindValue(":b", 10);
-    qry.bindValue(":usr", current);
-    qry.bindValue(":d",clock_text);
-    if (qry.exec()){
-        qDebug()<<"done";
-        qry.clear();
-
-        ui->weight->clear();
-        ui->height->clear();
-    }
-    else{
-        qry.clear();
-        qDebug()<<"no";
-    }
+    insertData(weight,height,clock_text,bmi,current);
     fitness_db.close();
+    //this->close();
+
 
 }
 

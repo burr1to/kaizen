@@ -6,34 +6,31 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1200</width>
-    <height>800</height>
+    <width>1280</width>
+    <height>720</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>0</width>
-    <height>0</height>
+    <width>1280</width>
+    <height>720</height>
    </size>
   </property>
   <property name="baseSize">
    <size>
-    <width>1920</width>
-    <height>1080</height>
+    <width>1280</width>
+    <height>720</height>
    </size>
   </property>
   <property name="windowTitle">
    <string>Login</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="src_img.qrc">
+   <iconset>
     <normaloff>:/images/src_images/kaizen_square.png</normaloff>:/images/src_images/kaizen_square.png</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">QFrame{
-border: 1px solid transparent;}
-
-</string>
+   <string notr="true">background-color: rgb(32, 34, 37);</string>
   </property>
   <widget class="QWidget" name="loginwidget">
    <property name="minimumSize">
@@ -49,8 +46,7 @@ border: 1px solid transparent;}
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">#loginwidget{background-color: rgb(49, 155, 255); }
-</string>
+    <string notr="true">background-color: rgb(32, 34, 37);</string>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
@@ -80,28 +76,31 @@ border: 1px solid transparent;}
       </property>
       <property name="maximumSize">
        <size>
-        <width>602</width>
-        <height>602</height>
+        <width>600</width>
+        <height>600</height>
        </size>
       </property>
       <property name="styleSheet">
        <string notr="true">#loginframe{
-background-color:white;
-border-radius:40px;
+background-color: #2f3136;
+border-radius:50px;
 max-width:600px;
 max-height:600px;
 }
 
 #bigtxt{
 font-size:30px;
+color:#b9bbbe;
 font-weight:bold;
 }
 
 #username,#password
 {
-border-radius:20px;
-background:white;
-border:1px solid black;
+border-radius:15px;
+background:#36393f;
+border:1px;
+border-color:#b9bbbe ;
+color:#b9bbbe;
 padding:10px;
 
 margin-bottom:10px;
@@ -112,7 +111,7 @@ margin-bottom:10px;
 border-radius:10px;
 border:1px solid rgb(173, 173, 173);
 padding:6px;
-color:black;
+color:#b9bbbe;
 margin-top:15px;
 font-size:20px;
 font-weight:bold;
@@ -120,16 +119,16 @@ background:transparent;
 }
 
 #loginbutt:hover{
-background-color:black;
+background-color:#202225;
 border:1px solid transparent;
-color:white;
+color:#b9bbbe;
 }
 
 
 #usr,#pswd{
 font-size:24px;
 margin-bottom:10px;
-color:black;
+color:#b9bbbe;
 background:transparent;
 }
 #pswd{
@@ -141,13 +140,13 @@ border:1px solid transparent;
 padding:20px;
 font-size:15px;
 
-color:black;
+color:#b9bbbe;
 
 }
 
 #textdis{
-margin-bottom:5px;
-color:black;
+margin-bottom:8px;
+color:#b9bbbe;
 
 }
 </string>
@@ -195,8 +194,11 @@ color:black;
          </item>
          <item>
           <widget class="QLabel" name="bigtxt">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(47, 49, 54);</string>
+           </property>
            <property name="text">
-            <string>Login System</string>
+            <string>Login</string>
            </property>
           </widget>
          </item>
@@ -257,7 +259,7 @@ color:black;
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true"/>
+            <string notr="true">background-color: rgb(47, 49, 54);</string>
            </property>
            <property name="text">
             <string>Sign up from here</string>
@@ -280,8 +282,11 @@ color:black;
            </property>
           </spacer>
          </item>
-         <item alignment="Qt::AlignHCenter">
+         <item>
           <widget class="QLabel" name="textdis">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(47, 49, 54);</string>
+           </property>
            <property name="text">
             <string/>
            </property>
@@ -327,9 +332,7 @@ color:black;
    </layout>
   </widget>
  </widget>
- <resources>
-  <include location="src_img.qrc"/>
- </resources>
+ <resources/>
  <connections>
   <connection>
    <sender>password</sender>

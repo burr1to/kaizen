@@ -6,36 +6,38 @@ allplans::allplans(QWidget *parent) :
     ui(new Ui::allplans)
 {
     ui->setupUi(this);
+    ui->datecome->setDate(QDate::currentDate());
     db = QSqlDatabase::database();
     QSqlQuery qry;
     qry.prepare("select current from current_user");
     if (qry.exec()){
-    //while(qry.next()){
+
         qry.first();
     current = qry.value(0).toString();
     qry.clear();
     qDebug()<<current;
-    //}
+
     }
 
-
-    QSqlQueryModel * model = new QSqlQueryModel();
-    model->setQuery("select plandetails from plan where planuser = '"+current+"'");
-    int rowcount = model->rowCount();
-    qDebug()<< rowcount;
-
-    ui->listView->setModel(model);
+    refresh();
 
 }
-int a;
+
 allplans::~allplans()
 {
     db.close();
     delete ui;
 }
 
-
-
+int a;
+void allplans::refresh()
+{
+    QSqlQueryModel * model = new QSqlQueryModel();
+    model->setQuery("select plandetails from plan where planuser = '"+current+"'");
+    int rowcount = model->rowCount();
+    qDebug()<< rowcount;
+    ui->listView->setModel(model);
+}
 
 int allplans::on_listView_activated(const QModelIndex &index)
 {
@@ -84,19 +86,26 @@ void allplans::on_pushButton_clicked()
 
 
      QSqlQuery sq;
+     if (!upplan.isEmpty()){
      sq.prepare("update plan set plandate = '"+update+"', plantime = '"+uptime+"', plandetails = '"+upplan+"' where planid = :pl");
      sq.bindValue(":pl",a);
     if (sq.exec()){
-        qDebug()<< "Edit updated";
+        ui->errortxt->setText("Plan updated!!");
         ui->editingPlan->clear();
         ui->datecome->clear();
         ui->timecome->clear();
+        refresh();
 
     }
     else{
         qDebug()<< "Nope";
     }
     sq.clear();
+     }
+     else{
+         ui->errortxt->setText("You have not input your plan :(");
+
+     }
 
 }
 
@@ -116,6 +125,8 @@ void allplans::on_pushButton_3_clicked()
         qu.bindValue(":psl",a);
         if (qu.exec()){
             qDebug()<<"Exec";
+            ui->errortxt->setText("Plan deleted!! Sorry to see it go :(");
+            refresh();
         }else {
             qDebug()<<"Um";
         }
@@ -129,13 +140,5 @@ void allplans::on_pushButton_3_clicked()
 
 
 
-void allplans::on_refresh_clicked()
-{
-    QSqlQueryModel * model = new QSqlQueryModel();
-    model->setQuery("select plandetails from plan where planuser = '"+current+"'");
-    int rowcount = model->rowCount();
-    qDebug()<< rowcount;
 
-    ui->listView->setModel(model);
-}
 

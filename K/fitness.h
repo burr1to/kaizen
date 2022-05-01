@@ -5,9 +5,9 @@
 #include <QtSql>
 #include <QtDebug>
 #include <QFileInfo>
-//#include <QtCharts>
-//#include <QChartView>
-//#include <QLineSeries>
+/*#include <QtCharts>
+#include <QChartView>
+#include <QLineSeries>*/
 #include <QString>
 #include <QTimer>
 #include <QDateTime>
@@ -16,7 +16,7 @@
 #include "lower_body.h"
 #include "core.h"
 #include "yoga.h"
-#include "fitness_edit.h"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class fitness; }
@@ -28,10 +28,13 @@ class fitness : public QMainWindow
 public:
     QSqlDatabase db;
     QString current;
-
 public:
     fitness(QWidget *parent = nullptr);
     ~fitness();
+
+public slots:
+
+
 
 private slots:
 
@@ -45,16 +48,13 @@ private slots:
 
     void on_pushButton_yoga_clicked();
 
-
-    //void show_chart();
-
+    void show_chart();
 
     void on_editstuff_clicked();
 
-    void on_refresh_clicked();
-
     void on_home_clicked();
 
+     void getfitnessdata(QString username, QString fitnessdata[]);
 private:
     Ui::fitness *ui;
     upper_body *upperbody;

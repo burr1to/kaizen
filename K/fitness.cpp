@@ -2,10 +2,11 @@
 #include "ui_fitness.h"
 #include <QTimer>
 #include <QDateTime>
-#include "fitness_edit.h"
 #include <QSql>
 #include <QSqlDatabase>
+#include "fitness_edit.h"
 
+  QString fitdata[2];
 fitness::fitness(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::fitness)
@@ -20,9 +21,14 @@ fitness::fitness(QWidget *parent)
     current = qry.value(0).toString();
     qry.clear();
     }
-    QString height, weight, bmi;
 
-    //QTimer *datetime = new QTimer(this);
+
+    ui->helloname->setText(current);
+    getfitnessdata(current,fitdata);
+    ui->weight->setText(fitdata[0]);
+    ui->height->setText(fitdata[1]);
+
+
 
     //show_chart();
 
@@ -34,14 +40,34 @@ fitness::~fitness()
     delete ui;
 }
 
-/*void fitness::show_chart()
-{
-    QSqlQuery qry1, qry2,qry3;
 
-    qry2.prepare("select count(*) from fitness where username = '""+current+'");
+void fitness::getfitnessdata(QString username,QString fitdata[]){
+    QSqlQuery fitqry;
+    if (fitqry.exec("select weight,height from fitness where username = '"+username+"' limit 1")){
+        qDebug()<<"Executed";
+
+            while(fitqry.next()){
+
+
+                fitdata[0] = fitqry.value(0).toString();
+                fitdata[1] = fitqry.value(1).toString();
+
+
+        }
+    }
+    qDebug()<<fitdata[0];
+    qDebug()<<fitdata[1];
+
+}
+void fitness::show_chart()
+{
+    /*QSqlQuery qry1, qry2,qry3;
+    int a;
+    qry2.prepare("select count(*) from fitness where username = '"+current+"'");
     qry2.exec();
     qry2.first();
     int noofrows = qry2.value(0).toInt();
+    qDebug() << noofrows;
 
     int offset = noofrows - 5;
 
@@ -49,22 +75,30 @@ fitness::~fitness()
     int i;
     qry3.prepare("select * from fitness where username = '"+current+"' limit 5 offset :offsetvalue ");
     qry3.bindValue(":offsetvalue",offset);
+    qDebug() << current;
+
     int count = 0;
     if (qry3.exec()){
         while (qry3.next()){
             count = count + 1;
         }
     }
+    qDebug() << count;
 
-    qry1.prepare("select * from fitness username = '"+current+"' limit 5 offset :offsetvalue");
+    qry1.prepare("select * from fitness where username = '"+current+"' limit 5 offset :offsetvalue");
     qry1.bindValue(":offsetvalue",offset);
     qry1.exec();
+    qDebug() << offset;
 
     for (i=0; i<count; i++){
         qry1.next();
+        if (i == 0){
+            a = qry1.value(1).toInt();
+            qDebug()<< a;
+        }
         QStringList dates = qry1.value(0).toString().split("-").mid(0,3);
         QDateTime momentInTime;
-        momentInTime.setDate(QDate(dates[0].toInt(), dates[1].toInt() , dates[2].toInt()));
+        momentInTime.setDate(QDate(dates[0].toInt(), dates[1].toInt(), dates[2].toInt()));
         series -> append(momentInTime.toMSecsSinceEpoch(), qry1.value(1).toDouble());
     }
 
@@ -72,7 +106,7 @@ fitness::~fitness()
     chart -> addSeries(series);
     chart -> legend() -> hide();
     chart -> setTitle("Weight Record");
-    chart -> setTheme(QChart::ChartThemeHighContrast);
+    chart -> setTheme(QChart::ChartThemeBlueIcy);
 
     QDateTimeAxis *axisX = new QDateTimeAxis;
     axisX->setFormat("dd MMM");
@@ -83,7 +117,7 @@ fitness::~fitness()
 
     QValueAxis *axisY = new QValueAxis;
     axisY->setLabelFormat("%i");
-    axisY->setRange(66,75);
+    axisY->setRange(a-4, a+5);
     axisY->setTickCount(10);
     axisY->setTitleText("Weight");
     chart->addAxis(axisY, Qt::AlignLeft);
@@ -92,12 +126,14 @@ fitness::~fitness()
     chart -> setAnimationOptions(QChart::GridAxisAnimations);
     chart -> setAnimationOptions(QChart::SeriesAnimations);
     chart -> setAnimationEasingCurve(QEasingCurve::OutCubic);
+    chart->setPlotArea(QRectF(50, 40, 530, 250));
+    chart->setMargins(QMargins(0,0,0,0));
 
     QChartView *chartView = new QChartView(chart);
     chartView -> setRenderHint(QPainter::Antialiasing);
-    chartView -> setParent(ui->horizontalFrame_chart);
+    chartView -> setParent(ui->horizontalFrame_chart);*/
 }
-*/
+
 void fitness::on_pushButton_uperbody_clicked()
 {
     hide();
@@ -129,10 +165,6 @@ void fitness::on_pushButton_yoga_clicked()
 }
 
 
-
-
-
-
 void fitness::on_editstuff_clicked()
 {
     fitness_edit *fit;
@@ -142,14 +174,10 @@ void fitness::on_editstuff_clicked()
 }
 
 
-void fitness::on_refresh_clicked()
-{
-
-}
-
-
 void fitness::on_home_clicked()
 {
-
+    hide();
+    QWidget *parent = this->parentWidget();
+    parent->show();
 }
 
