@@ -6,120 +6,184 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>725</width>
-    <height>578</height>
+    <width>500</width>
+    <height>720</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>500</width>
+    <height>720</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>500</width>
+    <height>720</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0">
-    <widget class="QFrame" name="frame">
+  <property name="styleSheet">
+   <string notr="true">#allplans{
+background-color: rgb(32, 34, 37);}
+
+#listView:hover{
+background-color:#202225;
+border:1px solid transparent;
+border-radius:15px;
+color:#b9bbbe;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <widget class="QFrame" name="frame_2">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(47, 49, 54);
+border-radius:40px;
+border:0px;</string>
+     </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
      </property>
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <widget class="QListView" name="listView">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>20</y>
-        <width>391</width>
-        <height>431</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">#listview{
-font-size:14px;
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QListView" name="listView">
+        <property name="styleSheet">
+         <string notr="true">font:24px;
 padding:10px;
-}</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label">
-      <property name="geometry">
-       <rect>
-        <x>530</x>
-        <y>260</y>
-        <width>49</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="editingPlan">
-      <property name="geometry">
-       <rect>
-        <x>440</x>
-        <y>60</y>
-        <width>231</width>
-        <height>22</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QDateEdit" name="datecome">
-      <property name="geometry">
-       <rect>
-        <x>420</x>
-        <y>140</y>
-        <width>110</width>
-        <height>22</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QTimeEdit" name="timecome">
-      <property name="geometry">
-       <rect>
-        <x>550</x>
-        <y>140</y>
-        <width>118</width>
-        <height>22</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton">
-      <property name="geometry">
-       <rect>
-        <x>520</x>
-        <y>210</y>
-        <width>75</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Update</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="refresh">
-      <property name="geometry">
-       <rect>
-        <x>150</x>
-        <y>500</y>
-        <width>75</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Refresh</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_3">
-      <property name="geometry">
-       <rect>
-        <x>430</x>
-        <y>210</y>
-        <width>75</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Delete</string>
-      </property>
-     </widget>
+color:#b9bbbe;
+border-radius:40px;
+background-color: rgb(54, 57, 63);
+
+
+</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_3">
+        <property name="styleSheet">
+         <string notr="true">border:0px;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QLineEdit" name="editingPlan">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-radius:15px;
+background-color: rgb(54, 57, 63);
+color:#b9bbbe;
+padding:10px;</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QDateEdit" name="datecome">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-radius:15px;
+background-color: rgb(54, 57, 63);
+color:#b9bbbe;</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTimeEdit" name="timecome">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-radius:15px;
+background-color: rgb(54, 57, 63);
+color:#b9bbbe;</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QPushButton" name="pushButton_3">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-radius:15px;
+background-color: rgb(54, 57, 63);
+color:#b9bbbe;</string>
+             </property>
+             <property name="text">
+              <string>Delete</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="baseSize">
+              <size>
+               <width>0</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-radius:15px;
+background-color: rgb(54, 57, 63);
+color:#b9bbbe;</string>
+             </property>
+             <property name="text">
+              <string>Update</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </widget>
    </item>
   </layout>
