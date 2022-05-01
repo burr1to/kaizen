@@ -6,21 +6,9 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>500</width>
-    <height>773</height>
+    <width>449</width>
+    <height>729</height>
    </rect>
-  </property>
-  <property name="minimumSize">
-   <size>
-    <width>500</width>
-    <height>720</height>
-   </size>
-  </property>
-  <property name="baseSize">
-   <size>
-    <width>500</width>
-    <height>720</height>
-   </size>
   </property>
   <property name="windowTitle">
    <string>Sign Up</string>
@@ -34,13 +22,13 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(32, 34, 37);</string>
+    <string notr="true"/>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_2">
     <item>
      <widget class="QFrame" name="Mainframe">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(32, 34, 37);
+       <string notr="true">
 border-radius:20px;</string>
       </property>
       <property name="frameShape">
@@ -61,10 +49,8 @@ border-radius:20px;</string>
            </property>
            <property name="styleSheet">
             <string notr="true">#signup_frame{
-background-color: #2f3136;;
-border-radius:50px;
+background-color: rgb(255, 255, 255);
 padding:10px;
-color:#b9bbbe;
 }
 
 #title{
@@ -77,10 +63,11 @@ font-size:20px;
 
 QDateEdit
 {
-border: 2px;
-padding:5px;
+    background-color: white;
+border: 2px solid white;
+  padding:5px;
 font-size:15px;
-background-color: #36393f;
+background-color:white;
 }
 
 
@@ -88,15 +75,15 @@ background-color: #36393f;
 #regbut{
 border-radius:10px;
 border:1px solid rgb(173, 173, 173);
-background-color: #36393f;
+background-color: rgb(251, 255, 249);
 padding:15px;
 font-size:18px;
 }
 
 #regbut:hover{
-background-color:#202225;
+background-color:black;
 border:1px solid transparent;
-color:#b9bbbe;
+color:white;
 }
 
 QLineEdit{
@@ -145,7 +132,8 @@ padding:4px;
               <property name="styleSheet">
                <string notr="true">border:0px;
 background:transparent;
-color:#b9bbbe;</string>
+color: black;
+</string>
               </property>
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; font-weight:700;&quot;&gt;Sign up&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -163,10 +151,6 @@ color:#b9bbbe;</string>
                     <pointsize>-1</pointsize>
                    </font>
                   </property>
-                  <property name="styleSheet">
-                   <string notr="true">background-color: rgb(47, 49, 54);
-color:#b9bbbe;</string>
-                  </property>
                   <property name="text">
                    <string>First Name</string>
                   </property>
@@ -178,10 +162,6 @@ color:#b9bbbe;</string>
                    <font>
                     <pointsize>-1</pointsize>
                    </font>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">background-color: rgb(47, 49, 54);
-color:#b9bbbe;</string>
                   </property>
                   <property name="text">
                    <string>Last Name</string>
@@ -208,8 +188,7 @@ color:#b9bbbe;</string>
                   </property>
                   <property name="styleSheet">
                    <string notr="true">background:transparent;
-background-color:#36393f;
-color:#b9bbbe;</string>
+background-color: rgb(255, 255, 255);</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -232,8 +211,7 @@ color:#b9bbbe;</string>
                   </property>
                   <property name="styleSheet">
                    <string notr="true">background:transparent;
-background-color:#36393f;
-color:#b9bbbe;</string>
+background-color: rgb(255, 255, 255);</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -252,10 +230,6 @@ color:#b9bbbe;</string>
                  <font>
                   <pointsize>-1</pointsize>
                  </font>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">background-color: rgb(47, 49, 54);
-color:#b9bbbe;</string>
                 </property>
                 <property name="text">
                  <string>Username</string>
@@ -278,8 +252,7 @@ color:#b9bbbe;</string>
                 </property>
                 <property name="styleSheet">
                  <string notr="true">background:transparent;
-background-color:#36393f;
-color:#b9bbbe;</string>
+background-color: rgb(255, 255, 255);</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -296,10 +269,6 @@ color:#b9bbbe;</string>
                  <font>
                   <pointsize>-1</pointsize>
                  </font>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">background-color: rgb(47, 49, 54);
-color:#b9bbbe;</string>
                 </property>
                 <property name="text">
                  <string>Password</string>
@@ -322,8 +291,7 @@ color:#b9bbbe;</string>
                 </property>
                 <property name="styleSheet">
                  <string notr="true">background:transparent;
-background-color:#36393f;
-color:#b9bbbe;</string>
+background-color: rgb(255, 255, 255);</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -333,10 +301,7 @@ color:#b9bbbe;</string>
              </layout>
             </item>
             <item>
-             <layout class="QVBoxLayout" name="da" stretch="0,0">
-              <property name="spacing">
-               <number>5</number>
-              </property>
+             <layout class="QVBoxLayout" name="da">
               <item>
                <widget class="QLabel" name="label_6">
                 <property name="font">
@@ -344,38 +309,13 @@ color:#b9bbbe;</string>
                   <pointsize>-1</pointsize>
                  </font>
                 </property>
-                <property name="styleSheet">
-                 <string notr="true">background-color: rgb(47, 49, 54);
-color:#b9bbbe;</string>
-                </property>
                 <property name="text">
                  <string>Date of Birth</string>
                 </property>
                </widget>
               </item>
               <item>
-               <widget class="QDateEdit" name="dob">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>50</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">color:#b9bbbe;
-font-size:20px;</string>
-                </property>
-                <property name="dateTime">
-                 <datetime>
-                  <hour>0</hour>
-                  <minute>0</minute>
-                  <second>0</second>
-                  <year>2022</year>
-                  <month>5</month>
-                  <day>1</day>
-                 </datetime>
-                </property>
-               </widget>
+               <widget class="QDateEdit" name="dob"/>
               </item>
              </layout>
             </item>
@@ -387,10 +327,6 @@ font-size:20px;</string>
                  <font>
                   <pointsize>-1</pointsize>
                  </font>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">background-color: rgb(47, 49, 54);
-color:#b9bbbe;</string>
                 </property>
                 <property name="text">
                  <string>Email ID</string>
@@ -413,8 +349,7 @@ color:#b9bbbe;</string>
                 </property>
                 <property name="styleSheet">
                  <string notr="true">background:transparent;
-background-color:#36393f;
-color:#b9bbbe;</string>
+background-color: rgb(255, 255, 255);</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -451,7 +386,7 @@ color:#b9bbbe;</string>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">color:#b9bbbe;</string>
+               <string notr="true"/>
               </property>
               <property name="text">
                <string>Create Account</string>

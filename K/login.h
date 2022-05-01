@@ -24,7 +24,7 @@ class Login : public QMainWindow
 
     void myfunction(){
            mydb = QSqlDatabase::addDatabase("QSQLITE");
-           mydb.setDatabaseName("D:/01_Prasun/Home/Coding/Kaizen/K/database.db");
+           mydb.setDatabaseName("C:/Users/burr1to/Desktop/Kaizen/K/database.db");
        };
 
 
