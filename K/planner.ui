@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1280</width>
-    <height>720</height>
+    <width>1920</width>
+    <height>1080</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -51,7 +51,7 @@ background:transparent;}</string>
          <property name="styleSheet">
           <string notr="true"/>
          </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="1,5,2,0">
+         <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="1,5,2,0,0">
           <item>
            <widget class="QPushButton" name="Kaizen_logo">
             <property name="styleSheet">
@@ -82,7 +82,7 @@ background:transparent;}</string>
            </spacer>
           </item>
           <item>
-           <widget class="QLabel" name="label">
+           <widget class="QLabel" name="heytxt">
             <property name="font">
              <font>
               <pointsize>16</pointsize>
@@ -94,10 +94,17 @@ background:transparent;}</string>
 padding-right:10px;</string>
             </property>
             <property name="text">
-             <string>Hey, Stranger!</string>
+             <string>Welcome to Kaizen!!</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="text">
+             <string>Refresh</string>
             </property>
            </widget>
           </item>

@@ -30,7 +30,16 @@ Login::~Login()
 
 
 
-
+void Login::createTable(QString username){
+    QSqlQuery quz;
+    quz.prepare("insert into current_user(current) values ('"+username+"')");
+    if(quz.exec()){
+      qDebug()<<"Table created";
+    } else {
+       qDebug()<<"Table not created";
+    }
+    quz.clear();
+}
 
 void Login::on_loginbutt_clicked()
 {
@@ -43,14 +52,7 @@ void Login::on_loginbutt_clicked()
 
        QString username = ui->username->text();
        QString password = ui->password->text();
-       QSqlQuery quz;
-       quz.prepare("insert into current_user(current) values ('"+username+"')");
-       if(quz.exec()){
-         qDebug()<<"Table created";
-       } else {
-          qDebug()<<"Table not created";
-       }
-       quz.clear();
+
        QSqlQuery qry;
 
        if (username == "" && password == ""){
@@ -68,11 +70,11 @@ void Login::on_loginbutt_clicked()
            if (count==1){
                qDebug()<< "Successful login";
                qry.clear();
+                createTable(username);
                    mydb.close();
                    this->hide();
 
-               Planner *p;
-               p = new Planner(this);
+               Planner *p=new Planner(this);
                p->show();
 
            }

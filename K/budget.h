@@ -1,10 +1,12 @@
 #ifndef BUDGET_H
 #define BUDGET_H
-
+#include <QDialog>
 #include <QtSql>
 #include <QSqlDatabase>
 #include <QDebug>
+#include <QFileInfo>
 #include <QMainWindow>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Budget; }
@@ -15,13 +17,31 @@ class Budget : public QMainWindow
     Q_OBJECT
 
 public:
-    QString current;
-    QSqlDatabase budgetdb;
+    QString price, item;
+    QString f,e,o,s;
+    int extotal,intotal,alltotal;
+    QString current,variable;
+        QSqlDatabase budgetdb;
     Budget(QWidget *parent = nullptr);
     ~Budget();
 
 private slots:
 
+    void on_pushButton_5_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_12_clicked();
+
+    void on_pushButton_9_clicked();
+
+    void on_pushButton_4_clicked();
+
+    QString addItemstoDatabase(QString,QString,QString);
+
+    void on_home_clicked();
+
+    void setTotals();
 
 private:
     Ui::Budget *ui;
