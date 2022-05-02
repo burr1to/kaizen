@@ -9,20 +9,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>500</width>
-    <height>167</height>
+    <width>562</width>
+    <height>303</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>500</width>
-    <height>150</height>
+    <width>300</width>
+    <height>100</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>500</width>
-    <height>167</height>
+    <width>700</width>
+    <height>303</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -30,11 +30,18 @@
   </property>
   <property name="styleSheet">
    <string notr="true">margin: 0px;
-padding:0px;</string>
+background-color: rgb(34, 37, 42);
+font:18px;
+padding:10px;</string>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout_3">
    <item>
     <widget class="QFrame" name="frame">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+border-radius:40px;
+color:black;</string>
+     </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
      </property>
@@ -55,7 +62,18 @@ padding:0px;</string>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="weight"/>
+         <widget class="QLineEdit" name="weight">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(230, 235, 241);
+border-radius:15px;</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -69,7 +87,18 @@ padding:0px;</string>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="height"/>
+         <widget class="QLineEdit" name="height">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(230, 235, 241);
+border-radius:15px;</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -81,25 +110,23 @@ padding:0px;</string>
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="5,2,2">
+        <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="2,2">
          <property name="spacing">
           <number>2</number>
          </property>
          <item>
-          <spacer name="verticalSpacer">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
+          <widget class="QPushButton" name="submit">
+           <property name="minimumSize">
             <size>
-             <width>50</width>
-             <height>19</height>
+             <width>0</width>
+             <height>40</height>
             </size>
            </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QPushButton" name="submit">
+           <property name="styleSheet">
+            <string notr="true">border-radius:15px;
+background-color: rgb(55, 59, 62);
+color:white;</string>
+           </property>
            <property name="text">
             <string>Submit</string>
            </property>
@@ -107,6 +134,17 @@ padding:0px;</string>
          </item>
          <item>
           <widget class="QPushButton" name="pushButton">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-radius:15px;
+background-color: rgb(55, 59, 62);
+color:white;</string>
+           </property>
            <property name="text">
             <string>Close</string>
            </property>
