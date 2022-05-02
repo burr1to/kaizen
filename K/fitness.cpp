@@ -22,6 +22,16 @@ fitness::fitness(QWidget *parent)
     qry.clear();
     }
 
+<<<<<<< HEAD
+
+    ui->helloname->setText(current);
+    getfitnessdata(current,fitdata);
+    ui->weight->setText(fitdata[0]);
+    ui->height->setText(fitdata[1]);
+
+
+=======
+>>>>>>> 09006a73d535aa2987d32610dc6115bfd6562b12
 
     ui->helloname->setText(current);
     getfitnessdata(current,fitdata);
@@ -30,7 +40,7 @@ fitness::fitness(QWidget *parent)
 
 
 
-    //show_chart();
+    show_chart();
 
 }
 
@@ -61,7 +71,11 @@ void fitness::getfitnessdata(QString username,QString fitdata[]){
 }
 void fitness::show_chart()
 {
+<<<<<<< HEAD
     /*QSqlQuery qry1, qry2,qry3;
+=======
+    QSqlQuery qry1, qry2,qry3;
+>>>>>>> 09006a73d535aa2987d32610dc6115bfd6562b12
     int a;
     qry2.prepare("select count(*) from fitness where username = '"+current+"'");
     qry2.exec();
@@ -100,6 +114,7 @@ void fitness::show_chart()
         QDateTime momentInTime;
         momentInTime.setDate(QDate(dates[0].toInt(), dates[1].toInt(), dates[2].toInt()));
         series -> append(momentInTime.toMSecsSinceEpoch(), qry1.value(1).toDouble());
+        qDebug() << momentInTime;
     }
 
     QChart *chart = new QChart();

@@ -22,8 +22,11 @@ fitness_edit::fitness_edit(QWidget *parent) :
 
 fitness_edit::~fitness_edit()
 {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 09006a73d535aa2987d32610dc6115bfd6562b12
     delete ui;
 }
 
@@ -68,5 +71,11 @@ void fitness_edit::on_submit_clicked()
     //this->close();
 
 
+}
+
+
+void fitness_edit::on_pushButton_clicked()
+{
+    this->close();
 }
 

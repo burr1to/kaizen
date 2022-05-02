@@ -5,9 +5,15 @@
 #include <QtSql>
 #include <QtDebug>
 #include <QFileInfo>
+<<<<<<< HEAD
 /*#include <QtCharts>
 #include <QChartView>
 #include <QLineSeries>*/
+=======
+#include <QtCharts>
+#include <QChartView>
+#include <QLineSeries>
+>>>>>>> 09006a73d535aa2987d32610dc6115bfd6562b12
 #include <QString>
 #include <QTimer>
 #include <QDateTime>
@@ -54,7 +60,11 @@ private slots:
 
     void on_home_clicked();
 
+<<<<<<< HEAD
      void getfitnessdata(QString username, QString fitnessdata[]);
+=======
+    void getfitnessdata(QString username, QString fitnessdata[]);
+>>>>>>> 09006a73d535aa2987d32610dc6115bfd6562b12
 private:
     Ui::fitness *ui;
     upper_body *upperbody;

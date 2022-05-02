@@ -31,6 +31,11 @@ private slots:
 
     void on_submit_clicked();
     void insertData(QString, QString, QString, float, QString);
+<<<<<<< HEAD
+=======
+
+    void on_pushButton_clicked();
+>>>>>>> 09006a73d535aa2987d32610dc6115bfd6562b12
 
 private:
     Ui::fitness_edit *ui;

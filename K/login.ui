@@ -30,7 +30,13 @@
     <normaloff>:/images/src_images/kaizen_square.png</normaloff>:/images/src_images/kaizen_square.png</iconset>
   </property>
   <property name="styleSheet">
+<<<<<<< HEAD
    <string notr="true">background-color: rgb(32, 34, 37);</string>
+=======
+   <string notr="true">font: 9pt &quot;Segoe UI&quot;;
+color:black;
+padding:15px</string>
+>>>>>>> 09006a73d535aa2987d32610dc6115bfd6562b12
   </property>
   <widget class="QWidget" name="loginwidget">
    <property name="minimumSize">
@@ -46,7 +52,11 @@
     </size>
    </property>
    <property name="styleSheet">
+<<<<<<< HEAD
     <string notr="true">background-color: rgb(32, 34, 37);</string>
+=======
+    <string notr="true">background-color: rgb(34, 37, 42);</string>
+>>>>>>> 09006a73d535aa2987d32610dc6115bfd6562b12
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
@@ -74,8 +84,15 @@
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
+      <property name="minimumSize">
+       <size>
+        <width>400</width>
+        <height>500</height>
+       </size>
+      </property>
       <property name="maximumSize">
        <size>
+<<<<<<< HEAD
         <width>600</width>
         <height>600</height>
        </size>
@@ -149,6 +166,22 @@ margin-bottom:8px;
 color:#b9bbbe;
 
 }
+=======
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="baseSize">
+       <size>
+        <width>400</width>
+        <height>500</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+border-radius:50px;
+border:0px;
+>>>>>>> 09006a73d535aa2987d32610dc6115bfd6562b12
 </string>
       </property>
       <property name="frameShape">
@@ -159,43 +192,13 @@ color:#b9bbbe;
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
-        <spacer name="horizontalSpacer">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Fixed</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
         <layout class="QVBoxLayout" name="verticalLayout_3">
-         <item>
-          <spacer name="verticalSpacer">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Fixed</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
          <item>
           <widget class="QLabel" name="bigtxt">
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(47, 49, 54);</string>
+            <string notr="true">border-radius:25px;
+border:0px;
+font:24px;</string>
            </property>
            <property name="text">
             <string>Login</string>
@@ -203,47 +206,84 @@ color:#b9bbbe;
           </widget>
          </item>
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout_4">
-           <item>
-            <layout class="QVBoxLayout" name="verticalLayout">
-             <item>
-              <widget class="QLabel" name="usr">
-               <property name="text">
-                <string>Username</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLineEdit" name="username"/>
-             </item>
-            </layout>
-           </item>
-           <item>
-            <layout class="QVBoxLayout" name="verticalLayout_2">
-             <item>
-              <widget class="QLabel" name="pswd">
-               <property name="text">
-                <string>Password</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLineEdit" name="password"/>
-             </item>
-            </layout>
-           </item>
-          </layout>
+          <widget class="QLabel" name="usr">
+           <property name="styleSheet">
+            <string notr="true">border-radius:25px;
+border:0px;</string>
+           </property>
+           <property name="text">
+            <string>Username</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+<<<<<<< HEAD
+          <widget class="QLabel" name="bigtxt">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(47, 49, 54);</string>
+           </property>
+           <property name="text">
+            <string>Login</string>
+=======
+          <widget class="QLineEdit" name="username">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(230, 235, 241);
+border-radius:20px;
+border:0px;</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="pswd">
+           <property name="styleSheet">
+            <string notr="true">border-radius:25px;
+border:0px;</string>
+           </property>
+           <property name="text">
+            <string>Password</string>
+>>>>>>> 09006a73d535aa2987d32610dc6115bfd6562b12
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="password">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(230, 235, 241);
+border-radius:20px;
+border:0px;</string>
+           </property>
+           <property name="echoMode">
+            <enum>QLineEdit::Password</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
          </item>
          <item>
           <widget class="QPushButton" name="loginbutt">
            <property name="font">
             <font>
-             <pointsize>-1</pointsize>
-             <bold>true</bold>
+             <family>Segoe UI</family>
+             <pointsize>9</pointsize>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true"/>
+            <string notr="true">background-color: rgb(230, 235, 241);
+border-radius:10px;
+border:0px;</string>
            </property>
            <property name="text">
             <string>Login</string>
@@ -254,12 +294,18 @@ color:#b9bbbe;
           <widget class="QPushButton" name="signupbut">
            <property name="font">
             <font>
-             <pointsize>-1</pointsize>
-             <bold>true</bold>
+             <family>Segoe UI</family>
+             <pointsize>9</pointsize>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
+<<<<<<< HEAD
             <string notr="true">background-color: rgb(47, 49, 54);</string>
+=======
+            <string notr="true">border:0px;</string>
+>>>>>>> 09006a73d535aa2987d32610dc6115bfd6562b12
            </property>
            <property name="text">
             <string>Sign up from here</string>
@@ -293,22 +339,6 @@ color:#b9bbbe;
           </widget>
          </item>
         </layout>
-       </item>
-       <item>
-        <spacer name="horizontalSpacer_2">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Fixed</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
        </item>
       </layout>
      </widget>
