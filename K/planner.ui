@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1470</width>
+    <width>1280</width>
     <height>720</height>
    </rect>
   </property>
@@ -44,345 +44,194 @@ font:14px;</string>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(34, 37, 42);</string>
    </property>
-   <widget class="QFrame" name="Mainframe">
-    <property name="geometry">
-     <rect>
-      <x>268</x>
-      <y>11</y>
-      <width>1001</width>
-      <height>698</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);
+   <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="2,9">
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="styleSheet">
+       <string notr="true">border:0px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QPushButton" name="Kaizen_logo">
+         <property name="styleSheet">
+          <string notr="true">border:0px;
+border-radius:15px;
+background-color: rgb(55, 59, 62);</string>
+         </property>
+         <property name="text">
+          <string>logo</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>155</width>
+           <height>55</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="styleSheet">
+          <string notr="true">border:0px;
+border-radius:15px;
+background-color: rgb(55, 59, 62);</string>
+         </property>
+         <property name="text">
+          <string>All Plans</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="styleSheet">
+          <string notr="true">border:0px;
+border-radius:15px;
+background-color: rgb(55, 59, 62);</string>
+         </property>
+         <property name="text">
+          <string>Fitness</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_4">
+         <property name="styleSheet">
+          <string notr="true">border:0px;
+border-radius:15px;
+background-color: rgb(55, 59, 62);</string>
+         </property>
+         <property name="text">
+          <string>Budget</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>469</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="Mainframe">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
 border-radius:50px;
 border:0px;</string>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout_2" stretch="3,21">
-     <item>
-      <widget class="QWidget" name="Hello" native="true">
-       <property name="styleSheet">
-        <string notr="true">border:0px;
-border-radius:25px;
-background-color: rgb(230, 235, 241);</string>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="5,2,0,0">
-        <item>
-         <spacer name="horizontalSpacer">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <widget class="QLabel" name="heytxt">
-          <property name="font">
-           <font>
-            <pointsize>-1</pointsize>
-            <italic>false</italic>
-            <bold>false</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">border:0px;
-padding-right:10px;</string>
-          </property>
-          <property name="text">
-           <string>Welcome to Kaizen!!</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton">
-          <property name="styleSheet">
-           <string notr="true">border:0px;
-border-radius:15px;
-background-color: rgb(55, 59, 62);</string>
-          </property>
-          <property name="text">
-           <string>Refresh</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="Logout">
-          <property name="styleSheet">
-           <string notr="true">border:0px;
-border-radius:15px;
-background-color: rgb(55, 59, 62);</string>
-          </property>
-          <property name="text">
-           <string>LOGOUT</string>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>50</width>
-            <height>50</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="not_hello" stretch="1,1">
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2" stretch="3,21">
        <item>
-        <widget class="QFrame" name="Planner_section">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-           <horstretch>1</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
+        <widget class="QWidget" name="Hello" native="true">
          <property name="styleSheet">
-          <string notr="true">#plandate,#plantime{
-border-radius:5px;
-padding:10px;
-background-color: rgb(231, 231, 231);
-}</string>
+          <string notr="true">border:0px;
+border-radius:25px;
+background-color: rgb(230, 235, 241);</string>
          </property>
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
-         <layout class="QVBoxLayout" name="verticalLayout_4" stretch="13,4">
+         <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="5,2,0,0">
           <item>
-           <widget class="QWidget" name="Display_plan" native="true">
-            <property name="styleSheet">
-             <string notr="true">#plan_1,#plan_2,#plan_3,#plan_4{
-border-radius:30px;
-font-size:14px;
-}</string>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
             </property>
-            <layout class="QVBoxLayout" name="verticalLayout_6" stretch="1,1,1,1">
-             <item>
-              <widget class="QLabel" name="plan_1">
-               <property name="font">
-                <font>
-                 <pointsize>-1</pointsize>
-                 <italic>false</italic>
-                 <bold>false</bold>
-                </font>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">border:0px;
-border-radius:25px;
-background-color: rgb(230, 235, 241);</string>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="plan_2">
-               <property name="font">
-                <font>
-                 <pointsize>-1</pointsize>
-                 <italic>false</italic>
-                 <bold>false</bold>
-                </font>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">border:0px;
-border-radius:25px;
-background-color: rgb(230, 235, 241);</string>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="plan_3">
-               <property name="font">
-                <font>
-                 <pointsize>-1</pointsize>
-                 <italic>false</italic>
-                 <bold>false</bold>
-                </font>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">border:0px;
-border-radius:25px;
-background-color: rgb(230, 235, 241);</string>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="plan_4">
-               <property name="font">
-                <font>
-                 <pointsize>-1</pointsize>
-                 <italic>false</italic>
-                 <bold>false</bold>
-                </font>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">border:0px;
-border-radius:25px;
-background-color: rgb(230, 235, 241);</string>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-              </widget>
-             </item>
-            </layout>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="heytxt">
+            <property name="font">
+             <font>
+              <pointsize>-1</pointsize>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:0px;
+padding-right:10px;</string>
+            </property>
+            <property name="text">
+             <string>Welcome to Kaizen!!</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
            </widget>
           </item>
           <item>
-           <widget class="QWidget" name="Add_plan" native="true">
+           <widget class="QPushButton" name="pushButton">
             <property name="styleSheet">
-             <string notr="true"/>
+             <string notr="true">border:0px;
+border-radius:15px;
+background-color: rgb(55, 59, 62);</string>
             </property>
-            <layout class="QVBoxLayout" name="verticalLayout">
-             <item>
-              <layout class="QHBoxLayout" name="horizontalLayout" stretch="13,2">
-               <item>
-                <layout class="QVBoxLayout" name="verticalLayout_5" stretch="0,1,1">
-                 <item>
-                  <widget class="QLineEdit" name="addPlan">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>50</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <pointsize>-1</pointsize>
-                     <italic>false</italic>
-                     <bold>false</bold>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">border:0px;
+            <property name="text">
+             <string>Refresh</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="Logout">
+            <property name="styleSheet">
+             <string notr="true">border:0px;
 border-radius:15px;
-background-color: rgb(230, 235, 241);</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_5">
-                   <item>
-                    <widget class="QDateEdit" name="plandate">
-                     <property name="styleSheet">
-                      <string notr="true">border:0px;
-border-radius:15px;
-background-color: rgb(230, 235, 241);</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QTimeEdit" name="plantime">
-                     <property name="styleSheet">
-                      <string notr="true">border:0px;
-border-radius:15px;
-background-color: rgb(230, 235, 241);</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </item>
-                 <item>
-                  <widget class="QPushButton" name="showplans">
-                   <property name="minimumSize">
-                    <size>
-                     <width>40</width>
-                     <height>40</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <pointsize>-1</pointsize>
-                     <italic>false</italic>
-                     <bold>false</bold>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">border:0px;
-border-radius:15px;
-background-color: rgb(230, 235, 241);</string>
-                   </property>
-                   <property name="text">
-                    <string>&lt;----- Show All Plans -----&gt;</string>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </item>
-               <item>
-                <widget class="QPushButton" name="addbut">
-                 <property name="minimumSize">
-                  <size>
-                   <width>50</width>
-                   <height>50</height>
-                  </size>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">border:0 px;</string>
-                 </property>
-                 <property name="text">
-                  <string>a</string>
-                 </property>
-                 <property name="icon">
-                  <iconset>
-                   <normaloff>:/images/src_images/plus.png</normaloff>:/images/src_images/plus.png</iconset>
-                 </property>
-                 <property name="iconSize">
-                  <size>
-                   <width>45</width>
-                   <height>45</height>
-                  </size>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </item>
-             <item>
-              <widget class="QLabel" name="planerr">
-               <property name="text">
-                <string/>
-               </property>
-              </widget>
-             </item>
-            </layout>
+background-color: rgb(55, 59, 62);</string>
+            </property>
+            <property name="text">
+             <string>LOGOUT</string>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
            </widget>
           </item>
          </layout>
         </widget>
        </item>
        <item>
-        <layout class="QVBoxLayout" name="B_and_F_section" stretch="0,0,0">
+        <layout class="QHBoxLayout" name="not_hello" stretch="1,1">
          <item>
-          <widget class="QFrame" name="frame_2">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>200</height>
-            </size>
+          <widget class="QFrame" name="Planner_section">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>1</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">#plandate,#plantime{
+border-radius:5px;
+padding:10px;
+background-color: rgb(231, 231, 231);
+}</string>
            </property>
            <property name="frameShape">
             <enum>QFrame::StyledPanel</enum>
@@ -390,495 +239,639 @@ background-color: rgb(230, 235, 241);</string>
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QWidget" name="Fitness_section" native="true">
-           <property name="styleSheet">
-            <string notr="true">border:0px;
+           <layout class="QVBoxLayout" name="verticalLayout_4" stretch="13,4">
+            <item>
+             <widget class="QWidget" name="Display_plan" native="true">
+              <property name="styleSheet">
+               <string notr="true">#plan_1,#plan_2,#plan_3,#plan_4{
+border-radius:30px;
+font-size:14px;
+}</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_6" stretch="1,1,1,1">
+               <item>
+                <widget class="QLabel" name="plan_1">
+                 <property name="font">
+                  <font>
+                   <pointsize>-1</pointsize>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border:0px;
 border-radius:25px;
 background-color: rgb(230, 235, 241);</string>
-           </property>
-           <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,1">
-            <item>
-             <layout class="QVBoxLayout" name="verticalLayout_11">
-              <item>
-               <widget class="QPushButton" name="fitbut">
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>100</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true"/>
-                </property>
-                <property name="text">
-                 <string>f</string>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>100</width>
-                  <height>100</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QWidget" name="BMI" native="true">
-                <property name="styleSheet">
-                 <string notr="true"/>
-                </property>
-                <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,1">
-                 <item>
-                  <widget class="QLabel" name="BMI_label">
-                   <property name="font">
-                    <font>
-                     <pointsize>-1</pointsize>
-                     <italic>false</italic>
-                     <bold>false</bold>
-                    </font>
-                   </property>
-                   <property name="autoFillBackground">
-                    <bool>false</bool>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true"/>
-                   </property>
-                   <property name="text">
-                    <string>BMI</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLabel" name="label_13">
-                   <property name="font">
-                    <font>
-                     <pointsize>-1</pointsize>
-                     <italic>false</italic>
-                     <bold>false</bold>
-                    </font>
-                   </property>
-                   <property name="autoFillBackground">
-                    <bool>false</bool>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true"/>
-                   </property>
-                   <property name="text">
-                    <string>XXX</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-             </layout>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="plan_2">
+                 <property name="font">
+                  <font>
+                   <pointsize>-1</pointsize>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border:0px;
+border-radius:25px;
+background-color: rgb(230, 235, 241);</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="plan_3">
+                 <property name="font">
+                  <font>
+                   <pointsize>-1</pointsize>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border:0px;
+border-radius:25px;
+background-color: rgb(230, 235, 241);</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="plan_4">
+                 <property name="font">
+                  <font>
+                   <pointsize>-1</pointsize>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border:0px;
+border-radius:25px;
+background-color: rgb(230, 235, 241);</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
             </item>
             <item>
-             <layout class="QVBoxLayout" name="Extra_fitness" stretch="1,1">
-              <item>
-               <widget class="QWidget" name="Height" native="true">
-                <property name="styleSheet">
-                 <string notr="true"/>
-                </property>
-                <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="1,1">
+             <widget class="QWidget" name="Add_plan" native="true">
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout" stretch="13,2">
                  <item>
-                  <widget class="QLabel" name="Height_label">
-                   <property name="font">
-                    <font>
-                     <pointsize>-1</pointsize>
-                     <italic>false</italic>
-                     <bold>false</bold>
-                    </font>
-                   </property>
-                   <property name="autoFillBackground">
-                    <bool>false</bool>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true"/>
-                   </property>
-                   <property name="text">
-                    <string>Height</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
+                  <layout class="QVBoxLayout" name="verticalLayout_5" stretch="0,1,1">
+                   <item>
+                    <widget class="QLineEdit" name="addPlan">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>50</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>-1</pointsize>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">border:0px;
+border-radius:15px;
+background-color: rgb(230, 235, 241);</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_5">
+                     <item>
+                      <widget class="QDateEdit" name="plandate">
+                       <property name="styleSheet">
+                        <string notr="true">border:0px;
+border-radius:15px;
+background-color: rgb(230, 235, 241);</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QTimeEdit" name="plantime">
+                       <property name="styleSheet">
+                        <string notr="true">border:0px;
+border-radius:15px;
+background-color: rgb(230, 235, 241);</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="showplans">
+                     <property name="minimumSize">
+                      <size>
+                       <width>40</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>-1</pointsize>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">border:0px;
+border-radius:15px;
+background-color: rgb(230, 235, 241);</string>
+                     </property>
+                     <property name="text">
+                      <string>&lt;----- Show All Plans -----&gt;</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
                  </item>
                  <item>
-                  <widget class="QLabel" name="label_17">
-                   <property name="font">
-                    <font>
-                     <pointsize>-1</pointsize>
-                     <italic>false</italic>
-                     <bold>false</bold>
-                    </font>
-                   </property>
-                   <property name="autoFillBackground">
-                    <bool>false</bool>
+                  <widget class="QPushButton" name="addbut">
+                   <property name="minimumSize">
+                    <size>
+                     <width>50</width>
+                     <height>50</height>
+                    </size>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true"/>
+                    <string notr="true">border:0 px;</string>
                    </property>
                    <property name="text">
-                    <string>XXX</string>
+                    <string>a</string>
                    </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
+                   <property name="icon">
+                    <iconset>
+                     <normaloff>:/images/src_images/plus.png</normaloff>:/images/src_images/plus.png</iconset>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>45</width>
+                     <height>45</height>
+                    </size>
                    </property>
                   </widget>
                  </item>
                 </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QWidget" name="Weight" native="true">
-                <property name="styleSheet">
-                 <string notr="true"/>
-                </property>
-                <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="1,1">
-                 <item>
-                  <widget class="QLabel" name="Weight_label">
-                   <property name="font">
-                    <font>
-                     <pointsize>-1</pointsize>
-                     <italic>false</italic>
-                     <bold>false</bold>
-                    </font>
-                   </property>
-                   <property name="autoFillBackground">
-                    <bool>false</bool>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true"/>
-                   </property>
-                   <property name="text">
-                    <string>Weight</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLabel" name="label_15">
-                   <property name="font">
-                    <font>
-                     <pointsize>-1</pointsize>
-                     <italic>false</italic>
-                     <bold>false</bold>
-                    </font>
-                   </property>
-                   <property name="autoFillBackground">
-                    <bool>false</bool>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true"/>
-                   </property>
-                   <property name="text">
-                    <string>XXXX</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-             </layout>
+               </item>
+               <item>
+                <widget class="QLabel" name="planerr">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
             </item>
            </layout>
           </widget>
          </item>
          <item>
-          <widget class="QWidget" name="Budget_section" native="true">
-           <property name="styleSheet">
-            <string notr="true">border:0px;
+          <layout class="QVBoxLayout" name="B_and_F_section" stretch="0,0,0">
+           <item>
+            <widget class="QFrame" name="frame_2">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>200</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="Fitness_section" native="true">
+             <property name="styleSheet">
+              <string notr="true">border:0px;
 border-radius:25px;
 background-color: rgb(230, 235, 241);</string>
-           </property>
-           <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,1">
-            <item>
-             <layout class="QVBoxLayout" name="verticalLayout_10">
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,1">
               <item>
-               <widget class="QPushButton" name="budgetbut">
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>100</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true"/>
-                </property>
-                <property name="text">
-                 <string>b</string>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>100</width>
-                  <height>100</height>
-                 </size>
-                </property>
-               </widget>
+               <layout class="QVBoxLayout" name="verticalLayout_11">
+                <item>
+                 <widget class="QPushButton" name="fitbut">
+                  <property name="minimumSize">
+                   <size>
+                    <width>100</width>
+                    <height>100</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="text">
+                   <string>f</string>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>100</width>
+                    <height>100</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QWidget" name="BMI" native="true">
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,1">
+                   <item>
+                    <widget class="QLabel" name="BMI_label">
+                     <property name="font">
+                      <font>
+                       <pointsize>-1</pointsize>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="autoFillBackground">
+                      <bool>false</bool>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                     <property name="text">
+                      <string>BMI</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_13">
+                     <property name="font">
+                      <font>
+                       <pointsize>-1</pointsize>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="autoFillBackground">
+                      <bool>false</bool>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                     <property name="text">
+                      <string>XXX</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
               </item>
               <item>
-               <widget class="QWidget" name="Expenditure" native="true">
-                <property name="styleSheet">
-                 <string notr="true">border-radius: 13;
-background:transparent;</string>
-                </property>
-                <layout class="QVBoxLayout" name="verticalLayout_8" stretch="1,1">
-                 <item>
-                  <widget class="QLabel" name="Expenditure_label">
-                   <property name="font">
-                    <font>
-                     <pointsize>-1</pointsize>
-                     <italic>false</italic>
-                     <bold>false</bold>
-                    </font>
-                   </property>
-                   <property name="autoFillBackground">
-                    <bool>false</bool>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true"/>
-                   </property>
-                   <property name="text">
-                    <string>Total Expenditure</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLabel" name="label_9">
-                   <property name="font">
-                    <font>
-                     <pointsize>-1</pointsize>
-                     <italic>false</italic>
-                     <bold>false</bold>
-                    </font>
-                   </property>
-                   <property name="autoFillBackground">
-                    <bool>false</bool>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true"/>
-                   </property>
-                   <property name="text">
-                    <string>XXXX</string>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
+               <layout class="QVBoxLayout" name="Extra_fitness" stretch="1,1">
+                <item>
+                 <widget class="QWidget" name="Height" native="true">
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="1,1">
+                   <item>
+                    <widget class="QLabel" name="Height_label">
+                     <property name="font">
+                      <font>
+                       <pointsize>-1</pointsize>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="autoFillBackground">
+                      <bool>false</bool>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                     <property name="text">
+                      <string>Height</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_17">
+                     <property name="font">
+                      <font>
+                       <pointsize>-1</pointsize>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="autoFillBackground">
+                      <bool>false</bool>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                     <property name="text">
+                      <string>XXX</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QWidget" name="Weight" native="true">
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="1,1">
+                   <item>
+                    <widget class="QLabel" name="Weight_label">
+                     <property name="font">
+                      <font>
+                       <pointsize>-1</pointsize>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="autoFillBackground">
+                      <bool>false</bool>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                     <property name="text">
+                      <string>Weight</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_15">
+                     <property name="font">
+                      <font>
+                       <pointsize>-1</pointsize>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="autoFillBackground">
+                      <bool>false</bool>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                     <property name="text">
+                      <string>XXXX</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
               </item>
              </layout>
-            </item>
-            <item>
-             <layout class="QVBoxLayout" name="Extra_budget" stretch="1,1">
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="Budget_section" native="true">
+             <property name="styleSheet">
+              <string notr="true">border:0px;
+border-radius:25px;
+background-color: rgb(230, 235, 241);</string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,1">
               <item>
-               <widget class="QWidget" name="Closing_balance" native="true">
-                <property name="styleSheet">
-                 <string notr="true">border-radius: 13;</string>
-                </property>
-                <layout class="QVBoxLayout" name="verticalLayout_7" stretch="1,1">
-                 <item>
-                  <widget class="QLabel" name="Balance_label">
-                   <property name="font">
-                    <font>
-                     <pointsize>-1</pointsize>
-                     <italic>false</italic>
-                     <bold>false</bold>
-                    </font>
-                   </property>
-                   <property name="autoFillBackground">
-                    <bool>false</bool>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true"/>
-                   </property>
-                   <property name="text">
-                    <string>Closing Balance</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLabel" name="label_8">
-                   <property name="font">
-                    <font>
-                     <pointsize>-1</pointsize>
-                     <italic>false</italic>
-                     <bold>false</bold>
-                    </font>
-                   </property>
-                   <property name="autoFillBackground">
-                    <bool>false</bool>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true"/>
-                   </property>
-                   <property name="text">
-                    <string>XXXXX</string>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
+               <layout class="QVBoxLayout" name="verticalLayout_10">
+                <item>
+                 <widget class="QPushButton" name="budgetbut">
+                  <property name="minimumSize">
+                   <size>
+                    <width>100</width>
+                    <height>100</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="text">
+                   <string>b</string>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>100</width>
+                    <height>100</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QWidget" name="Expenditure" native="true">
+                  <property name="styleSheet">
+                   <string notr="true">border-radius: 13;
+background:transparent;</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_8" stretch="1,1">
+                   <item>
+                    <widget class="QLabel" name="Expenditure_label">
+                     <property name="font">
+                      <font>
+                       <pointsize>-1</pointsize>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="autoFillBackground">
+                      <bool>false</bool>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                     <property name="text">
+                      <string>Total Expenditure</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_9">
+                     <property name="font">
+                      <font>
+                       <pointsize>-1</pointsize>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="autoFillBackground">
+                      <bool>false</bool>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                     <property name="text">
+                      <string>XXXX</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
               </item>
               <item>
-               <widget class="QWidget" name="Thismonth_budget" native="true">
-                <property name="styleSheet">
-                 <string notr="true">border-radius: 13;
+               <layout class="QVBoxLayout" name="Extra_budget" stretch="1,1">
+                <item>
+                 <widget class="QWidget" name="Closing_balance" native="true">
+                  <property name="styleSheet">
+                   <string notr="true">border-radius: 13;</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_7" stretch="1,1">
+                   <item>
+                    <widget class="QLabel" name="Balance_label">
+                     <property name="font">
+                      <font>
+                       <pointsize>-1</pointsize>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="autoFillBackground">
+                      <bool>false</bool>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                     <property name="text">
+                      <string>Closing Balance</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_8">
+                     <property name="font">
+                      <font>
+                       <pointsize>-1</pointsize>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="autoFillBackground">
+                      <bool>false</bool>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                     <property name="text">
+                      <string>XXXXX</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QWidget" name="Thismonth_budget" native="true">
+                  <property name="styleSheet">
+                   <string notr="true">border-radius: 13;
 background:transparent;</string>
-                </property>
-                <layout class="QVBoxLayout" name="verticalLayout_9" stretch="1,1">
-                 <item>
-                  <widget class="QLabel" name="Budget_label">
-                   <property name="font">
-                    <font>
-                     <pointsize>-1</pointsize>
-                     <italic>false</italic>
-                     <bold>false</bold>
-                    </font>
-                   </property>
-                   <property name="autoFillBackground">
-                    <bool>false</bool>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true"/>
-                   </property>
-                   <property name="text">
-                    <string>Allocated Budget</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLabel" name="label_11">
-                   <property name="font">
-                    <font>
-                     <pointsize>-1</pointsize>
-                     <italic>false</italic>
-                     <bold>false</bold>
-                    </font>
-                   </property>
-                   <property name="autoFillBackground">
-                    <bool>false</bool>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true"/>
-                   </property>
-                   <property name="text">
-                    <string>XXXX</string>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_9" stretch="1,1">
+                   <item>
+                    <widget class="QLabel" name="Budget_label">
+                     <property name="font">
+                      <font>
+                       <pointsize>-1</pointsize>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="autoFillBackground">
+                      <bool>false</bool>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                     <property name="text">
+                      <string>Allocated Budget</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_11">
+                     <property name="font">
+                      <font>
+                       <pointsize>-1</pointsize>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="autoFillBackground">
+                      <bool>false</bool>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                     <property name="text">
+                      <string>XXXX</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
               </item>
              </layout>
-            </item>
-           </layout>
-          </widget>
+            </widget>
+           </item>
+          </layout>
          </item>
         </layout>
        </item>
       </layout>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QFrame" name="frame">
-    <property name="geometry">
-     <rect>
-      <x>11</x>
-      <y>11</y>
-      <width>115</width>
-      <height>698</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout_3">
-     <item>
-      <widget class="QPushButton" name="Kaizen_logo">
-       <property name="styleSheet">
-        <string notr="true">border:0px;
-border-radius:15px;
-background-color: rgb(55, 59, 62);</string>
-       </property>
-       <property name="text">
-        <string>logo</string>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>155</width>
-         <height>55</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_2">
-       <property name="styleSheet">
-        <string notr="true">border:0px;
-border-radius:15px;
-background-color: rgb(55, 59, 62);</string>
-       </property>
-       <property name="text">
-        <string>All Plans</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_3">
-       <property name="styleSheet">
-        <string notr="true">border:0px;
-border-radius:15px;
-background-color: rgb(55, 59, 62);</string>
-       </property>
-       <property name="text">
-        <string>Fitness</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_4">
-       <property name="styleSheet">
-        <string notr="true">border:0px;
-border-radius:15px;
-background-color: rgb(55, 59, 62);</string>
-       </property>
-       <property name="text">
-        <string>Budget</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <spacer name="verticalSpacer">
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>20</width>
-         <height>467</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-    </layout>
-   </widget>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

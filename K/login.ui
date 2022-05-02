@@ -159,6 +159,9 @@ border:0px;</string>
 border-radius:20px;
 border:0px;</string>
            </property>
+           <property name="echoMode">
+            <enum>QLineEdit::Password</enum>
+           </property>
           </widget>
          </item>
          <item>

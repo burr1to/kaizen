@@ -15,15 +15,24 @@ class fitness_edit : public QDialog
     Q_OBJECT
 
 public:
-    QString current;
+    QString current,weight,height, clock_text;
     QSqlDatabase fitness_db;
     explicit fitness_edit(QWidget *parent = nullptr);
     ~fitness_edit();
+signals:
+
+    void editData();
+
+public slots:
+    //void display();
 
 private slots:
 
 
     void on_submit_clicked();
+    void insertData(QString, QString, QString, float, QString);
+
+    void on_pushButton_clicked();
 
 private:
     Ui::fitness_edit *ui;
