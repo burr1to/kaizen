@@ -12,17 +12,7 @@
   </property>
   <property name="minimumSize">
    <size>
-<<<<<<< HEAD
-    <width>500</width>
-    <height>720</height>
-   </size>
-  </property>
-  <property name="baseSize">
-   <size>
-    <width>500</width>
-=======
     <width>400</width>
->>>>>>> 09006a73d535aa2987d32610dc6115bfd6562b12
     <height>720</height>
    </size>
   </property>
@@ -30,38 +20,17 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-<<<<<<< HEAD
-   <string notr="true">#allplans{
-background-color: rgb(32, 34, 37);
-
-}
-
-#listView:hover{
-background-color:#202225;
-border:1px solid transparent;
-border-radius:15px;
-color:#b9bbbe;
-}</string>
-=======
    <string notr="true">background-color: rgb(34, 37, 42);
 color:black;
 padding:10px;</string>
->>>>>>> 09006a73d535aa2987d32610dc6115bfd6562b12
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
     <widget class="QFrame" name="frame_2">
      <property name="styleSheet">
-<<<<<<< HEAD
-      <string notr="true">background-color: rgb(47, 49, 54);
-border-radius:40px;
-border:0px;
-color:white;</string>
-=======
       <string notr="true">background-color: rgb(255, 255, 255);
 border:0px;
 border-radius:40px;</string>
->>>>>>> 09006a73d535aa2987d32610dc6115bfd6562b12
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -73,148 +42,14 @@ border-radius:40px;</string>
       <item>
        <widget class="QListView" name="listView">
         <property name="styleSheet">
-<<<<<<< HEAD
-         <string notr="true">font:24px;
-padding:10px;
-color:#b9bbbe;
-border-radius:40px;
-background-color: rgb(54, 57, 63);
-
-
-</string>
-=======
          <string notr="true">background-color: rgb(230, 235, 241);
 border:0px;
 border-radius:40px;
 font:24px;</string>
->>>>>>> 09006a73d535aa2987d32610dc6115bfd6562b12
         </property>
        </widget>
       </item>
       <item>
-<<<<<<< HEAD
-       <widget class="QFrame" name="frame_3">
-        <property name="styleSheet">
-         <string notr="true">border:0px;</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::StyledPanel</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout">
-         <item>
-          <widget class="QLineEdit" name="editingPlan">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>40</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border-radius:15px;
-background-color: rgb(54, 57, 63);
-color:#b9bbbe;
-padding:10px;</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_2">
-           <item>
-            <widget class="QDateEdit" name="datecome">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>40</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius:15px;
-background-color: rgb(54, 57, 63);
-color:#b9bbbe;</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QTimeEdit" name="timecome">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>40</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius:15px;
-background-color: rgb(54, 57, 63);
-color:#b9bbbe;</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout">
-           <item>
-            <widget class="QPushButton" name="pushButton_3">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>40</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius:15px;
-background-color: rgb(54, 57, 63);
-color:#b9bbbe;</string>
-             </property>
-             <property name="text">
-              <string>Delete</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="pushButton">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>40</height>
-              </size>
-             </property>
-             <property name="baseSize">
-              <size>
-               <width>0</width>
-               <height>50</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius:15px;
-background-color: rgb(54, 57, 63);
-color:#b9bbbe;</string>
-             </property>
-             <property name="text">
-              <string>Update</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </widget>
-      </item>
-      <item alignment="Qt::AlignHCenter">
-       <widget class="QLabel" name="errortxt">
-        <property name="styleSheet">
-         <string notr="true">#errortxt{
-color:white;
-}</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-=======
        <layout class="QVBoxLayout" name="verticalLayout">
         <item>
          <widget class="QLineEdit" name="editingPlan">
@@ -325,7 +160,6 @@ border-radius:15px;</string>
          </widget>
         </item>
        </layout>
->>>>>>> 09006a73d535aa2987d32610dc6115bfd6562b12
       </item>
      </layout>
     </widget>

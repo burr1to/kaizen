@@ -22,11 +22,6 @@ fitness_edit::fitness_edit(QWidget *parent) :
 
 fitness_edit::~fitness_edit()
 {
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 09006a73d535aa2987d32610dc6115bfd6562b12
     delete ui;
 }
 

@@ -12,8 +12,8 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>1280</width>
-    <height>720</height>
+    <width>0</width>
+    <height>0</height>
    </size>
   </property>
   <property name="baseSize">
@@ -30,13 +30,9 @@
     <normaloff>:/images/src_images/kaizen_square.png</normaloff>:/images/src_images/kaizen_square.png</iconset>
   </property>
   <property name="styleSheet">
-<<<<<<< HEAD
-   <string notr="true">background-color: rgb(32, 34, 37);</string>
-=======
    <string notr="true">font: 9pt &quot;Segoe UI&quot;;
 color:black;
 padding:15px</string>
->>>>>>> 09006a73d535aa2987d32610dc6115bfd6562b12
   </property>
   <widget class="QWidget" name="loginwidget">
    <property name="minimumSize">
@@ -52,11 +48,7 @@ padding:15px</string>
     </size>
    </property>
    <property name="styleSheet">
-<<<<<<< HEAD
-    <string notr="true">background-color: rgb(32, 34, 37);</string>
-=======
     <string notr="true">background-color: rgb(34, 37, 42);</string>
->>>>>>> 09006a73d535aa2987d32610dc6115bfd6562b12
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
@@ -92,81 +84,6 @@ padding:15px</string>
       </property>
       <property name="maximumSize">
        <size>
-<<<<<<< HEAD
-        <width>600</width>
-        <height>600</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">#loginframe{
-background-color: #2f3136;
-border-radius:50px;
-max-width:600px;
-max-height:600px;
-}
-
-#bigtxt{
-font-size:30px;
-color:#b9bbbe;
-font-weight:bold;
-}
-
-#username,#password
-{
-border-radius:15px;
-background:#36393f;
-border:1px;
-border-color:#b9bbbe ;
-color:#b9bbbe;
-padding:10px;
-
-margin-bottom:10px;
-}
-
-
-#loginbutt{
-border-radius:10px;
-border:1px solid rgb(173, 173, 173);
-padding:6px;
-color:#b9bbbe;
-margin-top:15px;
-font-size:20px;
-font-weight:bold;
-background:transparent;
-}
-
-#loginbutt:hover{
-background-color:#202225;
-border:1px solid transparent;
-color:#b9bbbe;
-}
-
-
-#usr,#pswd{
-font-size:24px;
-margin-bottom:10px;
-color:#b9bbbe;
-background:transparent;
-}
-#pswd{
-margin-top:20px;
-}
-
-#signupbut{
-border:1px solid transparent;
-padding:20px;
-font-size:15px;
-
-color:#b9bbbe;
-
-}
-
-#textdis{
-margin-bottom:8px;
-color:#b9bbbe;
-
-}
-=======
         <width>16777215</width>
         <height>16777215</height>
        </size>
@@ -181,7 +98,6 @@ color:#b9bbbe;
        <string notr="true">background-color: rgb(255, 255, 255);
 border-radius:50px;
 border:0px;
->>>>>>> 09006a73d535aa2987d32610dc6115bfd6562b12
 </string>
       </property>
       <property name="frameShape">
@@ -217,14 +133,6 @@ border:0px;</string>
           </widget>
          </item>
          <item>
-<<<<<<< HEAD
-          <widget class="QLabel" name="bigtxt">
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(47, 49, 54);</string>
-           </property>
-           <property name="text">
-            <string>Login</string>
-=======
           <widget class="QLineEdit" name="username">
            <property name="styleSheet">
             <string notr="true">background-color: rgb(230, 235, 241);
@@ -241,7 +149,6 @@ border:0px;</string>
            </property>
            <property name="text">
             <string>Password</string>
->>>>>>> 09006a73d535aa2987d32610dc6115bfd6562b12
            </property>
           </widget>
          </item>
@@ -301,11 +208,7 @@ border:0px;</string>
             </font>
            </property>
            <property name="styleSheet">
-<<<<<<< HEAD
-            <string notr="true">background-color: rgb(47, 49, 54);</string>
-=======
             <string notr="true">border:0px;</string>
->>>>>>> 09006a73d535aa2987d32610dc6115bfd6562b12
            </property>
            <property name="text">
             <string>Sign up from here</string>
@@ -328,11 +231,8 @@ border:0px;</string>
            </property>
           </spacer>
          </item>
-         <item>
+         <item alignment="Qt::AlignHCenter">
           <widget class="QLabel" name="textdis">
-           <property name="styleSheet">
-            <string notr="true">background-color: rgb(47, 49, 54);</string>
-           </property>
            <property name="text">
             <string/>
            </property>

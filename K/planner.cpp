@@ -9,7 +9,7 @@ Planner::Planner(QWidget *parent)
 {
     ui->setupUi(this);
 
-     ui->plandate->setDate(QDate::currentDate());
+
 
      db = QSqlDatabase::database();
      QSqlQuery qry;

@@ -382,22 +382,6 @@ background-color: rgb(230, 235, 241);</string>
                      </item>
                     </layout>
                    </item>
-<<<<<<< HEAD
-                   <item alignment="Qt::AlignHCenter">
-                    <widget class="QLabel" name="planerr">
-                     <property name="styleSheet">
-                      <string notr="true">#planerr{
-font-size:14px;
-color:white;
-}</string>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                    </widget>
-                   </item>
-=======
->>>>>>> 09006a73d535aa2987d32610dc6115bfd6562b12
                    <item>
                     <widget class="QPushButton" name="showplans">
                      <property name="minimumSize">

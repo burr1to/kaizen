@@ -29,7 +29,7 @@ private slots:
 
     void on_pushButton_3_clicked();
 
-    void refresh();
+    void on_refresh_clicked();
 
 private:
     Ui::allplans *ui;
