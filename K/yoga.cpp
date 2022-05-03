@@ -35,8 +35,8 @@ void yoga::on_pushButton_stop_timer_clicked()
 {
     minutes = 14;
     seconds = 59;
-    ui->seconds->display(seconds);
-    ui->minutes->display(minutes);
+    ui->seconds_2->display(seconds);
+    ui->minutes_2->display(minutes);
     time.stop();
 }
 
@@ -47,8 +47,8 @@ void yoga::timerr()
         minutes = minutes -1;
     }
     else{
-        ui->seconds->display(seconds);
-        ui->minutes->display(minutes);
+        ui->seconds_2->display(seconds);
+        ui->minutes_2->display(minutes);
     }
 }
 
