@@ -147,8 +147,8 @@ border-radius:15px;</string>
           </item>
          </layout>
         </item>
-        <item>
-         <widget class="QLabel" name="label">
+        <item alignment="Qt::AlignHCenter">
+         <widget class="QLabel" name="txterr">
           <property name="minimumSize">
            <size>
             <width>0</width>
@@ -156,7 +156,7 @@ border-radius:15px;</string>
            </size>
           </property>
           <property name="text">
-           <string>TextLabel</string>
+           <string/>
           </property>
          </widget>
         </item>

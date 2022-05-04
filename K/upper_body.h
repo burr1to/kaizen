@@ -37,6 +37,14 @@ private slots:
     void on_pushButton_stop_timer_clicked();
 
     void on_home_clicked();
+   void on_fit_butt_clicked();
+
+   void on_bud_butt_clicked();
+
+
+
+   void on_logo_clicked();
+
 
 private:
     Ui::upper_body *ui;

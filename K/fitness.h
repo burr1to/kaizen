@@ -52,12 +52,22 @@ private slots:
 
     void on_editstuff_clicked();
 
-    void on_home_clicked();
+
 
     void getfitnessdata(QString username, QString fitnessdata[]);
-    void on_pushButton_clicked();
 
-    void on_pushButton_2_clicked();
+     void on_home_clicked();
+    void on_fit_butt_clicked();
+
+    void on_bud_butt_clicked();
+
+
+
+    void on_logo_clicked();
+
+
+
+    void on_refresh_clicked();
 
 private:
     Ui::fitness *ui;

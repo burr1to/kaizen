@@ -50,9 +50,15 @@ private slots:
 
     void on_pushButton_clicked();
 
-    void setbudget();
+    void setbudget(QString);
 
     void setfitness();
+
+    void on_allplans_clicked();
+
+    void on_fit_butt_clicked();
+
+    void on_bud_butt_clicked();
 
 private:
     Ui::Planner *ui;

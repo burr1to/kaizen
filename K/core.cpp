@@ -1,8 +1,13 @@
 #include "core.h"
 #include "ui_core.h"
 #include "fitness.h"
+#include "login.h"
+#include "planner.h"
+#include "budget.h"
+#include "signup.h"
 
-QString f[2];
+
+QString f[3];
 
 core::core(QWidget *parent) :
     QDialog(parent),
@@ -23,6 +28,7 @@ core::core(QWidget *parent) :
     getfitnessdata(current,f);
     ui->weight->setText(f[0]);
     ui->height->setText(f[1]);
+    ui->bmi->setText(f[2]);
 
 
     minutes = 4;
@@ -37,7 +43,7 @@ core::~core()
 }
 void core::getfitnessdata(QString username,QString f[]){
     QSqlQuery fitqry;
-    if (fitqry.exec("select weight,height from fitness where username = '"+username+"' limit 1")){
+    if (fitqry.exec("select weight,height,bmi from fitness where username = '"+username+"' order by currentdate desc limit 1")){
         qDebug()<<"Executed";
 
             while(fitqry.next()){
@@ -45,16 +51,11 @@ void core::getfitnessdata(QString username,QString f[]){
 
                 f[0] = fitqry.value(0).toString();
                 f[1] = fitqry.value(1).toString();
-
-
+                f[2] = fitqry.value(2).toString();
         }
     }
-    qDebug()<<f[0];
-    qDebug()<<f[1];
 
 }
-
-
 
 void core::on_pushButton_start_workout_clicked()
 {
@@ -70,7 +71,6 @@ void core::on_pushButton_start_workout_clicked()
         ui->pushButton_start_workout->setText("Pause");
     }
 }
-
 
 void core::on_pushButton_stop_timer_clicked()
 {
@@ -94,8 +94,30 @@ void core::timerr()
     }
 }
 
-
 void core::on_home_clicked()
+{
+    this->close();
+    Planner *p = new Planner(this);
+    p->show();
+}
+
+void core::on_fit_butt_clicked()
+{
+
+    this->close();
+    fitness *f = new fitness(this);
+    f->show();
+
+}
+
+void core::on_bud_butt_clicked()
+{
+    this->close();
+    Budget *b = new Budget(this);
+    b->show();
+}
+
+void core::on_logo_clicked()
 {
     hide();
     QWidget *parent = this->parentWidget();

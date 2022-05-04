@@ -15,6 +15,7 @@ class fitness_edit : public QDialog
     Q_OBJECT
 
 public:
+        float bmi,conv;
     QString current,weight,height, clock_text;
     QSqlDatabase fitness_db;
     explicit fitness_edit(QWidget *parent = nullptr);
@@ -30,7 +31,7 @@ private slots:
 
 
     void on_submit_clicked();
-    void insertData(QString, QString, QString, float, QString);
+    void insertData(QString, QString, QString, QString, QString);
 
     void on_pushButton_clicked();
 

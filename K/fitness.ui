@@ -59,7 +59,7 @@ color: white;
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_4">
        <item>
-        <widget class="QPushButton" name="pushButton_3">
+        <widget class="QPushButton" name="logo">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -71,6 +71,29 @@ color: white;
          </property>
          <property name="text">
           <string>logo</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="refresh">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#refresh{
+background-color: rgb(55, 59, 62);
+border radius:40px;
+}
+#home:refresh{
+font-size: 18px;
+background-color:#e6ebf1;
+color: #22252a;}</string>
+         </property>
+         <property name="text">
+          <string>Refresh</string>
          </property>
         </widget>
        </item>
@@ -93,7 +116,7 @@ background-color:#e6ebf1;
 color: #22252a;}</string>
          </property>
          <property name="text">
-          <string>Home</string>
+          <string>Planner</string>
          </property>
         </widget>
        </item>
@@ -139,7 +162,7 @@ background-color:#e6ebf1;
 color: #22252a;}</string>
          </property>
          <property name="text">
-          <string>budget</string>
+          <string>Budget</string>
          </property>
         </widget>
        </item>
@@ -178,7 +201,6 @@ border radius:50px;</string>
                <widget class="QLabel" name="label_6">
                 <property name="font">
                  <font>
-                  <family>Foco</family>
                   <pointsize>-1</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -199,7 +221,6 @@ border radius:50px;</string>
                <widget class="QLabel" name="helloname">
                 <property name="font">
                  <font>
-                  <family>Foco</family>
                   <pointsize>-1</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -224,7 +245,6 @@ border radius:50px;</string>
                <widget class="QLabel" name="label_2">
                 <property name="font">
                  <font>
-                  <family>Foco</family>
                   <pointsize>-1</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -245,7 +265,6 @@ border radius:50px;</string>
                <widget class="QLabel" name="age">
                 <property name="font">
                  <font>
-                  <family>Foco</family>
                   <pointsize>-1</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -270,7 +289,6 @@ border radius:50px;</string>
                <widget class="QLabel" name="label_4">
                 <property name="font">
                  <font>
-                  <family>Foco</family>
                   <pointsize>-1</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -291,7 +309,6 @@ border radius:50px;</string>
                <widget class="QLabel" name="height">
                 <property name="font">
                  <font>
-                  <family>Foco</family>
                   <pointsize>-1</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -316,7 +333,6 @@ border radius:50px;</string>
                <widget class="QLabel" name="label_7">
                 <property name="font">
                  <font>
-                  <family>Foco</family>
                   <pointsize>-1</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -337,7 +353,6 @@ border radius:50px;</string>
                <widget class="QLabel" name="weight">
                 <property name="font">
                  <font>
-                  <family>Foco</family>
                   <pointsize>-1</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -362,7 +377,6 @@ border radius:50px;</string>
                <widget class="QLabel" name="label_9">
                 <property name="font">
                  <font>
-                  <family>Foco</family>
                   <pointsize>-1</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -383,7 +397,6 @@ border radius:50px;</string>
                <widget class="QLabel" name="bmi">
                 <property name="font">
                  <font>
-                  <family>Foco</family>
                   <pointsize>-1</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -462,7 +475,6 @@ border-radius:50px;</string>
          </property>
          <property name="font">
           <font>
-           <family>FONTSPRING DEMO - Pontiac Black</family>
            <pointsize>25</pointsize>
            <italic>false</italic>
            <bold>true</bold>
@@ -541,7 +553,6 @@ border-radius:40px;</string>
                  <widget class="QLabel" name="label_3">
                   <property name="font">
                    <font>
-                    <family>Foco</family>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -551,9 +562,7 @@ border-radius:40px;</string>
                    <string notr="true">font:35px;</string>
                   </property>
                   <property name="text">
-                   <string>A little progress 
-each day adds up 
-to BIG results.</string>
+                   <string>1</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
@@ -570,7 +579,6 @@ to BIG results.</string>
            <widget class="QFrame" name="frame_3">
             <property name="font">
              <font>
-              <family>Foco</family>
               <pointsize>12</pointsize>
               <italic>false</italic>
               <bold>false</bold>
@@ -601,7 +609,6 @@ color: #e6ebf1;}</string>
                </property>
                <property name="font">
                 <font>
-                 <family>Foco</family>
                  <pointsize>12</pointsize>
                  <italic>false</italic>
                  <bold>false</bold>
@@ -625,7 +632,6 @@ color: #e6ebf1;}</string>
                </property>
                <property name="font">
                 <font>
-                 <family>Foco</family>
                  <pointsize>12</pointsize>
                  <italic>false</italic>
                  <bold>false</bold>
@@ -649,7 +655,6 @@ color: #e6ebf1;}</string>
                </property>
                <property name="font">
                 <font>
-                 <family>Foco</family>
                  <pointsize>12</pointsize>
                  <italic>false</italic>
                  <bold>false</bold>
@@ -673,7 +678,6 @@ color: #e6ebf1;}</string>
                </property>
                <property name="font">
                 <font>
-                 <family>Foco</family>
                  <pointsize>12</pointsize>
                  <italic>false</italic>
                  <bold>false</bold>

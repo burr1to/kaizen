@@ -11,20 +11,14 @@ allplans::allplans(QWidget *parent) :
     QSqlQuery qry;
     qry.prepare("select current from current_user");
     if (qry.exec()){
-    //while(qry.next()){
         qry.first();
     current = qry.value(0).toString();
     qry.clear();
     qDebug()<<current;
-    //}
+
     }
-
-
     QSqlQueryModel * model = new QSqlQueryModel();
     model->setQuery("select plandetails from plan where planuser = '"+current+"'");
-    int rowcount = model->rowCount();
-    qDebug()<< rowcount;
-
     ui->listView->setModel(model);
 
 }
@@ -35,9 +29,6 @@ allplans::~allplans()
     delete ui;
 }
 
-
-
-
 int allplans::on_listView_activated(const QModelIndex &index)
 {
     QString val= ui->listView->model()->data(index).toString();
@@ -47,7 +38,6 @@ int allplans::on_listView_activated(const QModelIndex &index)
        if (que.exec()){
 
            while(que.next()){
-
                ui->editingPlan->setText(que.value(2).toString());
                ok = que.value(0).toString();
                ok2 = que.value(1).toString();
@@ -57,15 +47,9 @@ int allplans::on_listView_activated(const QModelIndex &index)
                ui->timecome->setTime(timecome);
 
                a = que.value(3).toInt();
-
-
-
-
            }
-
        } else {
            qDebug()<<"Nope not done";
-
        }
        que.clear();
 
@@ -76,31 +60,33 @@ void allplans::on_pushButton_clicked()
 {
     QString upplan,update,uptime;
      upplan = ui->editingPlan->text();
-
      QDate d = ui->datecome->date();
      update = d.toString("yyyy-MM-dd");
      QTime t = ui->timecome->time();
      uptime = t.toString("HH:mm:ss");
 
-
-
-     QSqlQuery sq;
-     sq.prepare("update plan set plandate = '"+update+"', plantime = '"+uptime+"', plandetails = '"+upplan+"' where planid = :pl");
-     sq.bindValue(":pl",a);
-    if (sq.exec()){
-        qDebug()<< "Edit updated";
-        ui->editingPlan->clear();
-        ui->datecome->clear();
-        ui->timecome->clear();
-
+    if (!upplan.isEmpty()){
+        QSqlQuery sq;
+        sq.prepare("update plan set plandate = '"+update+"', plantime = '"+uptime+"', plandetails = '"+upplan+"' where planid = :pl");
+        sq.bindValue(":pl",a);
+       if (sq.exec()){
+           qDebug()<< "Edit updated";
+           ui->editingPlan->clear();
+           ui->datecome->clear();
+           ui->timecome->clear();
+       }
+       else{
+           qDebug()<< "Nope";
+       }
+       sq.clear();
+       QSqlQueryModel * model = new QSqlQueryModel();
+       model->setQuery("select plandetails from plan where planuser = '"+current+"'");
+       ui->listView->setModel(model);
     }
     else{
-        qDebug()<< "Nope";
+        ui->txterr->setText("Please plan something!!");
     }
-    sq.clear();
-
 }
-
 
 void allplans::on_pushButton_3_clicked()
 {
@@ -125,18 +111,13 @@ void allplans::on_pushButton_3_clicked()
         ui->editingPlan->clear();
         ui->datecome->clear();
         ui->timecome->clear();
+        QSqlQueryModel * model = new QSqlQueryModel();
+        model->setQuery("select plandetails from plan where planuser = '"+current+"'");
+        ui->listView->setModel(model);
 
     }
 
 
 
-void allplans::on_refresh_clicked()
-{
-    QSqlQueryModel * model = new QSqlQueryModel();
-    model->setQuery("select plandetails from plan where planuser = '"+current+"'");
-    int rowcount = model->rowCount();
-    qDebug()<< rowcount;
 
-    ui->listView->setModel(model);
-}
 

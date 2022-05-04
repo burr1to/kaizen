@@ -1,7 +1,12 @@
 #include "upper_body.h"
 #include "ui_upper_body.h"
+#include "fitness.h"
+#include "login.h"
+#include "planner.h"
+#include "budget.h"
+#include "signup.h"
 
-QString fitd[2];
+QString fitd[3];
 upper_body::upper_body(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::upper_body)
@@ -21,6 +26,7 @@ upper_body::upper_body(QWidget *parent) :
     getfitnessdata(current,fitd);
     ui->weight->setText(fitd[0]);
     ui->height->setText(fitd[1]);
+    ui->bmi->setText(fitd[2]);
 
 
     minutes = 4;
@@ -35,7 +41,7 @@ upper_body::~upper_body()
 }
 void upper_body::getfitnessdata(QString username,QString fitd[]){
     QSqlQuery fitqry;
-    if (fitqry.exec("select weight,height from fitness where username = '"+username+"' limit 1")){
+    if (fitqry.exec("select weight,height,bmi from fitness where username = '"+username+"'  order by currentdate desc limit 1")){
         qDebug()<<"Executed";
 
             while(fitqry.next()){
@@ -43,6 +49,7 @@ void upper_body::getfitnessdata(QString username,QString fitd[]){
 
                 fitd[0] = fitqry.value(0).toString();
                 fitd[1] = fitqry.value(1).toString();
+                 fitd[2] = fitqry.value(2).toString();
 
 
         }
@@ -96,6 +103,30 @@ void upper_body::on_pushButton_stop_timer_clicked()
 
 
 void upper_body::on_home_clicked()
+{
+    this->close();
+    Planner *p = new Planner(this);
+    p->show();
+}
+
+
+void upper_body::on_fit_butt_clicked()
+{
+
+    this->close();
+    fitness *f = new fitness(this);
+    f->show();
+
+}
+
+void upper_body::on_bud_butt_clicked()
+{
+    this->close();
+    Budget *b = new Budget(this);
+    b->show();
+}
+
+void upper_body::on_logo_clicked()
 {
     hide();
     QWidget *parent = this->parentWidget();

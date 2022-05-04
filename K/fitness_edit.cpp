@@ -26,7 +26,7 @@ fitness_edit::~fitness_edit()
 }
 
 
-void fitness_edit::insertData(QString weight, QString height, QString clock_text, float bmi, QString current){
+void fitness_edit::insertData(QString weight, QString height, QString clock_text, QString bmi, QString current){
     QSqlQuery qry;
     qry.prepare("INSERT INTO fitness(currentdate,weight,height,bmi,username) VALUES (:d,:w,:h,:b,:usr)");
     qry.bindValue(":w", weight);
@@ -58,12 +58,19 @@ void fitness_edit::on_submit_clicked()
     }
     QDateTime clock = QDateTime::currentDateTime();
     clock_text=clock.toString("yyyy-MM-dd-hh-mm-ss");
-    float bmi = 10.0;
     weight = ui->weight->text();
     height = ui->height->text();
-    insertData(weight,height,clock_text,bmi,current);
+    if (weight.isEmpty() || height.isEmpty()){
+        ui->err->setText("Please don't leave any empty fields");
+    }else{
+    conv = (float)height.toInt()/100;
+    float sq = conv*conv;
+    bmi = (float)weight.toInt()/sq;
+    QString grape = QString::number(bmi, 'g', 5);
+    insertData(weight,height,clock_text,grape,current);
     fitness_db.close();
-    //this->close();
+    }
+
 
 
 }

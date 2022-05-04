@@ -12,23 +12,12 @@ Login::Login(QWidget *parent) :
     ui->setupUi(this);
        ui->username->setPlaceholderText("Enter username");
        ui->password->setPlaceholderText("Enter password");
-
-
-
 }
-
-
-
-
 
 Login::~Login()
 {
     delete ui;
 }
-
-
-
-
 
 void Login::createTable(QString username){
     QSqlQuery quz;
@@ -58,7 +47,6 @@ void Login::on_loginbutt_clicked()
        if (username == "" && password == ""){
             ui->textdis->setText("Please enter username or password to log in.");
        }
-
        else{
 
        if(qry.exec("select * from user where username = '"+username+"' and password = '"+password+"'")){
@@ -73,10 +61,8 @@ void Login::on_loginbutt_clicked()
                 createTable(username);
                    mydb.close();
                    this->hide();
-
                Planner *p=new Planner(this);
                p->show();
-
            }
            else if (count<1){
                qDebug()<< "Username and Password does not exist.";
@@ -88,11 +74,9 @@ void Login::on_loginbutt_clicked()
            } else {
                qDebug()<< "Uhm ok";
            }
-
        }
        }
 }
-
 
 void Login::on_signupbut_clicked()
 {

@@ -87,7 +87,7 @@ border-radius:15px;</string>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="allplans">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -105,7 +105,7 @@ background-color: rgb(55, 59, 62);</string>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_3">
+        <widget class="QPushButton" name="fit_butt">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -123,7 +123,7 @@ background-color: rgb(55, 59, 62);</string>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_4">
+        <widget class="QPushButton" name="bud_butt">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -201,7 +201,6 @@ background-color: rgb(230, 235, 241);</string>
            <widget class="QLabel" name="heytxt">
             <property name="font">
              <font>
-              <family>FONTSPRING DEMO - Pontiac Black</family>
               <pointsize>14</pointsize>
               <italic>false</italic>
               <bold>true</bold>
@@ -303,7 +302,6 @@ font-size:14px;
                 <widget class="QLabel" name="plan_1">
                  <property name="font">
                   <font>
-                   <family>Foco</family>
                    <pointsize>-1</pointsize>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -323,7 +321,6 @@ background-color: rgb(230, 235, 241);</string>
                 <widget class="QLabel" name="plan_2">
                  <property name="font">
                   <font>
-                   <family>Foco</family>
                    <pointsize>-1</pointsize>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -343,7 +340,6 @@ background-color: rgb(230, 235, 241);</string>
                 <widget class="QLabel" name="plan_3">
                  <property name="font">
                   <font>
-                   <family>Foco</family>
                    <pointsize>-1</pointsize>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -363,7 +359,6 @@ background-color: rgb(230, 235, 241);</string>
                 <widget class="QLabel" name="plan_4">
                  <property name="font">
                   <font>
-                   <family>Foco</family>
                    <pointsize>-1</pointsize>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -402,7 +397,6 @@ background-color: rgb(230, 235, 241);</string>
                      </property>
                      <property name="font">
                       <font>
-                       <family>Foco</family>
                        <pointsize>12</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
@@ -447,7 +441,6 @@ background-color: rgb(230, 235, 241);</string>
                      </property>
                      <property name="font">
                       <font>
-                       <family>Foco</family>
                        <pointsize>12</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
@@ -456,10 +449,11 @@ background-color: rgb(230, 235, 241);</string>
                      <property name="styleSheet">
                       <string notr="true">border:0px;
 border-radius:15px;
-background-color: rgb(230, 235, 241);</string>
+background-color: rgb(230, 235, 241);
+padding:10px;</string>
                      </property>
                      <property name="text">
-                      <string>&lt;----- Show All Plans -----&gt;</string>
+                      <string>Show All Plans </string>
                      </property>
                     </widget>
                    </item>
@@ -566,7 +560,6 @@ background-color: rgb(230, 235, 241);</string>
                     <widget class="QLabel" name="BMI_label">
                      <property name="font">
                       <font>
-                       <family>Foco</family>
                        <pointsize>12</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
@@ -588,10 +581,9 @@ border-radius:10px;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLabel" name="label_13">
+                    <widget class="QLabel" name="bmit">
                      <property name="font">
                       <font>
-                       <family>Foco</family>
                        <pointsize>12</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
@@ -605,7 +597,7 @@ border-radius:10px;</string>
 border-radius:10px;</string>
                      </property>
                      <property name="text">
-                      <string>XXX</string>
+                      <string>x</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignCenter</set>
@@ -629,7 +621,6 @@ border-radius:10px;</string>
                     <widget class="QLabel" name="Height_label">
                      <property name="font">
                       <font>
-                       <family>Foco</family>
                        <pointsize>12</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
@@ -651,10 +642,9 @@ border-radius:20px;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLabel" name="label_17">
+                    <widget class="QLabel" name="heightt">
                      <property name="font">
                       <font>
-                       <family>Foco</family>
                        <pointsize>12</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
@@ -668,7 +658,7 @@ border-radius:20px;</string>
 border-radius:20px;</string>
                      </property>
                      <property name="text">
-                      <string>XXX</string>
+                      <string>x</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignCenter</set>
@@ -688,7 +678,6 @@ border-radius:20px;</string>
                     <widget class="QLabel" name="Weight_label">
                      <property name="font">
                       <font>
-                       <family>Foco</family>
                        <pointsize>12</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
@@ -710,10 +699,9 @@ border-radius:10px;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLabel" name="label_15">
+                    <widget class="QLabel" name="weightt">
                      <property name="font">
                       <font>
-                       <family>Foco</family>
                        <pointsize>12</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
@@ -727,7 +715,7 @@ border-radius:10px;</string>
 border-radius:20px;</string>
                      </property>
                      <property name="text">
-                      <string>XXXX</string>
+                      <string>x</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignCenter</set>
@@ -786,7 +774,6 @@ background:transparent;</string>
                     <widget class="QLabel" name="Expenditure_label">
                      <property name="font">
                       <font>
-                       <family>Foco</family>
                        <pointsize>-1</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
@@ -808,10 +795,9 @@ border-radius:5px;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLabel" name="label_9">
+                    <widget class="QLabel" name="exp">
                      <property name="font">
                       <font>
-                       <family>Foco</family>
                        <pointsize>-1</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
@@ -822,10 +808,11 @@ border-radius:5px;</string>
                      </property>
                      <property name="styleSheet">
                       <string notr="true">background-color: rgb(52, 239, 163);
-border-radius:5px;</string>
+border-radius:5px;
+font-size:25px;</string>
                      </property>
                      <property name="text">
-                      <string>XXXX</string>
+                      <string>xxxx</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignCenter</set>
@@ -849,7 +836,6 @@ border-radius:5px;</string>
                     <widget class="QLabel" name="Balance_label">
                      <property name="font">
                       <font>
-                       <family>Foco</family>
                        <pointsize>-1</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
@@ -866,7 +852,7 @@ border-radius:5px;</string>
 border-radius:10px;</string>
                      </property>
                      <property name="text">
-                      <string>Closing Balance</string>
+                      <string>Net Balance</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignCenter</set>
@@ -874,10 +860,9 @@ border-radius:10px;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLabel" name="label_8">
+                    <widget class="QLabel" name="net">
                      <property name="font">
                       <font>
-                       <family>Foco</family>
                        <pointsize>-1</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
@@ -888,10 +873,11 @@ border-radius:10px;</string>
                      </property>
                      <property name="styleSheet">
                       <string notr="true">background-color: rgb(52, 239, 163);
-border-radius:10px;</string>
+border-radius:10px;
+font-size:25px;</string>
                      </property>
                      <property name="text">
-                      <string>XXXXX</string>
+                      <string/>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignCenter</set>
@@ -912,7 +898,6 @@ background:transparent;</string>
                     <widget class="QLabel" name="Budget_label">
                      <property name="font">
                       <font>
-                       <family>Foco</family>
                        <pointsize>-1</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
@@ -926,7 +911,7 @@ background:transparent;</string>
 border-radius:10px;</string>
                      </property>
                      <property name="text">
-                      <string>Allocated Budget</string>
+                      <string>Total Income</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignCenter</set>
@@ -934,10 +919,9 @@ border-radius:10px;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLabel" name="label_11">
+                    <widget class="QLabel" name="inc">
                      <property name="font">
                       <font>
-                       <family>Foco</family>
                        <pointsize>-1</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
@@ -948,10 +932,11 @@ border-radius:10px;</string>
                      </property>
                      <property name="styleSheet">
                       <string notr="true">background-color: rgb(52, 239, 163);
-border-radius:10px;</string>
+border-radius:10px;
+font-size:25px;</string>
                      </property>
                      <property name="text">
-                      <string>XXXX</string>
+                      <string/>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignCenter</set>

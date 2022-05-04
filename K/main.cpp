@@ -2,7 +2,6 @@
 #include "login.h"
 #include "planner.h"
 #include <QApplication>
-QString current;
 
 
 

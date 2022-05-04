@@ -34,9 +34,17 @@ private slots:
 
     void getfitnessdata(QString username, QString fi[]);
 
-    void on_home_clicked();
+
 
     void on_pushButton_start_workout_clicked();
+
+    void on_home_clicked();
+   void on_fit_butt_clicked();
+
+   void on_bud_butt_clicked();
+
+   void on_logo_clicked();
+
 
 private:
     Ui::lower_body *ui;

@@ -35,6 +35,14 @@ void getfitnessdata(QString username, QString fdata[]);
     void timerr();
 
     void on_home_clicked();
+   void on_fit_butt_clicked();
+
+   void on_bud_butt_clicked();
+
+
+
+   void on_logo_clicked();
+
 
 private:
     Ui::yoga *ui;

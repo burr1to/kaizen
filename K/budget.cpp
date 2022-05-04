@@ -8,6 +8,8 @@ Budget::Budget(QWidget *parent)
     , ui(new Ui::Budget)
 {
     ui->setupUi(this);
+
+
     budgetdb = QSqlDatabase::database();
        QSqlQuery qry;
        qry.prepare("select current from current_user");
@@ -24,7 +26,7 @@ ui->hellotxt->setText("Hello " + current.toUpper() + " !");
    ui->othertot->setText(addItemstoDatabase(current,"Other",s));
    ui->intot->setText(addItemstoDatabase(current,"Income",o));
 
-   setTotals();
+   setTotals(current);
 
  QSqlQueryModel *bqmodel= new QSqlQueryModel();
   bqmodel->setQuery("SELECT Item,Price,Category FROM Info where username = '"+current+"'");
@@ -44,24 +46,29 @@ Budget::~Budget()
     delete ui;
 };
 
-void Budget::setTotals(){
+void Budget::setTotals(QString username){
     QString a,b;
     QSqlQuery tot;
-   if(tot.exec("select sum(Price) from INFO where category = 'Income'")){
+   if(tot.exec("select sum(Price) from INFO where category = 'Income' and username = '"+username+"'")){
         tot.first();
         a = tot.value(0).toString();
     }
-
     ui->intotal->setNum(a.toInt());
     tot.clear();
-    if(tot.exec("select sum(Price) from INFO")){
+    if(tot.exec("select sum(Price) from INFO where  username = '"+username+"'")){
          tot.first();
          b = tot.value(0).toString();
      }
     tot.clear();
+   if (b.isEmpty()){
+       ui->extotal->setNum(0);
+   }
+   else{
+       ui->extotal->setNum(b.toInt()-a.toInt());
+   }
+   int c = b.toInt()-a.toInt();
 
-   ui->extotal->setNum(b.toInt());
-   ui->net->setNum(b.toInt()-a.toInt());
+   ui->net->setNum(a.toInt()-c);
 
 }
 
@@ -73,7 +80,6 @@ QString Budget::addItemstoDatabase(QString current, QString variable,QString a){
     }
     sumq.clear();
     return a;
-
 }
 
 void Budget::on_pushButton_5_clicked()
@@ -82,7 +88,6 @@ void Budget::on_pushButton_5_clicked()
         QWidget *parent = this->parentWidget();
         parent->show();
 }
-
 
 void Budget::on_pushButton_3_clicked()
 {
@@ -110,25 +115,21 @@ void Budget::on_pushButton_3_clicked()
         else{
            qDebug()<<"Error";
         }
-
-
-
        ui->edutot->setText(addItemstoDatabase(current,"Education",e));
        extotal=f.toInt()+e.toInt()+s.toInt();
        intotal = o.toInt();
 
-        setTotals();
+        setTotals(current);
         QSqlQueryModel *bqmodel= new QSqlQueryModel();
          bqmodel->setQuery("SELECT Item,Price FROM Info where username = '"+current+"'");
          ui->expta->setModel(bqmodel);
-
         }
         else{
             qDebug()<<"No empty please";
         }
 
+         allocatesomeofthis(budget);
 }
-
 
 void Budget::on_pushButton_12_clicked()
 {
@@ -157,7 +158,7 @@ void Budget::on_pushButton_12_clicked()
              qDebug()<<"Error";
         }
          ui->foodtot->setText(addItemstoDatabase(current,"Food",f));
-            setTotals();
+            setTotals(current);
             QSqlQueryModel *bqmodel= new QSqlQueryModel();
              bqmodel->setQuery("SELECT Item,Price FROM Info where username = '"+current+"'");
              ui->expta->setModel(bqmodel);
@@ -166,12 +167,12 @@ void Budget::on_pushButton_12_clicked()
              qDebug()<<"No empty please";
          }
 
+          allocatesomeofthis(budget);
 }
 
 
 void Budget::on_pushButton_9_clicked()
 {
-
         item = ui->o_item->text();
         price = ui->o_amount->text();
 
@@ -196,7 +197,7 @@ void Budget::on_pushButton_9_clicked()
         }
 
           ui->othertot->setText(addItemstoDatabase(current,"Other",s));
-          setTotals();
+          setTotals(current);
           QSqlQueryModel *bqmodel= new QSqlQueryModel();
            bqmodel->setQuery("SELECT Item,Price FROM Info where username = '"+current+"'");
            ui->expta->setModel(bqmodel);
@@ -205,6 +206,7 @@ void Budget::on_pushButton_9_clicked()
                 qDebug()<<"No empty please";
         }
 
+         allocatesomeofthis(budget);
 }
 
 
@@ -234,7 +236,7 @@ void Budget::on_pushButton_4_clicked()
              qDebug()<<"Error";
         }
          ui->intot->setText(addItemstoDatabase(current,"Income",o));
-           setTotals();
+           setTotals(current);
            QSqlQueryModel *bqmodel= new QSqlQueryModel();
             bqmodel->setQuery("SELECT Item,Price FROM Info where username = '"+current+"'");
             ui->expta->setModel(bqmodel);
@@ -243,62 +245,82 @@ void Budget::on_pushButton_4_clicked()
            qDebug()<<"No empty please";
         }
 
+        allocatesomeofthis(budget);
 }
-
-
-
-
 
 int Budget::on_expta_activated(const QModelIndex &index)
 {
     QString val= ui->expta->model()->data(index).toString();
     qDebug()<< val;
+    return 0;
 }
+void Budget::allocatesomeofthis(QString budget){
 
-
-
-void Budget::on_allocating_returnPressed()
-{
-    QString test = ui->allbudget->text();
-    QString tempo,temp;
-    int inc,bud,exp,allocated;
-
-    QString budget = ui->allocating->text();
     bud = budget.toInt();
     QSqlQuery quer;
 
-    if (quer.exec("select sum(Price) from INFO where category = 'Income'")){
+    if (quer.exec("select sum(Price) from INFO where category = 'Income' and username = '"+current+"'")){
     quer.first();
     temp = quer.value(0).toString();
     quer.clear();
+    qDebug()<< temp;
     }
-
-
-    if (quer.exec("select sum(Price) from INFO")){
+    if (quer.exec("select sum(Price) from INFO where username = '"+current+"'")){
     quer.first();
     tempo = quer.value(0).toString();
-    qDebug()<<tempo;
+
     quer.clear();
     }
 
     inc = temp.toInt();
-    exp = tempo.toInt();
-    int netval = inc-exp;
+    total = tempo.toInt();
+    exp = total-inc;
+    netval = inc-exp;
 
-    if (netval<0){
-        allocated = bud + netval;
-        ui->rem->setNum(allocated);
-    } else if(netval>0){
-        allocated = bud - netval;
-        ui->rem->setNum(allocated);
+    if (!temp.isEmpty() && !tempo.isEmpty()){
+
+        qDebug()<<netval;
+        if (netval<0){
+            allocated = bud + netval;
+            ui->rem->setNum(allocated);
+        } else if(netval>0){
+            allocated = bud - netval;
+            ui->rem->setNum(allocated);
+        }
+        else{
+            qDebug()<< "Eror";
+        }
+
+        ui->allbudget->setNum(bud);
+        ui->allocating->clear();
+    }
+
+    else if(temp.isEmpty()){
+        ui->intotal->setNum(0);
+        ui->allbudget->setNum(bud);
+        ui->rem->setNum(bud-exp);
+
+        ui->allocating->clear();
+    }
+    else if (tempo.isEmpty()){
+        ui->extotal->setNum(0);
+        ui->allbudget->setNum(bud);
+        ui->rem->setNum(bud+inc);
+
+        ui->allocating->clear();
     }
     else{
-        qDebug()<< "Eror";
+        ui->allbudget->setNum(bud);
+        ui->rem->setText("N/A");
+        ui->allocating->clear();
     }
+}
 
-
-    ui->allbudget->setNum(bud);
-    ui->allocating->clear();
+QString Budget::on_allocating_returnPressed()
+{
+    budget = ui->allocating->text();
+    allocatesomeofthis(budget);
+    return budget;
 
 
 }

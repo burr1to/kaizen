@@ -1,7 +1,12 @@
 #include "yoga.h"
 #include "ui_yoga.h"
 #include "fitness.h"
-  QString fdata[2];
+#include "login.h"
+#include "planner.h"
+#include "budget.h"
+#include "signup.h"
+
+  QString fdata[3];
 yoga::yoga(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::yoga)
@@ -21,6 +26,7 @@ yoga::yoga(QWidget *parent) :
     getfitnessdata(current,fdata);
     ui->weight->setText(fdata[0]);
     ui->height->setText(fdata[1]);
+    ui->bmi->setText(fdata[2]);
 
 
     minutes = 4;
@@ -35,7 +41,7 @@ yoga::~yoga()
 }
 void yoga::getfitnessdata(QString username,QString fdata[]){
     QSqlQuery fitqry;
-    if (fitqry.exec("select weight,height from fitness where username = '"+username+"' limit 1")){
+    if (fitqry.exec("select weight,height,bmi from fitness where username = '"+username+"' order by currentdate desc limit 1")){
         qDebug()<<"Executed";
 
             while(fitqry.next()){
@@ -43,6 +49,7 @@ void yoga::getfitnessdata(QString username,QString fdata[]){
 
                 fdata[0] = fitqry.value(0).toString();
                 fdata[1] = fitqry.value(1).toString();
+                fdata[2] = fitqry.value(2).toString();
 
 
         }
@@ -94,6 +101,30 @@ void yoga::timerr()
 
 
 void yoga::on_home_clicked()
+{
+    this->close();
+    Planner *p = new Planner(this);
+    p->show();
+}
+
+
+void yoga::on_fit_butt_clicked()
+{
+
+    this->close();
+    fitness *f = new fitness(this);
+    f->show();
+
+}
+
+void yoga::on_bud_butt_clicked()
+{
+    this->close();
+    Budget *b = new Budget(this);
+    b->show();
+}
+
+void yoga::on_logo_clicked()
 {
     hide();
     QWidget *parent = this->parentWidget();

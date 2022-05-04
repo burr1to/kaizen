@@ -298,7 +298,7 @@ color: black;
                       </font>
                      </property>
                      <property name="text">
-                      <string>Net Expense : </string>
+                      <string>Net Expense:</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -466,8 +466,8 @@ border: none;</string>
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>654</width>
-               <height>892</height>
+               <width>659</width>
+               <height>904</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_20" stretch="1,12,5">

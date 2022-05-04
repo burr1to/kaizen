@@ -1,17 +1,20 @@
 #include "fitness.h"
 #include "ui_fitness.h"
+#include "login.h"
+#include "planner.h"
+#include "budget.h"
+#include "signup.h"
 #include <QTimer>
 #include <QDateTime>
 #include <QSql>
 #include <QSqlDatabase>
 #include "fitness_edit.h"
 
-  QString fitdata[2];
+  QString fitdata[3];
 fitness::fitness(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::fitness)
 {
-
     ui->setupUi(this);
     db = QSqlDatabase::database();
     QSqlQuery qry;
@@ -21,12 +24,11 @@ fitness::fitness(QWidget *parent)
     current = qry.value(0).toString();
     qry.clear();
     }
-
-
     ui->helloname->setText(current);
     getfitnessdata(current,fitdata);
     ui->weight->setText(fitdata[0]);
     ui->height->setText(fitdata[1]);
+    ui->bmi->setText(fitdata[2]);
 
 
 
@@ -34,16 +36,14 @@ fitness::fitness(QWidget *parent)
 
 }
 
-
 fitness::~fitness()
 {
     delete ui;
 }
 
-
 void fitness::getfitnessdata(QString username,QString fitdata[]){
     QSqlQuery fitqry;
-    if (fitqry.exec("select weight,height from fitness where username = '"+username+"' limit 1")){
+    if (fitqry.exec("select weight,height,bmi from fitness where username = '"+username+"' order by currentdate desc limit 1")){
         qDebug()<<"Executed";
 
             while(fitqry.next()){
@@ -51,14 +51,15 @@ void fitness::getfitnessdata(QString username,QString fitdata[]){
 
                 fitdata[0] = fitqry.value(0).toString();
                 fitdata[1] = fitqry.value(1).toString();
-
-
+                fitdata[2] = fitqry.value(2).toString();
         }
     }
     qDebug()<<fitdata[0];
     qDebug()<<fitdata[1];
+    fitqry.clear();
 
 }
+
 void fitness::show_chart()
 {
     QSqlQuery qry1, qry2,qry3;
@@ -67,7 +68,7 @@ void fitness::show_chart()
     qry2.exec();
     qry2.first();
     int noofrows = qry2.value(0).toInt();
-    qDebug() << noofrows;
+
 
     int offset = noofrows - 5;
 
@@ -75,7 +76,7 @@ void fitness::show_chart()
     int i;
     qry3.prepare("select * from fitness where username = '"+current+"' limit 5 offset :offsetvalue ");
     qry3.bindValue(":offsetvalue",offset);
-    qDebug() << current;
+
 
     int count = 0;
     if (qry3.exec()){
@@ -88,19 +89,19 @@ void fitness::show_chart()
     qry1.prepare("select * from fitness where username = '"+current+"' limit 5 offset :offsetvalue");
     qry1.bindValue(":offsetvalue",offset);
     qry1.exec();
-    qDebug() << offset;
+
 
     for (i=0; i<count; i++){
         qry1.next();
         if (i == 0){
             a = qry1.value(1).toInt();
-            qDebug()<< a;
+
         }
         QStringList dates = qry1.value(0).toString().split("-").mid(0,3);
         QDateTime momentInTime;
         momentInTime.setDate(QDate(dates[0].toInt(), dates[1].toInt(), dates[2].toInt()));
         series -> append(momentInTime.toMSecsSinceEpoch(), qry1.value(1).toDouble());
-        qDebug() << momentInTime;
+        //qDebug() << momentInTime;
     }
 
     QChart *chart = new QChart();
@@ -174,8 +175,30 @@ void fitness::on_editstuff_clicked()
 
 }
 
-
 void fitness::on_home_clicked()
+{
+    this->close();
+    Planner *p = new Planner(this);
+    p->show();
+}
+
+void fitness::on_fit_butt_clicked()
+{
+
+    this->close();
+    fitness *f = new fitness(this);
+    f->show();
+
+}
+
+void fitness::on_bud_butt_clicked()
+{
+    this->close();
+    Budget *b = new Budget(this);
+    b->show();
+}
+
+void fitness::on_logo_clicked()
 {
     hide();
     QWidget *parent = this->parentWidget();
@@ -183,14 +206,10 @@ void fitness::on_home_clicked()
 }
 
 
-void fitness::on_pushButton_clicked()
+void fitness::on_refresh_clicked()
 {
-
-}
-
-
-void fitness::on_pushButton_2_clicked()
-{
-
+    this->close();
+    fitness *f = new fitness(this);
+    f->show();
 }
 
