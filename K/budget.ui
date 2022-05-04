@@ -54,7 +54,7 @@ color:#e6ebf1;</string>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="planner">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -62,9 +62,15 @@ color:#e6ebf1;</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">border:0px;
-border-radius:15px;
-background-color: rgb(55, 59, 62);</string>
+          <string notr="true">#planner{
+background-color: rgb(55, 59, 62);
+border-radius:20px;
+}
+#planner:hover{
+font: 18px;
+background-color:#e6ebf1;
+color: #22252a;
+}</string>
          </property>
          <property name="text">
           <string>Planner</string>
@@ -72,7 +78,7 @@ background-color: rgb(55, 59, 62);</string>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_5">
+        <widget class="QPushButton" name="fit_butt">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -80,9 +86,15 @@ background-color: rgb(55, 59, 62);</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">border:0px;
-border-radius:15px;
-background-color: rgb(55, 59, 62);</string>
+          <string notr="true">#fit_butt{
+background-color: rgb(55, 59, 62);
+border-radius:20px;
+}
+#fit_butt:hover{
+font: 18px;
+background-color:#e6ebf1;
+color: #22252a;
+}</string>
          </property>
          <property name="text">
           <string>Fitness</string>
@@ -90,7 +102,7 @@ background-color: rgb(55, 59, 62);</string>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_11">
+        <widget class="QPushButton" name="bud_butt">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -98,9 +110,15 @@ background-color: rgb(55, 59, 62);</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">border:0px;
-border-radius:15px;
-background-color: rgb(55, 59, 62);</string>
+          <string notr="true">#bud_butt{
+background-color: rgb(55, 59, 62);
+border-radius:20px;
+}
+#bud_butt:hover{
+font: 18px;
+background-color:#e6ebf1;
+color: #22252a;
+}</string>
          </property>
          <property name="text">
           <string>Budget</string>
@@ -122,15 +140,44 @@ background-color: rgb(55, 59, 62);</string>
        </item>
        <item>
         <widget class="QLabel" name="label_5">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(55, 59, 62);
+border-radius:20px;
+</string>
+         </property>
          <property name="text">
           <string>Allocate Budget</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLineEdit" name="allocating">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
          <property name="styleSheet">
-          <string notr="true">background-color:white;</string>
+          <string notr="true">#allocating{
+background-color: #ffffff;
+border-radius:15px;
+color:#22252a;
+}
+#allocating:hover{
+font: 18px;
+background-color:#e6ebf1;
+color: #22252a;
+}</string>
          </property>
         </widget>
        </item>
@@ -139,6 +186,11 @@ background-color: rgb(55, 59, 62);</string>
     </item>
     <item>
      <widget class="QFrame" name="frame_2">
+      <property name="styleSheet">
+       <string notr="true">border:0px;
+border-radius:40px;
+background-color:#ffffff;</string>
+      </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
@@ -158,8 +210,9 @@ background-color: rgb(55, 59, 62);</string>
           <bool>false</bool>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: white;
-border: none;</string>
+          <string notr="true">border:0px;
+border-radius:25px;
+background-color: rgb(230, 235, 241);</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -179,14 +232,15 @@ border: none;</string>
             <property name="font">
              <font>
               <family>Foco</family>
-              <pointsize>10</pointsize>
+              <pointsize>-1</pointsize>
               <italic>false</italic>
               <bold>false</bold>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">color: black;
+             <string notr="true">color: #34efa3;
 border: none;
+font:34px;
 </string>
             </property>
             <property name="text">
@@ -227,6 +281,11 @@ border: none;</string>
             <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,1">
              <item>
               <widget class="QFrame" name="frame_5">
+               <property name="styleSheet">
+                <string notr="true">border:0px;
+border-radius:30px;
+background-color: rgb(230, 235, 241);</string>
+               </property>
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
                </property>
@@ -248,7 +307,7 @@ border: none;</string>
                     </property>
                     <property name="styleSheet">
                      <string notr="true">border: none;
-color: black;
+color: #22252a;
 font:24px;
 </string>
                     </property>
@@ -277,6 +336,12 @@ font:24px;
                           <bold>false</bold>
                          </font>
                         </property>
+                        <property name="styleSheet">
+                         <string notr="true">background-color: #ffffff;
+border-radius:10px;
+padding:5px;
+</string>
+                        </property>
                         <property name="text">
                          <string>Total Income : </string>
                         </property>
@@ -294,6 +359,17 @@ font:24px;
                           <italic>false</italic>
                           <bold>false</bold>
                          </font>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">#intotal{
+background-color: #ffffff;
+border-radius:10px;
+padding-left:10px;
+}
+#intotal:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
                         </property>
                         <property name="text">
                          <string>xxxx</string>
@@ -314,6 +390,12 @@ font:24px;
                           <bold>false</bold>
                          </font>
                         </property>
+                        <property name="styleSheet">
+                         <string notr="true">background-color: #ffffff;
+border-radius:10px;
+padding:5px;
+</string>
+                        </property>
                         <property name="text">
                          <string>Total Expenses : </string>
                         </property>
@@ -331,6 +413,17 @@ font:24px;
                           <italic>false</italic>
                           <bold>false</bold>
                          </font>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">#extotal{
+background-color: #ffffff;
+border-radius:10px;
+padding-left:10px;
+}
+#extotal:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
                         </property>
                         <property name="text">
                          <string>xxxx</string>
@@ -351,6 +444,12 @@ font:24px;
                           <bold>false</bold>
                          </font>
                         </property>
+                        <property name="styleSheet">
+                         <string notr="true">background-color: #ffffff;
+border-radius:10px;
+padding:5px;
+</string>
+                        </property>
                         <property name="text">
                          <string>Net Expense : </string>
                         </property>
@@ -369,6 +468,17 @@ font:24px;
                           <bold>false</bold>
                          </font>
                         </property>
+                        <property name="styleSheet">
+                         <string notr="true">#net{
+background-color: #ffffff;
+border-radius:10px;
+padding-left:10px;
+}
+#net:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
+                        </property>
                         <property name="text">
                          <string>xxxx</string>
                         </property>
@@ -385,6 +495,11 @@ font:24px;
              </item>
              <item>
               <widget class="QFrame" name="frame_7">
+               <property name="styleSheet">
+                <string notr="true">border:0px;
+border-radius:30px;
+background-color: rgb(230, 235, 241);</string>
+               </property>
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
                </property>
@@ -406,7 +521,7 @@ font:24px;
                     </property>
                     <property name="styleSheet">
                      <string notr="true">border: none;
-color: black;
+color: #22252a;
 font:25px;
 
 </string>
@@ -437,7 +552,10 @@ font:25px;
                          </font>
                         </property>
                         <property name="styleSheet">
-                         <string notr="true">padding-left: 30px;</string>
+                         <string notr="true">background-color: #ffffff;
+border-radius:20px;
+padding:5px;
+</string>
                         </property>
                         <property name="text">
                          <string>Allocated Budget :</string>
@@ -456,6 +574,17 @@ font:25px;
                           <italic>false</italic>
                           <bold>false</bold>
                          </font>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">#allbudget{
+background-color: #ffffff;
+border-radius:20px;
+padding-left:10px;
+}
+#allbudget:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
                         </property>
                         <property name="text">
                          <string>0</string>
@@ -477,7 +606,10 @@ font:25px;
                          </font>
                         </property>
                         <property name="styleSheet">
-                         <string notr="true">padding-left: 30px;</string>
+                         <string notr="true">background-color: #ffffff;
+border-radius:20px;
+padding:5px;
+</string>
                         </property>
                         <property name="text">
                          <string>Remaining Balance :</string>
@@ -496,6 +628,17 @@ font:25px;
                           <italic>false</italic>
                           <bold>false</bold>
                          </font>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">#rem{
+background-color: #ffffff;
+border-radius:20px;
+padding-left:10px;
+}
+#rem:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
                         </property>
                         <property name="text">
                          <string>xxxx</string>
@@ -527,6 +670,11 @@ font:25px;
              <layout class="QHBoxLayout" name="horizontalLayout_23" stretch="1,1,1,1">
               <item>
                <widget class="QFrame" name="frame_11">
+                <property name="styleSheet">
+                 <string notr="true">border:0px;
+border-radius:20px;
+background-color: rgb(230, 235, 241);</string>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -561,7 +709,7 @@ font:25px;
                          </property>
                          <property name="styleSheet">
                           <string notr="true">color: black;
-font:12px;
+font:18px;
 </string>
                          </property>
                          <property name="text">
@@ -604,11 +752,18 @@ margin-right:10px;</string>
                        <item>
                         <widget class="QLineEdit" name="edu_item">
                          <property name="styleSheet">
-                          <string notr="true">border: 1px solid rgb(217, 217, 217);
+                          <string notr="true">#edu_item{
+border: 1px solid rgb(217, 217, 217);
 border-radius: 7px;
-padding: 5px;
 margin-left: 10px;
-margin-right: 10px;</string>
+margin-right: 10px;
+background-color: #ffffff;
+padding:4px;
+}
+#edu_item:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -621,11 +776,18 @@ margin-right: 10px;</string>
                        <item>
                         <widget class="QLineEdit" name="edu_amount">
                          <property name="styleSheet">
-                          <string notr="true">border: 1px solid rgb(217, 217, 217);
+                          <string notr="true">#edu_amount{
+border: 1px solid rgb(217, 217, 217);
 border-radius: 7px;
-padding: 5px;
 margin-left: 10px;
-margin-right: 10px;</string>
+margin-right: 10px;
+background-color: #ffffff;
+padding:4px;
+}
+#edu_amount:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
                          </property>
                          <property name="placeholderText">
                           <string>Amount</string>
@@ -655,7 +817,7 @@ margin-right:10px;</string>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
-                     <height>30</height>
+                     <height>35</height>
                     </size>
                    </property>
                    <property name="text">
@@ -693,6 +855,9 @@ margin-right:10px;</string>
                        <bold>false</bold>
                       </font>
                      </property>
+                     <property name="styleSheet">
+                      <string notr="true">padding:2px;</string>
+                     </property>
                      <property name="text">
                       <string/>
                      </property>
@@ -705,6 +870,11 @@ margin-right:10px;</string>
               </item>
               <item>
                <widget class="QFrame" name="frame_8">
+                <property name="styleSheet">
+                 <string notr="true">border:0px;
+border-radius:30px;
+background-color: rgb(230, 235, 241);</string>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -775,11 +945,18 @@ margin-right:10px;</string>
                      <item>
                       <widget class="QLineEdit" name="f_item">
                        <property name="styleSheet">
-                        <string notr="true">border: 1px solid rgb(217, 217, 217);
+                        <string notr="true">#f_item{
+border: 1px solid rgb(217, 217, 217);
 border-radius: 7px;
-padding: 5px;
 margin-left: 10px;
-margin-right: 10px;</string>
+margin-right: 10px;
+background-color: #ffffff;
+padding:4px;
+}
+#f_item:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -792,11 +969,18 @@ margin-right: 10px;</string>
                      <item>
                       <widget class="QLineEdit" name="f_amount">
                        <property name="styleSheet">
-                        <string notr="true">border: 1px solid rgb(217, 217, 217);
+                        <string notr="true">#f_amount{
+border: 1px solid rgb(217, 217, 217);
 border-radius: 7px;
-padding: 5px;
 margin-left: 10px;
-margin-right: 10px;</string>
+margin-right: 10px;
+background-color: #ffffff;
+padding:4px;
+}
+#f_amount:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
                        </property>
                        <property name="placeholderText">
                         <string>Amount</string>
@@ -828,6 +1012,12 @@ margin-right:10px;</string>
                  </item>
                  <item>
                   <widget class="QPushButton" name="pushButton_4">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>35</height>
+                    </size>
+                   </property>
                    <property name="text">
                     <string>PushButton</string>
                    </property>
@@ -863,6 +1053,9 @@ margin-right:10px;</string>
                        <bold>false</bold>
                       </font>
                      </property>
+                     <property name="styleSheet">
+                      <string notr="true">padding:2px;</string>
+                     </property>
                      <property name="text">
                       <string>700</string>
                      </property>
@@ -875,6 +1068,11 @@ margin-right:10px;</string>
               </item>
               <item>
                <widget class="QFrame" name="frame_9">
+                <property name="styleSheet">
+                 <string notr="true">border:0px;
+border-radius:30px;
+background-color: rgb(230, 235, 241);</string>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -950,11 +1148,18 @@ margin-right:10px;</string>
                        <item>
                         <widget class="QLineEdit" name="o_item">
                          <property name="styleSheet">
-                          <string notr="true">border: 1px solid rgb(217, 217, 217);
+                          <string notr="true">#o_item{
+border: 1px solid rgb(217, 217, 217);
 border-radius: 7px;
-padding: 5px;
 margin-left: 10px;
-margin-right: 10px;</string>
+margin-right: 10px;
+background-color: #ffffff;
+padding:4px;
+}
+#o_item:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -967,11 +1172,18 @@ margin-right: 10px;</string>
                        <item>
                         <widget class="QLineEdit" name="o_amount">
                          <property name="styleSheet">
-                          <string notr="true">border: 1px solid rgb(217, 217, 217);
+                          <string notr="true">#o_amount{
+border: 1px solid rgb(217, 217, 217);
 border-radius: 7px;
-padding: 5px;
 margin-left: 10px;
-margin-right: 10px;</string>
+margin-right: 10px;
+background-color: #ffffff;
+padding:4px;
+}
+#o_amount:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
                          </property>
                          <property name="placeholderText">
                           <string>Amount</string>
@@ -998,6 +1210,12 @@ margin-right:10px;</string>
                  </item>
                  <item>
                   <widget class="QPushButton" name="pushButton_9">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>35</height>
+                    </size>
+                   </property>
                    <property name="text">
                     <string>PushButton</string>
                    </property>
@@ -1033,6 +1251,9 @@ margin-right:10px;</string>
                        <bold>false</bold>
                       </font>
                      </property>
+                     <property name="styleSheet">
+                      <string notr="true">padding:2px;</string>
+                     </property>
                      <property name="text">
                       <string>700</string>
                      </property>
@@ -1045,6 +1266,11 @@ margin-right:10px;</string>
               </item>
               <item>
                <widget class="QFrame" name="frame_10">
+                <property name="styleSheet">
+                 <string notr="true">border:0px;
+border-radius:30px;
+background-color: rgb(230, 235, 241);</string>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -1120,11 +1346,18 @@ margin-right:10px;</string>
                        <item>
                         <widget class="QLineEdit" name="in_item">
                          <property name="styleSheet">
-                          <string notr="true">border: 1px solid rgb(217, 217, 217);
+                          <string notr="true">#in_item{
+border: 1px solid rgb(217, 217, 217);
 border-radius: 7px;
-padding: 5px;
 margin-left: 10px;
-margin-right: 10px;</string>
+margin-right: 10px;
+background-color: #ffffff;
+padding:4px;
+}
+#in_item:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -1137,11 +1370,18 @@ margin-right: 10px;</string>
                        <item>
                         <widget class="QLineEdit" name="in_amount">
                          <property name="styleSheet">
-                          <string notr="true">border: 1px solid rgb(217, 217, 217);
+                          <string notr="true">#in_amount{
+border: 1px solid rgb(217, 217, 217);
 border-radius: 7px;
-padding: 5px;
 margin-left: 10px;
-margin-right: 10px;</string>
+margin-right: 10px;
+background-color: #ffffff;
+padding:4px;
+}
+#in_amount:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
                          </property>
                          <property name="placeholderText">
                           <string>Amount</string>
@@ -1168,6 +1408,12 @@ margin-right:10px;</string>
                  </item>
                  <item>
                   <widget class="QPushButton" name="pushButton_13">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>35</height>
+                    </size>
+                   </property>
                    <property name="text">
                     <string>PushButton</string>
                    </property>
@@ -1203,6 +1449,9 @@ margin-right:10px;</string>
                        <bold>false</bold>
                       </font>
                      </property>
+                     <property name="styleSheet">
+                      <string notr="true">padding:2px;</string>
+                     </property>
                      <property name="text">
                       <string>700</string>
                      </property>
@@ -1233,8 +1482,9 @@ margin-right:10px;</string>
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">border: none;
-background: white;</string>
+            <string notr="true">border:0px;
+border-radius:25px;
+background-color: rgb(230, 235, 241);</string>
            </property>
            <property name="frameShape">
             <enum>QFrame::StyledPanel</enum>
@@ -1254,17 +1504,25 @@ background: white;</string>
             </property>
             <item>
              <widget class="QLabel" name="label_8">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>30</height>
+               </size>
+              </property>
               <property name="font">
                <font>
                 <family>Foco</family>
-                <pointsize>10</pointsize>
+                <pointsize>-1</pointsize>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">border: none;
-color: black;</string>
+               <string notr="true">border:0px;
+border-radius:15px;
+font:16px;
+background-color: rgb(230, 235, 241);</string>
               </property>
               <property name="text">
                <string>Recent Expenses</string>
@@ -1277,7 +1535,9 @@ color: black;</string>
             <item>
              <widget class="QTableView" name="expta">
               <property name="styleSheet">
-               <string notr="true">font:12px;</string>
+               <string notr="true">border:0px;
+border-radius:25px;
+background-color: #ffffff</string>
               </property>
               <property name="autoScrollMargin">
                <number>10</number>
@@ -1300,72 +1560,143 @@ color: black;</string>
              </widget>
             </item>
             <item>
-             <layout class="QVBoxLayout" name="verticalLayout_26">
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_21">
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_14">
-                  <item>
-                   <widget class="QLabel" name="label_4">
-                    <property name="text">
-                     <string>Item</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLineEdit" name="itemr"/>
-                  </item>
-                 </layout>
-                </item>
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_13">
-                  <item>
-                   <widget class="QLabel" name="label_3">
-                    <property name="text">
-                     <string>Price</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLineEdit" name="pricer"/>
-                  </item>
-                 </layout>
-                </item>
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_12">
-                  <item>
-                   <widget class="QLabel" name="label_2">
-                    <property name="text">
-                     <string>Category</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLineEdit" name="catr"/>
-                  </item>
-                 </layout>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_17">
-                <item>
-                 <widget class="QPushButton" name="updatebutt">
-                  <property name="text">
-                   <string>Update</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="deletebutt">
-                  <property name="text">
-                   <string>Delete</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-             </layout>
+             <widget class="QFrame" name="frame_12">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_11">
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_26">
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_21">
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_14">
+                     <item>
+                      <widget class="QLabel" name="label_4">
+                       <property name="text">
+                        <string>Item</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="itemr">
+                       <property name="styleSheet">
+                        <string notr="true">#itemr{
+background-color: #ffffff;
+border-radius:10px;
+}
+#itemr:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_13">
+                     <item>
+                      <widget class="QLabel" name="label_3">
+                       <property name="text">
+                        <string>Price</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="pricer">
+                       <property name="styleSheet">
+                        <string notr="true">#pricer{
+background-color: #ffffff;
+border-radius:10px;
+}
+#pricer:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_12">
+                     <item>
+                      <widget class="QLabel" name="label_2">
+                       <property name="text">
+                        <string>Category</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="catr">
+                       <property name="styleSheet">
+                        <string notr="true">#catr{
+background-color: #ffffff;
+border-radius:10px;
+}
+#catr:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_17">
+                   <item>
+                    <widget class="QPushButton" name="updatebutt">
+                     <property name="styleSheet">
+                      <string notr="true">#updatebutt{
+background-color: #ffffff;
+border-radius:10px;
+}
+#updatebutt:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>Update</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="deletebutt">
+                     <property name="styleSheet">
+                      <string notr="true">#deletebutt{
+background-color: #ffffff;
+border-radius:10px;
+}
+#deletebutt:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>Delete</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
             </item>
            </layout>
           </widget>
