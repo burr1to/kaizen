@@ -17,7 +17,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Home</string>
+   <string>Planner</string>
   </property>
   <property name="windowIcon">
    <iconset>
@@ -25,8 +25,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">color:black;
-padding:10px;
-font:14px;</string>
+font: 12pt &quot;Foco&quot;;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="minimumSize">
@@ -54,7 +53,8 @@ font:14px;</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">border:0px;</string>
+       <string notr="true">border:0px;
+color:#e6ebf1;</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -65,10 +65,15 @@ font:14px;</string>
       <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
         <widget class="QPushButton" name="Kaizen_logo">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>100</height>
+          </size>
+         </property>
          <property name="styleSheet">
           <string notr="true">border:0px;
-border-radius:15px;
-background-color: rgb(55, 59, 62);</string>
+border-radius:15px;</string>
          </property>
          <property name="text">
           <string>logo</string>
@@ -83,6 +88,12 @@ background-color: rgb(55, 59, 62);</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_2">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
          <property name="styleSheet">
           <string notr="true">border:0px;
 border-radius:15px;
@@ -95,6 +106,12 @@ background-color: rgb(55, 59, 62);</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_3">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
          <property name="styleSheet">
           <string notr="true">border:0px;
 border-radius:15px;
@@ -107,6 +124,12 @@ background-color: rgb(55, 59, 62);</string>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_4">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
          <property name="styleSheet">
           <string notr="true">border:0px;
 border-radius:15px;
@@ -178,14 +201,17 @@ background-color: rgb(230, 235, 241);</string>
            <widget class="QLabel" name="heytxt">
             <property name="font">
              <font>
-              <pointsize>-1</pointsize>
+              <family>FONTSPRING DEMO - Pontiac Black</family>
+              <pointsize>14</pointsize>
               <italic>false</italic>
-              <bold>false</bold>
+              <bold>true</bold>
              </font>
             </property>
             <property name="styleSheet">
              <string notr="true">border:0px;
-padding-right:10px;</string>
+padding-right:10px;
+color:#34efa3;
+font: 700 14pt &quot;FONTSPRING DEMO - Pontiac Black&quot;;</string>
             </property>
             <property name="text">
              <string>Welcome to Kaizen!!</string>
@@ -197,6 +223,12 @@ padding-right:10px;</string>
           </item>
           <item>
            <widget class="QPushButton" name="pushButton">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
             <property name="styleSheet">
              <string notr="true">border:0px;
 border-radius:15px;
@@ -209,6 +241,12 @@ background-color: rgb(55, 59, 62);</string>
           </item>
           <item>
            <widget class="QPushButton" name="Logout">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
             <property name="styleSheet">
              <string notr="true">border:0px;
 border-radius:15px;
@@ -265,6 +303,7 @@ font-size:14px;
                 <widget class="QLabel" name="plan_1">
                  <property name="font">
                   <font>
+                   <family>Foco</family>
                    <pointsize>-1</pointsize>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -284,6 +323,7 @@ background-color: rgb(230, 235, 241);</string>
                 <widget class="QLabel" name="plan_2">
                  <property name="font">
                   <font>
+                   <family>Foco</family>
                    <pointsize>-1</pointsize>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -303,6 +343,7 @@ background-color: rgb(230, 235, 241);</string>
                 <widget class="QLabel" name="plan_3">
                  <property name="font">
                   <font>
+                   <family>Foco</family>
                    <pointsize>-1</pointsize>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -322,6 +363,7 @@ background-color: rgb(230, 235, 241);</string>
                 <widget class="QLabel" name="plan_4">
                  <property name="font">
                   <font>
+                   <family>Foco</family>
                    <pointsize>-1</pointsize>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -360,7 +402,8 @@ background-color: rgb(230, 235, 241);</string>
                      </property>
                      <property name="font">
                       <font>
-                       <pointsize>-1</pointsize>
+                       <family>Foco</family>
+                       <pointsize>12</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
                       </font>
@@ -404,7 +447,8 @@ background-color: rgb(230, 235, 241);</string>
                      </property>
                      <property name="font">
                       <font>
-                       <pointsize>-1</pointsize>
+                       <family>Foco</family>
+                       <pointsize>12</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
                       </font>
@@ -522,7 +566,8 @@ background-color: rgb(230, 235, 241);</string>
                     <widget class="QLabel" name="BMI_label">
                      <property name="font">
                       <font>
-                       <pointsize>-1</pointsize>
+                       <family>Foco</family>
+                       <pointsize>12</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
                       </font>
@@ -531,7 +576,8 @@ background-color: rgb(230, 235, 241);</string>
                       <bool>false</bool>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true"/>
+                      <string notr="true">background-color: rgb(253, 214, 112);
+border-radius:10px;</string>
                      </property>
                      <property name="text">
                       <string>BMI</string>
@@ -545,7 +591,8 @@ background-color: rgb(230, 235, 241);</string>
                     <widget class="QLabel" name="label_13">
                      <property name="font">
                       <font>
-                       <pointsize>-1</pointsize>
+                       <family>Foco</family>
+                       <pointsize>12</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
                       </font>
@@ -554,7 +601,8 @@ background-color: rgb(230, 235, 241);</string>
                       <bool>false</bool>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true"/>
+                      <string notr="true">background-color: rgb(52, 239, 163);
+border-radius:10px;</string>
                      </property>
                      <property name="text">
                       <string>XXX</string>
@@ -581,7 +629,8 @@ background-color: rgb(230, 235, 241);</string>
                     <widget class="QLabel" name="Height_label">
                      <property name="font">
                       <font>
-                       <pointsize>-1</pointsize>
+                       <family>Foco</family>
+                       <pointsize>12</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
                       </font>
@@ -590,7 +639,8 @@ background-color: rgb(230, 235, 241);</string>
                       <bool>false</bool>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true"/>
+                      <string notr="true">background-color: rgb(253, 214, 112);
+border-radius:20px;</string>
                      </property>
                      <property name="text">
                       <string>Height</string>
@@ -604,7 +654,8 @@ background-color: rgb(230, 235, 241);</string>
                     <widget class="QLabel" name="label_17">
                      <property name="font">
                       <font>
-                       <pointsize>-1</pointsize>
+                       <family>Foco</family>
+                       <pointsize>12</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
                       </font>
@@ -613,7 +664,8 @@ background-color: rgb(230, 235, 241);</string>
                       <bool>false</bool>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true"/>
+                      <string notr="true">background-color: rgb(52, 239, 163);
+border-radius:20px;</string>
                      </property>
                      <property name="text">
                       <string>XXX</string>
@@ -636,7 +688,8 @@ background-color: rgb(230, 235, 241);</string>
                     <widget class="QLabel" name="Weight_label">
                      <property name="font">
                       <font>
-                       <pointsize>-1</pointsize>
+                       <family>Foco</family>
+                       <pointsize>12</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
                       </font>
@@ -645,7 +698,8 @@ background-color: rgb(230, 235, 241);</string>
                       <bool>false</bool>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true"/>
+                      <string notr="true">background-color: rgb(253, 214, 112);
+border-radius:10px;</string>
                      </property>
                      <property name="text">
                       <string>Weight</string>
@@ -659,7 +713,8 @@ background-color: rgb(230, 235, 241);</string>
                     <widget class="QLabel" name="label_15">
                      <property name="font">
                       <font>
-                       <pointsize>-1</pointsize>
+                       <family>Foco</family>
+                       <pointsize>12</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
                       </font>
@@ -668,7 +723,8 @@ background-color: rgb(230, 235, 241);</string>
                       <bool>false</bool>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true"/>
+                      <string notr="true">background-color: rgb(52, 239, 163);
+border-radius:20px;</string>
                      </property>
                      <property name="text">
                       <string>XXXX</string>
@@ -691,7 +747,8 @@ background-color: rgb(230, 235, 241);</string>
              <property name="styleSheet">
               <string notr="true">border:0px;
 border-radius:25px;
-background-color: rgb(230, 235, 241);</string>
+background-color: rgb(230, 235, 241);
+font:12px;</string>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,1">
               <item>
@@ -729,6 +786,7 @@ background:transparent;</string>
                     <widget class="QLabel" name="Expenditure_label">
                      <property name="font">
                       <font>
+                       <family>Foco</family>
                        <pointsize>-1</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
@@ -738,10 +796,14 @@ background:transparent;</string>
                       <bool>false</bool>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true"/>
+                      <string notr="true">background-color: rgb(253, 214, 112);
+border-radius:5px;</string>
                      </property>
                      <property name="text">
                       <string>Total Expenditure</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
                      </property>
                     </widget>
                    </item>
@@ -749,6 +811,7 @@ background:transparent;</string>
                     <widget class="QLabel" name="label_9">
                      <property name="font">
                       <font>
+                       <family>Foco</family>
                        <pointsize>-1</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
@@ -758,10 +821,14 @@ background:transparent;</string>
                       <bool>false</bool>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true"/>
+                      <string notr="true">background-color: rgb(52, 239, 163);
+border-radius:5px;</string>
                      </property>
                      <property name="text">
                       <string>XXXX</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
                      </property>
                     </widget>
                    </item>
@@ -782,19 +849,27 @@ background:transparent;</string>
                     <widget class="QLabel" name="Balance_label">
                      <property name="font">
                       <font>
+                       <family>Foco</family>
                        <pointsize>-1</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
                       </font>
                      </property>
+                     <property name="layoutDirection">
+                      <enum>Qt::LeftToRight</enum>
+                     </property>
                      <property name="autoFillBackground">
                       <bool>false</bool>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true"/>
+                      <string notr="true">background-color: rgb(253, 214, 112);
+border-radius:10px;</string>
                      </property>
                      <property name="text">
                       <string>Closing Balance</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
                      </property>
                     </widget>
                    </item>
@@ -802,6 +877,7 @@ background:transparent;</string>
                     <widget class="QLabel" name="label_8">
                      <property name="font">
                       <font>
+                       <family>Foco</family>
                        <pointsize>-1</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
@@ -811,10 +887,14 @@ background:transparent;</string>
                       <bool>false</bool>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true"/>
+                      <string notr="true">background-color: rgb(52, 239, 163);
+border-radius:10px;</string>
                      </property>
                      <property name="text">
                       <string>XXXXX</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
                      </property>
                     </widget>
                    </item>
@@ -832,6 +912,7 @@ background:transparent;</string>
                     <widget class="QLabel" name="Budget_label">
                      <property name="font">
                       <font>
+                       <family>Foco</family>
                        <pointsize>-1</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
@@ -841,10 +922,14 @@ background:transparent;</string>
                       <bool>false</bool>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true"/>
+                      <string notr="true">background-color: rgb(253, 214, 112);
+border-radius:10px;</string>
                      </property>
                      <property name="text">
                       <string>Allocated Budget</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
                      </property>
                     </widget>
                    </item>
@@ -852,6 +937,7 @@ background:transparent;</string>
                     <widget class="QLabel" name="label_11">
                      <property name="font">
                       <font>
+                       <family>Foco</family>
                        <pointsize>-1</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
@@ -861,10 +947,14 @@ background:transparent;</string>
                       <bool>false</bool>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true"/>
+                      <string notr="true">background-color: rgb(52, 239, 163);
+border-radius:10px;</string>
                      </property>
                      <property name="text">
                       <string>XXXX</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
                      </property>
                     </widget>
                    </item>

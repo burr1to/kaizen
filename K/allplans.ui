@@ -17,12 +17,13 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>All Plans</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(34, 37, 42);
 color:black;
-padding:10px;</string>
+padding:5px;
+font: 12pt &quot;Foco&quot;;</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
