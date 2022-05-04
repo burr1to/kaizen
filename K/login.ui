@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1920</width>
-    <height>1080</height>
+    <width>1280</width>
+    <height>720</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -137,9 +137,15 @@ border:0px;</string>
          <item>
           <widget class="QLineEdit" name="username">
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(230, 235, 241);
+            <string notr="true">#username{
+background-color: rgb(230, 235, 241);
+border:0px;
 border-radius:20px;
-border:0px;</string>
+}
+#username:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
            </property>
           </widget>
          </item>
@@ -157,9 +163,15 @@ border:0px;</string>
          <item>
           <widget class="QLineEdit" name="password">
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(230, 235, 241);
+            <string notr="true">#password{
+background-color: rgb(230, 235, 241);
+border:0px;
 border-radius:20px;
-border:0px;</string>
+}
+#password:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
            </property>
            <property name="echoMode">
             <enum>QLineEdit::Password</enum>
@@ -190,9 +202,15 @@ border:0px;</string>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(230, 235, 241);
-border-radius:10px;
-border:0px;</string>
+            <string notr="true">#loginbutt{
+background-color: rgb(230, 235, 241);
+border:0px;
+border-radius:20px;
+}
+#loginbutt:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
            </property>
            <property name="text">
             <string>Login</string>
@@ -204,14 +222,19 @@ border:0px;</string>
            <property name="font">
             <font>
              <family>Foco</family>
-             <pointsize>-1</pointsize>
+             <pointsize>12</pointsize>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">border:0px;
-font:14px;</string>
+            <string notr="true">#QLineEdit{
+border:0px;
+font:12px;
+}
+#QLineEdit:hover{
+color: #34efa3;
+}</string>
            </property>
            <property name="text">
             <string>Sign up from here</string>

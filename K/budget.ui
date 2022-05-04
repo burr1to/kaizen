@@ -210,9 +210,10 @@ background-color:#ffffff;</string>
           <bool>false</bool>
          </property>
          <property name="styleSheet">
-          <string notr="true">border:0px;
-border-radius:25px;
-background-color: rgb(230, 235, 241);</string>
+          <string notr="true">background-color:#e6ebf1;
+font: 700 25pt &quot;FONTSPRING DEMO - Pontiac Black&quot;;
+border-radius:30px;
+color: #34efa3;</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -231,7 +232,7 @@ background-color: rgb(230, 235, 241);</string>
            <widget class="QLabel" name="label">
             <property name="font">
              <font>
-              <family>Foco</family>
+              <family>FONTSPRING DEMO - Pontiac Black</family>
               <pointsize>-1</pointsize>
               <italic>false</italic>
               <bold>false</bold>
@@ -244,7 +245,7 @@ font:30px;
 </string>
             </property>
             <property name="text">
-             <string>Budget Tracker</string>
+             <string>BUDGET TRACKER</string>
             </property>
            </widget>
           </item>
@@ -252,7 +253,7 @@ font:30px;
            <widget class="QLabel" name="hellotxt">
             <property name="font">
              <font>
-              <family>Foco</family>
+              <family>FONTSPRING DEMO - Pontiac Black</family>
               <pointsize>-1</pointsize>
               <italic>false</italic>
               <bold>false</bold>

@@ -66,7 +66,8 @@ padding:5px;</string>
            </property>
            <property name="styleSheet">
             <string notr="true">background-color: rgb(255, 255, 255);
-font:18px;</string>
+font:18px;
+</string>
            </property>
            <property name="frameShape">
             <enum>QFrame::StyledPanel</enum>
@@ -74,7 +75,7 @@ font:18px;</string>
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
-           <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0,0,0,0,0,0">
+           <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0,0,0,0,0,0,0">
             <item>
              <widget class="QLabel" name="title">
               <property name="minimumSize">
@@ -86,13 +87,13 @@ font:18px;</string>
               <property name="font">
                <font>
                 <family>FONTSPRING DEMO - Pontiac Black</family>
-                <pointsize>14</pointsize>
+                <pointsize>25</pointsize>
                 <italic>false</italic>
                 <bold>true</bold>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">font: 700 14pt &quot;FONTSPRING DEMO - Pontiac Black&quot;;
+               <string notr="true">font: 700 25pt &quot;FONTSPRING DEMO - Pontiac Black&quot;;
 color:#34efa3;</string>
               </property>
               <property name="text">
@@ -173,9 +174,15 @@ color:#34efa3;</string>
                    </font>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">background-color: rgb(230, 235, 241);
+                   <string notr="true">#fname{
+background-color: rgb(230, 235, 241);
+border:0px;
 border-radius:15px;
-border:0px;e6ebf1</string>
+}
+#fname:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -199,9 +206,15 @@ border:0px;e6ebf1</string>
                    </font>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">background-color: rgb(230, 235, 241);
+                   <string notr="true">#lname{
+background-color: rgb(230, 235, 241);
+border:0px;
 border-radius:15px;
-border:0px;</string>
+}
+#lname:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -246,9 +259,15 @@ border:0px;</string>
                  </font>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">background-color: rgb(230, 235, 241);
+                 <string notr="true">#username{
+background-color: rgb(230, 235, 241);
+border:0px;
 border-radius:15px;
-border:0px;</string>
+}
+#username:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -291,9 +310,15 @@ border:0px;</string>
                  </font>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">background-color: rgb(230, 235, 241);
+                 <string notr="true">#password{
+background-color: rgb(230, 235, 241);
+border:0px;
 border-radius:15px;
-border:0px;</string>
+}
+#password:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -322,9 +347,25 @@ border:0px;</string>
               <item>
                <widget class="QDateEdit" name="dob">
                 <property name="styleSheet">
-                 <string notr="true">background-color: rgb(230, 235, 241);
+                 <string notr="true">#dob{
+background-color: rgb(230, 235, 241);
+border:0px;
 border-radius:15px;
-border:0px;</string>
+}
+#dob:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
+                </property>
+                <property name="dateTime">
+                 <datetime>
+                  <hour>0</hour>
+                  <minute>0</minute>
+                  <second>0</second>
+                  <year>1980</year>
+                  <month>1</month>
+                  <day>1</day>
+                 </datetime>
                 </property>
                </widget>
               </item>
@@ -364,9 +405,15 @@ border:0px;</string>
                  </font>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">background-color: rgb(230, 235, 241);
+                 <string notr="true">#email{
+background-color: rgb(230, 235, 241);
+border:0px;
 border-radius:15px;
-border:0px;</string>
+}
+#email:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -405,12 +452,28 @@ border:0px;</string>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">background-color: rgb(230, 235, 241);
+               <string notr="true">#regbut{
+background-color: rgb(230, 235, 241);
+border:0px;
 border-radius:10px;
-border:0px;</string>
+}
+#regbut:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
               </property>
               <property name="text">
                <string>Create Account</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_7">
+              <property name="styleSheet">
+               <string notr="true">margin-bottom:15px;</string>
+              </property>
+              <property name="text">
+               <string/>
               </property>
              </widget>
             </item>
