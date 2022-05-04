@@ -127,7 +127,7 @@ void fitness::show_chart()
     chart -> setAnimationOptions(QChart::GridAxisAnimations);
     chart -> setAnimationOptions(QChart::SeriesAnimations);
     chart -> setAnimationEasingCurve(QEasingCurve::OutCubic);
-    chart->setPlotArea(QRectF(50, 40, 530, 250));
+    chart->setPlotArea(QRectF(45, 20, 530, 230));
     chart->setMargins(QMargins(0,0,0,0));
 
     QChartView *chartView = new QChartView(chart);

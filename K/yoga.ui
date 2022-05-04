@@ -721,8 +721,11 @@ color: #e6ebf1;}</string>
                    <property name="digitCount">
                     <number>2</number>
                    </property>
+                   <property name="value" stdset="0">
+                    <double>4.000000000000000</double>
+                   </property>
                    <property name="intValue" stdset="0">
-                    <number>14</number>
+                    <number>4</number>
                    </property>
                   </widget>
                  </item>
@@ -809,5 +812,70 @@ color: #e6ebf1;}</string>
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>pushButton_start_workout</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>687</x>
+     <y>398</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>899</x>
+     <y>901</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>pushButton_start_workout</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>790</x>
+     <y>597</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>902</x>
+     <y>911</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>pushButton_start_workout</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1079</x>
+     <y>396</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1068</x>
+     <y>836</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>pushButton_start_workout</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1142</x>
+     <y>648</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1105</x>
+     <y>858</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

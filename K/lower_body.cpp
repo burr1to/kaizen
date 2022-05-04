@@ -26,7 +26,7 @@ lower_body::lower_body(QWidget *parent) :
     ui->height->setText(fi[1]);
 
 
-    minutes = 14;
+    minutes = 4;
     seconds = 59;
     connect(&time, SIGNAL(timeout()), this, SLOT(timerr()));
     this->setWindowState(Qt::WindowMaximized);
@@ -57,20 +57,29 @@ void lower_body::getfitnessdata(QString username,QString fi[]){
 }
 
 
-
-void lower_body::on_pushButton_start_timer_clicked()
+void lower_body::on_pushButton_start_workout_clicked()
 {
     time.start(1000);
+    if(pause == true){
+        time.stop();
+        pause = false;
+        ui->pushButton_start_workout->setText("Start");
+    }
+    else{
+        pause = true;
+        time.start();
+        ui->pushButton_start_workout->setText("Pause");
+    }
 }
-
 
 void lower_body::on_pushButton_stop_timer_clicked()
 {
-    minutes = 14;
+    minutes = 4;
     seconds = 59;
     ui->seconds->display(seconds);
     ui->minutes->display(minutes);
     time.stop();
+    ui->pushButton_start_workout->setText("Start Workout");
 }
 
 void lower_body::timerr()
@@ -92,4 +101,7 @@ void lower_body::on_home_clicked()
     QWidget *parent = this->parentWidget();
     parent->show();
 }
+
+
+
 

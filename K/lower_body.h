@@ -28,8 +28,6 @@ public:
 private slots:
 
 
-    void on_pushButton_start_timer_clicked();
-
     void on_pushButton_stop_timer_clicked();
 
     void timerr();
@@ -38,10 +36,13 @@ private slots:
 
     void on_home_clicked();
 
+    void on_pushButton_start_workout_clicked();
+
 private:
     Ui::lower_body *ui;
     short int minutes;
     short int seconds;
+    bool pause;
     QTimer time;
 };
 
