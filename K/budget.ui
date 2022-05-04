@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1920</width>
-    <height>1080</height>
+    <width>1600</width>
+    <height>900</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -46,6 +46,12 @@ background-color:#B1ccf2;</string>
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="minimumSize">
+          <size>
+           <width>230</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="styleSheet">
           <string notr="true">border: none;
 background-color:#B1ccf2;</string>
@@ -56,43 +62,85 @@ background-color:#B1ccf2;</string>
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <layout class="QFormLayout" name="formLayout">
-          <item row="2" column="0" colspan="2">
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>100</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>logo</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_2">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Planner</string>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QPushButton" name="pushButton_5">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>40</height>
+             </size>
+            </property>
             <property name="text">
-             <string>Refresh</string>
+             <string>Fitness</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="0">
-           <widget class="QPushButton" name="home">
+          <item>
+           <widget class="QPushButton" name="pushButton_11">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>40</height>
+             </size>
+            </property>
             <property name="text">
-             <string>Home Logo Here</string>
+             <string>Budget</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="0">
+          <item>
            <spacer name="verticalSpacer">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
             </property>
-            <property name="sizeType">
-             <enum>QSizePolicy::Fixed</enum>
-            </property>
             <property name="sizeHint" stdset="0">
              <size>
               <width>20</width>
-              <height>150</height>
+              <height>551</height>
              </size>
             </property>
            </spacer>
           </item>
-          <item row="3" column="0" colspan="2">
-           <layout class="QVBoxLayout" name="verticalLayout_5">
-            <property name="topMargin">
-             <number>150</number>
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>Allocate Budget</string>
             </property>
-           </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="allocating">
+            <property name="styleSheet">
+             <string notr="true">background-color:white;</string>
+            </property>
+           </widget>
           </item>
          </layout>
         </widget>
@@ -114,7 +162,7 @@ background-color:#B1ccf2;</string>
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <layout class="QGridLayout" name="gridLayout" rowstretch="3,10,14,0" columnstretch="5,2">
+         <layout class="QGridLayout" name="gridLayout" rowstretch="3,10,14,0" columnstretch="4,3">
           <item row="1" column="1" rowspan="3">
            <widget class="QScrollArea" name="scrollArea">
             <property name="styleSheet">
@@ -129,11 +177,11 @@ border: none;</string>
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>459</width>
-               <height>904</height>
+               <width>557</width>
+               <height>744</height>
               </rect>
              </property>
-             <layout class="QVBoxLayout" name="verticalLayout_20" stretch="2,13,5">
+             <layout class="QVBoxLayout" name="verticalLayout_20" stretch="1,12,5">
               <item>
                <widget class="QLabel" name="label_8">
                 <property name="font">
@@ -159,12 +207,95 @@ color: black;</string>
               </item>
               <item>
                <widget class="QFrame" name="frame_6">
+                <property name="styleSheet">
+                 <string notr="true">border:1px solid black;</string>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
                 <property name="frameShadow">
                  <enum>QFrame::Raised</enum>
                 </property>
+                <widget class="QPushButton" name="updatebutt">
+                 <property name="geometry">
+                  <rect>
+                   <x>40</x>
+                   <y>140</y>
+                   <width>75</width>
+                   <height>24</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Update</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="deletebutt">
+                 <property name="geometry">
+                  <rect>
+                   <x>130</x>
+                   <y>140</y>
+                   <width>75</width>
+                   <height>24</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>Delete</string>
+                 </property>
+                </widget>
+                <widget class="QWidget" name="">
+                 <property name="geometry">
+                  <rect>
+                   <x>20</x>
+                   <y>10</y>
+                   <width>201</width>
+                   <height>111</height>
+                  </rect>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_21">
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_14">
+                    <item>
+                     <widget class="QLabel" name="label_4">
+                      <property name="text">
+                       <string>Item</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="itemr"/>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_13">
+                    <item>
+                     <widget class="QLabel" name="label_3">
+                      <property name="text">
+                       <string>Price</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="pricer"/>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_12">
+                    <item>
+                     <widget class="QLabel" name="label_2">
+                      <property name="text">
+                       <string>Category</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="catr"/>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
                </widget>
               </item>
              </layout>
@@ -466,7 +597,7 @@ color: black;
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLabel" name="extotal_3">
+                    <widget class="QLabel" name="allbudget">
                      <property name="font">
                       <font>
                        <pointsize>13</pointsize>
@@ -474,7 +605,7 @@ color: black;
                       </font>
                      </property>
                      <property name="text">
-                      <string>xxxx</string>
+                      <string>0</string>
                      </property>
                     </widget>
                    </item>
@@ -502,7 +633,7 @@ color: black;
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLabel" name="extotal_4">
+                    <widget class="QLabel" name="rem">
                      <property name="font">
                       <font>
                        <pointsize>13</pointsize>

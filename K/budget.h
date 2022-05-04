@@ -17,9 +17,10 @@ class Budget : public QMainWindow
     Q_OBJECT
 
 public:
+
     QString price, item;
     QString f,e,o,s;
-    int extotal,intotal,alltotal;
+    int extotal,intotal,alltotal,allocated,balance;
     QString current,variable;
         QSqlDatabase budgetdb;
     Budget(QWidget *parent = nullptr);
@@ -39,9 +40,15 @@ private slots:
 
     QString addItemstoDatabase(QString,QString,QString);
 
-    void on_home_clicked();
+
 
     void setTotals();
+
+    int on_expta_activated(const QModelIndex &index);
+
+
+
+    void on_allocating_returnPressed();
 
 private:
     Ui::Budget *ui;

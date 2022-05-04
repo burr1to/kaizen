@@ -182,3 +182,15 @@ void fitness::on_home_clicked()
     parent->show();
 }
 
+
+void fitness::on_pushButton_clicked()
+{
+
+}
+
+
+void fitness::on_pushButton_2_clicked()
+{
+
+}
+

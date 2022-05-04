@@ -6,6 +6,7 @@ allplans::allplans(QWidget *parent) :
     ui(new Ui::allplans)
 {
     ui->setupUi(this);
+    ui->datecome->setDate(QDate::currentDate());
     db = QSqlDatabase::database();
     QSqlQuery qry;
     qry.prepare("select current from current_user");

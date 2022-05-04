@@ -1,6 +1,7 @@
 #include "planner.h"
 #include "ui_planner.h"
 #include "allplans.h"
+#include <QDate>
  QString querystore[4],datestore[4],timestore[4];
 
 Planner::Planner(QWidget *parent)
@@ -10,7 +11,7 @@ Planner::Planner(QWidget *parent)
     ui->setupUi(this);
 
 
-
+    ui->plandate->setDate(QDate::currentDate());
      db = QSqlDatabase::database();
      QSqlQuery qry;
      qry.prepare("select current from current_user");
@@ -128,8 +129,9 @@ void Planner::on_addbut_clicked()
 
 void Planner::on_budgetbut_clicked()
 {
+     db.close();
     b = new Budget(this);
-        this->hide();
+        this->close();
         b->show();
 }
 
@@ -153,7 +155,7 @@ void Planner::on_fitbut_clicked()
 {
     db.close();
     f = new fitness(this);
-        this->hide();
+        this->close();
         f->show();
 }
 

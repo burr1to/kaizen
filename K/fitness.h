@@ -55,6 +55,10 @@ private slots:
     void on_home_clicked();
 
     void getfitnessdata(QString username, QString fitnessdata[]);
+    void on_pushButton_clicked();
+
+    void on_pushButton_2_clicked();
+
 private:
     Ui::fitness *ui;
     upper_body *upperbody;

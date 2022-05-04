@@ -246,9 +246,60 @@ void Budget::on_pushButton_4_clicked()
 }
 
 
-void Budget::on_home_clicked()
+
+
+
+int Budget::on_expta_activated(const QModelIndex &index)
 {
-    this->close();
-    //back->show();
+    QString val= ui->expta->model()->data(index).toString();
+    qDebug()<< val;
+}
+
+
+
+void Budget::on_allocating_returnPressed()
+{
+    QString test = ui->allbudget->text();
+    QString tempo,temp;
+    int inc,bud,exp,allocated;
+
+    QString budget = ui->allocating->text();
+    bud = budget.toInt();
+    QSqlQuery quer;
+
+    if (quer.exec("select sum(Price) from INFO where category = 'Income'")){
+    quer.first();
+    temp = quer.value(0).toString();
+    quer.clear();
+    }
+
+
+    if (quer.exec("select sum(Price) from INFO")){
+    quer.first();
+    tempo = quer.value(0).toString();
+    qDebug()<<tempo;
+    quer.clear();
+    }
+
+    inc = temp.toInt();
+    exp = tempo.toInt();
+    int netval = inc-exp;
+
+    if (netval<0){
+        allocated = bud + netval;
+        ui->rem->setNum(allocated);
+    } else if(netval>0){
+        allocated = bud - netval;
+        ui->rem->setNum(allocated);
+    }
+    else{
+        qDebug()<< "Eror";
+    }
+
+
+    ui->allbudget->setNum(bud);
+    ui->allocating->clear();
+
+
 }
 

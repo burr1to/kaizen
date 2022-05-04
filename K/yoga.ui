@@ -75,7 +75,7 @@ color: white;</string>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="home_2">
+          <widget class="QPushButton" name="home">
            <property name="minimumSize">
             <size>
              <width>0</width>
@@ -174,7 +174,7 @@ border radius:50px;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="helloname_2">
+                 <widget class="QLabel" name="helloname">
                   <property name="font">
                    <font>
                     <pointsize>-1</pointsize>
@@ -218,7 +218,7 @@ border radius:50px;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="age_2">
+                 <widget class="QLabel" name="age">
                   <property name="font">
                    <font>
                     <pointsize>-1</pointsize>
@@ -262,7 +262,7 @@ border radius:50px;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="height_2">
+                 <widget class="QLabel" name="height">
                   <property name="font">
                    <font>
                     <pointsize>-1</pointsize>
@@ -306,7 +306,7 @@ border radius:50px;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="weight_2">
+                 <widget class="QLabel" name="weight">
                   <property name="font">
                    <font>
                     <pointsize>-1</pointsize>
@@ -350,7 +350,7 @@ border radius:50px;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLabel" name="bmi_2">
+                 <widget class="QLabel" name="bmi">
                   <property name="font">
                    <font>
                     <pointsize>-1</pointsize>
@@ -679,7 +679,7 @@ color: #727a7c;}</string>
                 </layout>
                </item>
                <item>
-                <widget class="QPushButton" name="pushButton_start_workout_2">
+                <widget class="QPushButton" name="pushButton_start_workout">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                    <horstretch>0</horstretch>
@@ -701,7 +701,7 @@ color: #727a7c;}</string>
                 </widget>
                </item>
                <item>
-                <widget class="QPushButton" name="pushButton_stop_timer_2">
+                <widget class="QPushButton" name="pushButton_stop_timer">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                    <horstretch>0</horstretch>
