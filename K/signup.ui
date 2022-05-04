@@ -460,6 +460,7 @@ border-radius:10px;
 #regbut:hover{
 background-color:#22252a;
 color: #e6ebf1;
+font:20px;
 }</string>
               </property>
               <property name="text">

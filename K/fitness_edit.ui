@@ -70,8 +70,15 @@ color:black;</string>
            </size>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(230, 235, 241);
-border-radius:15px;</string>
+           <string notr="true">#weight{
+background-color: rgb(230, 235, 241);
+border:0px;
+border-radius:20px;
+}
+#weight:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
           </property>
          </widget>
         </item>
@@ -95,8 +102,15 @@ border-radius:15px;</string>
            </size>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(230, 235, 241);
-border-radius:15px;</string>
+           <string notr="true">#height{
+background-color: rgb(230, 235, 241);
+border:0px;
+border-radius:20px;
+}
+#height:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
           </property>
          </widget>
         </item>
@@ -123,9 +137,15 @@ border-radius:15px;</string>
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">border-radius:15px;
+            <string notr="true">#submit{
+border-radius:15px;
 background-color: rgb(55, 59, 62);
-color:white;</string>
+color:#e6ebf1;
+}
+#submit:hover{
+background-color:#e6ebf1;
+color: #22252a;
+}</string>
            </property>
            <property name="text">
             <string>Submit</string>
@@ -141,9 +161,15 @@ color:white;</string>
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">border-radius:15px;
+            <string notr="true">#pushButton{
+border-radius:15px;
 background-color: rgb(55, 59, 62);
-color:white;</string>
+color:#e6ebf1;
+}
+#pushButton:hover{
+background-color:#e6ebf1;
+color: #22252a;
+}</string>
            </property>
            <property name="text">
             <string>Close</string>

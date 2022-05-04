@@ -59,6 +59,9 @@ padding:15px</string>
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
+      <property name="styleSheet">
+       <string notr="true">border-image:url(:/img sr/log.png);</string>
+      </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
@@ -210,6 +213,7 @@ border-radius:20px;
 #loginbutt:hover{
 background-color:#22252a;
 color: #e6ebf1;
+font:20px;
 }</string>
            </property>
            <property name="text">
@@ -222,19 +226,15 @@ color: #e6ebf1;
            <property name="font">
             <font>
              <family>Foco</family>
-             <pointsize>12</pointsize>
+             <pointsize>-1</pointsize>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">#QLineEdit{
-border:0px;
-font:12px;
-}
-#QLineEdit:hover{
-color: #34efa3;
-}</string>
+            <string notr="true">border:0px;
+font:16px;
+</string>
            </property>
            <property name="text">
             <string>Sign up from here</string>

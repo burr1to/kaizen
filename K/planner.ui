@@ -20,8 +20,8 @@
    <string>Planner</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>:/images/src_images/kaizen_square.png</normaloff>:/images/src_images/kaizen_square.png</iconset>
+   <iconset resource="img.qrc">
+    <normaloff>:/img sr/logo.png</normaloff>:/img sr/logo.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">color:#22252a;
@@ -53,8 +53,10 @@ font: 12pt &quot;Foco&quot;;</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">border:0px;
-color:#e6ebf1;</string>
+       <string notr="true">#frame{
+border:0px;
+color:#e6ebf1;
+border-image:url(:/img sr/planner_side.png);}</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -76,12 +78,16 @@ color:#e6ebf1;</string>
 border-radius:15px;</string>
          </property>
          <property name="text">
-          <string>logo</string>
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="img.qrc">
+           <normaloff>:/img sr/kaizen.png</normaloff>:/img sr/kaizen.png</iconset>
          </property>
          <property name="iconSize">
           <size>
-           <width>155</width>
-           <height>55</height>
+           <width>230</width>
+           <height>100</height>
           </size>
          </property>
         </widget>
@@ -106,7 +112,17 @@ color: #22252a;
 }</string>
          </property>
          <property name="text">
-          <string>All Plans</string>
+          <string>  All Plans</string>
+         </property>
+         <property name="icon">
+          <iconset resource="img.qrc">
+           <normaloff>:/img sr/Planner.png</normaloff>:/img sr/Planner.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
          </property>
         </widget>
        </item>
@@ -129,7 +145,17 @@ background-color:#e6ebf1;
 color: #22252a;}</string>
          </property>
          <property name="text">
-          <string>Fitness</string>
+          <string>  Fitness</string>
+         </property>
+         <property name="icon">
+          <iconset resource="img.qrc">
+           <normaloff>:/img sr/fitness.png</normaloff>:/img sr/fitness.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
          </property>
         </widget>
        </item>
@@ -152,7 +178,17 @@ background-color:#e6ebf1;
 color: #22252a;}</string>
          </property>
          <property name="text">
-          <string>Budget</string>
+          <string>  Budget</string>
+         </property>
+         <property name="icon">
+          <iconset resource="img.qrc">
+           <normaloff>:/img sr/budget.png</normaloff>:/img sr/budget.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
          </property>
         </widget>
        </item>
@@ -269,12 +305,20 @@ font: 24px;</string>
              </size>
             </property>
             <property name="styleSheet">
-             <string notr="true">border:0px;
-border-radius:15px;
-background-color: rgb(55, 59, 62);</string>
+             <string notr="true">margin:10px;</string>
             </property>
             <property name="text">
-             <string>r</string>
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="img.qrc">
+              <normaloff>:/img sr/refresh.png</normaloff>:/img sr/refresh.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
             </property>
            </widget>
           </item>
@@ -287,12 +331,14 @@ background-color: rgb(55, 59, 62);</string>
              </size>
             </property>
             <property name="styleSheet">
-             <string notr="true">border:0px;
-border-radius:15px;
-background-color: rgb(55, 59, 62);</string>
+             <string notr="true">margin-right:10px</string>
             </property>
             <property name="text">
-             <string>o</string>
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="img.qrc">
+              <normaloff>:/img sr/logout.png</normaloff>:/img sr/logout.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -448,9 +494,15 @@ background-color: rgb(230, 235, 241);</string>
                       </font>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true">border:0px;
-border-radius:15px;
-background-color: rgb(230, 235, 241);</string>
+                      <string notr="true">#addPlan{
+background-color: rgb(230, 235, 241);
+border:0px;
+border-radius:20px;
+}
+#addPlan:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
                      </property>
                     </widget>
                    </item>
@@ -459,9 +511,15 @@ background-color: rgb(230, 235, 241);</string>
                      <item>
                       <widget class="QDateEdit" name="plandate">
                        <property name="styleSheet">
-                        <string notr="true">border:0px;
+                        <string notr="true">#plandate{
+background-color: rgb(230, 235, 241);
+border:0px;
 border-radius:15px;
-background-color: rgb(230, 235, 241);</string>
+}
+#plantime:hover{
+background-color:#22252a;
+color: #e6ebf1;
+}</string>
                        </property>
                       </widget>
                      </item>
@@ -487,16 +545,23 @@ background-color: rgb(230, 235, 241);</string>
                      <property name="font">
                       <font>
                        <family>Foco</family>
-                       <pointsize>12</pointsize>
+                       <pointsize>-1</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
                       </font>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true">border:0px;
-border-radius:15px;
+                      <string notr="true">#showplans{
 background-color: rgb(230, 235, 241);
-padding:10px;</string>
+border:0px;
+border-radius:20px;
+font:14px;
+}
+#showplans:hover{
+background-color:#22252a;
+color: #e6ebf1;
+font:16px;
+}</string>
                      </property>
                      <property name="text">
                       <string>Show All Plans </string>
@@ -514,14 +579,18 @@ padding:10px;</string>
                     </size>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">border:0 px;</string>
+                    <string notr="true">#addbut{
+border:0 px;
+border-radius:25px;}
+#addbut:hover{
+background-color:#e6ebf1;}</string>
                    </property>
                    <property name="text">
-                    <string>a</string>
+                    <string/>
                    </property>
                    <property name="icon">
-                    <iconset>
-                     <normaloff>:/images/src_images/plus.png</normaloff>:/images/src_images/plus.png</iconset>
+                    <iconset resource="img.qrc">
+                     <normaloff>:/img sr/plus.png</normaloff>:/img sr/plus.png</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -556,6 +625,9 @@ padding:10px;</string>
                <height>200</height>
               </size>
              </property>
+             <property name="styleSheet">
+              <string notr="true">#frame_2{border-image:url(:/img sr/plan_top.png);}</string>
+             </property>
              <property name="frameShape">
               <enum>QFrame::StyledPanel</enum>
              </property>
@@ -584,14 +656,26 @@ font:12px;</string>
                    </size>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true"/>
+                   <string notr="true">#fitbut{
+background-color:#ffffff;
+border:0px;
+border-radius:20px;
+}
+#fitbut:hover{
+background-color:#373b3e;
+}
+</string>
                   </property>
                   <property name="text">
-                   <string>f</string>
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="img.qrc">
+                    <normaloff>:/img sr/fit_butt.png</normaloff>:/img sr/fit_butt.png</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
-                    <width>100</width>
+                    <width>200</width>
                     <height>100</height>
                    </size>
                   </property>
@@ -623,8 +707,10 @@ font:12px;</string>
                       <bool>false</bool>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true">background-color: rgb(253, 214, 112);
-border-radius:10px;</string>
+                      <string notr="true">background-color:#ffffff;
+border:0px;
+border-radius:20px;
+</string>
                      </property>
                      <property name="text">
                       <string>BMI</string>
@@ -648,8 +734,10 @@ border-radius:10px;</string>
                       <bool>false</bool>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true">background-color: rgb(52, 239, 163);
-border-radius:10px;</string>
+                      <string notr="true">background-color:#ffffff;
+border:0px;
+border-radius:20px;
+</string>
                      </property>
                      <property name="text">
                       <string>x</string>
@@ -686,8 +774,10 @@ border-radius:10px;</string>
                       <bool>false</bool>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true">background-color: rgb(253, 214, 112);
-border-radius:20px;</string>
+                      <string notr="true">background-color:#ffffff;
+border:0px;
+border-radius:20px;
+</string>
                      </property>
                      <property name="text">
                       <string>Height</string>
@@ -711,7 +801,8 @@ border-radius:20px;</string>
                       <bool>false</bool>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true">background-color: rgb(52, 239, 163);
+                      <string notr="true">background-color:#ffffff;
+border:0px;
 border-radius:20px;</string>
                      </property>
                      <property name="text">
@@ -745,8 +836,10 @@ border-radius:20px;</string>
                       <bool>false</bool>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true">background-color: rgb(253, 214, 112);
-border-radius:10px;</string>
+                      <string notr="true">background-color:#ffffff;
+border:0px;
+border-radius:20px;
+</string>
                      </property>
                      <property name="text">
                       <string>Weight</string>
@@ -770,8 +863,10 @@ border-radius:10px;</string>
                       <bool>false</bool>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true">background-color: rgb(52, 239, 163);
-border-radius:20px;</string>
+                      <string notr="true">background-color:#ffffff;
+border:0px;
+border-radius:20px;
+</string>
                      </property>
                      <property name="text">
                       <string>x</string>
@@ -809,14 +904,26 @@ font:12px;</string>
                    </size>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true"/>
+                   <string notr="true">#budgetbut{
+background-color:#ffffff;
+border:0px;
+border-radius:20px;
+}
+#budgetbut:hover{
+background-color:#373b3e;
+}
+</string>
                   </property>
                   <property name="text">
                    <string>b</string>
                   </property>
+                  <property name="icon">
+                   <iconset resource="img.qrc">
+                    <normaloff>:/img sr/bud_butt.png</normaloff>:/img sr/bud_butt.png</iconset>
+                  </property>
                   <property name="iconSize">
                    <size>
-                    <width>100</width>
+                    <width>200</width>
                     <height>100</height>
                    </size>
                   </property>
@@ -855,8 +962,10 @@ background:transparent;</string>
                       <bool>false</bool>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true">background-color: rgb(253, 214, 112);
-border-radius:5px;</string>
+                      <string notr="true">background-color:#ffffff;
+border:0px;
+border-radius:10px;
+</string>
                      </property>
                      <property name="text">
                       <string>Total Expenditure</string>
@@ -880,8 +989,10 @@ border-radius:5px;</string>
                       <bool>false</bool>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true">background-color: rgb(52, 239, 163);
-border-radius:5px;</string>
+                      <string notr="true">background-color:#ffffff;
+border:0px;
+border-radius:10px;
+</string>
                      </property>
                      <property name="text">
                       <string>xxxx</string>
@@ -933,8 +1044,10 @@ border-radius:5px;</string>
                       <bool>false</bool>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true">background-color: rgb(253, 214, 112);
-border-radius:10px;</string>
+                      <string notr="true">background-color:#ffffff;
+border:0px;
+border-radius:10px;
+</string>
                      </property>
                      <property name="text">
                       <string>Net Balance</string>
@@ -958,8 +1071,10 @@ border-radius:10px;</string>
                       <bool>false</bool>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true">background-color: rgb(52, 239, 163);
-border-radius:10px;</string>
+                      <string notr="true">background-color:#ffffff;
+border:0px;
+border-radius:10px;
+</string>
                      </property>
                      <property name="text">
                       <string/>
@@ -1005,8 +1120,10 @@ background:transparent;</string>
                       <bool>false</bool>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true">background-color: rgb(253, 214, 112);
-border-radius:10px;</string>
+                      <string notr="true">background-color:#ffffff;
+border:0px;
+border-radius:10px;
+</string>
                      </property>
                      <property name="text">
                       <string>Total Income</string>
@@ -1030,8 +1147,10 @@ border-radius:10px;</string>
                       <bool>false</bool>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true">background-color: rgb(52, 239, 163);
-border-radius:10px;</string>
+                      <string notr="true">background-color:#ffffff;
+border:0px;
+border-radius:10px;
+</string>
                      </property>
                      <property name="text">
                       <string/>
@@ -1059,6 +1178,8 @@ border-radius:10px;</string>
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="img.qrc"/>
+ </resources>
  <connections/>
 </ui>

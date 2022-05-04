@@ -183,6 +183,7 @@ border radius:50px;</string>
                  <widget class="QLabel" name="label_6">
                   <property name="font">
                    <font>
+                    <family>Foco</family>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -203,6 +204,7 @@ border radius:50px;</string>
                  <widget class="QLabel" name="helloname">
                   <property name="font">
                    <font>
+                    <family>Foco</family>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -227,6 +229,7 @@ border radius:50px;</string>
                  <widget class="QLabel" name="label_2">
                   <property name="font">
                    <font>
+                    <family>Foco</family>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -247,6 +250,7 @@ border radius:50px;</string>
                  <widget class="QLabel" name="age">
                   <property name="font">
                    <font>
+                    <family>Foco</family>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -271,6 +275,7 @@ border radius:50px;</string>
                  <widget class="QLabel" name="label_4">
                   <property name="font">
                    <font>
+                    <family>Foco</family>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -291,6 +296,7 @@ border radius:50px;</string>
                  <widget class="QLabel" name="height">
                   <property name="font">
                    <font>
+                    <family>Foco</family>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -315,6 +321,7 @@ border radius:50px;</string>
                  <widget class="QLabel" name="label_7">
                   <property name="font">
                    <font>
+                    <family>Foco</family>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -335,6 +342,7 @@ border radius:50px;</string>
                  <widget class="QLabel" name="weight">
                   <property name="font">
                    <font>
+                    <family>Foco</family>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -359,6 +367,7 @@ border radius:50px;</string>
                  <widget class="QLabel" name="label_9">
                   <property name="font">
                    <font>
+                    <family>Foco</family>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -379,6 +388,7 @@ border radius:50px;</string>
                  <widget class="QLabel" name="bmi">
                   <property name="font">
                    <font>
+                    <family>Foco</family>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -435,6 +445,7 @@ color:black;</string>
            </property>
            <property name="font">
             <font>
+             <family>FONTSPRING DEMO - Pontiac Black</family>
              <pointsize>26</pointsize>
              <italic>false</italic>
              <bold>true</bold>
@@ -474,6 +485,9 @@ color: #34efa3;</string>
               <layout class="QGridLayout" name="gridLayout" columnstretch="5,5,1">
                <item row="1" column="1">
                 <widget class="QPushButton" name="pushButton_4">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                    <horstretch>0</horstretch>
@@ -482,6 +496,7 @@ color: #34efa3;</string>
                  </property>
                  <property name="font">
                   <font>
+                   <family>Foco</family>
                    <pointsize>12</pointsize>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -505,6 +520,9 @@ color: #e6ebf1;}</string>
                </item>
                <item row="1" column="0">
                 <widget class="QPushButton" name="pushButton_2">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                    <horstretch>0</horstretch>
@@ -513,6 +531,7 @@ color: #e6ebf1;}</string>
                  </property>
                  <property name="font">
                   <font>
+                   <family>Foco</family>
                    <pointsize>12</pointsize>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -536,6 +555,9 @@ color: #e6ebf1;}</string>
                </item>
                <item row="0" column="1">
                 <widget class="QPushButton" name="pushButton_3">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                    <horstretch>0</horstretch>
@@ -544,6 +566,7 @@ color: #e6ebf1;}</string>
                  </property>
                  <property name="font">
                   <font>
+                   <family>Foco</family>
                    <pointsize>12</pointsize>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -567,6 +590,9 @@ color: #e6ebf1;}</string>
                </item>
                <item row="0" column="0">
                 <widget class="QPushButton" name="pushButton">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                    <horstretch>0</horstretch>
@@ -575,6 +601,7 @@ color: #e6ebf1;}</string>
                  </property>
                  <property name="font">
                   <font>
+                   <family>Foco</family>
                    <pointsize>12</pointsize>
                    <italic>false</italic>
                    <bold>false</bold>
@@ -609,6 +636,7 @@ color: #e6ebf1;}</string>
                    <widget class="QLabel" name="label_11">
                     <property name="font">
                      <font>
+                      <family>Foco</family>
                       <pointsize>12</pointsize>
                       <italic>false</italic>
                       <bold>false</bold>
@@ -626,6 +654,7 @@ color: #e6ebf1;}</string>
                    <widget class="QLabel" name="label_12">
                     <property name="font">
                      <font>
+                      <family>Foco</family>
                       <pointsize>12</pointsize>
                       <italic>false</italic>
                       <bold>false</bold>
