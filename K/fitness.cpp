@@ -29,7 +29,7 @@ fitness::fitness(QWidget *parent)
     ui->weight->setText(fitdata[0]);
     ui->height->setText(fitdata[1]);
     ui->bmi->setText(fitdata[2]);
-
+    this->setWindowState(Qt::WindowMaximized);
 
 
     show_chart();

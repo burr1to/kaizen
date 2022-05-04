@@ -12,6 +12,7 @@ Login::Login(QWidget *parent) :
     ui->setupUi(this);
        ui->username->setPlaceholderText("Enter username");
        ui->password->setPlaceholderText("Enter password");
+       this->setWindowState(Qt::WindowMaximized);
 }
 
 Login::~Login()

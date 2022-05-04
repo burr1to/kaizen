@@ -9,6 +9,7 @@ Planner::Planner(QWidget *parent)
     , ui(new Ui::Planner)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowMaximized);
 
 
     ui->plandate->setDate(QDate::currentDate());
