@@ -42,6 +42,7 @@ private:
     Ui::upper_body *ui;
     short int minutes;
     short int seconds;
+    bool pause;
     QTimer time;
 };
 
