@@ -6,22 +6,29 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1280</width>
-    <height>720</height>
+    <width>1920</width>
+    <height>1080</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>1280</width>
+    <height>720</height>
+   </size>
+  </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Upper Body</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:#22252a;</string>
+   <string notr="true">background-color:#22252a;
+font: 12pt &quot;Foco&quot;;
+color: e6ebf1;</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_7">
+  <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
     <widget class="QFrame" name="frame_5">
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(34, 37, 42);
-border:0px;</string>
+      <string notr="true">border:0px;</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -29,7 +36,7 @@ border:0px;</string>
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="2,9">
       <item>
        <widget class="QFrame" name="frame">
         <property name="sizePolicy">
@@ -57,7 +64,7 @@ color: white;</string>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_4">
          <item>
-          <widget class="QPushButton" name="pushButton_5">
+          <widget class="QPushButton" name="logo">
            <property name="minimumSize">
             <size>
              <width>0</width>
@@ -65,7 +72,7 @@ color: white;</string>
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(55, 59, 62);</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>logo</string>
@@ -77,11 +84,18 @@ color: white;</string>
            <property name="minimumSize">
             <size>
              <width>0</width>
-             <height>40</height>
+             <height>50</height>
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(55, 59, 62);</string>
+            <string notr="true">#home{
+background-color: rgb(55, 59, 62);
+border radius:40px;
+}
+#home:hover{
+font-size: 18px;
+background-color:#e6ebf1;
+color: #22252a;}</string>
            </property>
            <property name="text">
             <string>Home</string>
@@ -89,15 +103,22 @@ color: white;</string>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_6">
+          <widget class="QPushButton" name="fit_butt">
            <property name="minimumSize">
             <size>
              <width>0</width>
-             <height>40</height>
+             <height>50</height>
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(55, 59, 62);</string>
+            <string notr="true">#fit_butt{
+background-color: rgb(55, 59, 62);
+border radius:40px;
+}
+#fit_butt:hover{
+font-size: 18px;
+background-color:#e6ebf1;
+color: #22252a;}</string>
            </property>
            <property name="text">
             <string>Fitness</string>
@@ -105,15 +126,22 @@ color: white;</string>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_7">
+          <widget class="QPushButton" name="bud_butt">
            <property name="minimumSize">
             <size>
              <width>0</width>
-             <height>40</height>
+             <height>50</height>
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(55, 59, 62);</string>
+            <string notr="true">#bud_butt{
+background-color: rgb(55, 59, 62);
+border radius:40px;
+}
+#bud_butt:hover{
+font-size: 18px;
+background-color:#e6ebf1;
+color: #22252a;}</string>
            </property>
            <property name="text">
             <string>budget</string>
@@ -136,7 +164,7 @@ color: white;</string>
          <item>
           <widget class="QFrame" name="frame_11">
            <property name="styleSheet">
-            <string notr="true">font:24px;
+            <string notr="true">font:20px;
 background-color: rgb(55, 59, 62);
 border radius:50px;</string>
            </property>
@@ -155,6 +183,7 @@ border radius:50px;</string>
                  <widget class="QLabel" name="label_6">
                   <property name="font">
                    <font>
+                    <family>Foco</family>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -175,6 +204,7 @@ border radius:50px;</string>
                  <widget class="QLabel" name="helloname">
                   <property name="font">
                    <font>
+                    <family>Foco</family>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -199,6 +229,7 @@ border radius:50px;</string>
                  <widget class="QLabel" name="label_2">
                   <property name="font">
                    <font>
+                    <family>Foco</family>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -219,6 +250,7 @@ border radius:50px;</string>
                  <widget class="QLabel" name="age">
                   <property name="font">
                    <font>
+                    <family>Foco</family>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -243,6 +275,7 @@ border radius:50px;</string>
                  <widget class="QLabel" name="label_4">
                   <property name="font">
                    <font>
+                    <family>Foco</family>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -263,6 +296,7 @@ border radius:50px;</string>
                  <widget class="QLabel" name="height">
                   <property name="font">
                    <font>
+                    <family>Foco</family>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -287,6 +321,7 @@ border radius:50px;</string>
                  <widget class="QLabel" name="label_7">
                   <property name="font">
                    <font>
+                    <family>Foco</family>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -307,6 +342,7 @@ border radius:50px;</string>
                  <widget class="QLabel" name="weight">
                   <property name="font">
                    <font>
+                    <family>Foco</family>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -331,6 +367,7 @@ border radius:50px;</string>
                  <widget class="QLabel" name="label_9">
                   <property name="font">
                    <font>
+                    <family>Foco</family>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -351,6 +388,7 @@ border radius:50px;</string>
                  <widget class="QLabel" name="bmi">
                   <property name="font">
                    <font>
+                    <family>Foco</family>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -379,12 +417,18 @@ border radius:50px;</string>
            <property name="minimumSize">
             <size>
              <width>0</width>
-             <height>40</height>
+             <height>50</height>
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(55, 59, 62);
-border radius:40px;</string>
+            <string notr="true">#editstuff{
+background-color: rgb(55, 59, 62);
+border radius:40px;
+}
+#editstuff:hover{
+font-size: 18px;
+background-color:#e6ebf1;
+color: #22252a;}</string>
            </property>
            <property name="text">
             <string>Edit</string>
@@ -424,15 +468,17 @@ color:black;</string>
            </property>
            <property name="font">
             <font>
-             <pointsize>24</pointsize>
-             <italic>true</italic>
+             <family>FONTSPRING DEMO - Pontiac Black</family>
+             <pointsize>26</pointsize>
+             <italic>false</italic>
              <bold>true</bold>
             </font>
            </property>
            <property name="styleSheet">
             <string notr="true">background-color:#e6ebf1;
+font: 700 26pt &quot;FONTSPRING DEMO - Pontiac Black&quot;;
 border-radius:30px;
-color: black;</string>
+color: #34efa3;</string>
            </property>
            <property name="text">
             <string>Upper Body</string>
@@ -459,36 +505,7 @@ color: black;</string>
               <property name="frameShadow">
                <enum>QFrame::Raised</enum>
               </property>
-              <layout class="QGridLayout" name="gridLayout" columnstretch="5,0,0">
-               <item row="0" column="0">
-                <widget class="QPushButton" name="pushButton">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <pointsize>26</pointsize>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">#pushButton{
-background-color:#e6ebf1;
-border-radius:40px;
-}
-#pushButton:hover{
-font-size: 48px;
-color: #727a7c;}</string>
-                 </property>
-                 <property name="text">
-                  <string>Push Up 
- 3 set of 15 reps</string>
-                 </property>
-                </widget>
-               </item>
+              <layout class="QGridLayout" name="gridLayout" columnstretch="5,5,1">
                <item row="1" column="1">
                 <widget class="QPushButton" name="pushButton_4">
                  <property name="sizePolicy">
@@ -499,8 +516,10 @@ color: #727a7c;}</string>
                  </property>
                  <property name="font">
                   <font>
-                   <pointsize>26</pointsize>
-                   <bold>true</bold>
+                   <family>Foco</family>
+                   <pointsize>12</pointsize>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="styleSheet">
@@ -509,8 +528,9 @@ background-color:#e6ebf1;
 border-radius:40px;
 }
 #pushButton_4:hover{
-font-size: 48px;
-color: #727a7c;}</string>
+font-size: 20px;
+background-color:#373b3e;
+color: #e6ebf1;}</string>
                  </property>
                  <property name="text">
                   <string>Crunches 
@@ -528,8 +548,10 @@ color: #727a7c;}</string>
                  </property>
                  <property name="font">
                   <font>
-                   <pointsize>26</pointsize>
-                   <bold>true</bold>
+                   <family>Foco</family>
+                   <pointsize>12</pointsize>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
                  </property>
                  <property name="styleSheet">
@@ -538,11 +560,76 @@ background-color:#e6ebf1;
 border-radius:40px;
 }
 #pushButton_2:hover{
-font-size: 48px;
-color: #727a7c;}</string>
+font-size: 20px;
+background-color:#373b3e;
+color: #e6ebf1;}</string>
                  </property>
                  <property name="text">
                   <string>Bear Crawl 
+ 3 set of 15 reps</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QPushButton" name="pushButton_3">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Foco</family>
+                   <pointsize>12</pointsize>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">#pushButton_3{
+background-color:#e6ebf1;
+border-radius:40px;
+}
+#pushButton_3:hover{
+font-size: 20px;
+background-color:#373b3e;
+color: #e6ebf1;}</string>
+                 </property>
+                 <property name="text">
+                  <string>Mountain climber 
+ 3 set of 12 reps</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QPushButton" name="pushButton">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Foco</family>
+                   <pointsize>12</pointsize>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">#pushButton{
+background-color:#e6ebf1;
+border-radius:40px;
+}
+#pushButton:hover{
+font-size: 20px;
+background-color:#373b3e;
+color: #e6ebf1;}</string>
+                 </property>
+                 <property name="text">
+                  <string>Push Up 
  3 set of 15 reps</string>
                  </property>
                 </widget>
@@ -560,8 +647,10 @@ color: #727a7c;}</string>
                    <widget class="QLabel" name="label_11">
                     <property name="font">
                      <font>
-                      <pointsize>36</pointsize>
-                      <bold>true</bold>
+                      <family>Foco</family>
+                      <pointsize>12</pointsize>
+                      <italic>false</italic>
+                      <bold>false</bold>
                      </font>
                     </property>
                     <property name="text">
@@ -576,7 +665,9 @@ color: #727a7c;}</string>
                    <widget class="QLabel" name="label_12">
                     <property name="font">
                      <font>
-                      <pointsize>20</pointsize>
+                      <family>Foco</family>
+                      <pointsize>12</pointsize>
+                      <italic>false</italic>
                       <bold>false</bold>
                      </font>
                     </property>
@@ -594,35 +685,6 @@ color: #727a7c;}</string>
                    </widget>
                   </item>
                  </layout>
-                </widget>
-               </item>
-               <item row="0" column="1">
-                <widget class="QPushButton" name="pushButton_3">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <pointsize>26</pointsize>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">#pushButton_3{
-background-color:#e6ebf1;
-border-radius:40px;
-}
-#pushButton_3:hover{
-font-size: 48px;
-color: #727a7c;}</string>
-                 </property>
-                 <property name="text">
-                  <string>Mountain climber 
- 3 set of 12 reps</string>
-                 </property>
                 </widget>
                </item>
               </layout>
@@ -685,11 +747,12 @@ color: #727a7c;}</string>
                  <property name="styleSheet">
                   <string notr="true">#pushButton_start_workout{
 background-color:#e6ebf1;
-border-radius:25px;
+border-radius:20px;
 }
 #pushButton_start_workout:hover{
-font-size: 48px;
-color: #727a7c;}</string>
+font-size: 18px;
+background-color:#373b3e;
+color: #e6ebf1;}</string>
                  </property>
                  <property name="text">
                   <string>Start Workout</string>
@@ -707,11 +770,12 @@ color: #727a7c;}</string>
                  <property name="styleSheet">
                   <string notr="true">#pushButton_stop_timer{
 background-color:#e6ebf1;
-border-radius:25px;
+border-radius:20px;
 }
-#pushButton_stop_workout:timer{
-font-size: 48px;
-color: #727a7c;}</string>
+#pushButton_stop_timer:hover{
+font-size: 18px;
+background-color:#373b3e;
+color: #e6ebf1;}</string>
                  </property>
                  <property name="text">
                   <string>Stop</string>

@@ -25,8 +25,9 @@
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(34, 37, 42);
+font: 14pt &quot;Foco&quot;;
 color:black;
-padding:10px;</string>
+padding:5px;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
@@ -57,6 +58,7 @@ padding:10px;</string>
           <widget class="QFrame" name="signup_frame">
            <property name="font">
             <font>
+             <family>Foco</family>
              <pointsize>-1</pointsize>
              <italic>false</italic>
              <bold>false</bold>
@@ -72,42 +74,31 @@ font:18px;</string>
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
-           <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0,0,0,0,0,0,0">
+           <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0,0,0,0,0,0">
             <item>
              <widget class="QLabel" name="title">
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>50</height>
+                <height>100</height>
                </size>
               </property>
               <property name="font">
                <font>
-                <pointsize>-1</pointsize>
+                <family>FONTSPRING DEMO - Pontiac Black</family>
+                <pointsize>14</pointsize>
                 <italic>false</italic>
-                <bold>false</bold>
+                <bold>true</bold>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true"/>
+               <string notr="true">font: 700 14pt &quot;FONTSPRING DEMO - Pontiac Black&quot;;
+color:#34efa3;</string>
               </property>
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; font-weight:700;&quot;&gt;Sign up&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
-            </item>
-            <item>
-             <spacer name="verticalSpacer">
-              <property name="orientation">
-               <enum>Qt::Vertical</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>20</width>
-                <height>40</height>
-               </size>
-              </property>
-             </spacer>
             </item>
             <item>
              <layout class="QVBoxLayout" name="names">
@@ -123,6 +114,7 @@ font:18px;</string>
                   </property>
                   <property name="font">
                    <font>
+                    <family>Foco</family>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -146,6 +138,7 @@ font:18px;</string>
                   </property>
                   <property name="font">
                    <font>
+                    <family>Foco</family>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -173,6 +166,7 @@ font:18px;</string>
                   </property>
                   <property name="font">
                    <font>
+                    <family>Foco</family>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -198,6 +192,7 @@ border:0px;e6ebf1</string>
                   </property>
                   <property name="font">
                    <font>
+                    <family>Foco</family>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -223,6 +218,7 @@ border:0px;</string>
                <widget class="QLabel" name="label_3">
                 <property name="font">
                  <font>
+                  <family>Foco</family>
                   <pointsize>-1</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -243,6 +239,7 @@ border:0px;</string>
                 </property>
                 <property name="font">
                  <font>
+                  <family>Foco</family>
                   <pointsize>-1</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -266,6 +263,7 @@ border:0px;</string>
                <widget class="QLabel" name="label_4">
                 <property name="font">
                  <font>
+                  <family>Foco</family>
                   <pointsize>-1</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -286,6 +284,7 @@ border:0px;</string>
                 </property>
                 <property name="font">
                  <font>
+                  <family>Foco</family>
                   <pointsize>-1</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -309,6 +308,7 @@ border:0px;</string>
                <widget class="QLabel" name="label_6">
                 <property name="font">
                  <font>
+                  <family>Foco</family>
                   <pointsize>-1</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -336,6 +336,7 @@ border:0px;</string>
                <widget class="QLabel" name="label_5">
                 <property name="font">
                  <font>
+                  <family>Foco</family>
                   <pointsize>-1</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -356,6 +357,7 @@ border:0px;</string>
                 </property>
                 <property name="font">
                  <font>
+                  <family>Foco</family>
                   <pointsize>-1</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -396,6 +398,7 @@ border:0px;</string>
               </property>
               <property name="font">
                <font>
+                <family>Foco</family>
                 <pointsize>-1</pointsize>
                 <italic>false</italic>
                 <bold>false</bold>
