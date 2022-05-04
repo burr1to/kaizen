@@ -8,6 +8,7 @@ Budget::Budget(QWidget *parent)
     , ui(new Ui::Budget)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowMaximized);
 
 
     budgetdb = QSqlDatabase::database();
