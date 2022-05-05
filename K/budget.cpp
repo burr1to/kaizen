@@ -280,16 +280,18 @@ void Budget::allocatesomeofthis(QString budget){
     if (!temp.isEmpty() && !tempo.isEmpty()){
 
         qDebug()<<netval;
-        if (netval<0){
+        allocated = bud + netval;
+        ui->rem->setNum(allocated);
+        /*if (netval<0){
             allocated = bud + netval;
             ui->rem->setNum(allocated);
         } else if(netval>0){
             allocated = bud - netval;
             ui->rem->setNum(allocated);
-        }
-        else{
+        }*/
+       /* else{
             qDebug()<< "Eror";
-        }
+        }*/
 
         ui->allbudget->setNum(bud);
         ui->allocating->clear();
