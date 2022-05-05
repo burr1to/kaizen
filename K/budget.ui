@@ -313,7 +313,7 @@ color: #fdd670;</string>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">color: #fdd670;
+             <string notr="true">color: #34efa3;
 border: none;
 font:30px;
 </string>
@@ -334,12 +334,12 @@ font:30px;
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">color: #fdd670;
+             <string notr="true">color: #34efa3;
 border: none;
 font:24px;</string>
             </property>
             <property name="text">
-             <string>Welcome to Kaizen Budget!</string>
+             <string>hello admin</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>

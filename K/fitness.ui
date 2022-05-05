@@ -515,7 +515,7 @@ border-radius:50px;</string>
           <string notr="true">background-color:#e6ebf1;
 font: 700 25pt &quot;FONTSPRING DEMO - Pontiac Black&quot;;
 border-radius:30px;
-color: #fdd670;</string>
+color: #34efa3;</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>

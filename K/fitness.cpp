@@ -230,8 +230,8 @@ void fitness::on_bud_butt_clicked()
 void fitness::on_logo_clicked()
 {
     this->close();
-    QWidget *parent = this->parentWidget();
-    parent->show();
+    Planner *p = new Planner(this);
+    p->show();
 }
 
 

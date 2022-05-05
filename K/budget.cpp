@@ -320,6 +320,8 @@ void Budget::on_updatebutt_clicked()
         ui->edutot->setText(addItemstoDatabase(current,"Education",e));
         ui->othertot->setText(addItemstoDatabase(current,"Other",s));
         ui->intot->setText(addItemstoDatabase(current,"Income",o));
+        setTotals(current);
+         allocatesomeofthis(budget);
     }
     else{
         qDebug()<<"suii";
@@ -350,6 +352,8 @@ void Budget::on_deletebutt_clicked()
         ui->edutot->setText(addItemstoDatabase(current,"Education",e));
         ui->othertot->setText(addItemstoDatabase(current,"Other",s));
         ui->intot->setText(addItemstoDatabase(current,"Income",o));
+        setTotals(current);
+         allocatesomeofthis(budget);
 }
 
 
@@ -435,8 +439,8 @@ void Budget::on_pushButton_4_clicked()
 void Budget::on_logo_clicked()
 {
     this->close();
-    QWidget *parent = this->parentWidget();
-    parent->show();
+    Planner *p = new Planner(this);
+    p->show();
 }
 
 

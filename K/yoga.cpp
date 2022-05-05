@@ -128,9 +128,9 @@ void yoga::on_bud_butt_clicked()
 void yoga::on_logo_clicked()
 {
 
-        this->close();
-        QWidget *parent = this->parentWidget();
-        parent->show();
+    this->close();
+    Planner *p = new Planner(this);
+    p->show();
 
 
 }

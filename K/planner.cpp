@@ -113,7 +113,7 @@ void Planner::setfitness(){
 
 void Planner::showfour(QString current,QString querystore[],QString datestore[],QString timestore[]){
     QSqlQuery qq;
-    qq.prepare("select plandetails,plandate,plantime from plan where planuser = '"+current+"' order by plandate desc, plantime desc limit 4");
+    qq.prepare("select plandetails,plandate,plantime from plan where planuser = '"+current+"' order by plandate asc, plantime asc limit 4");
     if(qq.exec()){
         qDebug()<<"Exec";
 
@@ -194,17 +194,19 @@ void Planner::on_budgetbut_clicked()
 void Planner::on_Logout_clicked()
 {
 
-    QSqlQuery destroy;
-    destroy.prepare("delete * from current_user");
-    if (destroy.exec()){
+    QSqlQuery uu;
+    uu.prepare("delete from current_user");
+    if (uu.exec()){
         qDebug()<< "Destructor called";
     }
+    else{
+        qDebug()<< "Nigga";
+    }
 
-    destroy.clear();
-    Login*l = new Login(this);
-    l->show();
+    uu.clear();
     this->close();
-
+    Login *li = new Login();
+    li->show();
 
 }
 

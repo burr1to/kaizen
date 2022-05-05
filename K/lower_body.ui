@@ -255,7 +255,7 @@ border radius:50px;</string>
                    </font>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">color : black;</string>
+                   <string notr="true">color : #767782;</string>
                   </property>
                   <property name="text">
                    <string>xxxx</string>
@@ -301,7 +301,7 @@ border radius:50px;</string>
                    </font>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">color : black;</string>
+                   <string notr="true">color : #767782;</string>
                   </property>
                   <property name="text">
                    <string>xxxx</string>
@@ -347,7 +347,7 @@ border radius:50px;</string>
                    </font>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">color : black;</string>
+                   <string notr="true">color : #767782;</string>
                   </property>
                   <property name="text">
                    <string>xxxx</string>
@@ -393,7 +393,7 @@ border radius:50px;</string>
                    </font>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">color : black;</string>
+                   <string notr="true">color : #767782;</string>
                   </property>
                   <property name="text">
                    <string>xxxx</string>
@@ -439,7 +439,7 @@ border radius:50px;</string>
                    </font>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">color : black;</string>
+                   <string notr="true">color : #767782;</string>
                   </property>
                   <property name="text">
                    <string>xxxx</string>
@@ -468,7 +468,7 @@ border radius:50px;</string>
          </sizepolicy>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color:rgb(255, 247, 247);
+         <string notr="true">background-color:#ffffff;
 border-radius:50px;
 color:black;</string>
         </property>
@@ -499,7 +499,7 @@ color:black;</string>
             <string notr="true">background-color:#e6ebf1;
 font: 700 26pt &quot;FONTSPRING DEMO - Pontiac Black&quot;;
 border-radius:30px;
-color: #fdd670;</string>
+color: #34efa3;</string>
            </property>
            <property name="text">
             <string>Lower Body</string>
