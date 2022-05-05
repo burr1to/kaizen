@@ -223,6 +223,7 @@ color:#e6ebf1;</string>
                <widget class="QLabel" name="label_6">
                 <property name="font">
                  <font>
+                  <family>Foco</family>
                   <pointsize>-1</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -243,6 +244,7 @@ color:#e6ebf1;</string>
                <widget class="QLabel" name="helloname">
                 <property name="font">
                  <font>
+                  <family>Foco</family>
                   <pointsize>-1</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -267,6 +269,7 @@ color:#e6ebf1;</string>
                <widget class="QLabel" name="label_2">
                 <property name="font">
                  <font>
+                  <family>Foco</family>
                   <pointsize>-1</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -287,6 +290,7 @@ color:#e6ebf1;</string>
                <widget class="QLabel" name="age">
                 <property name="font">
                  <font>
+                  <family>Foco</family>
                   <pointsize>-1</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -311,6 +315,7 @@ color:#e6ebf1;</string>
                <widget class="QLabel" name="label_4">
                 <property name="font">
                  <font>
+                  <family>Foco</family>
                   <pointsize>-1</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -331,6 +336,7 @@ color:#e6ebf1;</string>
                <widget class="QLabel" name="height">
                 <property name="font">
                  <font>
+                  <family>Foco</family>
                   <pointsize>-1</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -355,6 +361,7 @@ color:#e6ebf1;</string>
                <widget class="QLabel" name="label_7">
                 <property name="font">
                  <font>
+                  <family>Foco</family>
                   <pointsize>-1</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -375,6 +382,7 @@ color:#e6ebf1;</string>
                <widget class="QLabel" name="weight">
                 <property name="font">
                  <font>
+                  <family>Foco</family>
                   <pointsize>-1</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -399,6 +407,7 @@ color:#e6ebf1;</string>
                <widget class="QLabel" name="label_9">
                 <property name="font">
                  <font>
+                  <family>Foco</family>
                   <pointsize>-1</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -419,6 +428,7 @@ color:#e6ebf1;</string>
                <widget class="QLabel" name="bmi">
                 <property name="font">
                  <font>
+                  <family>Foco</family>
                   <pointsize>-1</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -539,6 +549,7 @@ color: #fdd670;</string>
             </property>
             <property name="font">
              <font>
+              <family>FONTSPRING DEMO - Pontiac Black</family>
               <pointsize>25</pointsize>
               <italic>false</italic>
               <bold>true</bold>
@@ -643,7 +654,7 @@ border-radius:40px;</string>
              <item>
               <widget class="QFrame" name="frame_6">
                <property name="styleSheet">
-                <string notr="true">background-color: rgb(230, 235, 241);
+                <string notr="true">background-color: rgb(55, 59, 62);
 border-radius:40px;</string>
                </property>
                <property name="frameShape">
@@ -682,6 +693,7 @@ border-radius:40px;</string>
            <widget class="QFrame" name="frame_3">
             <property name="font">
              <font>
+              <family>Foco</family>
               <pointsize>12</pointsize>
               <italic>false</italic>
               <bold>false</bold>
@@ -712,6 +724,7 @@ color: #e6ebf1;}</string>
                </property>
                <property name="font">
                 <font>
+                 <family>Foco</family>
                  <pointsize>12</pointsize>
                  <italic>false</italic>
                  <bold>false</bold>
@@ -735,6 +748,7 @@ color: #e6ebf1;}</string>
                </property>
                <property name="font">
                 <font>
+                 <family>Foco</family>
                  <pointsize>12</pointsize>
                  <italic>false</italic>
                  <bold>false</bold>
@@ -758,6 +772,7 @@ color: #e6ebf1;}</string>
                </property>
                <property name="font">
                 <font>
+                 <family>Foco</family>
                  <pointsize>12</pointsize>
                  <italic>false</italic>
                  <bold>false</bold>
@@ -781,6 +796,7 @@ color: #e6ebf1;}</string>
                </property>
                <property name="font">
                 <font>
+                 <family>Foco</family>
                  <pointsize>12</pointsize>
                  <italic>false</italic>
                  <bold>false</bold>

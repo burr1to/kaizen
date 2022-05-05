@@ -117,7 +117,7 @@ void fitness::show_chart()
     chart -> addSeries(series);
     chart -> legend() -> hide();
     chart -> setTitle("Weight Record");
-    chart -> setTheme(QChart::ChartThemeBlueIcy);
+    chart -> setTheme(QChart::ChartThemeDark);
 
     QDateTimeAxis *axisX = new QDateTimeAxis;
     axisX->setFormat("dd MMM");
@@ -137,7 +137,7 @@ void fitness::show_chart()
     chart -> setAnimationOptions(QChart::GridAxisAnimations);
     chart -> setAnimationOptions(QChart::SeriesAnimations);
     chart -> setAnimationEasingCurve(QEasingCurve::OutCubic);
-    chart->setPlotArea(QRectF(45, 20, 530, 230));
+    chart->setPlotArea(QRectF(45, 0, 530, 205));
     chart->setMargins(QMargins(0,0,0,0));
 
     QChartView *chartView = new QChartView(chart);
