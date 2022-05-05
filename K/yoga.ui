@@ -671,6 +671,9 @@ color: #e6ebf1;}</string>
                </item>
                <item row="0" column="2" rowspan="2">
                 <widget class="QFrame" name="frame_8">
+                 <property name="styleSheet">
+                  <string notr="true">#frame_8{border-image:url(:/img sr/fitness_side.png);}</string>
+                 </property>
                  <property name="frameShape">
                   <enum>QFrame::StyledPanel</enum>
                  </property>
