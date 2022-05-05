@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="img.qrc">
+    <normaloff>:/img sr/logo.png</normaloff>:/img sr/logo.png</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">font: 10pt &quot;Foco&quot;;</string>
   </property>
@@ -30,8 +34,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">border:0px;
-color:#e6ebf1;</string>
+       <string notr="true">#frame{border-image:url(:/img sr/budget_side.png);}</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -48,8 +51,22 @@ color:#e6ebf1;</string>
            <height>100</height>
           </size>
          </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:#22252a;
+border:0px;</string>
+         </property>
          <property name="text">
-          <string>logo</string>
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="img.qrc">
+           <normaloff>:/img sr/kaizen.png</normaloff>:/img sr/kaizen.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>200</width>
+           <height>100</height>
+          </size>
          </property>
         </widget>
        </item>
@@ -65,6 +82,7 @@ color:#e6ebf1;</string>
           <string notr="true">#planner{
 background-color: rgb(55, 59, 62);
 border-radius:20px;
+color:#e6ebf1;
 }
 #planner:hover{
 font: 16px;
@@ -73,7 +91,17 @@ color: #22252a;
 }</string>
          </property>
          <property name="text">
-          <string>Planner</string>
+          <string>  Planner</string>
+         </property>
+         <property name="icon">
+          <iconset resource="img.qrc">
+           <normaloff>:/img sr/Planner.png</normaloff>:/img sr/Planner.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
          </property>
         </widget>
        </item>
@@ -89,6 +117,7 @@ color: #22252a;
           <string notr="true">#fit_butt{
 background-color: rgb(55, 59, 62);
 border-radius:20px;
+color:#e6ebf1;
 }
 #fit_butt:hover{
 font: 16px;
@@ -97,7 +126,17 @@ color: #22252a;
 }</string>
          </property>
          <property name="text">
-          <string>Fitness</string>
+          <string>  Fitness</string>
+         </property>
+         <property name="icon">
+          <iconset resource="img.qrc">
+           <normaloff>:/img sr/fitness.png</normaloff>:/img sr/fitness.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
          </property>
         </widget>
        </item>
@@ -113,6 +152,7 @@ color: #22252a;
           <string notr="true">#bud_butt{
 background-color: rgb(55, 59, 62);
 border-radius:20px;
+color:#e6ebf1;
 }
 #bud_butt:hover{
 font: 16px;
@@ -121,7 +161,17 @@ color: #22252a;
 }</string>
          </property>
          <property name="text">
-          <string>Budget</string>
+          <string>  Budget</string>
+         </property>
+         <property name="icon">
+          <iconset resource="img.qrc">
+           <normaloff>:/img sr/budget.png</normaloff>:/img sr/budget.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
          </property>
         </widget>
        </item>
@@ -132,8 +182,8 @@ color: #22252a;
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>20</width>
-           <height>361</height>
+           <width>0</width>
+           <height>20</height>
           </size>
          </property>
         </spacer>
@@ -143,13 +193,13 @@ color: #22252a;
          <property name="minimumSize">
           <size>
            <width>0</width>
-           <height>40</height>
+           <height>50</height>
           </size>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(55, 59, 62);
 border-radius:20px;
-</string>
+color:#e6ebf1;</string>
          </property>
          <property name="text">
           <string>Allocate Budget</string>
@@ -164,7 +214,7 @@ border-radius:20px;
          <property name="minimumSize">
           <size>
            <width>0</width>
-           <height>30</height>
+           <height>40</height>
           </size>
          </property>
          <property name="styleSheet">
@@ -174,12 +224,24 @@ border-radius:15px;
 color:#22252a;
 }
 #allocating:hover{
-font: 18px;
 background-color:#e6ebf1;
 color: #22252a;
 }</string>
          </property>
         </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>220</height>
+          </size>
+         </property>
+        </spacer>
        </item>
       </layout>
      </widget>
@@ -213,7 +275,7 @@ background-color:#ffffff;</string>
           <string notr="true">background-color:#e6ebf1;
 font: 700 25pt &quot;FONTSPRING DEMO - Pontiac Black&quot;;
 border-radius:30px;
-color: #34efa3;</string>
+color: #fdd670;</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -223,10 +285,16 @@ color: #34efa3;</string>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_7">
           <property name="leftMargin">
-           <number>25</number>
+           <number>30</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
           </property>
           <property name="rightMargin">
-           <number>40</number>
+           <number>30</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
           </property>
           <item>
            <widget class="QLabel" name="label">
@@ -239,7 +307,7 @@ color: #34efa3;</string>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">color: #34efa3;
+             <string notr="true">color: #fdd670;
 border: none;
 font:30px;
 </string>
@@ -260,7 +328,7 @@ font:30px;
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">color: #34efa3;
+             <string notr="true">color: #fdd670;
 border: none;
 font:24px;</string>
             </property>
@@ -541,8 +609,14 @@ font:25px;
                   </item>
                   <item>
                    <layout class="QVBoxLayout" name="verticalLayout_17">
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>30</number>
+                    </property>
                     <item>
-                     <layout class="QHBoxLayout" name="horizontalLayout_15">
+                     <layout class="QHBoxLayout" name="horizontalLayout_15" stretch="1,1">
                       <item>
                        <widget class="QLabel" name="label_22">
                         <property name="font">
@@ -596,7 +670,7 @@ color: #e6ebf1;
                      </layout>
                     </item>
                     <item>
-                     <layout class="QHBoxLayout" name="horizontalLayout_16">
+                     <layout class="QHBoxLayout" name="horizontalLayout_16" stretch="1,1">
                       <item>
                        <widget class="QLabel" name="label_23">
                         <property name="font">
@@ -711,7 +785,7 @@ background-color: rgb(230, 235, 241);</string>
                          </property>
                          <property name="styleSheet">
                           <string notr="true">color: black;
-font:18px;
+font:12px;
 </string>
                          </property>
                          <property name="text">
@@ -737,7 +811,8 @@ font:18px;
                          <property name="styleSheet">
                           <string notr="true">border-top: 2px solid rgb(239, 239, 239);
 margin-left: 10px;
-margin-right:10px;</string>
+margin-right:10px;
+background-color:#22252a;</string>
                          </property>
                          <property name="orientation">
                           <enum>Qt::Horizontal</enum>
@@ -796,36 +871,84 @@ color: #e6ebf1;
                          </property>
                         </widget>
                        </item>
+                       <item>
+                        <widget class="Line" name="line_4">
+                         <property name="styleSheet">
+                          <string notr="true">border-top: 2px solid rgb(239, 239, 239);
+margin-left: 10px;
+margin-right:10px;
+background-color:#22252a;</string>
+                         </property>
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                        </widget>
+                       </item>
                       </layout>
                      </item>
                     </layout>
                    </item>
-                   <item>
-                    <widget class="Line" name="line_4">
-                     <property name="styleSheet">
-                      <string notr="true">border-top: 2px solid rgb(239, 239, 239);
-margin-left: 10px;
-margin-right:10px;</string>
-                     </property>
-                     <property name="orientation">
-                      <enum>Qt::Horizontal</enum>
-                     </property>
-                    </widget>
-                   </item>
                   </layout>
                  </item>
                  <item>
-                  <widget class="QPushButton" name="pushButton_3">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>35</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string>PushButton</string>
-                   </property>
-                  </widget>
+                  <layout class="QHBoxLayout" name="horizontalLayout_10">
+                   <item>
+                    <spacer name="horizontalSpacer">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="pushButton_3">
+                     <property name="minimumSize">
+                      <size>
+                       <width>40</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">#pushButton_3{
+border:0 px;
+border-radius:20px;}
+#pushButton_3:hover{
+background-color:#ffffff;}</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="img.qrc">
+                       <normaloff>:/img sr/plus.png</normaloff>:/img sr/plus.png</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>30</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_2">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
                  </item>
                  <item>
                   <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="1,2">
@@ -930,7 +1053,8 @@ background-color: rgb(230, 235, 241);</string>
                        <property name="styleSheet">
                         <string notr="true">border-top: 2px solid rgb(239, 239, 239);
 margin-left: 10px;
-margin-right:10px;</string>
+margin-right:10px;
+background-color:#22252a;</string>
                        </property>
                        <property name="orientation">
                         <enum>Qt::Horizontal</enum>
@@ -989,19 +1113,13 @@ color: #e6ebf1;
                        </property>
                       </widget>
                      </item>
-                    </layout>
-                   </item>
-                   <item>
-                    <layout class="QVBoxLayout" name="verticalLayout_8">
-                     <property name="spacing">
-                      <number>20</number>
-                     </property>
                      <item>
                       <widget class="Line" name="line_9">
                        <property name="styleSheet">
                         <string notr="true">border-top: 2px solid rgb(239, 239, 239);
 margin-left: 10px;
-margin-right:10px;</string>
+margin-right:10px;
+background-color:#22252a;</string>
                        </property>
                        <property name="orientation">
                         <enum>Qt::Horizontal</enum>
@@ -1013,17 +1131,64 @@ margin-right:10px;</string>
                   </layout>
                  </item>
                  <item>
-                  <widget class="QPushButton" name="pushButton_4">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>35</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string>PushButton</string>
-                   </property>
-                  </widget>
+                  <layout class="QHBoxLayout" name="horizontalLayout_11">
+                   <item>
+                    <spacer name="horizontalSpacer_3">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="pushButton_4">
+                     <property name="minimumSize">
+                      <size>
+                       <width>40</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">#pushButton_4{
+border:0 px;
+border-radius:20px;}
+#pushButton_4:hover{
+background-color:#ffffff;}</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="img.qrc">
+                       <normaloff>:/img sr/plus.png</normaloff>:/img sr/plus.png</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>30</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_4">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
                  </item>
                  <item>
                   <layout class="QHBoxLayout" name="horizontalLayout_18" stretch="1,2">
@@ -1133,7 +1298,8 @@ background-color: rgb(230, 235, 241);</string>
                          <property name="styleSheet">
                           <string notr="true">border-top: 2px solid rgb(239, 239, 239);
 margin-left: 10px;
-margin-right:10px;</string>
+margin-right:10px;
+background-color:#22252a;</string>
                          </property>
                          <property name="orientation">
                           <enum>Qt::Horizontal</enum>
@@ -1192,36 +1358,84 @@ color: #e6ebf1;
                          </property>
                         </widget>
                        </item>
+                       <item>
+                        <widget class="Line" name="line_12">
+                         <property name="styleSheet">
+                          <string notr="true">border-top: 2px solid rgb(239, 239, 239);
+margin-left: 10px;
+margin-right:10px;
+background-color:#22252a;</string>
+                         </property>
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                        </widget>
+                       </item>
                       </layout>
                      </item>
                     </layout>
                    </item>
-                   <item>
-                    <widget class="Line" name="line_12">
-                     <property name="styleSheet">
-                      <string notr="true">border-top: 2px solid rgb(239, 239, 239);
-margin-left: 10px;
-margin-right:10px;</string>
-                     </property>
-                     <property name="orientation">
-                      <enum>Qt::Horizontal</enum>
-                     </property>
-                    </widget>
-                   </item>
                   </layout>
                  </item>
                  <item>
-                  <widget class="QPushButton" name="pushButton_9">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>35</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string>PushButton</string>
-                   </property>
-                  </widget>
+                  <layout class="QHBoxLayout" name="horizontalLayout_19">
+                   <item>
+                    <spacer name="horizontalSpacer_5">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="pushButton_9">
+                     <property name="minimumSize">
+                      <size>
+                       <width>40</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">#pushButton_9{
+border:0 px;
+border-radius:20px;}
+#pushButton_9:hover{
+background-color:#ffffff;}</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="img.qrc">
+                       <normaloff>:/img sr/plus.png</normaloff>:/img sr/plus.png</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>30</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_6">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
                  </item>
                  <item>
                   <layout class="QHBoxLayout" name="horizontalLayout_21" stretch="1,3">
@@ -1331,7 +1545,8 @@ background-color: rgb(230, 235, 241);</string>
                          <property name="styleSheet">
                           <string notr="true">border-top: 2px solid rgb(239, 239, 239);
 margin-left: 10px;
-margin-right:10px;</string>
+margin-right:10px;
+background-color:#22252a;</string>
                          </property>
                          <property name="orientation">
                           <enum>Qt::Horizontal</enum>
@@ -1390,36 +1605,85 @@ color: #e6ebf1;
                          </property>
                         </widget>
                        </item>
+                       <item>
+                        <widget class="Line" name="line_8">
+                         <property name="styleSheet">
+                          <string notr="true">border-top: 2px solid rgb(239, 239, 239);
+margin-left: 10px;
+margin-right:10px;
+background-color:#22252a;</string>
+                         </property>
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                        </widget>
+                       </item>
                       </layout>
                      </item>
                     </layout>
                    </item>
-                   <item>
-                    <widget class="Line" name="line_8">
-                     <property name="styleSheet">
-                      <string notr="true">border-top: 2px solid rgb(239, 239, 239);
-margin-left: 10px;
-margin-right:10px;</string>
-                     </property>
-                     <property name="orientation">
-                      <enum>Qt::Horizontal</enum>
-                     </property>
-                    </widget>
-                   </item>
                   </layout>
                  </item>
                  <item>
-                  <widget class="QPushButton" name="pushButton_13">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>35</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string>PushButton</string>
-                   </property>
-                  </widget>
+                  <layout class="QHBoxLayout" name="horizontalLayout_20">
+                   <item>
+                    <spacer name="horizontalSpacer_7">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="pushButton_13">
+                     <property name="minimumSize">
+                      <size>
+                       <width>40</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">#pushButton_13{
+border:0 px;
+border-radius:20px;
+}
+#pushButton_13:hover{
+background-color:#ffffff;}</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="img.qrc">
+                       <normaloff>:/img sr/plus.png</normaloff>:/img sr/plus.png</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>30</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_8">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
                  </item>
                  <item>
                   <layout class="QHBoxLayout" name="horizontalLayout_22" stretch="1,2">
@@ -1668,6 +1932,7 @@ border-radius:10px;
 }
 #updatebutt:hover{
 background-color:#22252a;
+font:14px;
 color: #e6ebf1;
 }</string>
                      </property>
@@ -1686,6 +1951,7 @@ border-radius:10px;
 #deletebutt:hover{
 background-color:#22252a;
 color: #e6ebf1;
+font:14px;
 }</string>
                      </property>
                      <property name="text">
@@ -1711,6 +1977,8 @@ color: #e6ebf1;
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="img.qrc"/>
+ </resources>
  <connections/>
 </ui>

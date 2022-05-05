@@ -19,6 +19,10 @@
   <property name="windowTitle">
    <string>All Plans</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="img.qrc">
+    <normaloff>:/img sr/logo.png</normaloff>:/img sr/logo.png</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(34, 37, 42);
 color:black;
@@ -126,6 +130,7 @@ border-radius:15px;
 }
 #pushButton:hover{
 background-color:#22252a;
+font:18px;
 color: #e6ebf1;
 }</string>
             </property>
@@ -150,6 +155,7 @@ border-radius:15px;
 }
 #pushButton_3:hover{
 background-color:#22252a;
+font:18px;
 color: #e6ebf1;
 }</string>
             </property>
@@ -180,6 +186,8 @@ color: #e6ebf1;
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="img.qrc"/>
+ </resources>
  <connections/>
 </ui>

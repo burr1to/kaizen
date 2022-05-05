@@ -28,6 +28,10 @@
   <property name="windowTitle">
    <string>Edit</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="img.qrc">
+    <normaloff>:/img sr/logo.png</normaloff>:/img sr/logo.png</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">margin: 0px;
 background-color: rgb(34, 37, 42);
@@ -144,6 +148,7 @@ color:#e6ebf1;
 }
 #submit:hover{
 background-color:#e6ebf1;
+font:18px;
 color: #22252a;
 }</string>
            </property>
@@ -168,6 +173,7 @@ color:#e6ebf1;
 }
 #pushButton:hover{
 background-color:#e6ebf1;
+font:18px;
 color: #22252a;
 }</string>
            </property>
@@ -194,6 +200,8 @@ color: #22252a;
  <tabstops>
   <tabstop>weight</tabstop>
  </tabstops>
- <resources/>
+ <resources>
+  <include location="img.qrc"/>
+ </resources>
  <connections/>
 </ui>

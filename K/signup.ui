@@ -7,12 +7,12 @@
     <x>0</x>
     <y>0</y>
     <width>500</width>
-    <height>779</height>
+    <height>770</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>500</width>
+    <width>400</width>
     <height>720</height>
    </size>
   </property>
@@ -20,8 +20,8 @@
    <string>Sign Up</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>:/images/src_images/kaizen_square.png</normaloff>:/images/src_images/kaizen_square.png</iconset>
+   <iconset resource="img.qrc">
+    <normaloff>:/img sr/logo.png</normaloff>:/img sr/logo.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(34, 37, 42);
@@ -489,6 +489,8 @@ font:20px;
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="img.qrc"/>
+ </resources>
  <connections/>
 </ui>

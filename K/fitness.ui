@@ -25,6 +25,10 @@
   <property name="windowTitle">
    <string>Fitness</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="img.qrc">
+    <normaloff>:/img sr/logo.png</normaloff>:/img sr/logo.png</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">background-color:#22252a;
 font: 12pt &quot;Foco&quot;;</string>
@@ -70,7 +74,17 @@ color: white;
           <string notr="true"/>
          </property>
          <property name="text">
-          <string>logo</string>
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="img.qrc">
+           <normaloff>:/img sr/kaizen.png</normaloff>:/img sr/kaizen.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>200</width>
+           <height>100</height>
+          </size>
          </property>
         </widget>
        </item>
@@ -93,7 +107,17 @@ background-color:#e6ebf1;
 color: #22252a;}</string>
          </property>
          <property name="text">
-          <string>Planner</string>
+          <string>  Planner</string>
+         </property>
+         <property name="icon">
+          <iconset resource="img.qrc">
+           <normaloff>:/img sr/Planner.png</normaloff>:/img sr/Planner.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>35</width>
+           <height>35</height>
+          </size>
          </property>
         </widget>
        </item>
@@ -116,7 +140,17 @@ background-color:#e6ebf1;
 color: #22252a;}</string>
          </property>
          <property name="text">
-          <string>Fitness</string>
+          <string>  Fitness</string>
+         </property>
+         <property name="icon">
+          <iconset resource="img.qrc">
+           <normaloff>:/img sr/fitness.png</normaloff>:/img sr/fitness.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>35</width>
+           <height>35</height>
+          </size>
          </property>
         </widget>
        </item>
@@ -139,7 +173,17 @@ background-color:#e6ebf1;
 color: #22252a;}</string>
          </property>
          <property name="text">
-          <string>Budget</string>
+          <string>  Budget</string>
+         </property>
+         <property name="icon">
+          <iconset resource="img.qrc">
+           <normaloff>:/img sr/budget.png</normaloff>:/img sr/budget.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>35</width>
+           <height>35</height>
+          </size>
          </property>
         </widget>
        </item>
@@ -413,7 +457,7 @@ color:#e6ebf1;</string>
          <property name="minimumSize">
           <size>
            <width>0</width>
-           <height>40</height>
+           <height>50</height>
           </size>
          </property>
          <property name="styleSheet">
@@ -428,6 +472,12 @@ color: #22252a;}</string>
          </property>
          <property name="text">
           <string>Edit</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
          </property>
         </widget>
        </item>
@@ -465,7 +515,7 @@ border-radius:50px;</string>
           <string notr="true">background-color:#e6ebf1;
 font: 700 25pt &quot;FONTSPRING DEMO - Pontiac Black&quot;;
 border-radius:30px;
-color: #34efa3;</string>
+color: #fdd670;</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -478,13 +528,13 @@ color: #34efa3;</string>
            <number>0</number>
           </property>
           <property name="leftMargin">
-           <number>0</number>
+           <number>30</number>
           </property>
           <property name="topMargin">
            <number>0</number>
           </property>
           <property name="rightMargin">
-           <number>0</number>
+           <number>20</number>
           </property>
           <property name="bottomMargin">
            <number>0</number>
@@ -506,7 +556,7 @@ color: #34efa3;</string>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">padding-left:20px;</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string>FITNESS</string>
@@ -553,12 +603,23 @@ padding-right:10px</string>
             </property>
             <property name="styleSheet">
              <string notr="true">#refresh{
-border radius:40px;
-margin-right:20px
-}</string>
+border:0 px;
+border-radius:25px;}
+#refresh:hover{
+background-color:#ffffff;}</string>
             </property>
             <property name="text">
-             <string>re</string>
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="img.qrc">
+              <normaloff>:/img sr/refresh.png</normaloff>:/img sr/refresh.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
             </property>
            </widget>
           </item>
@@ -613,35 +674,16 @@ border-radius:40px;</string>
              </item>
              <item>
               <widget class="QFrame" name="frame_7">
+               <property name="styleSheet">
+                <string notr="true">#frame_7{border-image:url(:/img sr/fit_top.png);}</string>
+               </property>
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
                </property>
                <property name="frameShadow">
                 <enum>QFrame::Raised</enum>
                </property>
-               <layout class="QHBoxLayout" name="horizontalLayout_6">
-                <item>
-                 <widget class="QLabel" name="label_3">
-                  <property name="font">
-                   <font>
-                    <family>Foco</family>
-                    <pointsize>-1</pointsize>
-                    <italic>false</italic>
-                    <bold>false</bold>
-                   </font>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">font:35px;</string>
-                  </property>
-                  <property name="text">
-                   <string>1</string>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignCenter</set>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
+               <layout class="QHBoxLayout" name="horizontalLayout_6"/>
               </widget>
              </item>
             </layout>
@@ -781,6 +823,8 @@ border-image: url(:/images/src_images/yoga.png);</string>
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="img.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -26,8 +26,8 @@
    <string>Kaizen</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>:/images/src_images/kaizen_square.png</normaloff>:/images/src_images/kaizen_square.png</iconset>
+   <iconset resource="img.qrc">
+    <normaloff>:/img sr/logo.png</normaloff>:/img sr/logo.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">font: 9pt &quot;Segoe UI&quot;;
@@ -288,7 +288,9 @@ font:16px;
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="img.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>password</sender>
