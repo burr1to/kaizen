@@ -208,7 +208,7 @@ color: #22252a;}</string>
          <item>
           <widget class="QFrame" name="frame_11">
            <property name="styleSheet">
-            <string notr="true">font:20px;
+            <string notr="true">font:18px;
 background-color: rgb(55, 59, 62);
 border radius:50px;</string>
            </property>
@@ -851,12 +851,12 @@ color: #e6ebf1;}</string>
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>651</x>
-     <y>397</y>
+     <x>454</x>
+     <y>275</y>
     </hint>
     <hint type="destinationlabel">
-     <x>947</x>
-     <y>890</y>
+     <x>609</x>
+     <y>590</y>
     </hint>
    </hints>
   </connection>
@@ -867,12 +867,12 @@ color: #e6ebf1;}</string>
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1201</x>
-     <y>371</y>
+     <x>750</x>
+     <y>258</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1144</x>
-     <y>842</y>
+     <x>745</x>
+     <y>549</y>
     </hint>
    </hints>
   </connection>
@@ -883,12 +883,12 @@ color: #e6ebf1;}</string>
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>802</x>
-     <y>627</y>
+     <x>516</x>
+     <y>393</y>
     </hint>
     <hint type="destinationlabel">
-     <x>939</x>
-     <y>901</y>
+     <x>608</x>
+     <y>596</y>
     </hint>
    </hints>
   </connection>
@@ -899,12 +899,12 @@ color: #e6ebf1;}</string>
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1107</x>
-     <y>534</y>
+     <x>752</x>
+     <y>429</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1254</x>
-     <y>886</y>
+     <x>752</x>
+     <y>569</y>
     </hint>
    </hints>
   </connection>

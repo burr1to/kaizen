@@ -79,7 +79,7 @@ void yoga::on_pushButton_start_workout_clicked()
 
 void yoga::on_pushButton_stop_timer_clicked()
 {
-    minutes = 14;
+    minutes = 4;
     seconds = 59;
     ui->seconds->display(seconds);
     ui->minutes->display(minutes);
@@ -133,4 +133,5 @@ void yoga::on_logo_clicked()
 
 
 }
+
 

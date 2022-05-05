@@ -214,7 +214,7 @@ color: #22252a;}</string>
          <item>
           <widget class="QFrame" name="frame_11">
            <property name="styleSheet">
-            <string notr="true">font:20px;
+            <string notr="true">font:18px;
 background-color: rgb(55, 59, 62);
 border radius:50px;</string>
            </property>

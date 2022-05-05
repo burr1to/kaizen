@@ -43,7 +43,6 @@ private slots:
 
    void on_logo_clicked();
 
-
 private:
     Ui::core *ui;
     short int minutes;

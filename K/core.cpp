@@ -125,3 +125,4 @@ void core::on_logo_clicked()
     parent->show();
 }
 
+
