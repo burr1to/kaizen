@@ -30,11 +30,10 @@ Planner::Planner(QWidget *parent)
        ui->heytxt->setText("Hello, " + current.toUpper() + " !");
 
        showfour(current,querystore,datestore,timestore);
-
-       ui->plan_1->setText(querystore[0] + "\n" +  "\n" + datestore[0] + "   " + timestore[0]);
-       ui->plan_2->setText(querystore[1] + "\n" +  "\n" + datestore[1] + "   " + timestore[1]);
-       ui->plan_3->setText(querystore[2] + "\n" +  "\n" + datestore[2] + "   " + timestore[2]);
-       ui->plan_4->setText(querystore[3] + "\n" +  "\n" + datestore[3] + "   " + timestore[3]);
+       ui->plan_1->setText(querystore[0] + "\n" +  "\n" + datestore[0] + "       " + timestore[0]);
+       ui->plan_2->setText(querystore[1] + "\n" +  "\n" + datestore[1] + "       " + timestore[1]);
+       ui->plan_3->setText(querystore[2] + "\n" +  "\n" + datestore[2] + "       " + timestore[2]);
+       ui->plan_4->setText(querystore[3] + "\n" +  "\n" + datestore[3] + "       " + timestore[3]);
 
     setbudget(current);
     setfitness();
@@ -105,8 +104,8 @@ void Planner::setfitness(){
         qDebug()<<"No";
     }
     ui->bmit->setText(fitstore[2]);
-    ui->weightt->setText(fitstore[0]);
-    ui->heightt->setText(fitstore[1]);
+    ui->weightt->setText(fitstore[0]+" kg");
+    ui->heightt->setText(fitstore[1]+" cm");
     g.clear();
 
 }
@@ -175,9 +174,9 @@ void Planner::on_addbut_clicked()
            showfour(current,querystore,datestore,timestore);
 
            ui->plan_1->setText(querystore[0] + "\n" +  "\n"  + datestore[0] + "       " + timestore[0]);
-           ui->plan_2->setText(querystore[1] + "\n" +  "\n" + datestore[1] + "        " + timestore[1]);
-           ui->plan_3->setText(querystore[2] + "\n" +  "\n" + datestore[2] + "        " + timestore[2]);
-           ui->plan_4->setText(querystore[3] + "\n" +  "\n" + datestore[3] + "        " + timestore[3]);
+           ui->plan_2->setText(querystore[1] + "\n" +  "\n" + datestore[1] + "       " + timestore[1]);
+           ui->plan_3->setText(querystore[2] + "\n" +  "\n" + datestore[2] + "       " + timestore[2]);
+           ui->plan_4->setText(querystore[3] + "\n" +  "\n" + datestore[3] + "       " + timestore[3]);
 
 }
 
@@ -200,7 +199,7 @@ void Planner::on_Logout_clicked()
         qDebug()<< "Destructor called";
     }
     else{
-        qDebug()<< "Nigga";
+        qDebug()<< "Not called";
     }
 
     uu.clear();

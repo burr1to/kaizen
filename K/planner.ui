@@ -926,7 +926,7 @@ background-color:#373b3e;
 </string>
                   </property>
                   <property name="text">
-                   <string>b</string>
+                   <string/>
                   </property>
                   <property name="icon">
                    <iconset resource="img.qrc">

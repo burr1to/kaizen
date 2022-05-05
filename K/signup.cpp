@@ -17,7 +17,6 @@ signup::~signup()
 void signup::on_regbut_clicked()
 {
     QString username = ui->username->text();
-    QString check;
 
         QString password = ui->password->text();
         QString f_name = ui->fname->text();
