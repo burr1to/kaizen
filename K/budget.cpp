@@ -119,7 +119,7 @@ void Budget::on_pushButton_3_clicked()
 
         setTotals(current);
         QSqlQueryModel *bqmodel= new QSqlQueryModel();
-         bqmodel->setQuery("SELECT Item,Price,Category FROM Info where username = '"+current+"'");
+         bqmodel->setQuery("SELECT Item,Price,Category FROM Info where username = '"+current+"' order by eid desc limit 10");
          ui->expta->setModel(bqmodel);
         }
         else{
@@ -162,7 +162,7 @@ void Budget::on_pushButton_9_clicked()
           ui->othertot->setText(addItemstoDatabase(current,"Other",s));
           setTotals(current);
           QSqlQueryModel *bqmodel= new QSqlQueryModel();
-           bqmodel->setQuery("SELECT Item,Price,Category FROM Info where username = '"+current+"'");
+           bqmodel->setQuery("SELECT Item,Price,Category FROM Info where username = '"+current+"' order by eid desc limit 10");
            ui->expta->setModel(bqmodel);
         }
         else{
@@ -313,7 +313,7 @@ void Budget::on_updatebutt_clicked()
        }
        sq.clear();
        QSqlQueryModel *bqmodel= new QSqlQueryModel();
-        bqmodel->setQuery("SELECT Item,Price,Category FROM Info where username = '"+current+"'");
+        bqmodel->setQuery("SELECT Item,Price,Category FROM Info where username = '"+current+"' order by eid desc limit 10" );
         ui->expta->setModel(bqmodel);
 
         ui->foodtot->setText(addItemstoDatabase(current,"Food",f));
@@ -329,8 +329,6 @@ void Budget::on_updatebutt_clicked()
 
 void Budget::on_deletebutt_clicked()
 {
-
-
         QSqlQuery qu;
         qu.prepare("delete from Info where eid = :psl");
         qu.bindValue(":psl",getid);
@@ -345,7 +343,7 @@ void Budget::on_deletebutt_clicked()
         ui->pricer->clear();
         ui->catr->clear();
         QSqlQueryModel * model = new QSqlQueryModel();
-        model->setQuery("select plandetails from plan where planuser = '"+current+"'");
+        model->setQuery("SELECT Item,Price,Category FROM Info where username = '"+current+"'");
         ui->expta->setModel(model);
 
         ui->foodtot->setText(addItemstoDatabase(current,"Food",f));
@@ -383,7 +381,7 @@ void Budget::on_pushButton_13_clicked()
      ui->intot->setText(addItemstoDatabase(current,"Income",o));
        setTotals(current);
        QSqlQueryModel *bqmodel= new QSqlQueryModel();
-        bqmodel->setQuery("SELECT Item,Price,Category FROM Info where username = '"+current+"'");
+        bqmodel->setQuery("SELECT Item,Price,Category FROM Info where username = '"+current+"' order by eid desc limit 10");
         ui->expta->setModel(bqmodel);
     }
     else{
@@ -423,7 +421,7 @@ void Budget::on_pushButton_4_clicked()
      ui->foodtot->setText(addItemstoDatabase(current,"Food",f));
         setTotals(current);
         QSqlQueryModel *bqmodel= new QSqlQueryModel();
-         bqmodel->setQuery("SELECT Item,Price,Category FROM Info where username = '"+current+"'");
+         bqmodel->setQuery("SELECT Item,Price,Category FROM Info where username = '"+current+"' order by eid desc limit 10");
          ui->expta->setModel(bqmodel);
      }
      else{

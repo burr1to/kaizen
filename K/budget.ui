@@ -214,7 +214,7 @@ color:#e6ebf1;</string>
          <property name="minimumSize">
           <size>
            <width>0</width>
-           <height>40</height>
+           <height>30</height>
           </size>
          </property>
          <property name="styleSheet">
@@ -273,7 +273,7 @@ background-color:#ffffff;</string>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color:#e6ebf1;
-font: 700 25pt &quot;FONTSPRING DEMO - Pontiac Black&quot;;
+font: 700 20pt &quot;FONTSPRING DEMO - Pontiac Black&quot;;
 border-radius:30px;
 color: #fdd670;</string>
          </property>
@@ -389,7 +389,7 @@ font:24px;
                   <item>
                    <layout class="QVBoxLayout" name="verticalLayout_22">
                     <property name="leftMargin">
-                     <number>30</number>
+                     <number>0</number>
                     </property>
                     <item>
                      <layout class="QHBoxLayout" name="horizontalLayout_8">
@@ -603,7 +603,7 @@ font:25px;
                      <number>0</number>
                     </property>
                     <property name="rightMargin">
-                     <number>30</number>
+                     <number>0</number>
                     </property>
                     <item>
                      <layout class="QHBoxLayout" name="horizontalLayout_15" stretch="1,1">
@@ -618,7 +618,7 @@ font:25px;
                         </property>
                         <property name="styleSheet">
                          <string notr="true">background-color: #ffffff;
-border-radius:20px;
+border-radius:10px;
 padding:5px;
 </string>
                         </property>
@@ -642,7 +642,7 @@ padding:5px;
                         <property name="styleSheet">
                          <string notr="true">#allbudget{
 background-color: #ffffff;
-border-radius:20px;
+border-radius:10px;
 padding-left:10px;
 }
 #allbudget:hover{
@@ -670,7 +670,7 @@ color: #e6ebf1;
                         </property>
                         <property name="styleSheet">
                          <string notr="true">background-color: #ffffff;
-border-radius:20px;
+border-radius:10px;
 padding:5px;
 </string>
                         </property>
@@ -694,7 +694,7 @@ padding:5px;
                         <property name="styleSheet">
                          <string notr="true">#rem{
 background-color: #ffffff;
-border-radius:20px;
+border-radius:10px;
 padding-left:10px;
 }
 #rem:hover{
@@ -1822,7 +1822,7 @@ background-color: #ffffff</string>
                      <item>
                       <widget class="QLabel" name="label_4">
                        <property name="text">
-                        <string>Item</string>
+                        <string>Item        </string>
                        </property>
                       </widget>
                      </item>
@@ -1847,7 +1847,7 @@ color: #e6ebf1;
                      <item>
                       <widget class="QLabel" name="label_3">
                        <property name="text">
-                        <string>Price</string>
+                        <string> Price      </string>
                        </property>
                       </widget>
                      </item>
