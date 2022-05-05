@@ -193,7 +193,7 @@ void Planner::on_budgetbut_clicked()
 
 void Planner::on_Logout_clicked()
 {
-    //db = QSqlDatabase::database();
+
     QSqlQuery destroy;
     destroy.prepare("delete * from current_user");
     if (destroy.exec()){
@@ -223,12 +223,6 @@ void Planner::on_showplans_clicked()
 }
 
 
-void Planner::on_pushButton_clicked()
-{
-    this->close();
-    Planner *back = new Planner(this);
-    back->show();
-}
 
 
 void Planner::on_allplans_clicked()
@@ -254,4 +248,12 @@ void Planner::on_bud_butt_clicked()
 }
 
 
+
+
+void Planner::on_ref_clicked()
+{
+    this->close();
+    Planner *back = new Planner(this);
+    back->show();
+}
 

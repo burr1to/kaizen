@@ -16,6 +16,7 @@ fitness::fitness(QWidget *parent)
     , ui(new Ui::fitness)
 {
     ui->setupUi(this);
+
     db = QSqlDatabase::database();
     QSqlQuery qry;
     qry.prepare("select current from current_user");
@@ -30,6 +31,7 @@ fitness::fitness(QWidget *parent)
     ui->height->setText(fitdata[1]);
     ui->bmi->setText(fitdata[2]);
     this->setWindowState(Qt::WindowMaximized);
+     ui->heytxt->setText("Hello " + current.toUpper());
 
 
     show_chart();
@@ -38,6 +40,13 @@ fitness::fitness(QWidget *parent)
 
 fitness::~fitness()
 {
+    QSqlQuery dest;
+       dest.prepare("delete from current_user");
+       if (dest.exec()){
+           qDebug()<< "Destructor called";
+       }
+       dest.clear();
+       db.close();
     delete ui;
 }
 

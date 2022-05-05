@@ -300,7 +300,6 @@ color: #fdd670;</string>
            <widget class="QLabel" name="label">
             <property name="font">
              <font>
-              <family>FONTSPRING DEMO - Pontiac Black</family>
               <pointsize>-1</pointsize>
               <italic>false</italic>
               <bold>false</bold>
@@ -321,7 +320,6 @@ font:30px;
            <widget class="QLabel" name="hellotxt">
             <property name="font">
              <font>
-              <family>FONTSPRING DEMO - Pontiac Black</family>
               <pointsize>-1</pointsize>
               <italic>false</italic>
               <bold>false</bold>
@@ -333,7 +331,7 @@ border: none;
 font:24px;</string>
             </property>
             <property name="text">
-             <string>xxxx</string>
+             <string>Welcome to Kaizen Budget!</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -369,7 +367,6 @@ background-color: rgb(230, 235, 241);</string>
                    <widget class="QLabel" name="label_7">
                     <property name="font">
                      <font>
-                      <family>Foco</family>
                       <pointsize>-1</pointsize>
                       <italic>false</italic>
                       <bold>false</bold>
@@ -400,7 +397,6 @@ font:24px;
                        <widget class="QLabel" name="label_18">
                         <property name="font">
                          <font>
-                          <family>Foco</family>
                           <pointsize>10</pointsize>
                           <italic>false</italic>
                           <bold>false</bold>
@@ -424,7 +420,6 @@ padding:5px;
                        <widget class="QLabel" name="intotal">
                         <property name="font">
                          <font>
-                          <family>Foco</family>
                           <pointsize>10</pointsize>
                           <italic>false</italic>
                           <bold>false</bold>
@@ -454,7 +449,6 @@ color: #e6ebf1;
                        <widget class="QLabel" name="label_17">
                         <property name="font">
                          <font>
-                          <family>Foco</family>
                           <pointsize>10</pointsize>
                           <italic>false</italic>
                           <bold>false</bold>
@@ -478,7 +472,6 @@ padding:5px;
                        <widget class="QLabel" name="extotal">
                         <property name="font">
                          <font>
-                          <family>Foco</family>
                           <pointsize>10</pointsize>
                           <italic>false</italic>
                           <bold>false</bold>
@@ -508,7 +501,6 @@ color: #e6ebf1;
                        <widget class="QLabel" name="label_19">
                         <property name="font">
                          <font>
-                          <family>Foco</family>
                           <pointsize>10</pointsize>
                           <italic>false</italic>
                           <bold>false</bold>
@@ -532,7 +524,6 @@ padding:5px;
                        <widget class="QLabel" name="net">
                         <property name="font">
                          <font>
-                          <family>Foco</family>
                           <pointsize>10</pointsize>
                           <italic>false</italic>
                           <bold>false</bold>
@@ -583,7 +574,6 @@ background-color: rgb(230, 235, 241);</string>
                    <widget class="QLabel" name="label_10">
                     <property name="font">
                      <font>
-                      <family>Foco</family>
                       <pointsize>-1</pointsize>
                       <italic>false</italic>
                       <bold>false</bold>
@@ -621,7 +611,6 @@ font:25px;
                        <widget class="QLabel" name="label_22">
                         <property name="font">
                          <font>
-                          <family>Foco</family>
                           <pointsize>10</pointsize>
                           <italic>false</italic>
                           <bold>false</bold>
@@ -645,7 +634,6 @@ padding:5px;
                        <widget class="QLabel" name="allbudget">
                         <property name="font">
                          <font>
-                          <family>Foco</family>
                           <pointsize>10</pointsize>
                           <italic>false</italic>
                           <bold>false</bold>
@@ -675,7 +663,6 @@ color: #e6ebf1;
                        <widget class="QLabel" name="label_23">
                         <property name="font">
                          <font>
-                          <family>Foco</family>
                           <pointsize>10</pointsize>
                           <italic>false</italic>
                           <bold>false</bold>
@@ -699,7 +686,6 @@ padding:5px;
                        <widget class="QLabel" name="rem">
                         <property name="font">
                          <font>
-                          <family>Foco</family>
                           <pointsize>10</pointsize>
                           <italic>false</italic>
                           <bold>false</bold>
@@ -777,7 +763,6 @@ background-color: rgb(230, 235, 241);</string>
                         <widget class="QPushButton" name="pushButton_6">
                          <property name="font">
                           <font>
-                           <family>Foco</family>
                            <pointsize>-1</pointsize>
                            <italic>false</italic>
                            <bold>false</bold>
@@ -959,7 +944,6 @@ background-color:#ffffff;}</string>
                     <widget class="QLabel" name="label_11">
                      <property name="font">
                       <font>
-                       <family>Foco</family>
                        <pointsize>10</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
@@ -974,7 +958,6 @@ background-color:#ffffff;}</string>
                     <widget class="QLabel" name="edutot">
                      <property name="font">
                       <font>
-                       <family>Foco</family>
                        <pointsize>10</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
@@ -1021,7 +1004,6 @@ background-color: rgb(230, 235, 241);</string>
                       <widget class="QPushButton" name="pushButton_7">
                        <property name="font">
                         <font>
-                         <family>Foco</family>
                          <pointsize>10</pointsize>
                          <italic>false</italic>
                          <bold>false</bold>
@@ -1199,7 +1181,6 @@ background-color:#ffffff;}</string>
                     <widget class="QLabel" name="label_13">
                      <property name="font">
                       <font>
-                       <family>Foco</family>
                        <pointsize>10</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
@@ -1214,7 +1195,6 @@ background-color:#ffffff;}</string>
                     <widget class="QLabel" name="foodtot">
                      <property name="font">
                       <font>
-                       <family>Foco</family>
                        <pointsize>10</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
@@ -1266,7 +1246,6 @@ background-color: rgb(230, 235, 241);</string>
                         <widget class="QPushButton" name="pushButton_12">
                          <property name="font">
                           <font>
-                           <family>Foco</family>
                            <pointsize>10</pointsize>
                            <italic>false</italic>
                            <bold>false</bold>
@@ -1446,7 +1425,6 @@ background-color:#ffffff;}</string>
                     <widget class="QLabel" name="label_16">
                      <property name="font">
                       <font>
-                       <family>Foco</family>
                        <pointsize>10</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
@@ -1461,7 +1439,6 @@ background-color:#ffffff;}</string>
                     <widget class="QLabel" name="othertot">
                      <property name="font">
                       <font>
-                       <family>Foco</family>
                        <pointsize>10</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
@@ -1513,7 +1490,6 @@ background-color: rgb(230, 235, 241);</string>
                         <widget class="QPushButton" name="pushButton_14">
                          <property name="font">
                           <font>
-                           <family>Foco</family>
                            <pointsize>10</pointsize>
                            <italic>false</italic>
                            <bold>false</bold>
@@ -1694,7 +1670,6 @@ background-color:#ffffff;}</string>
                     <widget class="QLabel" name="label_12">
                      <property name="font">
                       <font>
-                       <family>Foco</family>
                        <pointsize>10</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
@@ -1709,7 +1684,6 @@ background-color:#ffffff;}</string>
                     <widget class="QLabel" name="intot">
                      <property name="font">
                       <font>
-                       <family>Foco</family>
                        <pointsize>10</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
@@ -1778,7 +1752,6 @@ background-color: rgb(230, 235, 241);</string>
               </property>
               <property name="font">
                <font>
-                <family>Foco</family>
                 <pointsize>-1</pointsize>
                 <italic>false</italic>
                 <bold>false</bold>

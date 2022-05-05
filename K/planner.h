@@ -48,7 +48,6 @@ private slots:
 
     void showfour(QString current,QString querystore[],QString datestore[],QString timestore[]);
 
-    void on_pushButton_clicked();
 
     void setbudget(QString);
 
@@ -59,6 +58,8 @@ private slots:
     void on_fit_butt_clicked();
 
     void on_bud_butt_clicked();
+
+    void on_ref_clicked();
 
 private:
     Ui::Planner *ui;

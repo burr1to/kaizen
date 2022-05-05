@@ -1,6 +1,7 @@
 #include "budget.h"
 #include "ui_budget.h"
 #include "planner.h"
+#include "fitness.h"
 
 
 Budget::Budget(QWidget *parent)
@@ -20,7 +21,7 @@ Budget::Budget(QWidget *parent)
        qry.clear();
        }
 
-ui->hellotxt->setText("Hello " + current.toUpper() + " !");
+   ui->hellotxt->setText("Hello " + current.toUpper() + " !");
 
    ui->foodtot->setText(addItemstoDatabase(current,"Food",f));
    ui->edutot->setText(addItemstoDatabase(current,"Education",e));
@@ -30,7 +31,7 @@ ui->hellotxt->setText("Hello " + current.toUpper() + " !");
    setTotals(current);
 
  QSqlQueryModel *bqmodel= new QSqlQueryModel();
-  bqmodel->setQuery("SELECT Item,Price,Category FROM Info where username = '"+current+"'");
+  bqmodel->setQuery("SELECT Item,Price,Category FROM Info where username = '"+current+"' order by DateTime desc limit 10");
   ui->expta->setModel(bqmodel);
 
 }
@@ -132,44 +133,7 @@ void Budget::on_pushButton_3_clicked()
          allocatesomeofthis(budget);
 }
 
-void Budget::on_pushButton_12_clicked()
-{
 
-        item = ui->f_item->text();
-        price = ui->f_amount->text();
-
-        if (!budgetdb.open()){
-            qDebug()<<"Failed to connect";
-            return;
-        }
-         if (!item.isEmpty() && !price.isEmpty()){
-        QSqlQuery qry;
-
-        qry.prepare("INSERT INTO Info(item, price, category,username) VALUES(:item, :price, :category,:usr)");
-        qry.bindValue(":price", price);
-        qry.bindValue(":item", item);
-        qry.bindValue(":category", "Food");
-        qry.bindValue(":usr",current);
-        if (qry.exec()){
-            ui->f_item->setText("");
-            ui->f_amount->setText("");
-            qry.clear();
-        }
-        else{
-             qDebug()<<"Error";
-        }
-         ui->foodtot->setText(addItemstoDatabase(current,"Food",f));
-            setTotals(current);
-            QSqlQueryModel *bqmodel= new QSqlQueryModel();
-             bqmodel->setQuery("SELECT Item,Price FROM Info where username = '"+current+"'");
-             ui->expta->setModel(bqmodel);
-         }
-         else{
-             qDebug()<<"No empty please";
-         }
-
-          allocatesomeofthis(budget);
-}
 
 
 void Budget::on_pushButton_9_clicked()
@@ -211,50 +175,30 @@ void Budget::on_pushButton_9_clicked()
 }
 
 
-void Budget::on_pushButton_4_clicked()
-{
 
-        item = ui->in_item->text();
-        price = ui->in_amount->text();
 
-        if (!budgetdb.open()){
-            qDebug()<<"Failed to connect";
-            return;
-        }
-        if (!item.isEmpty() && !price.isEmpty()){
-        QSqlQuery qry;
-        qry.prepare("INSERT INTO Info(item, price, category,username) VALUES(:item, :price, :category,:usr)");
-        qry.bindValue(":price", price);
-        qry.bindValue(":item", item);
-        qry.bindValue(":category", "Income");
-        qry.bindValue(":usr",current);
-        if (qry.exec()){
-            ui->in_item->setText("");
-            ui->in_amount->setText("");
-            qry.clear();
-        }
-        else{
-             qDebug()<<"Error";
-        }
-         ui->intot->setText(addItemstoDatabase(current,"Income",o));
-           setTotals(current);
-           QSqlQueryModel *bqmodel= new QSqlQueryModel();
-            bqmodel->setQuery("SELECT Item,Price FROM Info where username = '"+current+"'");
-            ui->expta->setModel(bqmodel);
-        }
-        else{
-           qDebug()<<"No empty please";
-        }
-
-        allocatesomeofthis(budget);
-}
-
-int Budget::on_expta_activated(const QModelIndex &index)
+QString Budget::on_expta_activated(const QModelIndex &index)
 {
     QString val= ui->expta->model()->data(index).toString();
     qDebug()<< val;
-    return 0;
+    QSqlQuery q;
+    q.prepare("select DateTime, Item, Price, Category from Info where Item = '"+val+"' or Price = '"+val+"' or Category = '"+val+"'");
+    if (q.exec()){
+        while (q.next()){
+            ui->itemr->setText(q.value(0).toString());
+             ui-> pricer->setText(q.value(1).toString());
+           ui->catr->setText(q.value(2).toString());
+           //getdate = q.value
+        }
+    } else {
+        qDebug()<< "Damn";
+    }
+    q.clear();
+    return "asd";
 }
+
+
+
 void Budget::allocatesomeofthis(QString budget){
 
     bud = budget.toInt();
@@ -281,16 +225,8 @@ void Budget::allocatesomeofthis(QString budget){
     if (!temp.isEmpty() && !tempo.isEmpty()){
 
         qDebug()<<netval;
-        if (netval<0){
-            allocated = bud + netval;
-            ui->rem->setNum(allocated);
-        } else if(netval>0){
-            allocated = bud - netval;
-            ui->rem->setNum(allocated);
-        }
-        else{
-            qDebug()<< "Eror";
-        }
+        allocated = bud + netval;
+        ui->rem->setNum(allocated);
 
         ui->allbudget->setNum(bud);
         ui->allocating->clear();
@@ -324,5 +260,118 @@ QString Budget::on_allocating_returnPressed()
     return budget;
 
 
+}
+
+
+void Budget::on_planner_clicked()
+{
+    this->close();
+    Planner *p = new Planner(this);
+    p->show();
+}
+
+
+void Budget::on_fit_butt_clicked()
+{
+    this->close();
+    fitness *f = new fitness(this);
+    f->show();
+}
+
+
+void Budget::on_bud_butt_clicked()
+{
+    this->close();
+    Budget *b = new Budget(this);
+    b->show();
+}
+
+
+void Budget::on_updatebutt_clicked()
+{
+
+}
+
+
+void Budget::on_deletebutt_clicked()
+{
+
+}
+
+
+void Budget::on_pushButton_13_clicked()
+{
+    item = ui->in_item->text();
+    price = ui->in_amount->text();
+
+    if (!budgetdb.open()){
+        qDebug()<<"Failed to connect";
+        return;
+    }
+    if (!item.isEmpty() && !price.isEmpty()){
+    QSqlQuery qry;
+    qry.prepare("INSERT INTO Info(item, price, category,username) VALUES(:item, :price, :category,:usr)");
+    qry.bindValue(":price", price);
+    qry.bindValue(":item", item);
+    qry.bindValue(":category", "Income");
+    qry.bindValue(":usr",current);
+    if (qry.exec()){
+        ui->in_item->setText("");
+        ui->in_amount->setText("");
+        qry.clear();
+    }
+    else{
+         qDebug()<<"Error";
+    }
+     ui->intot->setText(addItemstoDatabase(current,"Income",o));
+       setTotals(current);
+       QSqlQueryModel *bqmodel= new QSqlQueryModel();
+        bqmodel->setQuery("SELECT Item,Price FROM Info where username = '"+current+"'");
+        ui->expta->setModel(bqmodel);
+    }
+    else{
+       qDebug()<<"No empty please";
+    }
+
+    allocatesomeofthis(budget);
+}
+
+
+void Budget::on_pushButton_4_clicked()
+{
+    item = ui->f_item->text();
+    price = ui->f_amount->text();
+
+    if (!budgetdb.open()){
+        qDebug()<<"Failed to connect";
+        return;
+    }
+     if (!item.isEmpty() && !price.isEmpty()){
+    QSqlQuery qry;
+
+    qry.prepare("INSERT INTO Info(item, price, category,username) VALUES(:item, :price, :category,:usr)");
+    qry.bindValue(":price", price);
+    qry.bindValue(":item", item);
+    qry.bindValue(":category", "Food");
+    qry.bindValue(":usr",current);
+    if (qry.exec()){
+        ui->f_item->setText("");
+        ui->f_amount->setText("");
+        qry.clear();
+    }
+    else{
+         qDebug()<<"Error";
+    }
+     ui->foodtot->setText(addItemstoDatabase(current,"Food",f));
+        setTotals(current);
+        QSqlQueryModel *bqmodel= new QSqlQueryModel();
+         bqmodel->setQuery("SELECT Item,Price FROM Info where username = '"+current+"'");
+         ui->expta->setModel(bqmodel);
+     }
+     else{
+         qDebug()<<"No empty please";
+     }
+
+      allocatesomeofthis(budget);
 }
 
