@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/images"/>
+    <qresource prefix="/">
+        <file>img sr/bud_butt.png</file>
+        <file>img sr/budget.png</file>
+        <file>img sr/budget_side.png</file>
+        <file>img sr/fit_butt.png</file>
+        <file>img sr/fitness.png</file>
+        <file>img sr/kaizen.png</file>
+        <file>img sr/log.png</file>
+        <file>img sr/logo.png</file>
+        <file>img sr/logout.png</file>
+        <file>img sr/plan_top.png</file>
+        <file>img sr/Planner.png</file>
+        <file>img sr/planner_side.png</file>
+        <file>img sr/plus.png</file>
+        <file>img sr/refresh.png</file>
+        <file>img sr/fitness_side.png</file>
+        <file>img sr/fit_top.png</file>
+    </qresource>
+    <qresource prefix="/src"/>
+</RCC>
