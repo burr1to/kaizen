@@ -67,7 +67,7 @@ void Login::on_loginbutt_clicked()
            }
            else if (count<1){
                qDebug()<< "Username and Password does not exist.";
-               ui->textdis->setText("Username and Password not found");
+               ui->textdis->setText("Invalid Username or Password!");
                qry.clear();
                mydb.close();
            } else if(count>1){

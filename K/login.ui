@@ -232,12 +232,19 @@ font:20px;
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">border:0px;
-font:16px;
+            <string notr="true">#signupbut{
+border:0px;
+font:16px;}
+#signupbut:hover{
+border:0px;
+font:17px;
+color:#34efa3}
+
+
 </string>
            </property>
            <property name="text">
-            <string>Sign up from here</string>
+            <string>Click here to Sign Up.</string>
            </property>
           </widget>
          </item>

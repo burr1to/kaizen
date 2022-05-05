@@ -468,8 +468,8 @@ font:20px;
               </property>
              </widget>
             </item>
-            <item>
-             <widget class="QLabel" name="label_7">
+            <item alignment="Qt::AlignHCenter">
+             <widget class="QLabel" name="err">
               <property name="styleSheet">
                <string notr="true">margin-bottom:15px;</string>
               </property>

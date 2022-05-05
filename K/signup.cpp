@@ -17,6 +17,8 @@ signup::~signup()
 void signup::on_regbut_clicked()
 {
     QString username = ui->username->text();
+    QString check;
+
         QString password = ui->password->text();
         QString f_name = ui->fname->text();
         QString l_name = ui->lname->text();
@@ -30,7 +32,8 @@ void signup::on_regbut_clicked()
 
         if (!mydb.open()){
             qDebug()<< "Failed database";
-        } else {
+        }
+        else {
             qDebug()<< "Connect";
             QSqlQuery q;
             if (q.exec("select userid from user order by userid")){
@@ -43,7 +46,7 @@ void signup::on_regbut_clicked()
 
             q.clear();
             if (username == ""){
-                qDebug()<<"Please don't leave fields without data";
+                ui->err->setText("Please don't leave fields without data.");
             }
             else{
              lv = lv+1;
@@ -71,6 +74,7 @@ void signup::on_regbut_clicked()
 
                } else {
                    qDebug()<< "No";
+                   ui->err->setText("Username already taken.");
                    //hide();
                    qu.clear();
 
@@ -79,5 +83,7 @@ void signup::on_regbut_clicked()
 
     }
         mydb.close();
+
+
 }
 

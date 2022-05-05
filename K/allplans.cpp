@@ -84,7 +84,7 @@ void allplans::on_pushButton_clicked()
        ui->listView->setModel(model);
     }
     else{
-        ui->txterr->setText("Please plan something!!");
+        ui->txterr->setText("Add something on plan!");
     }
 }
 

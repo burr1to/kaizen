@@ -19,6 +19,7 @@ public:
 
     QSqlDatabase mydb;
 public:
+    QString current;
     explicit signup(QWidget *parent = nullptr);
     ~signup();
 
