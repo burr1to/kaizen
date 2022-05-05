@@ -35,6 +35,7 @@ fitness::fitness(QWidget *parent)
 
 
     show_chart();
+    show_age();
 
 }
 
@@ -110,7 +111,7 @@ void fitness::show_chart()
         QDateTime momentInTime;
         momentInTime.setDate(QDate(dates[0].toInt(), dates[1].toInt(), dates[2].toInt()));
         series -> append(momentInTime.toMSecsSinceEpoch(), qry1.value(1).toDouble());
-        //qDebug() << momentInTime;
+        qDebug() << dates;
     }
 
     QChart *chart = new QChart();
@@ -144,6 +145,25 @@ void fitness::show_chart()
     chartView -> setRenderHint(QPainter::Antialiasing);
     chartView -> setParent(ui->horizontalFrame_chart);
 }
+
+void fitness::show_age()
+{
+    QSqlQuery qry1;
+    int age;
+    int current_year = QDate::currentDate().year();
+    qry1.prepare("select dob from user where username = '"+current+"'");
+    qry1.exec();
+    qry1.first();
+    QStringList dates = qry1.value(0).toString().split("-").mid(0,3);
+
+    qDebug() << "-------";
+    age = current_year - dates.first().toInt();
+    qDebug() << age;
+    QString s = QString::number(age);
+    ui->age->setText(s);
+    qry1.clear();
+}
+
 
 void fitness::on_pushButton_uperbody_clicked()
 {
@@ -221,4 +241,5 @@ void fitness::on_refresh_clicked()
     fitness *f = new fitness(this);
     f->show();
 }
+
 

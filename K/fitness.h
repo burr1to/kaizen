@@ -63,6 +63,7 @@ private slots:
     void on_logo_clicked();
 
     void on_refresh_clicked();
+    void show_age();
 
 private:
     Ui::fitness *ui;
