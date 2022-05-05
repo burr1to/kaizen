@@ -21,7 +21,7 @@ Budget::Budget(QWidget *parent)
        qry.clear();
        }
 
-   ui->hellotxt->setText("Hello " + current.toUpper() + " !");
+   ui->hellotxt->setText("Hello, " + current.toUpper() + " !");
 
    ui->foodtot->setText(addItemstoDatabase(current,"Food",f));
    ui->edutot->setText(addItemstoDatabase(current,"Education",e));

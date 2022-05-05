@@ -15,8 +15,8 @@
         <file>img sr/plus.png</file>
         <file>img sr/refresh.png</file>
         <file>img sr/fit_top.png</file>
-        <file>img sr/plan_top.png</file>
         <file>img sr/fitness_side.png</file>
+        <file>img sr/plan_top.png</file>
     </qresource>
     <qresource prefix="/src"/>
 </RCC>

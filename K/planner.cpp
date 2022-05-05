@@ -27,7 +27,7 @@ Planner::Planner(QWidget *parent)
            qDebug()<< "Fail to open in planner";
        } else qDebug()<< "Open in planner";
 
-       ui->heytxt->setText("Hello " + current.toUpper() + " !");
+       ui->heytxt->setText("Hello, " + current.toUpper() + " !");
 
        showfour(current,querystore,datestore,timestore);
 
