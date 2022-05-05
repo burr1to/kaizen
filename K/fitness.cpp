@@ -209,7 +209,7 @@ void fitness::on_bud_butt_clicked()
 
 void fitness::on_logo_clicked()
 {
-    hide();
+    this->close();
     QWidget *parent = this->parentWidget();
     parent->show();
 }

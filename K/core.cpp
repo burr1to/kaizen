@@ -117,9 +117,10 @@ void core::on_bud_butt_clicked()
     b->show();
 }
 
+
 void core::on_logo_clicked()
 {
-    hide();
+    this->close();
     QWidget *parent = this->parentWidget();
     parent->show();
 }

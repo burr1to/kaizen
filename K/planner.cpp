@@ -201,8 +201,10 @@ void Planner::on_Logout_clicked()
     }
 
     destroy.clear();
+    Login*l = new Login(this);
+    l->show();
     this->close();
-    //Login
+
 
 }
 

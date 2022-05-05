@@ -41,8 +41,6 @@ private slots:
 
    void on_bud_butt_clicked();
 
-
-
    void on_logo_clicked();
 
 

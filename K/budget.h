@@ -17,7 +17,8 @@ class Budget : public QMainWindow
     Q_OBJECT
 
 public:
-    QString getdate;
+
+    int getid;
     int inc,bud,exp,total,netval,extotal,intotal,alltotal,allocated,balance;
     QString price, item,budget,tempo,temp, current,variable;
     QString f,e,o,s;
@@ -27,7 +28,7 @@ public:
 
 private slots:
 
-    void on_pushButton_5_clicked();
+
 
     void on_pushButton_3_clicked();
 
@@ -45,7 +46,7 @@ private slots:
 
     void setTotals(QString);
 
-    QString on_expta_activated(const QModelIndex &index);
+    int on_expta_activated(const QModelIndex &index);
 
 
 
@@ -62,7 +63,7 @@ private slots:
 
     void on_deletebutt_clicked();
 
-
+    void on_logo_clicked();
 
 private:
     Ui::Budget *ui;

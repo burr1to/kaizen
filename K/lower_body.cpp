@@ -126,8 +126,9 @@ void lower_body::on_bud_butt_clicked()
 
 void lower_body::on_logo_clicked()
 {
-    hide();
+    this->close();
     QWidget *parent = this->parentWidget();
     parent->show();
 }
+
 

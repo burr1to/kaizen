@@ -128,8 +128,11 @@ void upper_body::on_bud_butt_clicked()
 
 void upper_body::on_logo_clicked()
 {
-    hide();
-    QWidget *parent = this->parentWidget();
-    parent->show();
+
+        this->close();
+        QWidget *parent = this->parentWidget();
+        parent->show();
+
+
 }
 

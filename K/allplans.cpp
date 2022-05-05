@@ -90,14 +90,8 @@ void allplans::on_pushButton_clicked()
 
 void allplans::on_pushButton_3_clicked()
 {
-    QString delp,deld,delt;
-        delp = ui->editingPlan->text();
-        QDate d = ui->datecome->date();
-        deld = d.toString("yyyy-MM-dd");
-        QTime t = ui->timecome->time();
-        delt = t.toString("HH:mm:ss");
-        qDebug()<<a;
 
+        qDebug()<<a;
         QSqlQuery qu;
         qu.prepare("delete from plan where planid = :psl");
         qu.bindValue(":psl",a);

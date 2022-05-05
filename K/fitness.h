@@ -53,7 +53,6 @@ private slots:
     void on_editstuff_clicked();
 
 
-
     void getfitnessdata(QString username, QString fitnessdata[]);
 
      void on_home_clicked();
@@ -61,11 +60,7 @@ private slots:
 
     void on_bud_butt_clicked();
 
-
-
     void on_logo_clicked();
-
-
 
     void on_refresh_clicked();
 

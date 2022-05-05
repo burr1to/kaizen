@@ -31,7 +31,7 @@ Budget::Budget(QWidget *parent)
    setTotals(current);
 
  QSqlQueryModel *bqmodel= new QSqlQueryModel();
-  bqmodel->setQuery("SELECT Item,Price,Category FROM Info where username = '"+current+"' order by DateTime desc limit 10");
+  bqmodel->setQuery("SELECT Item,Price,Category FROM Info where username = '"+current+"' order by eid desc limit 10");
   ui->expta->setModel(bqmodel);
 
 }
@@ -47,6 +47,7 @@ Budget::~Budget()
        budgetdb.close();
     delete ui;
 };
+
 
 void Budget::setTotals(QString username){
     QString a,b;
@@ -84,12 +85,6 @@ QString Budget::addItemstoDatabase(QString current, QString variable,QString a){
     return a;
 }
 
-void Budget::on_pushButton_5_clicked()
-{
-    hide();
-        QWidget *parent = this->parentWidget();
-        parent->show();
-}
 
 void Budget::on_pushButton_3_clicked()
 {
@@ -104,11 +99,12 @@ void Budget::on_pushButton_3_clicked()
         if (!item.isEmpty() && !price.isEmpty()){
         QSqlQuery qry;
 
-        qry.prepare("INSERT INTO Info(item, price, category,username) VALUES(:item, :price, :category,:usr)");
+        qry.prepare("INSERT INTO Info(item, price, category,username) VALUES (:item, :price, :category,:usr)");
         qry.bindValue(":price", price);
         qry.bindValue(":item", item);
         qry.bindValue(":category", "Education");
         qry.bindValue(":usr",current);
+
         if (qry.exec()){
             ui->edu_item->setText("");
             ui->edu_amount->setText("");
@@ -123,7 +119,7 @@ void Budget::on_pushButton_3_clicked()
 
         setTotals(current);
         QSqlQueryModel *bqmodel= new QSqlQueryModel();
-         bqmodel->setQuery("SELECT Item,Price FROM Info where username = '"+current+"'");
+         bqmodel->setQuery("SELECT Item,Price,Category FROM Info where username = '"+current+"'");
          ui->expta->setModel(bqmodel);
         }
         else{
@@ -147,11 +143,13 @@ void Budget::on_pushButton_9_clicked()
         }
         if (!item.isEmpty() && !price.isEmpty()){
         QSqlQuery qry;
-        qry.prepare("INSERT INTO Info(item, price, category,username) VALUES(:item, :price, :category,:usr)");
+        qry.prepare("INSERT INTO Info(item, price, category,username) VALUES (:item, :price, :category,:usr)");
         qry.bindValue(":price", price);
         qry.bindValue(":item", item);
         qry.bindValue(":category", "Other");
         qry.bindValue(":usr",current);
+
+
         if (qry.exec()){
             ui->o_item->setText("");
             ui->o_amount->setText("");
@@ -164,7 +162,7 @@ void Budget::on_pushButton_9_clicked()
           ui->othertot->setText(addItemstoDatabase(current,"Other",s));
           setTotals(current);
           QSqlQueryModel *bqmodel= new QSqlQueryModel();
-           bqmodel->setQuery("SELECT Item,Price FROM Info where username = '"+current+"'");
+           bqmodel->setQuery("SELECT Item,Price,Category FROM Info where username = '"+current+"'");
            ui->expta->setModel(bqmodel);
         }
         else{
@@ -177,24 +175,28 @@ void Budget::on_pushButton_9_clicked()
 
 
 
-QString Budget::on_expta_activated(const QModelIndex &index)
+int Budget::on_expta_activated(const QModelIndex &index)
 {
+    QString sui;
     QString val= ui->expta->model()->data(index).toString();
     qDebug()<< val;
     QSqlQuery q;
-    q.prepare("select DateTime, Item, Price, Category from Info where Item = '"+val+"' or Price = '"+val+"' or Category = '"+val+"'");
+    q.prepare("select Item, Price, EID, Category from Info where EID ='"+val+"' or Item = '"+val+"' or Price = '"+val+"' or Category = '"+val+"'");
     if (q.exec()){
         while (q.next()){
             ui->itemr->setText(q.value(0).toString());
              ui-> pricer->setText(q.value(1).toString());
-           ui->catr->setText(q.value(2).toString());
+           ui->catr->setText(q.value(3).toString());
+           sui = q.value(2).toString();
+
            //getdate = q.value
         }
     } else {
         qDebug()<< "Damn";
     }
     q.clear();
-    return "asd";
+    getid = sui.toInt();
+    return getid;
 }
 
 
@@ -289,13 +291,67 @@ void Budget::on_bud_butt_clicked()
 
 void Budget::on_updatebutt_clicked()
 {
+    QString item,price,category;
+     item = ui->itemr->text();
 
+     price = ui->pricer->text();
+
+     category = ui->catr->text();
+
+    if (!item.isEmpty() && !price.isEmpty() && !category.isEmpty()){
+        QSqlQuery sq;
+        sq.prepare("update Info set Item = '"+item+"', Price = '"+price+"', Category = '"+category+"' where eid = :id");
+        sq.bindValue(":id",getid);
+       if (sq.exec()){
+           qDebug()<< "Edit updated";
+           ui->itemr->clear();
+           ui->pricer->clear();
+           ui->catr->clear();
+       }
+       else{
+           qDebug()<< "Nope";
+       }
+       sq.clear();
+       QSqlQueryModel *bqmodel= new QSqlQueryModel();
+        bqmodel->setQuery("SELECT Item,Price,Category FROM Info where username = '"+current+"'");
+        ui->expta->setModel(bqmodel);
+
+        ui->foodtot->setText(addItemstoDatabase(current,"Food",f));
+        ui->edutot->setText(addItemstoDatabase(current,"Education",e));
+        ui->othertot->setText(addItemstoDatabase(current,"Other",s));
+        ui->intot->setText(addItemstoDatabase(current,"Income",o));
+    }
+    else{
+        qDebug()<<"suii";
+    }
 }
 
 
 void Budget::on_deletebutt_clicked()
 {
 
+
+        QSqlQuery qu;
+        qu.prepare("delete from Info where eid = :psl");
+        qu.bindValue(":psl",getid);
+        if (qu.exec()){
+            qDebug()<<"Exec";
+        }else {
+            qDebug()<<"Um";
+        }
+        qu.clear();
+
+        ui->itemr->clear();
+        ui->pricer->clear();
+        ui->catr->clear();
+        QSqlQueryModel * model = new QSqlQueryModel();
+        model->setQuery("select plandetails from plan where planuser = '"+current+"'");
+        ui->expta->setModel(model);
+
+        ui->foodtot->setText(addItemstoDatabase(current,"Food",f));
+        ui->edutot->setText(addItemstoDatabase(current,"Education",e));
+        ui->othertot->setText(addItemstoDatabase(current,"Other",s));
+        ui->intot->setText(addItemstoDatabase(current,"Income",o));
 }
 
 
@@ -315,6 +371,7 @@ void Budget::on_pushButton_13_clicked()
     qry.bindValue(":item", item);
     qry.bindValue(":category", "Income");
     qry.bindValue(":usr",current);
+
     if (qry.exec()){
         ui->in_item->setText("");
         ui->in_amount->setText("");
@@ -326,7 +383,7 @@ void Budget::on_pushButton_13_clicked()
      ui->intot->setText(addItemstoDatabase(current,"Income",o));
        setTotals(current);
        QSqlQueryModel *bqmodel= new QSqlQueryModel();
-        bqmodel->setQuery("SELECT Item,Price FROM Info where username = '"+current+"'");
+        bqmodel->setQuery("SELECT Item,Price,Category FROM Info where username = '"+current+"'");
         ui->expta->setModel(bqmodel);
     }
     else{
@@ -354,6 +411,7 @@ void Budget::on_pushButton_4_clicked()
     qry.bindValue(":item", item);
     qry.bindValue(":category", "Food");
     qry.bindValue(":usr",current);
+
     if (qry.exec()){
         ui->f_item->setText("");
         ui->f_amount->setText("");
@@ -365,7 +423,7 @@ void Budget::on_pushButton_4_clicked()
      ui->foodtot->setText(addItemstoDatabase(current,"Food",f));
         setTotals(current);
         QSqlQueryModel *bqmodel= new QSqlQueryModel();
-         bqmodel->setQuery("SELECT Item,Price FROM Info where username = '"+current+"'");
+         bqmodel->setQuery("SELECT Item,Price,Category FROM Info where username = '"+current+"'");
          ui->expta->setModel(bqmodel);
      }
      else{
@@ -374,4 +432,13 @@ void Budget::on_pushButton_4_clicked()
 
       allocatesomeofthis(budget);
 }
+
+
+void Budget::on_logo_clicked()
+{
+    this->close();
+    QWidget *parent = this->parentWidget();
+    parent->show();
+}
+
 
