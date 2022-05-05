@@ -32,6 +32,7 @@ public:
     fitness(QWidget *parent = nullptr);
     ~fitness();
 
+
 public slots:
 
 
@@ -64,6 +65,7 @@ private slots:
 
     void on_refresh_clicked();
     void show_age();
+
 
 private:
     Ui::fitness *ui;

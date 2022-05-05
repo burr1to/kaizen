@@ -35,6 +35,7 @@ lower_body::lower_body(QWidget *parent) :
     seconds = 59;
     connect(&time, SIGNAL(timeout()), this, SLOT(timerr()));
     this->setWindowState(Qt::WindowMaximized);
+    show_age();
 
 }
 
@@ -129,6 +130,24 @@ void lower_body::on_logo_clicked()
     this->close();
     QWidget *parent = this->parentWidget();
     parent->show();
+}
+
+void lower_body::show_age()
+{
+    QSqlQuery qry1;
+    int age;
+    int current_year = QDate::currentDate().year();
+    qry1.prepare("select dob from user where username = '"+current+"'");
+    qry1.exec();
+    qry1.first();
+    QStringList dates = qry1.value(0).toString().split("-").mid(0,3);
+
+    qDebug() << "-------";
+    age = current_year - dates.first().toInt();
+    qDebug() << age;
+    QString s = QString::number(age);
+    ui->age->setText(s);
+    qry1.clear();
 }
 
 
