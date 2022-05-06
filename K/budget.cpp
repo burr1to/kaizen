@@ -4,6 +4,7 @@
 #include "fitness.h"
 
 
+
 Budget::Budget(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::Budget)
@@ -91,7 +92,10 @@ void Budget::on_pushButton_3_clicked()
 
         item = ui->edu_item->text();
         price = ui->edu_amount->text();
-
+        int a = price.toInt();
+    if (a == 0){
+        qDebug()<<"asd";
+    } else{
         if (!budgetdb.open()){
             qDebug()<<"Failed to connect";
             return;
@@ -100,7 +104,7 @@ void Budget::on_pushButton_3_clicked()
         QSqlQuery qry;
 
         qry.prepare("INSERT INTO Info(item, price, category,username) VALUES (:item, :price, :category,:usr)");
-        qry.bindValue(":price", price);
+        qry.bindValue(":price", a);
         qry.bindValue(":item", item);
         qry.bindValue(":category", "Education");
         qry.bindValue(":usr",current);
@@ -127,6 +131,10 @@ void Budget::on_pushButton_3_clicked()
         }
 
          allocatesomeofthis(budget);
+
+    }
+
+
 }
 
 
@@ -136,6 +144,10 @@ void Budget::on_pushButton_9_clicked()
 {
         item = ui->o_item->text();
         price = ui->o_amount->text();
+        int a = price.toInt();
+    if (a == 0){
+        qDebug()<<"asd";
+    } else{
 
         if (!budgetdb.open()){
             qDebug()<<"Failed to connect";
@@ -170,6 +182,7 @@ void Budget::on_pushButton_9_clicked()
         }
 
          allocatesomeofthis(budget);
+    }
 }
 
 
@@ -361,6 +374,10 @@ void Budget::on_pushButton_13_clicked()
 {
     item = ui->in_item->text();
     price = ui->in_amount->text();
+    int a = price.toInt();
+if (a == 0){
+    qDebug()<<"asd";
+} else{
 
     if (!budgetdb.open()){
         qDebug()<<"Failed to connect";
@@ -394,12 +411,17 @@ void Budget::on_pushButton_13_clicked()
 
     allocatesomeofthis(budget);
 }
+}
 
 
 void Budget::on_pushButton_4_clicked()
 {
     item = ui->f_item->text();
     price = ui->f_amount->text();
+    int a = price.toInt();
+if (a == 0){
+    qDebug()<<"asd";
+} else{
 
     if (!budgetdb.open()){
         qDebug()<<"Failed to connect";
@@ -433,6 +455,7 @@ void Budget::on_pushButton_4_clicked()
      }
 
       allocatesomeofthis(budget);
+}
 }
 
 

@@ -33,7 +33,6 @@ fitness::fitness(QWidget *parent)
     this->setWindowState(Qt::WindowMaximized);
      ui->heytxt->setText("Hello, " + current.toUpper() + " !");
 
-
     show_chart();
     show_age();
 
