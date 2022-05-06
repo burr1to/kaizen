@@ -214,7 +214,7 @@ color:#e6ebf1;</string>
          <property name="minimumSize">
           <size>
            <width>0</width>
-           <height>30</height>
+           <height>40</height>
           </size>
          </property>
          <property name="styleSheet">
@@ -238,7 +238,7 @@ color: #22252a;
          <property name="sizeHint" stdset="0">
           <size>
            <width>20</width>
-           <height>320</height>
+           <height>300</height>
           </size>
          </property>
         </spacer>
